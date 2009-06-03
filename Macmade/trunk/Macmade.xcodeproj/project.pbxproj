@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05E9A0720FD73BAA00F2E8B0 /* MMEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E9A06E0FD73BAA00F2E8B0 /* MMEvent.h */; };
+		05E9A0730FD73BAA00F2E8B0 /* MMEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E9A06F0FD73BAA00F2E8B0 /* MMEventDispatcher.h */; };
+		05E9A0740FD73BAA00F2E8B0 /* MMEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */; };
+		05E9A0750FD73BAA00F2E8B0 /* MMEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0710FD73BAA00F2E8B0 /* MMEventDispatcher.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05E9A06E0FD73BAA00F2E8B0 /* MMEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMEvent.h; sourceTree = "<group>"; };
+		05E9A06F0FD73BAA00F2E8B0 /* MMEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMEventDispatcher.h; sourceTree = "<group>"; };
+		05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMEvent.m; path = classes/MMEvent.m; sourceTree = "<group>"; };
+		05E9A0710FD73BAA00F2E8B0 /* MMEventDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMEventDispatcher.m; path = classes/MMEventDispatcher.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -40,6 +48,16 @@
 				8DC2EF5B0486A6940098B216 /* Macmade.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		05E9A06D0FD73BAA00F2E8B0 /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				05E9A06E0FD73BAA00F2E8B0 /* MMEvent.h */,
+				05E9A06F0FD73BAA00F2E8B0 /* MMEventDispatcher.h */,
+			);
+			name = includes;
+			path = classes/includes;
 			sourceTree = "<group>";
 		};
 		0867D691FE84028FC02AAC07 /* Macmade */ = {
@@ -75,6 +93,9 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				05E9A06D0FD73BAA00F2E8B0 /* includes */,
+				05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */,
+				05E9A0710FD73BAA00F2E8B0 /* MMEventDispatcher.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -112,6 +133,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E9A0720FD73BAA00F2E8B0 /* MMEvent.h in Headers */,
+				05E9A0730FD73BAA00F2E8B0 /* MMEventDispatcher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +194,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E9A0740FD73BAA00F2E8B0 /* MMEvent.m in Sources */,
+				05E9A0750FD73BAA00F2E8B0 /* MMEventDispatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
