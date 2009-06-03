@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05E9A0720FD73BAA00F2E8B0 /* MMEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E9A06E0FD73BAA00F2E8B0 /* MMEvent.h */; };
-		05E9A0730FD73BAA00F2E8B0 /* MMEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E9A06F0FD73BAA00F2E8B0 /* MMEventDispatcher.h */; };
+		05E9A0720FD73BAA00F2E8B0 /* MMEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E9A06E0FD73BAA00F2E8B0 /* MMEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E9A0730FD73BAA00F2E8B0 /* MMEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E9A06F0FD73BAA00F2E8B0 /* MMEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E9A0740FD73BAA00F2E8B0 /* MMEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */; };
 		05E9A0750FD73BAA00F2E8B0 /* MMEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0710FD73BAA00F2E8B0 /* MMEventDispatcher.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
