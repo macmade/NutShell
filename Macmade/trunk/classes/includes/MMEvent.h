@@ -1,12 +1,15 @@
 // $Id$
 
+// Local includes
+#import "MMObject.h"
+
 /**
  * Event object
  *
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@interface MMEvent: NSObject
+@interface MMEvent: MMObject
 {
     @protected
     

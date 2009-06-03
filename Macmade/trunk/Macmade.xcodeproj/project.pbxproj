@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055C80B90FD73D630097C170 /* MMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* MMObject.m */; };
+		055C80BF0FD73D7C0097C170 /* MMObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80BE0FD73D7C0097C170 /* MMObject.h */; };
 		05E9A0720FD73BAA00F2E8B0 /* MMEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E9A06E0FD73BAA00F2E8B0 /* MMEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E9A0730FD73BAA00F2E8B0 /* MMEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E9A06F0FD73BAA00F2E8B0 /* MMEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E9A0740FD73BAA00F2E8B0 /* MMEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055C80B80FD73D630097C170 /* MMObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMObject.m; path = classes/MMObject.m; sourceTree = "<group>"; };
+		055C80BE0FD73D7C0097C170 /* MMObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMObject.h; sourceTree = "<group>"; };
 		05E9A06E0FD73BAA00F2E8B0 /* MMEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMEvent.h; sourceTree = "<group>"; };
 		05E9A06F0FD73BAA00F2E8B0 /* MMEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMEventDispatcher.h; sourceTree = "<group>"; };
 		05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMEvent.m; path = classes/MMEvent.m; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			children = (
 				05E9A06E0FD73BAA00F2E8B0 /* MMEvent.h */,
 				05E9A06F0FD73BAA00F2E8B0 /* MMEventDispatcher.h */,
+				055C80BE0FD73D7C0097C170 /* MMObject.h */,
 			);
 			name = includes;
 			path = classes/includes;
@@ -96,6 +101,7 @@
 				05E9A06D0FD73BAA00F2E8B0 /* includes */,
 				05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */,
 				05E9A0710FD73BAA00F2E8B0 /* MMEventDispatcher.m */,
+				055C80B80FD73D630097C170 /* MMObject.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -135,6 +141,7 @@
 			files = (
 				05E9A0720FD73BAA00F2E8B0 /* MMEvent.h in Headers */,
 				05E9A0730FD73BAA00F2E8B0 /* MMEventDispatcher.h in Headers */,
+				055C80BF0FD73D7C0097C170 /* MMObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +203,7 @@
 			files = (
 				05E9A0740FD73BAA00F2E8B0 /* MMEvent.m in Sources */,
 				05E9A0750FD73BAA00F2E8B0 /* MMEventDispatcher.m in Sources */,
+				055C80B90FD73D630097C170 /* MMObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
