@@ -1,6 +1,4 @@
-//
-// Prefix header for all source files of the 'Macmade' target in the 'Macmade' project.
-//
+// $Id$
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
