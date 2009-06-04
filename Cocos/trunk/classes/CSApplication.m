@@ -23,7 +23,7 @@
         
         execution = [ CSExecution getInstance  ];
         workspace = [ NSWorkspace sharedWorkspace ];
-        logger    = [ CSLogger getInstance ];
+        logger    = [ [ CSLogger alloc ] init ];
     }
     
     return self;

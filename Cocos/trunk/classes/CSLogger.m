@@ -27,6 +27,12 @@
     return self;
 }
 
+- ( void )dealloc
+{
+    [ messages release ];
+    [ super dealloc ];
+}
+
 - ( void )message: ( CSLogMessage * ) message
 {
     [ messages addObject: message ];

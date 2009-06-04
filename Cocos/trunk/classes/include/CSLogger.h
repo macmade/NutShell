@@ -28,7 +28,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSLogger: CSObjectSingleton
+@interface CSLogger: CSObject
 {
 @protected
     
