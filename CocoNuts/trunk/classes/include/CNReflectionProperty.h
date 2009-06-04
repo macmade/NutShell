@@ -16,6 +16,9 @@
  *              precompiled version.
  */
 
+// System includes
+#import <objc/runtime.h>
+
 // Local includes
 #import "CNObject.h"
 
@@ -27,6 +30,23 @@
  */
 @interface CNReflectionProperty: CNObject
 {
+@protected
+    
+    /*!
+     * @abstract    The Objective-C property
+     */
+    objc_property_t property;
+    
+    /*!
+     * @abstract    The name of the property
+     */
+    NSString * name;
+    
+    /*!
+     * @abstract    The attributes of the property
+     */
+    NSString * attributes;
+    
 @private
     
     /*!
@@ -45,5 +65,24 @@
      */
     id CN_r2;
 }
+
+/*! @property */
+@property( readonly ) objc_property_t property;
+
+/*! @property */
+@property( readonly ) NSString * name;
+
+/*! @property */
+@property( readonly ) NSString * attributes;
+
+/*!
+ * 
+ */
++ ( id )reflectorWithProperty:( objc_property_t )prop;
+
+/*!
+ * 
+ */
+- ( id )initWithProperty:( objc_property_t )prop;
 
 @end
