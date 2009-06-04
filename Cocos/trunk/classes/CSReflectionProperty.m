@@ -23,6 +23,15 @@
     return [ reflector autorelease ];
 }
 
+- ( NSString * )description
+{
+    NSString * description;
+    
+    description = [ [ super description ] stringByAppendingFormat: @"\n\t- property:\t%@\n\t- attributes:\t%@", name, attributes ];
+    
+    return description;
+}
+
 - ( id )initWithProperty:( objc_property_t )prop
 {
     if( ( self = [ self init ] ) ) {
