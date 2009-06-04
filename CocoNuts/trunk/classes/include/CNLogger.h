@@ -25,7 +25,7 @@
  */
 @interface CNLogger: CNObjectSingleton
 {
-    @protected
+@protected
     
     /**
      * An array with the messages
@@ -36,6 +36,15 @@
      * 
      */
     BOOL enableDebug;
+    
+@private
+    
+    /**
+     * Reserved instance variables to help ensure binary compatibility with
+     * future versions of the class
+     */
+    id _r1;
+    id _r2;
 }
 
 /**

@@ -22,10 +22,10 @@
  */
 @interface CNExecution: CNObjectSingleton
 {
-    @protected
+@protected
     
     /**
-     * Whether the user can execute privileged coCNands
+     * Whether the user can execute privileged commands
      */
     BOOL canExecuteWithPrivilege;
     
@@ -33,6 +33,15 @@
      * The authorization object
      */
     AuthorizationRef authorizationRef;
+    
+@private
+    
+    /**
+     * Reserved instance variables to help ensure binary compatibility with
+     * future versions of the class
+     */
+    id _r1;
+    id _r2;
 }
 
 /**
@@ -42,32 +51,32 @@
 @property( readonly ) AuthorizationRef authorizationRef;
 
 /**
- * Authorize the user to execute coCNands with admin privileges
+ * Authorize the user to execute command with admin privileges
  * 
  * @return  void
  */
 - ( void )authorizeExecute;
 
 /**
- * Executes a coCNand line tool with admin privileges
+ * Executes a command line tool with admin privileges
  * 
- * @param   char *      The path to the coCNand line tool
- * @param   char * []   The arguments for the coCNand line tool
+ * @param   char *      The path to the command line tool
+ * @param   char * []   The arguments for the command line tool
  * @return  FILE *      An I/O pipe
  */
-- ( FILE * )executeWithPrivileges: ( char * )coCNand arguments: ( char * [] )arguments;
+- ( FILE * )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments;
 
 /**
- * Executes a coCNand line tool with admin privileges
+ * Executes a command line tool with admin privileges
  * 
- * @param   NSString *      The path to the coCNand line tool
- * @param   NSArray * []    The arguments for the coCNand line tool
+ * @param   NSString *      The path to the command line tool
+ * @param   NSArray * []    The arguments for the command line tool
  * @return  NSFileHandle *  An I/O pipe
  */
-- ( NSFileHandle * )execute: ( NSString * )coCNand arguments: ( NSArray * )arguments;
+- ( NSFileHandle * )execute: ( NSString * )command arguments: ( NSArray * )arguments;
 
 /**
- * Opens a target with the /usr/bin/open coCNand
+ * Opens a target with the /usr/bin/open command
  * 
  * @param   NSString *      The target to open
  * @return  NSFileHandle *  An I/O pipe

@@ -22,7 +22,7 @@
  */
 @interface CNApplication: NSApplication
 {
-    @protected
+@protected
     
     /**
      * The authorization object
@@ -38,6 +38,15 @@
      * The logger object
      */
     CNLogger * logger;
+    
+@private
+    
+    /**
+     * Reserved instance variables to help ensure binary compatibility with
+     * future versions of the class
+     */
+    id _r1;
+    id _r2;
 }
 
 /**

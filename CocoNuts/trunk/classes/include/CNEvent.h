@@ -22,7 +22,7 @@
  */
 @interface CNEvent: CNObject
 {
-    @protected
+@protected
     
     /**
      * Whether the event is propagating
@@ -38,6 +38,15 @@
      * The event's name
      */
     NSString * name;
+    
+@private
+    
+    /**
+     * Reserved instance variables to help ensure binary compatibility with
+     * future versions of the class
+     */
+    id _r1;
+    id _r2;
 }
 
 /**

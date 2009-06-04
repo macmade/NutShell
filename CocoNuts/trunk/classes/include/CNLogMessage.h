@@ -30,7 +30,7 @@ enum {
  */
 @interface CNLogMessage: CNObject
 {
-    @protected
+@protected
     
     /**
      * The message
@@ -46,6 +46,15 @@ enum {
      * The message's type
      */
     int type;
+    
+@private
+    
+    /**
+     * Reserved instance variables to help ensure binary compatibility with
+     * future versions of the class
+     */
+    id _r1;
+    id _r2;
 }
 
 /**
