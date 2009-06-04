@@ -24,6 +24,18 @@
 		055C81A60FD74CF60097C170 /* CNExecution.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81A50FD74CF60097C170 /* CNExecution.m */; };
 		055C81B20FD74E970097C170 /* CNApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C819D0FD74C280097C170 /* CNApplication.m */; };
 		055C81B30FD74E980097C170 /* CNApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81990FD74BED0097C170 /* CNApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E686C90FD77F6C003FAC5F /* CNReflectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C30FD77F6C003FAC5F /* CNReflectionClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E686CA0FD77F6C003FAC5F /* CNReflectionMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C40FD77F6C003FAC5F /* CNReflectionMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E686CB0FD77F6C003FAC5F /* CNReflectionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C50FD77F6C003FAC5F /* CNReflectionObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E686CC0FD77F6C003FAC5F /* CNReflectionProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C60FD77F6C003FAC5F /* CNReflectionProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E686CD0FD77F6C003FAC5F /* CNReflectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C70FD77F6C003FAC5F /* CNReflectionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E686CE0FD77F6C003FAC5F /* CNReflectionVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C80FD77F6C003FAC5F /* CNReflectionVariable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E686D50FD77F83003FAC5F /* CNReflectionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686CF0FD77F83003FAC5F /* CNReflectionClass.m */; };
+		05E686D60FD77F83003FAC5F /* CNReflectionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D00FD77F83003FAC5F /* CNReflectionMethod.m */; };
+		05E686D70FD77F83003FAC5F /* CNReflectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D10FD77F83003FAC5F /* CNReflectionObject.m */; };
+		05E686D80FD77F83003FAC5F /* CNReflectionProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D20FD77F83003FAC5F /* CNReflectionProperty.m */; };
+		05E686D90FD77F83003FAC5F /* CNReflectionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D30FD77F83003FAC5F /* CNReflectionProtocol.m */; };
+		05E686DA0FD77F83003FAC5F /* CNReflectionVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D40FD77F83003FAC5F /* CNReflectionVariable.m */; };
 		05E9A0740FD73BAA00F2E8B0 /* CNEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* CNEvent.m */; };
 		05E9A0750FD73BAA00F2E8B0 /* CNEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0710FD73BAA00F2E8B0 /* CNEventDispatcher.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
@@ -48,6 +60,18 @@
 		055C819D0FD74C280097C170 /* CNApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNApplication.m; path = classes/CNApplication.m; sourceTree = "<group>"; };
 		055C81A30FD74CE80097C170 /* CNExecution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNExecution.h; sourceTree = "<group>"; };
 		055C81A50FD74CF60097C170 /* CNExecution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNExecution.m; path = classes/CNExecution.m; sourceTree = "<group>"; };
+		05E686C30FD77F6C003FAC5F /* CNReflectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReflectionClass.h; sourceTree = "<group>"; };
+		05E686C40FD77F6C003FAC5F /* CNReflectionMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReflectionMethod.h; sourceTree = "<group>"; };
+		05E686C50FD77F6C003FAC5F /* CNReflectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReflectionObject.h; sourceTree = "<group>"; };
+		05E686C60FD77F6C003FAC5F /* CNReflectionProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReflectionProperty.h; sourceTree = "<group>"; };
+		05E686C70FD77F6C003FAC5F /* CNReflectionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReflectionProtocol.h; sourceTree = "<group>"; };
+		05E686C80FD77F6C003FAC5F /* CNReflectionVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReflectionVariable.h; sourceTree = "<group>"; };
+		05E686CF0FD77F83003FAC5F /* CNReflectionClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNReflectionClass.m; path = classes/CNReflectionClass.m; sourceTree = "<group>"; };
+		05E686D00FD77F83003FAC5F /* CNReflectionMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNReflectionMethod.m; path = classes/CNReflectionMethod.m; sourceTree = "<group>"; };
+		05E686D10FD77F83003FAC5F /* CNReflectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNReflectionObject.m; path = classes/CNReflectionObject.m; sourceTree = "<group>"; };
+		05E686D20FD77F83003FAC5F /* CNReflectionProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNReflectionProperty.m; path = classes/CNReflectionProperty.m; sourceTree = "<group>"; };
+		05E686D30FD77F83003FAC5F /* CNReflectionProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNReflectionProtocol.m; path = classes/CNReflectionProtocol.m; sourceTree = "<group>"; };
+		05E686D40FD77F83003FAC5F /* CNReflectionVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNReflectionVariable.m; path = classes/CNReflectionVariable.m; sourceTree = "<group>"; };
 		05E9A0700FD73BAA00F2E8B0 /* CNEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNEvent.m; path = classes/CNEvent.m; sourceTree = "<group>"; };
 		05E9A0710FD73BAA00F2E8B0 /* CNEventDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNEventDispatcher.m; path = classes/CNEventDispatcher.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -102,6 +126,12 @@
 				055C81000FD746240097C170 /* CNLogMessage.h */,
 				055C80E70FD7435C0097C170 /* CNObject.h */,
 				055C80FA0FD7454B0097C170 /* CNObjectSingleton.h */,
+				05E686C30FD77F6C003FAC5F /* CNReflectionClass.h */,
+				05E686C40FD77F6C003FAC5F /* CNReflectionMethod.h */,
+				05E686C50FD77F6C003FAC5F /* CNReflectionObject.h */,
+				05E686C60FD77F6C003FAC5F /* CNReflectionProperty.h */,
+				05E686C70FD77F6C003FAC5F /* CNReflectionProtocol.h */,
+				05E686C80FD77F6C003FAC5F /* CNReflectionVariable.h */,
 			);
 			name = include;
 			path = classes/include;
@@ -150,6 +180,12 @@
 				055C81040FD746330097C170 /* CNLogMessage.m */,
 				055C80B80FD73D630097C170 /* CNObject.m */,
 				055C80F80FD745410097C170 /* CNObjectSingleton.m */,
+				05E686CF0FD77F83003FAC5F /* CNReflectionClass.m */,
+				05E686D00FD77F83003FAC5F /* CNReflectionMethod.m */,
+				05E686D10FD77F83003FAC5F /* CNReflectionObject.m */,
+				05E686D20FD77F83003FAC5F /* CNReflectionProperty.m */,
+				05E686D30FD77F83003FAC5F /* CNReflectionProtocol.m */,
+				05E686D40FD77F83003FAC5F /* CNReflectionVariable.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -198,6 +234,12 @@
 				055C81610FD749F40097C170 /* CocoNuts.h in Headers */,
 				055C81A40FD74CE80097C170 /* CNExecution.h in Headers */,
 				055C81B30FD74E980097C170 /* CNApplication.h in Headers */,
+				05E686C90FD77F6C003FAC5F /* CNReflectionClass.h in Headers */,
+				05E686CA0FD77F6C003FAC5F /* CNReflectionMethod.h in Headers */,
+				05E686CB0FD77F6C003FAC5F /* CNReflectionObject.h in Headers */,
+				05E686CC0FD77F6C003FAC5F /* CNReflectionProperty.h in Headers */,
+				05E686CD0FD77F6C003FAC5F /* CNReflectionProtocol.h in Headers */,
+				05E686CE0FD77F6C003FAC5F /* CNReflectionVariable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +307,12 @@
 				055C81060FD746330097C170 /* CNLogMessage.m in Sources */,
 				055C81A60FD74CF60097C170 /* CNExecution.m in Sources */,
 				055C81B20FD74E970097C170 /* CNApplication.m in Sources */,
+				05E686D50FD77F83003FAC5F /* CNReflectionClass.m in Sources */,
+				05E686D60FD77F83003FAC5F /* CNReflectionMethod.m in Sources */,
+				05E686D70FD77F83003FAC5F /* CNReflectionObject.m in Sources */,
+				05E686D80FD77F83003FAC5F /* CNReflectionProperty.m in Sources */,
+				05E686D90FD77F83003FAC5F /* CNReflectionProtocol.m in Sources */,
+				05E686DA0FD77F83003FAC5F /* CNReflectionVariable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
