@@ -52,7 +52,7 @@
 /**
  * Class properties
  */
-@property( assign, readwrite ) BOOL propagating;
+@property( assign, readwrite, getter=isPropagating ) BOOL propagating;
 @property( readonly ) id target;
 @property( readonly ) NSString *  name;
 

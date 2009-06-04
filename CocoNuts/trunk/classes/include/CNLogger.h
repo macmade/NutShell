@@ -35,7 +35,7 @@
     /**
      * 
      */
-    BOOL enableDebug;
+    BOOL debug;
     
 @private
     
@@ -51,7 +51,7 @@
  * Class properties
  */
 @property( readonly ) NSMutableArray * messages;
-@property( assign, readwrite ) BOOL enableDebug;
+@property( assign, readwrite, getter=debugIsEnabled, setter=enableDebug: ) BOOL debug;
 
 /**
  * Adds a message

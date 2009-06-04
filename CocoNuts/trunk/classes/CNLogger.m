@@ -24,7 +24,7 @@
  * Automatic getters/setters
  */
 @synthesize messages;
-@synthesize enableDebug;
+@synthesize debug;
 
 /**
  * Object initialization
@@ -81,7 +81,7 @@
 {
     CNLogMessage * msg;
     
-    if( enableDebug == YES ) {
+    if( debug == YES ) {
         
         msg      = [ [ CNLogMessage alloc ] initWithMessage: message ];
         msg.type = CNMessageDebug;
