@@ -8,7 +8,7 @@
 // $Id$
 
 // Local includes
-#import "CNReflectionProtocol.h"
+#import "CNReflectionProperty.h"
 
 /**
  * Objective-C class property reflector
@@ -16,6 +16,6 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@implementation CNReflectionProtocol
+@implementation CNReflectionProperty
 
 @end
