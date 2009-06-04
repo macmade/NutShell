@@ -7,7 +7,6 @@
 
 // $Id$
 
-// Local includes
 #import "CNObjectSingleton.h"
 
 @implementation CNObjectSingleton

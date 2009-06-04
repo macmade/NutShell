@@ -7,32 +7,18 @@
 
 // $Id$
 
-// Local includes
 #import "CNEventDispatcher.h"
 #import "CNEvent.h"
 
-/**
- * NSObject additions (event dispatcher)
- *
- * @author      Jean-David Gadina <macmade@eosgarden.com>
- * @version     1.0
- */
 @implementation NSObject( CNEventDispatcher )
 
-// A dictionary with the registered events for all Objective-C class instances
 static NSMutableDictionary * _events;
 
-/**
- * 
- */
 - ( void )dispatchEvent: ( NSString * )name
 {
     [ self dispatchEvent: name target: self ];
 }
 
-/**
- * 
- */
 - ( void )dispatchEvent: ( NSString * )name target: ( id )target
 {
     CNEvent * event;
@@ -43,9 +29,6 @@ static NSMutableDictionary * _events;
     [ event release ];
 }
 
-/**
- * 
- */
 - ( void )dispatchEventObject: ( CNEvent * )event
 {
     NSString * classname;
@@ -105,17 +88,11 @@ static NSMutableDictionary * _events;
     }
 }
 
-/**
- * 
- */
 - ( int )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector
 {
     return [ self addEventListener: name target: target selector: selector priority: 255 ];
 }
 
-/**
- * 
- */
 - ( int )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector priority: ( int )priority
 {
     NSString * classname;
@@ -179,9 +156,6 @@ static NSMutableDictionary * _events;
     return [ listeners count ] - 1;
 }
 
-/**
- * 
- */
 - ( BOOL )hasEventListener: ( NSString * )name
 {
     NSString * classname;

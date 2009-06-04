@@ -3,80 +3,110 @@
  * 
  * Copyright (c) 2009, Jean-David Gadina (macmade@eosgarden.com)
  * All rights reserved.
- * 
- * This file should not be included directly by application source files using
- * the CocoNuts framework. Including 'CocoNuts.h' is preferred over importing
- * individual files because it will use a precompiled version.
  ******************************************************************************/
 
 // $Id$
 
+/*!
+ * @header
+ * 
+ * @discussion  This file should not be included directly by application source
+ *              files using the CocoNuts framework. Including 'CocoNuts.h' is
+ *              preferred over importing individual files because it will use a
+ *              precompiled version.
+ */
+
 // Local includes
 #import "CNObject.h"
 
-/**
- * Types of the log messages
+/*!
+ * @enum        MessageTypes
+ * 
+ * @abstract    The types of the log messages
  */
 enum {
     CNMessageLog   = 0,
     CNMessageDebug = 1
 };
 
-/**
- * Log message object
- *
- * @author      Jean-David Gadina <macmade@eosgarden.com>
+/*!
+ * @abstract    Log message object
+ * 
  * @version     1.0
+ * @namespace   CocoNuts
  */
 @interface CNLogMessage: CNObject
 {
 @protected
     
-    /**
-     * The message
+    /*!
+     * @abstract    The message
      */
     NSString * message;
     
-    /**
-     * The message's date
+    /*!
+     * @abstract    The message's date
      */
     NSDate * date;
     
-    /**
-     * The message's type
+    /*!
+     * @abstract    The message's type
      */
     int type;
     
 @private
     
-    /**
-     * Reserved instance variables to help ensure binary compatibility with
-     * future versions of the class
+    /*!
+     * @abstract    Reserved 1
+     * 
+     * @discussion  Reserved instance variables to help ensure binary
+     *              compatibility with future versions of the class.
      */
-    id _r1;
-    id _r2;
+    id CN_r1;
+    
+    /*!
+     * @abstract    Reserved 2
+     * 
+     * @discussion  Reserved instance variables to help ensure binary
+     *              compatibility with future versions of the class.
+     */
+    id CN_r2;
 }
 
-/**
- * Class properties
- */
+/*! @property */
 @property( copy, readwrite ) NSString * message;
+
+/*! @property */
 @property( copy, readwrite ) NSDate * date;
+
+/*! @property */
 @property( assign, readwrite ) int type;
 
-/**
+/*!
+ * @abstract    Initializes a newly allocated log message with a specific message text
  * 
+ * @param       str         The message text
+ * @return      The instance of the message object
  */
-- ( id )initWithMessage: ( NSString * )message;
+- ( id )initWithMessage: ( NSString * )str;
 
-/**
+/*!
+ * @abstract    Initializes a newly allocated log message with a specific message text and date
  * 
+ * @param       str         The message text
+ * @param       time        The message date
+ * @return      The instance of the message object
  */
-- ( id )initWithMessage: ( NSString * )message date: ( NSDate * )date;
+- ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time;
 
-/**
+/*!
+ * @abstract    Initializes a newly allocated log message with a specific message text, date and type
  * 
+ * @param       str         The message text
+ * @param       time        The message date
+ * @param       messageType The message type
+ * @return      The instance of the message object
  */
-- ( id )initWithMessage: ( NSString * )message date: ( NSDate * )date type: ( int )type;
+- ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType;
 
 @end

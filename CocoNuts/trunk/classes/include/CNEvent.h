@@ -3,81 +3,97 @@
  * 
  * Copyright (c) 2009, Jean-David Gadina (macmade@eosgarden.com)
  * All rights reserved.
- * 
- * This file should not be included directly by application source files using
- * the CocoNuts framework. Including 'CocoNuts.h' is preferred over importing
- * individual files because it will use a precompiled version.
  ******************************************************************************/
 
 // $Id$
 
+/*!
+ * @header
+ * 
+ * @discussion  This file should not be included directly by application source
+ *              files using the CocoNuts framework. Including 'CocoNuts.h' is
+ *              preferred over importing individual files because it will use a
+ *              precompiled version.
+ */
+
 // Local includes
 #import "CNObject.h"
 
-/**
- * Event object
- *
- * @author      Jean-David Gadina <macmade@eosgarden.com>
+/*!
+ * @abstract    Event object
+ * 
  * @version     1.0
+ * @namespace   CocoNuts
  */
 @interface CNEvent: CNObject
 {
 @protected
     
-    /**
-     * Whether the event is propagating
+    /*!
+     * @abstract    Whether the event is propagating
      */
     BOOL propagating;
     
-    /**
-     * The event's target object
+    /*!
+     * @abstract    The event's target object
      */
     id target;
     
-    /**
-     * The event's name
+    /*!
+     * @abstract    The event's name
      */
     NSString * name;
     
 @private
     
-    /**
-     * Reserved instance variables to help ensure binary compatibility with
-     * future versions of the class
+    /*!
+     * @abstract    Reserved 1
+     * 
+     * @discussion  Reserved instance variables to help ensure binary
+     *              compatibility with future versions of the class.
      */
-    id _r1;
-    id _r2;
+    id CN_r1;
+    
+    /*!
+     * @abstract    Reserved 2
+     * 
+     * @discussion  Reserved instance variables to help ensure binary
+     *              compatibility with future versions of the class.
+     */
+    id CN_r2;
 }
 
-/**
- * Class properties
- */
+/*! @property */
 @property( assign, readwrite, getter=isPropagating ) BOOL propagating;
+
+/*! @property */
 @property( readonly ) id target;
+
+/*! @property */
 @property( readonly ) NSString *  name;
 
-/**
- * Initializes a newly allocated event with a specific name
+/*!
+ * @abstract    Initializes a newly allocated event with a specific name
  * 
- * @param   NSString *  The event's name
- * @return  id          The instance of the event object
+ * @param       eventName   The event's name
+ * @return      The instance of the event object
  */
 - ( id )initWithName: ( NSString * )eventName;
 
-/**
- * Initializes a newly allocated event with a target object
+/*!
+ * @abstract    Initializes a newly allocated event with a target object
  * 
- * @param   id      The target object
- * @return  id      The instance of the event object
+ * @param       targetObject    The target object
+ * @return      The instance of the event object
  */
 - ( id )initWithTarget: ( id )targetObject;
 
-/**
- * Initializes a newly allocated event with a specific name and a target object
+/*!
+ * @abstract    Initializes a newly allocated event with a specific name and a target object
  * 
- * @param   NSString *  The event's name
- * @param   id          The target object
- * @return  id          The instance of the event object
+ * @param       eventName       The event's name
+ * @param       targetObject    The target object
+ * @return      The instance of the event object
  */
 - ( id )initWithName: ( NSString * )eventName target: ( id )targetObject;
 

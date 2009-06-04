@@ -12,25 +12,11 @@
 #import "CNLogMessage.h"
 #import "CNEventDispatcher.h"
 
-/**
- * Logger
- *
- * @author      Jean-David Gadina <macmade@eosgarden.com>
- * @version     1.0
- */
 @implementation CNLogger
 
-/**
- * Automatic getters/setters
- */
 @synthesize messages;
 @synthesize debug;
 
-/**
- * Object initialization
- * 
- * @return  id      The object's instance
- */
 - ( id )init
 {
     if( ( self = [ super init ] ) ) {
@@ -41,12 +27,6 @@
     return self;
 }
 
-/**
- * Adds a message
- * 
- * @param   LogMessage *    The message to add
- * @return  void
- */
 - ( void )message: ( CNLogMessage * ) message
 {
     [ messages addObject: message ];
@@ -54,12 +34,6 @@
     [ self dispatchEvent: @"MessageReceived" ];
 }
 
-/**
- * Adds a log message
- * 
- * @param   NSString *  The log message
- * @return  void
- */
 - ( void )log: ( NSString * )message
 {
    CNLogMessage * msg;
@@ -71,12 +45,6 @@
     [ self dispatchEvent: @"MessageReceived" ];
 }
 
-/**
- * Adds a debug message
- * 
- * @param   NSString *  The debug message
- * @return  void
- */
 - ( void )debug: ( NSString * )message
 {
     CNLogMessage * msg;
@@ -92,11 +60,6 @@
     }
 }
 
-/**
- * Clears the log messages
- * 
- * @return  void
- */
 - ( void )clear
 {
     [ messages removeAllObjects ];

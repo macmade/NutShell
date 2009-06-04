@@ -7,27 +7,14 @@
 
 // $Id$
 
-// Local includes
 #import "CNLogMessage.h"
 
-/**
- * Log message object
- *
- * @author      Jean-David Gadina <macmade@eosgarden.com>
- * @version     1.0
- */
 @implementation CNLogMessage
 
-/**
- * Automatic getters/setters
- */
 @synthesize message;
 @synthesize date;
 @synthesize type;
 
-/**
- * 
- */
 - ( id )init
 {
     if( ( self = [ super init ] ) ) {
@@ -40,9 +27,6 @@
     return self;
 }
 
-/**
- * 
- */
 - ( id )initWithMessage: ( NSString * )str
 {
     if( ( self = [ super init ] ) ) {
@@ -53,9 +37,6 @@
     return self;
 }
 
-/**
- * 
- */
 - ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time
 {
     if( ( self = [ super init ] ) ) {
@@ -67,9 +48,6 @@
     return self;
 }
 
-/**
- * 
- */
 - ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType
 {
     if( ( self = [ super init ] ) ) {

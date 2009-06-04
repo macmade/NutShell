@@ -7,15 +7,8 @@
 
 // $Id$
 
-// Local includes
 #import "CNReflectionObject.h"
 
-/**
- * Objective-C class instance reflector
- * 
- * @author      Jean-David Gadina <macmade@eosgarden.com>
- * @version     1.0
- */
 @implementation CNReflectionObject
 
 @end

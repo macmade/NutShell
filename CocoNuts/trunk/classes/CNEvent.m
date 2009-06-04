@@ -7,29 +7,14 @@
 
 // $Id$
 
-// Local includes
 #import "CNEvent.h"
 
-/**
- * Event object
- *
- * @author      Jean-David Gadina <macmade@eosgarden.com>
- * @version     1.0
- */
 @implementation CNEvent
 
-/**
- * Automatic getters/setters
- */
 @synthesize propagating;
 @synthesize target;
 @synthesize name;
 
-/**
- * Initializes a newly allocated event
- * 
- * @return  id      The instance of the event object
- */
 - ( id ) init
 {
     if( ( self = [ super init ] ) ) {
@@ -40,12 +25,6 @@
     return self;
 }
 
-/**
- * Initializes a newly allocated event with a specific name
- * 
- * @param   NSString *  The event's name
- * @return  id          The instance of the event object
- */
 - ( id )initWithName: ( NSString * )eventName
 {
     if( ( self = [ self init ] ) ) {
@@ -56,12 +35,6 @@
     return self;
 }
 
-/**
- * Initializes a newly allocated event with a target object
- * 
- * @param   id      The target object
- * @return  id      The instance of the event object
- */
 - ( id )initWithTarget: ( id )targetObject
 {
     if( ( self = [ self init ] ) ) {
@@ -72,14 +45,7 @@
     return self;
 }
 
-/**
- * Initializes a newly allocated event with a specific name and a target object
- * 
- * @param   NSString *  The event's name
- * @param   id          The target object
- * @return  id          The instance of the event object
- */
-- ( id )initWithName: ( NSString * )eventName target: (id)targetObject
+- ( id )initWithName: ( NSString * )eventName target: ( id )targetObject
 {
     if( ( self = [ self init ] ) ) {
         

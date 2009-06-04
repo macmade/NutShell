@@ -3,13 +3,18 @@
  * 
  * Copyright (c) 2009, Jean-David Gadina (macmade@eosgarden.com)
  * All rights reserved.
- * 
- * This file should not be included directly by application source files using
- * the CocoNuts framework. Including 'CocoNuts.h' is preferred over importing
- * individual files because it will use a precompiled version.
  ******************************************************************************/
 
 // $Id$
+
+/*!
+ * @header
+ * 
+ * @discussion  This file should not be included directly by application source
+ *              files using the CocoNuts framework. Including 'CocoNuts.h' is
+ *              preferred over importing individual files because it will use a
+ *              precompiled version.
+ */
 
 // Local includes
 #import "CNObjectSingleton.h"
@@ -17,70 +22,79 @@
 // Used classes
 @class CNLogMessage;
 
-/**
- * Logger
- *
- * @author      Jean-David Gadina <macmade@eosgarden.com>
+/*!
+ * @abstract    Logger object
+ * 
  * @version     1.0
+ * @namespace   CocoNuts
  */
 @interface CNLogger: CNObjectSingleton
 {
 @protected
     
-    /**
-     * An array with the messages
+    /*!
+     * @abstract    An array with the messages
      */
     NSMutableArray * messages;
     
-    /**
-     * 
+    /*!
+     * @abstract    Whether the debug messages are enables
      */
     BOOL debug;
     
 @private
     
-    /**
-     * Reserved instance variables to help ensure binary compatibility with
-     * future versions of the class
+    /*!
+     * @abstract    Reserved 1
+     * 
+     * @discussion  Reserved instance variables to help ensure binary
+     *              compatibility with future versions of the class.
      */
-    id _r1;
-    id _r2;
+    id CN_r1;
+    
+    /*!
+     * @abstract    Reserved 2
+     * 
+     * @discussion  Reserved instance variables to help ensure binary
+     *              compatibility with future versions of the class.
+     */
+    id CN_r2;
 }
 
-/**
- * Class properties
- */
+/*! @property */
 @property( readonly ) NSMutableArray * messages;
+
+/*! @property */
 @property( assign, readwrite, getter=debugIsEnabled, setter=enableDebug: ) BOOL debug;
 
-/**
- * Adds a message
+/*!
+ * @abstract    Adds a message
  * 
- * @param   LogMessage *    The message to add
- * @return  void
+ * @param       message The message to add
+ * @return      void
  */
 - ( void )message: ( CNLogMessage * ) message;
 
-/**
- * Adds a log message
+/*!
+ * @abstract    Adds a log message
  * 
- * @param   NSString *  The log message
- * @return  void
+ * @param       message The log message
+ * @return      void
  */
 - ( void )log: ( NSString * )message;
 
-/**
- * Adds a debug message
+/*!
+ * @abstract    Adds a debug message
  * 
- * @param   NSString *  The debug message
- * @return  void
+ * @param       message The debug message
+ * @return      void
  */
 - ( void )debug: ( NSString * )message;
 
-/**
- * Clears the log messages
+/*!
+ * @abstract    Clears the log messages
  * 
- * @return  void
+ * @return      void
  */
 - ( void )clear;
 
