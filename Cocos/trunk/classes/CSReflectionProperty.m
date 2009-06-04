@@ -16,7 +16,7 @@
 @synthesize name;
 @synthesize attributes;
 
-+ ( id )reflectorWithProperty:( objc_property_t )prop
++ ( id )reflectorFromProperty:( objc_property_t )prop
 {
     id reflector = [ [ self alloc ] initWithProperty: prop ];
     

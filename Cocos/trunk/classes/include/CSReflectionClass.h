@@ -85,9 +85,9 @@
 /*! @property */
 @property( readonly ) NSDictionary * protocols;
 
-+ ( id )reflectorWithClass: ( Class )objectivecClass;
-+ ( id )reflectorWithClassname: ( NSString * )classname;
-+ ( id )reflectorWithObject: ( id )object;
++ ( id )reflectorFromClass: ( Class )objectivecClass;
++ ( id )reflectorFromClassname: ( NSString * )classname;
++ ( id )reflectorFromObject: ( id )object;
 - ( id )initWithClass: ( Class )objectivecClass;
 - ( id )initWithClassname: ( NSString * )classname;
 - ( id )initWithObject: ( id )object;

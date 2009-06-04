@@ -13,7 +13,7 @@
 
 @synthesize name;
 
-+ ( id )reflectorWithProtocol:( Protocol * )proto
++ ( id )reflectorFromProtocol:( Protocol * )proto
 {
     id reflector = [ [ self alloc ] initWithProtocol: proto ];
     

@@ -78,7 +78,7 @@
 /*!
  * 
  */
-+ ( id )reflectorWithProperty:( objc_property_t )prop;
++ ( id )reflectorFromProperty:( objc_property_t )prop;
 
 /*!
  * 

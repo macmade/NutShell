@@ -53,7 +53,7 @@
 /*! @property */
 @property( readonly ) NSString * name;
 
-+ ( id )reflectorWithProtocol:( Protocol * )proto;
++ ( id )reflectorFromProtocol:( Protocol * )proto;
 - ( id )initWithProtocol:( Protocol * )proto;
 
 @end

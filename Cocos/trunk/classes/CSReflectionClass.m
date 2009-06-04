@@ -18,21 +18,21 @@
 @synthesize metaClass;
 @synthesize instanceSize;
 
-+ ( id )reflectorWithClass: ( Class )objectivecClass
++ ( id )reflectorFromClass: ( Class )objectivecClass
 {
     id reflector = [ [ self alloc ] initWithClass: objectivecClass ];
     
     return [ reflector autorelease ];
 }
 
-+ ( id )reflectorWithClassname: ( NSString * )classname
++ ( id )reflectorFromClassname: ( NSString * )classname
 {
     id reflector = [ [ self alloc ] initWithClassname: classname ];
     
     return [ reflector autorelease ];
 }
 
-+ ( id )reflectorWithObject: ( id )object
++ ( id )reflectorFromObject: ( id )object
 {
     id reflector = [ [ self alloc ] initWithObject: object ];
     
@@ -131,7 +131,7 @@
             
             for( i = 0; i < protocolCount; i++ ) {
                 
-                protocol = [ CSReflectionProtocol reflectorWithProtocol: classProtocols[ i ] ];
+                protocol = [ CSReflectionProtocol reflectorFromProtocol: classProtocols[ i ] ];
                 
                 [ protocolDict setObject: protocol forKey: [ protocol name ] ];
             }
