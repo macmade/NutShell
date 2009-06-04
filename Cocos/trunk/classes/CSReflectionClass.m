@@ -9,6 +9,7 @@
 
 #import <objc/runtime.h>
 #import "CSReflectionClass.h"
+#import "CSReflectionVariable.h"
 #import "CSReflectionProperty.h"
 #import "CSReflectionProtocol.h"
 
@@ -95,9 +96,31 @@
 
 - ( NSDictionary * )instanceVariables
 {
-    if( instanceVariables == nil ) {
+    unsigned int variableCount;
+    Ivar * classVariables;
+    CSReflectionProperty * variable;
+    NSMutableDictionary * variableDict;
+    unsigned int i;
+    
+    if( properties == nil ) {
         
+        classVariables = class_copyIvarList( objcClass, &variableCount );
+        NSLog( @"count: %i", variableCount );
+        if( classVariables != NULL && variableCount > 0 ) {
+            
+            variableDict = [ NSMutableDictionary dictionaryWithCapacity: variableCount ];
+            
+            for( i = 0; i < variableCount; i++ ) {
+                
+                variable = [ CSReflectionVariable reflectorFromVariable: classVariables[ i ] ];
+                
+                [ variableDict setObject: variable forKey: [ variable name ] ];
+            }
+            
+            instanceVariables = [ [ NSDictionary dictionaryWithDictionary: variableDict ] retain ];
+        }
         
+        free( classVariables );
     }
     
     return instanceVariables;
