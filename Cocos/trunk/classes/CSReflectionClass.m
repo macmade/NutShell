@@ -9,6 +9,7 @@
 
 #import <objc/runtime.h>
 #import "CSReflectionClass.h"
+#import "CSReflectionProperty.h"
 #import "CSReflectionProtocol.h"
 
 @implementation CSReflectionClass
@@ -104,9 +105,31 @@
 
 - ( NSDictionary * )properties
 {
+    unsigned int propertyCount;
+    objc_property_t * classProperties;
+    CSReflectionProperty * property;
+    NSMutableDictionary * propertyDict;
+    unsigned int i;
+    
     if( properties == nil ) {
         
+        classProperties = class_copyPropertyList( objcClass, &propertyCount );
         
+        if( classProperties != NULL && propertyCount > 0 ) {
+            
+            propertyDict = [ NSMutableDictionary dictionaryWithCapacity: propertyCount ];
+            
+            for( i = 0; i < propertyCount; i++ ) {
+                
+                property = [ CSReflectionProperty reflectorFromProperty: classProperties[ i ] ];
+                
+                [ propertyDict setObject: property forKey: [ property name ] ];
+            }
+            
+            properties = [ [ NSDictionary dictionaryWithDictionary: propertyDict ] retain ];
+        }
+        
+        free( classProperties );
     }
     
     return properties;
@@ -134,7 +157,7 @@
         
         classProtocols = class_copyProtocolList( objcClass, &protocolCount );
         
-        if( classProtocols != NULL && ( protocolCount > 0 ) ) {
+        if( classProtocols != NULL && protocolCount > 0 ) {
             
             protocolDict = [ NSMutableDictionary dictionaryWithCapacity: protocolCount ];
             
