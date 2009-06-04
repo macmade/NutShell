@@ -1,8 +1,8 @@
 // $Id$
 
 // Local includes
-#import "MMEventDispatcher.h"
-#import "MMEvent.h"
+#import "CNEventDispatcher.h"
+#import "CNEvent.h"
 
 /**
  * NSObject additions (event dispatcher)
@@ -10,7 +10,7 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@implementation NSObject( MMEventDispatcher )
+@implementation NSObject( CNEventDispatcher )
 
 // A dictionary with the registered events for all Objective-C class instances
 static NSMutableDictionary * _events;
@@ -28,8 +28,8 @@ static NSMutableDictionary * _events;
  */
 - ( void )dispatchEvent: ( NSString * )name target: ( id )target
 {
-    MMEvent * event;
-    event = [ [ MMEvent alloc ] initWithName: name target: target ];
+    CNEvent * event;
+    event = [ [ CNEvent alloc ] initWithName: name target: target ];
     
     [ self dispatchEventObject: event ];
     
@@ -39,7 +39,7 @@ static NSMutableDictionary * _events;
 /**
  * 
  */
-- ( void )dispatchEventObject: ( MMEvent * )event
+- ( void )dispatchEventObject: ( CNEvent * )event
 {
     NSString * classname;
     NSString * instanceId;

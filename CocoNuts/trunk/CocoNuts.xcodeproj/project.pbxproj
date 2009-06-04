@@ -8,55 +8,55 @@
 
 /* Begin PBXBuildFile section */
 		0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054145490FD7519B00D6CB19 /* Security.framework */; };
-		055C80B90FD73D630097C170 /* MMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* MMObject.m */; };
-		055C80E80FD7435C0097C170 /* MMEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* MMEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C80E90FD7435C0097C170 /* MMEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E60FD7435C0097C170 /* MMEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C80EA0FD7435C0097C170 /* MMObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* MMObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C80F70FD745300097C170 /* MMSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80F60FD745300097C170 /* MMSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C80F90FD745410097C170 /* MMObjectSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80F80FD745410097C170 /* MMObjectSingleton.m */; };
-		055C80FB0FD7454B0097C170 /* MMObjectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FA0FD7454B0097C170 /* MMObjectSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C81010FD746240097C170 /* MMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FF0FD746240097C170 /* MMLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C81020FD746240097C170 /* MMLogMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81000FD746240097C170 /* MMLogMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C81050FD746330097C170 /* MMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81030FD746330097C170 /* MMLogger.m */; };
-		055C81060FD746330097C170 /* MMLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81040FD746330097C170 /* MMLogMessage.m */; };
-		055C81610FD749F40097C170 /* Macmade.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81600FD749F40097C170 /* Macmade.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C81A40FD74CE80097C170 /* MMExecution.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81A30FD74CE80097C170 /* MMExecution.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C81A60FD74CF60097C170 /* MMExecution.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81A50FD74CF60097C170 /* MMExecution.m */; };
-		055C81B20FD74E970097C170 /* MMApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C819D0FD74C280097C170 /* MMApplication.m */; };
-		055C81B30FD74E980097C170 /* MMApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81990FD74BED0097C170 /* MMApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05E9A0740FD73BAA00F2E8B0 /* MMEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */; };
-		05E9A0750FD73BAA00F2E8B0 /* MMEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0710FD73BAA00F2E8B0 /* MMEventDispatcher.m */; };
+		055C80B90FD73D630097C170 /* CNObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* CNObject.m */; };
+		055C80E80FD7435C0097C170 /* CNEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* CNEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C80E90FD7435C0097C170 /* CNEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E60FD7435C0097C170 /* CNEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C80EA0FD7435C0097C170 /* CNObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* CNObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C80F70FD745300097C170 /* CNSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80F60FD745300097C170 /* CNSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C80F90FD745410097C170 /* CNObjectSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80F80FD745410097C170 /* CNObjectSingleton.m */; };
+		055C80FB0FD7454B0097C170 /* CNObjectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FA0FD7454B0097C170 /* CNObjectSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C81010FD746240097C170 /* CNLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FF0FD746240097C170 /* CNLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C81020FD746240097C170 /* CNLogMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81000FD746240097C170 /* CNLogMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C81050FD746330097C170 /* CNLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81030FD746330097C170 /* CNLogger.m */; };
+		055C81060FD746330097C170 /* CNLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81040FD746330097C170 /* CNLogMessage.m */; };
+		055C81610FD749F40097C170 /* CocoNuts.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81600FD749F40097C170 /* CocoNuts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C81A40FD74CE80097C170 /* CNExecution.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81A30FD74CE80097C170 /* CNExecution.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C81A60FD74CF60097C170 /* CNExecution.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81A50FD74CF60097C170 /* CNExecution.m */; };
+		055C81B20FD74E970097C170 /* CNApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C819D0FD74C280097C170 /* CNApplication.m */; };
+		055C81B30FD74E980097C170 /* CNApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81990FD74BED0097C170 /* CNApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E9A0740FD73BAA00F2E8B0 /* CNEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* CNEvent.m */; };
+		05E9A0750FD73BAA00F2E8B0 /* CNEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0710FD73BAA00F2E8B0 /* CNEventDispatcher.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		054145490FD7519B00D6CB19 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
-		055C80B80FD73D630097C170 /* MMObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMObject.m; path = classes/MMObject.m; sourceTree = "<group>"; };
-		055C80E50FD7435C0097C170 /* MMEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMEvent.h; sourceTree = "<group>"; };
-		055C80E60FD7435C0097C170 /* MMEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMEventDispatcher.h; sourceTree = "<group>"; };
-		055C80E70FD7435C0097C170 /* MMObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMObject.h; sourceTree = "<group>"; };
-		055C80F60FD745300097C170 /* MMSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSingleton.h; sourceTree = "<group>"; };
-		055C80F80FD745410097C170 /* MMObjectSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMObjectSingleton.m; path = classes/MMObjectSingleton.m; sourceTree = "<group>"; };
-		055C80FA0FD7454B0097C170 /* MMObjectSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMObjectSingleton.h; sourceTree = "<group>"; };
-		055C80FF0FD746240097C170 /* MMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLogger.h; sourceTree = "<group>"; };
-		055C81000FD746240097C170 /* MMLogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLogMessage.h; sourceTree = "<group>"; };
-		055C81030FD746330097C170 /* MMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMLogger.m; path = classes/MMLogger.m; sourceTree = "<group>"; };
-		055C81040FD746330097C170 /* MMLogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMLogMessage.m; path = classes/MMLogMessage.m; sourceTree = "<group>"; };
-		055C81600FD749F40097C170 /* Macmade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macmade.h; sourceTree = "<group>"; };
-		055C81990FD74BED0097C170 /* MMApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMApplication.h; sourceTree = "<group>"; };
-		055C819D0FD74C280097C170 /* MMApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMApplication.m; path = classes/MMApplication.m; sourceTree = "<group>"; };
-		055C81A30FD74CE80097C170 /* MMExecution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExecution.h; sourceTree = "<group>"; };
-		055C81A50FD74CF60097C170 /* MMExecution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMExecution.m; path = classes/MMExecution.m; sourceTree = "<group>"; };
-		05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMEvent.m; path = classes/MMEvent.m; sourceTree = "<group>"; };
-		05E9A0710FD73BAA00F2E8B0 /* MMEventDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMEventDispatcher.m; path = classes/MMEventDispatcher.m; sourceTree = "<group>"; };
+		055C80B80FD73D630097C170 /* CNObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNObject.m; path = classes/CNObject.m; sourceTree = "<group>"; };
+		055C80E50FD7435C0097C170 /* CNEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNEvent.h; sourceTree = "<group>"; };
+		055C80E60FD7435C0097C170 /* CNEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNEventDispatcher.h; sourceTree = "<group>"; };
+		055C80E70FD7435C0097C170 /* CNObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNObject.h; sourceTree = "<group>"; };
+		055C80F60FD745300097C170 /* CNSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSingleton.h; sourceTree = "<group>"; };
+		055C80F80FD745410097C170 /* CNObjectSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNObjectSingleton.m; path = classes/CNObjectSingleton.m; sourceTree = "<group>"; };
+		055C80FA0FD7454B0097C170 /* CNObjectSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNObjectSingleton.h; sourceTree = "<group>"; };
+		055C80FF0FD746240097C170 /* CNLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNLogger.h; sourceTree = "<group>"; };
+		055C81000FD746240097C170 /* CNLogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNLogMessage.h; sourceTree = "<group>"; };
+		055C81030FD746330097C170 /* CNLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNLogger.m; path = classes/CNLogger.m; sourceTree = "<group>"; };
+		055C81040FD746330097C170 /* CNLogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNLogMessage.m; path = classes/CNLogMessage.m; sourceTree = "<group>"; };
+		055C81600FD749F40097C170 /* CocoNuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoNuts.h; sourceTree = "<group>"; };
+		055C81990FD74BED0097C170 /* CNApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNApplication.h; sourceTree = "<group>"; };
+		055C819D0FD74C280097C170 /* CNApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNApplication.m; path = classes/CNApplication.m; sourceTree = "<group>"; };
+		055C81A30FD74CE80097C170 /* CNExecution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNExecution.h; sourceTree = "<group>"; };
+		055C81A50FD74CF60097C170 /* CNExecution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNExecution.m; path = classes/CNExecution.m; sourceTree = "<group>"; };
+		05E9A0700FD73BAA00F2E8B0 /* CNEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNEvent.m; path = classes/CNEvent.m; sourceTree = "<group>"; };
+		05E9A0710FD73BAA00F2E8B0 /* CNEventDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNEventDispatcher.m; path = classes/CNEventDispatcher.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		32DBCF5E0370ADEE00C91783 /* Macmade_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macmade_Prefix.pch; sourceTree = "<group>"; };
+		32DBCF5E0370ADEE00C91783 /* CocoNuts_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoNuts_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DC2EF5B0486A6940098B216 /* Macmade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Macmade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC2EF5B0486A6940098B216 /* CocoNuts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoNuts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +76,7 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5B0486A6940098B216 /* Macmade.framework */,
+				8DC2EF5B0486A6940098B216 /* CocoNuts.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 		055C80E00FD742880097C170 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
-				055C80F60FD745300097C170 /* MMSingleton.h */,
+				055C80F60FD745300097C170 /* CNSingleton.h */,
 			);
 			name = protocols;
 			path = classes/protocols;
@@ -93,21 +93,21 @@
 		055C80E40FD7435C0097C170 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				055C81600FD749F40097C170 /* Macmade.h */,
-				055C81990FD74BED0097C170 /* MMApplication.h */,
-				055C81A30FD74CE80097C170 /* MMExecution.h */,
-				055C80E50FD7435C0097C170 /* MMEvent.h */,
-				055C80E60FD7435C0097C170 /* MMEventDispatcher.h */,
-				055C80FF0FD746240097C170 /* MMLogger.h */,
-				055C81000FD746240097C170 /* MMLogMessage.h */,
-				055C80E70FD7435C0097C170 /* MMObject.h */,
-				055C80FA0FD7454B0097C170 /* MMObjectSingleton.h */,
+				055C81600FD749F40097C170 /* CocoNuts.h */,
+				055C81990FD74BED0097C170 /* CNApplication.h */,
+				055C81A30FD74CE80097C170 /* CNExecution.h */,
+				055C80E50FD7435C0097C170 /* CNEvent.h */,
+				055C80E60FD7435C0097C170 /* CNEventDispatcher.h */,
+				055C80FF0FD746240097C170 /* CNLogger.h */,
+				055C81000FD746240097C170 /* CNLogMessage.h */,
+				055C80E70FD7435C0097C170 /* CNObject.h */,
+				055C80FA0FD7454B0097C170 /* CNObjectSingleton.h */,
 			);
 			name = include;
 			path = classes/include;
 			sourceTree = "<group>";
 		};
-		0867D691FE84028FC02AAC07 /* Macmade */ = {
+		0867D691FE84028FC02AAC07 /* CocoNuts */ = {
 			isa = PBXGroup;
 			children = (
 				08FB77AEFE84172EC02AAC07 /* Classes */,
@@ -116,7 +116,7 @@
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = Macmade;
+			name = CocoNuts;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
@@ -143,14 +143,14 @@
 			children = (
 				055C80E40FD7435C0097C170 /* include */,
 				055C80E00FD742880097C170 /* protocols */,
-				055C819D0FD74C280097C170 /* MMApplication.m */,
-				055C81A50FD74CF60097C170 /* MMExecution.m */,
-				05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */,
-				05E9A0710FD73BAA00F2E8B0 /* MMEventDispatcher.m */,
-				055C81030FD746330097C170 /* MMLogger.m */,
-				055C81040FD746330097C170 /* MMLogMessage.m */,
-				055C80B80FD73D630097C170 /* MMObject.m */,
-				055C80F80FD745410097C170 /* MMObjectSingleton.m */,
+				055C819D0FD74C280097C170 /* CNApplication.m */,
+				055C81A50FD74CF60097C170 /* CNExecution.m */,
+				05E9A0700FD73BAA00F2E8B0 /* CNEvent.m */,
+				05E9A0710FD73BAA00F2E8B0 /* CNEventDispatcher.m */,
+				055C81030FD746330097C170 /* CNLogger.m */,
+				055C81040FD746330097C170 /* CNLogMessage.m */,
+				055C80B80FD73D630097C170 /* CNObject.m */,
+				055C80F80FD745410097C170 /* CNObjectSingleton.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32DBCF5E0370ADEE00C91783 /* Macmade_Prefix.pch */,
+				32DBCF5E0370ADEE00C91783 /* CocoNuts_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -188,25 +188,25 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055C80E80FD7435C0097C170 /* MMEvent.h in Headers */,
-				055C80E90FD7435C0097C170 /* MMEventDispatcher.h in Headers */,
-				055C80EA0FD7435C0097C170 /* MMObject.h in Headers */,
-				055C80F70FD745300097C170 /* MMSingleton.h in Headers */,
-				055C80FB0FD7454B0097C170 /* MMObjectSingleton.h in Headers */,
-				055C81010FD746240097C170 /* MMLogger.h in Headers */,
-				055C81020FD746240097C170 /* MMLogMessage.h in Headers */,
-				055C81610FD749F40097C170 /* Macmade.h in Headers */,
-				055C81A40FD74CE80097C170 /* MMExecution.h in Headers */,
-				055C81B30FD74E980097C170 /* MMApplication.h in Headers */,
+				055C80E80FD7435C0097C170 /* CNEvent.h in Headers */,
+				055C80E90FD7435C0097C170 /* CNEventDispatcher.h in Headers */,
+				055C80EA0FD7435C0097C170 /* CNObject.h in Headers */,
+				055C80F70FD745300097C170 /* CNSingleton.h in Headers */,
+				055C80FB0FD7454B0097C170 /* CNObjectSingleton.h in Headers */,
+				055C81010FD746240097C170 /* CNLogger.h in Headers */,
+				055C81020FD746240097C170 /* CNLogMessage.h in Headers */,
+				055C81610FD749F40097C170 /* CocoNuts.h in Headers */,
+				055C81A40FD74CE80097C170 /* CNExecution.h in Headers */,
+				055C81B30FD74E980097C170 /* CNApplication.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8DC2EF4F0486A6940098B216 /* Macmade */ = {
+		8DC2EF4F0486A6940098B216 /* CocoNuts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Macmade" */;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "CocoNuts" */;
 			buildPhases = (
 				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
@@ -217,10 +217,10 @@
 			);
 			dependencies = (
 			);
-			name = Macmade;
+			name = CocoNuts;
 			productInstallPath = "$(HOME)/Library/Frameworks";
-			productName = Macmade;
-			productReference = 8DC2EF5B0486A6940098B216 /* Macmade.framework */;
+			productName = CocoNuts;
+			productReference = 8DC2EF5B0486A6940098B216 /* CocoNuts.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -228,15 +228,15 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Macmade" */;
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "CocoNuts" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
-			mainGroup = 0867D691FE84028FC02AAC07 /* Macmade */;
+			mainGroup = 0867D691FE84028FC02AAC07 /* CocoNuts */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DC2EF4F0486A6940098B216 /* Macmade */,
+				8DC2EF4F0486A6940098B216 /* CocoNuts */,
 			);
 		};
 /* End PBXProject section */
@@ -257,14 +257,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E9A0740FD73BAA00F2E8B0 /* MMEvent.m in Sources */,
-				05E9A0750FD73BAA00F2E8B0 /* MMEventDispatcher.m in Sources */,
-				055C80B90FD73D630097C170 /* MMObject.m in Sources */,
-				055C80F90FD745410097C170 /* MMObjectSingleton.m in Sources */,
-				055C81050FD746330097C170 /* MMLogger.m in Sources */,
-				055C81060FD746330097C170 /* MMLogMessage.m in Sources */,
-				055C81A60FD74CF60097C170 /* MMExecution.m in Sources */,
-				055C81B20FD74E970097C170 /* MMApplication.m in Sources */,
+				05E9A0740FD73BAA00F2E8B0 /* CNEvent.m in Sources */,
+				05E9A0750FD73BAA00F2E8B0 /* CNEventDispatcher.m in Sources */,
+				055C80B90FD73D630097C170 /* CNObject.m in Sources */,
+				055C80F90FD745410097C170 /* CNObjectSingleton.m in Sources */,
+				055C81050FD746330097C170 /* CNLogger.m in Sources */,
+				055C81060FD746330097C170 /* CNLogMessage.m in Sources */,
+				055C81A60FD74CF60097C170 /* CNExecution.m in Sources */,
+				055C81B20FD74E970097C170 /* CNApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,10 +295,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Macmade_Prefix.pch;
+				GCC_PREFIX_HEADER = CocoNuts_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Frameworks;
-				PRODUCT_NAME = Macmade;
+				PRODUCT_NAME = CocoNuts;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -315,10 +315,10 @@
 				FRAMEWORK_VERSION = 1.0;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Macmade_Prefix.pch;
+				GCC_PREFIX_HEADER = CocoNuts_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Frameworks;
-				PRODUCT_NAME = Macmade;
+				PRODUCT_NAME = CocoNuts;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -394,7 +394,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Macmade" */ = {
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "CocoNuts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB91AE08733DA50010E9CD /* Debug */,
@@ -403,7 +403,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Macmade" */ = {
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "CocoNuts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,

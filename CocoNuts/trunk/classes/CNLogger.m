@@ -1,9 +1,9 @@
 // $Id$
 
 // Local includes
-#import "MMLogger.h"
-#import "MMLogMessage.h"
-#import "MMEventDispatcher.h"
+#import "CNLogger.h"
+#import "CNLogMessage.h"
+#import "CNEventDispatcher.h"
 
 /**
  * Logger
@@ -11,7 +11,7 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@implementation MMLogger
+@implementation CNLogger
 
 /**
  * Automatic getters/setters
@@ -40,7 +40,7 @@
  * @param   LogMessage *    The message to add
  * @return  void
  */
-- ( void )message: ( MMLogMessage * ) message
+- ( void )message: ( CNLogMessage * ) message
 {
     [ messages addObject: message ];
     
@@ -55,9 +55,9 @@
  */
 - ( void )log: ( NSString * )message
 {
-   MMLogMessage * msg;
+   CNLogMessage * msg;
     
-    msg = [ [ MMLogMessage alloc ] initWithMessage: message ];
+    msg = [ [ CNLogMessage alloc ] initWithMessage: message ];
     
     [ messages addObject: msg ];
     
@@ -72,12 +72,12 @@
  */
 - ( void )debug: ( NSString * )message
 {
-    MMLogMessage * msg;
+    CNLogMessage * msg;
     
     if( enableDebug == YES ) {
         
-        msg      = [ [ MMLogMessage alloc ] initWithMessage: message ];
-        msg.type = MMMessageDebug;
+        msg      = [ [ CNLogMessage alloc ] initWithMessage: message ];
+        msg.type = CNMessageDebug;
         
         [ messages addObject: msg ];
         

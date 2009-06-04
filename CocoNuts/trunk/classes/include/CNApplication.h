@@ -1,7 +1,7 @@
 // $Id$
 
 // Used classes
-@class MMLogger, MMExecution;
+@class CNLogger, CNExecution;
 
 /**
  * Application base
@@ -9,14 +9,14 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@interface MMApplication: NSApplication
+@interface CNApplication: NSApplication
 {
     @protected
     
     /**
      * The authorization object
      */
-    MMExecution * execution;
+    CNExecution * execution;
     
     /**
      * The shared workspace
@@ -26,14 +26,14 @@
     /**
      * The logger object
      */
-    MMLogger * logger;
+    CNLogger * logger;
 }
 
 /**
  * Class properties
  */
-@property( readonly ) MMExecution * execution;
+@property( readonly ) CNExecution * execution;
 @property( readonly ) NSWorkspace * workspace;
-@property( readonly ) MMLogger * logger;
+@property( readonly ) CNLogger * logger;
 
 @end

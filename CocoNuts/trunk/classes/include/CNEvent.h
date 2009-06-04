@@ -1,7 +1,7 @@
 // $Id$
 
 // Local includes
-#import "MMObject.h"
+#import "CNObject.h"
 
 /**
  * Event object
@@ -9,7 +9,7 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@interface MMEvent: MMObject
+@interface CNEvent: CNObject
 {
     @protected
     

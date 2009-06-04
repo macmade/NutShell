@@ -1,9 +1,9 @@
 // $Id$
 
 // Local includes
-#import "MMApplication.h"
-#import "MMExecution.h"
-#import "MMLogger.h"
+#import "CNApplication.h"
+#import "CNExecution.h"
+#import "CNLogger.h"
 
 /**
  * Application base
@@ -11,7 +11,7 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@implementation MMApplication
+@implementation CNApplication
 
 /**
  * Automatic getters/setters
@@ -29,9 +29,9 @@
 {
     if( ( self = [ super init ] ) ) {
         
-        execution = [ MMExecution getInstance  ];
+        execution = [ CNExecution getInstance  ];
         workspace = [ NSWorkspace sharedWorkspace ];
-        logger    = [ MMLogger getInstance ];
+        logger    = [ CNLogger getInstance ];
     }
     
     return self;

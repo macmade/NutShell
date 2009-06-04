@@ -1,14 +1,14 @@
 // $Id$
 
 // Local includes
-#import "MMObject.h"
+#import "CNObject.h"
 
 /**
  * Types of the log messages
  */
 enum {
-    MMMessageLog   = 0,
-    MMMessageDebug = 1
+    CNMessageLog   = 0,
+    CNMessageDebug = 1
 };
 
 /**
@@ -17,7 +17,7 @@ enum {
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@interface MMLogMessage: MMObject
+@interface CNLogMessage: CNObject
 {
     @protected
     

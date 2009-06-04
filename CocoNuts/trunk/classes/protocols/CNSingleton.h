@@ -1,6 +1,6 @@
 // $Id$
 
-@protocol MMSingleton
+@protocol CNSingleton
 
 + ( id )getInstance;
 

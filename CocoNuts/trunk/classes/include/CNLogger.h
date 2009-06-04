@@ -1,10 +1,10 @@
 // $Id$
 
 // Local includes
-#import "MMObjectSingleton.h"
+#import "CNObjectSingleton.h"
 
 // Used classes
-@class MMLogMessage;
+@class CNLogMessage;
 
 /**
  * Logger
@@ -12,7 +12,7 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@interface MMLogger: MMObjectSingleton
+@interface CNLogger: CNObjectSingleton
 {
     @protected
     
@@ -39,7 +39,7 @@
  * @param   LogMessage *    The message to add
  * @return  void
  */
-- ( void )message: ( MMLogMessage * ) message;
+- ( void )message: ( CNLogMessage * ) message;
 
 /**
  * Adds a log message

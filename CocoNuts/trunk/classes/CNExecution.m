@@ -1,7 +1,7 @@
 // $Id$
 
 // Local includes
-#import "MMExecution.h"
+#import "CNExecution.h"
 
 /**
  * Execution helper
@@ -9,7 +9,7 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@implementation MMExecution
+@implementation CNExecution
 
 /**
  * Automatic getters/setters
@@ -18,7 +18,7 @@
 @synthesize authorizationRef;
 
 /**
- * Authorize the user to execute commands with admin privileges
+ * Authorize the user to execute coCNands with admin privileges
  * 
  * @return  void
  */
@@ -89,15 +89,15 @@
 }
 
 /**
- * Executes a command line tool with admin privileges
+ * Executes a coCNand line tool with admin privileges
  * 
- * @param   char *      The path to the command line tool
- * @param   char * []   The arguments for the command line tool
+ * @param   char *      The path to the coCNand line tool
+ * @param   char * []   The arguments for the coCNand line tool
  * @return  FILE *      An I/O pipe
  */
-- ( FILE * )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments
+- ( FILE * )executeWithPrivileges: ( char * )coCNand arguments: ( char * [] )arguments
 {
-    // File pointer for the command line result
+    // File pointer for the coCNand line result
     FILE * io;
     
     // The authorization status
@@ -106,23 +106,23 @@
     // The authorization flags
     AuthorizationFlags flags;
     
-    // Checks if the user is authorized to execute privileged commands
+    // Checks if the user is authorized to execute privileged coCNands
     if( canExecuteWithPrivilege == NO ) {
         
         // Authorizes the user
         [ self authorizeExecute ];
     }
     
-    // Checks if the user is authorized to execute privileged commands
+    // Checks if the user is authorized to execute privileged coCNands
     if( canExecuteWithPrivilege == YES ) {
         
         // Gets the default authorization flags
         flags  = kAuthorizationFlagDefaults;
         
-        // Executes the command line tool
+        // Executes the coCNand line tool
         status = AuthorizationExecuteWithPrivileges(
             authorizationRef,
-            command,
+            coCNand,
             flags,
             arguments,
             &io
@@ -134,15 +134,15 @@
 }
 
 /**
- * Executes a command line tool with admin privileges
+ * Executes a coCNand line tool with admin privileges
  * 
- * @param   NSString *      The path to the command line tool
- * @param   NSArray * []    The arguments for the command line tool
+ * @param   NSString *      The path to the coCNand line tool
+ * @param   NSArray * []    The arguments for the coCNand line tool
  * @return  NSFileHandle *  An I/O pipe
  */
-- ( NSFileHandle * )execute: ( NSString * )command arguments: ( NSArray * )arguments
+- ( NSFileHandle * )execute: ( NSString * )coCNand arguments: ( NSArray * )arguments
 {
-    // File pointer for the command line result
+    // File pointer for the coCNand line result
     NSFileHandle * io;
     
     // Task object for the execution
@@ -154,8 +154,8 @@
     // Creates the task
     task = [ [ NSTask alloc ] init ];
     
-    // Sets the command path
-    [ task setLaunchPath: command ];
+    // Sets the coCNand path
+    [ task setLaunchPath: coCNand ];
     
     // Sets the arguments
     [task setArguments: arguments ];
@@ -169,7 +169,7 @@
     // Gets the file handle
     io = [ pipe fileHandleForReading ];
     
-    // Launches the command
+    // Launches the coCNand
     [ task launch ];
     
     // Returns the I/O pipe
@@ -177,7 +177,7 @@
 }
 
 /**
- * Opens a target with the /usr/bin/open command
+ * Opens a target with the /usr/bin/open coCNand
  * 
  * @param   NSString *      The target to open
  * @return  NSFileHandle *  An I/O pipe
@@ -190,7 +190,7 @@
     // Create the arguments array
     args = [ NSArray arrayWithObjects: target, nil ];
     
-    // Executes the open command
+    // Executes the open coCNand
     return [ self execute: @"/usr/bin/open" arguments: args ];
 }
 

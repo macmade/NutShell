@@ -1,7 +1,7 @@
 // $Id$
 
 // Used classes
-@class MMEvent;
+@class CNEvent;
 
 /**
  * NSObject additions (event dispatcher)
@@ -9,7 +9,7 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@interface NSObject( MMEventDispatcher )
+@interface NSObject( CNEventDispatcher )
 
 /**
  * 
@@ -24,7 +24,7 @@
 /**
  * 
  */
-- ( void )dispatchEventObject: ( MMEvent * )event;
+- ( void )dispatchEventObject: ( CNEvent * )event;
 
 /**
  * 

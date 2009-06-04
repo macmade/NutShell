@@ -1,9 +1,9 @@
 // $Id$
 
 // Local includes
-#import "MMObjectSingleton.h"
+#import "CNObjectSingleton.h"
 
-@implementation MMObjectSingleton
+@implementation CNObjectSingleton
 
 static NSMutableDictionary * _instances;
 

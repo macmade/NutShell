@@ -1,7 +1,7 @@
 // $Id$
 
 // Local includes
-#import "MMLogMessage.h"
+#import "CNLogMessage.h"
 
 /**
  * Log message object
@@ -9,7 +9,7 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@implementation MMLogMessage
+@implementation CNLogMessage
 
 /**
  * Automatic getters/setters
@@ -27,7 +27,7 @@
     
     self.message = @"";
     self.date    = [ NSDate date ];
-    self.type    = MMMessageLog;
+    self.type    = CNMessageLog;
     
     return self;
 }
