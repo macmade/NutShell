@@ -9,7 +9,7 @@
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@interface MMAuthorization: MMObjectSingleton
+@interface MMExecution: MMObjectSingleton
 {
     @protected
     
@@ -44,7 +44,7 @@
  * @param   char * []   The arguments for the command line tool
  * @return  FILE *      An I/O pipe
  */
-- ( FILE * )ExecuteWithPrivileges: ( char * )command arguments: ( char * [] )arguments;
+- ( FILE * )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments;
 
 /**
  * Executes a command line tool with admin privileges

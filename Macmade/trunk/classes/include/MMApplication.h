@@ -1,7 +1,7 @@
 // $Id$
 
 // Used classes
-@class MMLogger, MMAuthorization;
+@class MMLogger, MMExecution;
 
 /**
  * Application base
@@ -16,7 +16,7 @@
     /**
      * The authorization object
      */
-    MMAuthorization * authorization;
+    MMExecution * execution;
     
     /**
      * The shared workspace
@@ -32,7 +32,7 @@
 /**
  * Class properties
  */
-@property( readonly ) MMAuthorization * authorization;
+@property( readonly ) MMExecution * execution;
 @property( readonly ) NSWorkspace * workspace;
 @property( readonly ) MMLogger * logger;
 

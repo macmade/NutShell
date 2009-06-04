@@ -1,15 +1,15 @@
 // $Id$
 
 // Local includes
-#import "MMAuthorization.h"
+#import "MMExecution.h"
 
 /**
- * Authorization helper
+ * Execution helper
  *
  * @author      Jean-David Gadina <macmade@eosgarden.com>
  * @version     1.0
  */
-@implementation MMAuthorization
+@implementation MMExecution
 
 /**
  * Automatic getters/setters
@@ -95,7 +95,7 @@
  * @param   char * []   The arguments for the command line tool
  * @return  FILE *      An I/O pipe
  */
-- ( FILE * )ExecuteWithPrivileges: ( char * )command arguments: ( char * [] )arguments
+- ( FILE * )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments
 {
     // File pointer for the command line result
     FILE * io;

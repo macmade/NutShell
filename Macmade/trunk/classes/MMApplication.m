@@ -2,7 +2,7 @@
 
 // Local includes
 #import "MMApplication.h"
-#import "MMAuthorization.h"
+#import "MMExecution.h"
 #import "MMLogger.h"
 
 /**
@@ -16,7 +16,7 @@
 /**
  * Automatic getters/setters
  */
-@synthesize authorization;
+@synthesize execution;
 @synthesize workspace;
 @synthesize logger;
 
@@ -29,9 +29,9 @@
 {
     if( ( self = [ super init ] ) ) {
         
-        authorization = [ MMAuthorization getInstance  ];
-        workspace     = [ NSWorkspace sharedWorkspace ];
-        logger        = [ MMLogger getInstance ];
+        execution = [ MMExecution getInstance  ];
+        workspace = [ NSWorkspace sharedWorkspace ];
+        logger    = [ MMLogger getInstance ];
     }
     
     return self;
