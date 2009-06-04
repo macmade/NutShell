@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054145490FD7519B00D6CB19 /* Security.framework */; };
 		055C80B90FD73D630097C170 /* MMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* MMObject.m */; };
 		055C80E80FD7435C0097C170 /* MMEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* MMEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80E90FD7435C0097C170 /* MMEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E60FD7435C0097C170 /* MMEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054145490FD7519B00D6CB19 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		055C80B80FD73D630097C170 /* MMObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMObject.m; path = classes/MMObject.m; sourceTree = "<group>"; };
 		055C80E50FD7435C0097C170 /* MMEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMEvent.h; sourceTree = "<group>"; };
 		055C80E60FD7435C0097C170 /* MMEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMEventDispatcher.h; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +122,7 @@
 		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				054145490FD7519B00D6CB19 /* Security.framework */,
 				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
 				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
 			);
