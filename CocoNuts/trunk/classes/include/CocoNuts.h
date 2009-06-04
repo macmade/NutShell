@@ -1,3 +1,14 @@
+/*******************************************************************************
+ * CocoNuts Framework
+ * 
+ * Copyright (c) 2009, Jean-David Gadina (macmade@eosgarden.com)
+ * All rights reserved.
+ * 
+ * This file should be included by all application source files using the
+ * CocoNuts framework for easy building.  Using this file is preferred over
+ * importing individual files because it will use a precompiled version.
+ ******************************************************************************/
+
 // $Id$
 
 // Local includes
