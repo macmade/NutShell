@@ -30,11 +30,12 @@
  */
 - ( id )init
 {
-    self = [ super init ];
-    
-    self.message = @"";
-    self.date    = [ NSDate date ];
-    self.type    = CNMessageLog;
+    if( ( self = [ super init ] ) ) {
+        
+        self.message = @"";
+        self.date    = [ NSDate date ];
+        self.type    = CNMessageLog;
+    }
     
     return self;
 }
@@ -44,9 +45,10 @@
  */
 - ( id )initWithMessage: ( NSString * )str
 {
-    self = [ self init ];
-    
-    self.message = str;
+    if( ( self = [ super init ] ) ) {
+        
+        self.message = str;
+    }
     
     return self;
 }
@@ -56,10 +58,11 @@
  */
 - ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time
 {
-    self = [ self init ];
-    
-    self.message = str;
-    self.date    = time;
+    if( ( self = [ super init ] ) ) {
+        
+        self.message = str;
+        self.date    = time;
+    }
     
     return self;
 }
@@ -69,11 +72,12 @@
  */
 - ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType
 {
-    self = [ self init ];
-    
-    self.message = str;
-    self.date    = time;
-    self.type    = messageType;
+    if( ( self = [ super init ] ) ) {
+        
+        self.message = str;
+        self.date    = time;
+        self.type    = messageType;
+    }
     
     return self;
 }

@@ -48,11 +48,11 @@
     
     // Creates a new authorization
     status = AuthorizationCreate(
-                                 NULL,
-                                 kAuthorizationEmptyEnvironment,
-                                 flags,
-                                 &authorizationRef
-                                 );
+         NULL,
+         kAuthorizationEmptyEnvironment,
+         flags,
+         &authorizationRef
+     );
     
     // Checks the authorization status
     if( status == errAuthorizationSuccess ) {
@@ -69,18 +69,18 @@
         
         // Authorization flags
         flags = kAuthorizationFlagDefaults
-        | kAuthorizationFlagInteractionAllowed
-        | kAuthorizationFlagPreAuthorize
-        | kAuthorizationFlagExtendRights;
+              | kAuthorizationFlagInteractionAllowed
+              | kAuthorizationFlagPreAuthorize
+              | kAuthorizationFlagExtendRights;
         
         // Authorizes user for privileged execution
         status = AuthorizationCopyRights(
-                                         authorizationRef,
-                                         &rights,
-                                         NULL,
-                                         flags,
-                                         NULL
-                                         );
+             authorizationRef,
+             &rights,
+             NULL,
+             flags,
+             NULL
+         );
         
         // Checks the authorization status
         if( status == errAuthorizationSuccess ) {
