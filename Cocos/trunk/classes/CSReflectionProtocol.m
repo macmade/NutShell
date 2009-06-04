@@ -77,6 +77,7 @@
 
 - ( void )dealloc
 {
+    [ properties release ];
     [ super dealloc ];
 }
 
