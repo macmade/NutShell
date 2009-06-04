@@ -27,6 +27,10 @@
  */
 @interface CNReflectionProtocol: CNObject
 {
+@protected
+    
+    NSString * name;
+    
 @private
     
     /*!
@@ -45,5 +49,11 @@
      */
     id CN_r2;
 }
+
+/*! @property */
+@property( readonly ) NSString * name;
+
++ ( id )reflectorWithProtocol:( Protocol * )proto;
+- ( id )initWithProtocol:( Protocol * )proto;
 
 @end
