@@ -35,17 +35,17 @@
     /*!
      * 
      */
+    Ivar variable;
+    
+    /*!
+     * 
+     */
     NSString * name;
     
     /*!
      * 
      */
     NSString * typeEncoding;
-    
-    /*!
-     * 
-     */
-    ptrdiff_t offset;
     
 @private
     
@@ -67,13 +67,13 @@
 }
 
 /*! @property */
+@property( readonly ) Ivar variable;
+
+/*! @property */
 @property( readonly ) NSString * name;
 
 /*! @property */
 @property( readonly ) NSString * typeEncoding;
-
-/*! @property */
-@property( readonly ) ptrdiff_t offset;
 
 /*!
  * 
