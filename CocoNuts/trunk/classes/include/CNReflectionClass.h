@@ -21,6 +21,15 @@
  * @version     1.0
  */
 @interface CNReflectionClass: CNObject
-{}
+{
+@private
+    
+    /**
+     * Reserved instance variables to help ensure binary compatibility with
+     * future versions of the class
+     */
+    id _r1;
+    id _r2;
+}
 
 @end
