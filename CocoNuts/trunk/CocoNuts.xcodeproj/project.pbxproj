@@ -309,6 +309,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = /;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -319,6 +320,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Frameworks;
 				PRODUCT_NAME = CocoNuts;
+				SEPARATE_STRIP = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
