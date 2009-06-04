@@ -5,6 +5,7 @@
 #import "MMObject.h"
 
 @interface MMObjectSingleton: MMObject < MMSingleton >
+{}
 
 + ( id )getInstance;
 
