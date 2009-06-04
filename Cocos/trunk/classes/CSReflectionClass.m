@@ -39,6 +39,15 @@
     return [ reflector autorelease ];
 }
 
+- ( NSString * )description
+{
+    NSString * description;
+    
+    description = [ [ super description ] stringByAppendingFormat: @"\n\t- class:\t\t\t%@\n\t- instance size:\t%@\n\t- meta class:\t\t%i", name, instanceSize, metaClass ];
+    
+    return description;
+}
+
 - ( id )initWithClass: ( Class )objectivecClass
 {
     if( objectivecClass && ( self = [ super init ] ) ) {
