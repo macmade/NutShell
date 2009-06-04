@@ -15,6 +15,15 @@
 @synthesize target;
 @synthesize name;
 
+- ( NSString * )description
+{
+    NSString * description;
+    
+    description = [ [ super description ] stringByAppendingFormat: @"\n\t- name:\t\t\t%@\n\t- target:\t\t%@\n\t- propagating:\t%i", name, target, propagating ];
+    
+    return description;
+}
+
 - ( id ) init
 {
     if( ( self = [ super init ] ) ) {
