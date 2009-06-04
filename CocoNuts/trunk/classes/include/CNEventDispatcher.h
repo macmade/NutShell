@@ -56,7 +56,7 @@
  * @abstract    Adds an event listener on an event of the current object
  * 
  * @param       name        The name of the event to listen
- * @param       targer      The target class instance
+ * @param       target      The target class instance
  * @param       selector    The selector for the method of the target
  " @return      void
  */
@@ -66,7 +66,7 @@
  * @abstract    Adds an event listener on an event of the current object
  * 
  * @param       name        The name of the event to listen
- * @param       targer      The target class instance
+ * @param       target      The target class instance
  * @param       selector    The selector for the method of the target
  * @param       priority    The priority of the event listener
  " @return      void

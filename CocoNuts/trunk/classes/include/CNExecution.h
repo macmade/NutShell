@@ -75,7 +75,7 @@
  * @abstract    Executes a command line tool with admin privileges
  * 
  * @param       command     The path to the command line tool
- * @param       arguements  The arguments for the command line tool
+ * @param       arguments   The arguments for the command line tool
  * @return      An I/O pipe
  */
 - ( FILE * )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments;
