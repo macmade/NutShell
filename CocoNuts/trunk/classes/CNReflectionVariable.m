@@ -7,6 +7,7 @@
 
 // $Id$
 
+#import <objc/runtime.h>
 #import "CNReflectionVariable.h"
 
 @implementation CNReflectionVariable

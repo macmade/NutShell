@@ -16,6 +16,9 @@
  *              precompiled version.
  */
 
+// System includes
+#import <objc/runtime.h>
+
 // Local includes
 #import "CNObject.h"
 
@@ -27,6 +30,23 @@
  */
 @interface CNReflectionVariable: CNObject
 {
+@protected
+    
+    /*!
+     * 
+     */
+    NSString * name;
+    
+    /*!
+     * 
+     */
+    NSString * typeEncoding;
+    
+    /*!
+     * 
+     */
+    ptrdiff_t offset;
+    
 @private
     
     /*!
@@ -45,5 +65,24 @@
      */
     id CN_r2;
 }
+
+/*! @property */
+@property( readonly ) NSString * name;
+
+/*! @property */
+@property( readonly ) NSString * typeEncoding;
+
+/*! @property */
+@property( readonly ) ptrdiff_t offset;
+
+/*!
+ * 
+ */
++ ( id )reflectorFromVariable:( Ivar )var;
+
+/*!
+ * 
+ */
+- ( id )initWithVariable:( Ivar )var;
 
 @end
