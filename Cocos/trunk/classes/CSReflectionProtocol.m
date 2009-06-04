@@ -20,6 +20,15 @@
     return [ reflector autorelease ];
 }
 
+- ( NSString * )description
+{
+    NSString * description;
+    
+    description = [ [ super description ] stringByAppendingFormat: @"\n\t- protocol:\t%@", name ];
+    
+    return description;
+}
+
 - ( id )initWithProtocol:( Protocol * )proto
 {
     if( proto && ( self = [ super init ] ) ) {
