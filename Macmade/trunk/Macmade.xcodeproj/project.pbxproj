@@ -18,6 +18,7 @@
 		055C81020FD746240097C170 /* MMLogMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81000FD746240097C170 /* MMLogMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C81050FD746330097C170 /* MMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81030FD746330097C170 /* MMLogger.m */; };
 		055C81060FD746330097C170 /* MMLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81040FD746330097C170 /* MMLogMessage.m */; };
+		055C81610FD749F40097C170 /* Macmade.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81600FD749F40097C170 /* Macmade.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E9A0740FD73BAA00F2E8B0 /* MMEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */; };
 		05E9A0750FD73BAA00F2E8B0 /* MMEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0710FD73BAA00F2E8B0 /* MMEventDispatcher.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
@@ -36,6 +37,7 @@
 		055C81000FD746240097C170 /* MMLogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLogMessage.h; sourceTree = "<group>"; };
 		055C81030FD746330097C170 /* MMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMLogger.m; path = classes/MMLogger.m; sourceTree = "<group>"; };
 		055C81040FD746330097C170 /* MMLogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMLogMessage.m; path = classes/MMLogMessage.m; sourceTree = "<group>"; };
+		055C81600FD749F40097C170 /* Macmade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macmade.h; sourceTree = "<group>"; };
 		05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMEvent.m; path = classes/MMEvent.m; sourceTree = "<group>"; };
 		05E9A0710FD73BAA00F2E8B0 /* MMEventDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMEventDispatcher.m; path = classes/MMEventDispatcher.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -80,6 +82,7 @@
 		055C80E40FD7435C0097C170 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				055C81600FD749F40097C170 /* Macmade.h */,
 				055C80E50FD7435C0097C170 /* MMEvent.h */,
 				055C80E60FD7435C0097C170 /* MMEventDispatcher.h */,
 				055C80FF0FD746240097C170 /* MMLogger.h */,
@@ -176,6 +179,7 @@
 				055C80FB0FD7454B0097C170 /* MMObjectSingleton.h in Headers */,
 				055C81010FD746240097C170 /* MMLogger.h in Headers */,
 				055C81020FD746240097C170 /* MMLogMessage.h in Headers */,
+				055C81610FD749F40097C170 /* Macmade.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
