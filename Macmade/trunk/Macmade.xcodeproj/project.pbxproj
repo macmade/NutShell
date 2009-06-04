@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		055C80B90FD73D630097C170 /* MMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* MMObject.m */; };
-		055C80E80FD7435C0097C170 /* MMEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* MMEvent.h */; };
-		055C80E90FD7435C0097C170 /* MMEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E60FD7435C0097C170 /* MMEventDispatcher.h */; };
-		055C80EA0FD7435C0097C170 /* MMObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* MMObject.h */; };
-		055C80F70FD745300097C170 /* MMSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80F60FD745300097C170 /* MMSingleton.h */; };
+		055C80E80FD7435C0097C170 /* MMEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* MMEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C80E90FD7435C0097C170 /* MMEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E60FD7435C0097C170 /* MMEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C80EA0FD7435C0097C170 /* MMObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* MMObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C80F70FD745300097C170 /* MMSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80F60FD745300097C170 /* MMSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80F90FD745410097C170 /* MMObjectSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80F80FD745410097C170 /* MMObjectSingleton.m */; };
-		055C80FB0FD7454B0097C170 /* MMObjectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FA0FD7454B0097C170 /* MMObjectSingleton.h */; };
-		055C81010FD746240097C170 /* MMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FF0FD746240097C170 /* MMLogger.h */; };
-		055C81020FD746240097C170 /* MMLogMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81000FD746240097C170 /* MMLogMessage.h */; };
+		055C80FB0FD7454B0097C170 /* MMObjectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FA0FD7454B0097C170 /* MMObjectSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C81010FD746240097C170 /* MMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FF0FD746240097C170 /* MMLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C81020FD746240097C170 /* MMLogMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81000FD746240097C170 /* MMLogMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C81050FD746330097C170 /* MMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81030FD746330097C170 /* MMLogger.m */; };
 		055C81060FD746330097C170 /* MMLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81040FD746330097C170 /* MMLogMessage.m */; };
 		05E9A0740FD73BAA00F2E8B0 /* MMEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* MMEvent.m */; };
@@ -301,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEPLOYMENT_LOCATION = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
