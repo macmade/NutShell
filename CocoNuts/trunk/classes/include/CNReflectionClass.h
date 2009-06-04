@@ -27,6 +27,18 @@
  */
 @interface CNReflectionClass: CNObject
 {
+@protected
+    
+    Class objcClass;
+    NSString * name;
+    CNReflectionClass * superClass;
+    BOOL metaClass;
+    NSNumber * instanceSize;
+    NSDictionary * instanceVariables;
+    NSDictionary * properties;
+    NSDictionary * instanceMethods;
+    NSDictionary * protocols;
+    
 @private
     
     /*!
@@ -45,5 +57,39 @@
      */
     id CN_r2;
 }
+
+/*! @property */
+@property( readonly ) Class objcClass;
+
+/*! @property */
+@property( readonly ) NSString * name;
+
+/*! @property */
+@property( readonly ) CNReflectionClass * superClass;
+
+/*! @property */
+@property( readonly, getter=isMetaClass ) BOOL metaClass;
+
+/*! @property */
+@property( readonly ) NSNumber * instanceSize;
+
+/*! @property */
+@property( readonly ) NSDictionary * instanceVariables;
+
+/*! @property */
+@property( readonly ) NSDictionary * properties;
+
+/*! @property */
+@property( readonly ) NSDictionary * instanceMethods;
+
+/*! @property */
+@property( readonly ) NSDictionary * protocols;
+
++ ( id )reflectorWithClass: ( Class )objectivecClass;
++ ( id )reflectorWithClassname: ( NSString * )classname;
++ ( id )reflectorWithObject: ( id )object;
+- ( id )initWithClass: ( Class )objectivecClass;
+- ( id )initWithClassname: ( NSString * )classname;
+- ( id )initWithObject: ( id )object;
 
 @end
