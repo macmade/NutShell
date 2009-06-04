@@ -7,10 +7,13 @@
 
 // $Id$
 
+#import <objc/runtime.h>
 #import "CSReflectionProtocol.h"
+#import "CSReflectionProperty.h"
 
 @implementation CSReflectionProtocol
 
+@synthesize protocol;
 @synthesize name;
 
 + ( id )reflectorFromProtocol:( Protocol * )proto
@@ -33,10 +36,43 @@
 {
     if( proto && ( self = [ super init ] ) ) {
         
-        name = NSStringFromProtocol( proto );
+        protocol = proto;
+        name     = NSStringFromProtocol( proto );
     }
     
     return self;
+}
+
+- ( NSDictionary * )properties
+{
+    unsigned int propertyCount;
+    objc_property_t * protocolProperties;
+    CSReflectionProperty * property;
+    NSMutableDictionary * propertyDict;
+    unsigned int i;
+    
+    if( properties == nil ) {
+        
+        protocolProperties = protocol_copyPropertyList( protocol, &propertyCount );
+        
+        if( protocolProperties != NULL && propertyCount > 0 ) {
+            
+            propertyDict = [ NSMutableDictionary dictionaryWithCapacity: propertyCount ];
+            
+            for( i = 0; i < propertyCount; i++ ) {
+                
+                property = [ CSReflectionProperty reflectorFromProperty: protocolProperties[ i ] ];
+                
+                [ propertyDict setObject: property forKey: [ property name ] ];
+            }
+            
+            properties = [ [ NSDictionary dictionaryWithDictionary: propertyDict ] retain ];
+        }
+        
+        free( protocolProperties );
+    }
+    
+    return properties;
 }
 
 - ( void )dealloc

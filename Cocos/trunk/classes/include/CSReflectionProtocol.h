@@ -29,7 +29,9 @@
 {
 @protected
     
+    Protocol * protocol;
     NSString * name;
+    NSDictionary * properties;
     
 @private
     
@@ -51,7 +53,13 @@
 }
 
 /*! @property */
+@property( readonly ) Protocol * protocol;
+
+/*! @property */
 @property( readonly ) NSString * name;
+
+/*! @property */
+@property( readonly ) NSDictionary * properties;
 
 + ( id )reflectorFromProtocol:( Protocol * )proto;
 - ( id )initWithProtocol:( Protocol * )proto;
