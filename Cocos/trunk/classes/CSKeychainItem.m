@@ -70,32 +70,17 @@
 
 - ( BOOL )create
 {
-    if( ( self = [ super init ] ) ) {
-        
-        // ...
-    }
-    
-    return self;
+    return true;
 }
 
 - ( BOOL )modify: ( NSString * )newPassword
 {
-    if( ( self = [ super init ] ) ) {
-        
-        // ...
-    }
-    
-    return self;
+    return true;
 }
 
 - ( BOOL )remove
 {
-    if( ( self = [ super init ] ) ) {
-        
-        // ...
-    }
-    
-    return self;
+    return true;
 }
 
 @end
