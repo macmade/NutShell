@@ -33,7 +33,7 @@
 @protected
     
     /*!
-     * @abstract    The instance variable
+     * @abstract    The Objective-C instance variable
      */
     Ivar variable;
     
@@ -48,7 +48,7 @@
     NSString * typeEncoding;
     
     /*!
-     * @abstract    
+     * @abstract    The offset of the instance variable
      */
     ptrdiff_t offset;
     
