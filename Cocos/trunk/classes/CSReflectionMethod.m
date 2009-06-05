@@ -64,6 +64,22 @@
     return self;
 }
 
+/*!
+ * @abstract    
+ */
+- ( BOOL )isEqual:( SEL )sel
+{
+    return sel_isEqual( selector, sel );
+}
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )isEqualToReflector:( CSReflectionMethod * )methodRef
+{
+    return sel_isEqual( selector, methodRef->selector );
+}
+
 - ( void )dealloc
 {
     [ name release ];

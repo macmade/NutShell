@@ -125,4 +125,14 @@
  */
 - ( id )initWithMethod:( Method )objcMethod;
 
+/*!
+ * @abstract    
+ */
+- ( BOOL )isEqual:( SEL )sel;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )isEqualToReflector:( CSReflectionMethod * )methodRef;
+
 @end
