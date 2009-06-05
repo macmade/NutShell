@@ -10,8 +10,8 @@
 		0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054145490FD7519B00D6CB19 /* Security.framework */; };
 		0550DB600FD9993100DC5241 /* CSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DB5F0FD9993100DC5241 /* CSTextView.m */; };
 		0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DB610FD9993B00DC5241 /* CSTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0550DBB50FD9A28400DC5241 /* CSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DBB40FD9A28400DC5241 /* CSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0550DBB70FD9A29600DC5241 /* CSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DBB60FD9A29600DC5241 /* CSKeychain.m */; };
+		0550DBB50FD9A28400DC5241 /* CSKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0550DBB70FD9A29600DC5241 /* CSKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */; };
 		055C80B90FD73D630097C170 /* CSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* CSObject.m */; };
 		055C80E80FD7435C0097C170 /* CSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* CSEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80EA0FD7435C0097C170 /* CSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* CSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -54,8 +54,8 @@
 		054145490FD7519B00D6CB19 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		0550DB5F0FD9993100DC5241 /* CSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTextView.m; sourceTree = "<group>"; };
 		0550DB610FD9993B00DC5241 /* CSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTextView.h; sourceTree = "<group>"; };
-		0550DBB40FD9A28400DC5241 /* CSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKeychain.h; sourceTree = "<group>"; };
-		0550DBB60FD9A29600DC5241 /* CSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSKeychain.m; path = classes/CSKeychain.m; sourceTree = "<group>"; };
+		0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKeychainItem.h; sourceTree = "<group>"; };
+		0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSKeychainItem.m; path = classes/CSKeychainItem.m; sourceTree = "<group>"; };
 		055C80B80FD73D630097C170 /* CSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSObject.m; path = classes/CSObject.m; sourceTree = "<group>"; };
 		055C80E50FD7435C0097C170 /* CSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEvent.h; sourceTree = "<group>"; };
 		055C80E70FD7435C0097C170 /* CSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSObject.h; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				055C81990FD74BED0097C170 /* CSApplication.h */,
 				055C81A30FD74CE80097C170 /* CSExecution.h */,
 				055C80E50FD7435C0097C170 /* CSEvent.h */,
-				0550DBB40FD9A28400DC5241 /* CSKeychain.h */,
+				0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */,
 				055C80FF0FD746240097C170 /* CSLogger.h */,
 				055C81000FD746240097C170 /* CSLogMessage.h */,
 				055C80E70FD7435C0097C170 /* CSObject.h */,
@@ -215,7 +215,7 @@
 				055C819D0FD74C280097C170 /* CSApplication.m */,
 				055C81A50FD74CF60097C170 /* CSExecution.m */,
 				05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */,
-				0550DBB60FD9A29600DC5241 /* CSKeychain.m */,
+				0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */,
 				055C81030FD746330097C170 /* CSLogger.m */,
 				055C81040FD746330097C170 /* CSLogMessage.m */,
 				055C80B80FD73D630097C170 /* CSObject.m */,
@@ -284,7 +284,7 @@
 				056997C00FD8B03C00B590DD /* CSEventDispatcher.h in Headers */,
 				056997C80FD8B06500B590DD /* CSScrollView.h in Headers */,
 				0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */,
-				0550DBB50FD9A28400DC5241 /* CSKeychain.h in Headers */,
+				0550DBB50FD9A28400DC5241 /* CSKeychainItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +361,7 @@
 				056997BE0FD8B03100B590DD /* CSEventDispatcher.m in Sources */,
 				056997CA0FD8B07000B590DD /* CSScrollView.m in Sources */,
 				0550DB600FD9993100DC5241 /* CSTextView.m in Sources */,
-				0550DBB70FD9A29600DC5241 /* CSKeychain.m in Sources */,
+				0550DBB70FD9A29600DC5241 /* CSKeychainItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
