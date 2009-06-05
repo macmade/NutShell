@@ -62,6 +62,16 @@
     /*!
      * @abstract    
      */
+    NSString * instanceVariableLayout;
+    
+    /*!
+     * @abstract    
+     */
+    NSString * weakInstanceVariableLayout;
+    
+    /*!
+     * @abstract    
+     */
     NSDictionary * properties;
     
     /*!
@@ -110,6 +120,12 @@
 
 /*! @property */
 @property( readonly ) NSDictionary * instanceVariables;
+
+/*! @property */
+@property( readonly ) NSString * instanceVariableLayout;
+
+/*! @property */
+@property( readonly ) NSString * weakInstanceVariableLayout;
 
 /*! @property */
 @property( readonly ) NSDictionary * properties;

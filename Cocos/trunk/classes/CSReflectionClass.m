@@ -20,6 +20,8 @@
 @synthesize name;
 @synthesize metaClass;
 @synthesize instanceSize;
+@synthesize instanceVariableLayout;
+@synthesize weakInstanceVariableLayout;
 
 + ( id )reflectorFromClass: ( Class )objectivecClass
 {
@@ -55,10 +57,12 @@
 {
     if( objectivecClass && ( self = [ super init ] ) ) {
         
-        objcClass    = objectivecClass;
-        name         = [ [ NSString alloc ] initWithCString: class_getName( objcClass ) encoding: NSASCIIStringEncoding ];
-        metaClass    = class_isMetaClass( objcClass );
-        instanceSize = [ [ NSNumber alloc ] initWithInt: class_getInstanceSize( objcClass ) ];
+        objcClass                  = objectivecClass;
+        name                       = [ [ NSString alloc ] initWithCString: class_getName( objcClass ) encoding: NSASCIIStringEncoding ];
+        metaClass                  = class_isMetaClass( objcClass );
+        instanceSize               = [ [ NSNumber alloc ] initWithInt: class_getInstanceSize( objcClass ) ];
+        instanceVariableLayout     = [ [ NSString alloc ] initWithCString: class_getIvarLayout( objcClass ) encoding: NSASCIIStringEncoding ];
+        weakInstanceVariableLayout = [ [ NSString alloc ] initWithCString: class_getWeakIvarLayout( objcClass ) encoding: NSASCIIStringEncoding ];
     }
     
     return self;
@@ -80,6 +84,8 @@
     [ superClass release ];
     [ instanceSize release ];
     [ instanceVariables release ];
+    [ instanceVariableLayout release ];
+    [ weakInstanceVariableLayout release ];
     [ properties release ];
     [ instanceMethods release ];
     [ protocols release ];
