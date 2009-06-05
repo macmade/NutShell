@@ -38,8 +38,8 @@
     if( ( self = [ self init ] ) ) {
         
         variable     = var;
-        name         = [ [ NSString alloc ] initWithCString: ivar_getName( var ) encoding: NSUTF8StringEncoding ];
-        typeEncoding = [ [ NSString alloc ] initWithCString: ivar_getTypeEncoding( var ) encoding: NSUTF8StringEncoding ];
+        name         = [ [ NSString alloc ] initWithCString: ivar_getName( var ) encoding: NSASCIIStringEncoding ];
+        typeEncoding = [ [ NSString alloc ] initWithCString: ivar_getTypeEncoding( var ) encoding: NSASCIIStringEncoding ];
         offset       = ivar_getOffset( var );
     }
     

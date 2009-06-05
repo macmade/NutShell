@@ -44,7 +44,7 @@
     if( proto && ( self = [ super init ] ) ) {
         
         protocol = proto;
-        name     = [ [ NSString alloc ] initWithCString: protocol_getName( proto ) encoding: NSUTF8StringEncoding ];
+        name     = [ [ NSString alloc ] initWithCString: protocol_getName( proto ) encoding: NSASCIIStringEncoding ];
     }
     
     return self;
