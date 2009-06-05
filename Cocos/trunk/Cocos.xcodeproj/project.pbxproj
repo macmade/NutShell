@@ -10,7 +10,6 @@
 		0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054145490FD7519B00D6CB19 /* Security.framework */; };
 		055C80B90FD73D630097C170 /* CSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* CSObject.m */; };
 		055C80E80FD7435C0097C170 /* CSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* CSEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C80E90FD7435C0097C170 /* CSEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E60FD7435C0097C170 /* CSEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80EA0FD7435C0097C170 /* CSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* CSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80F70FD745300097C170 /* CSSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80F60FD745300097C170 /* CSSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80F90FD745410097C170 /* CSObjectSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80F80FD745410097C170 /* CSObjectSingleton.m */; };
@@ -24,6 +23,10 @@
 		055C81A60FD74CF60097C170 /* CSExecution.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81A50FD74CF60097C170 /* CSExecution.m */; };
 		055C81B20FD74E970097C170 /* CSApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C819D0FD74C280097C170 /* CSApplication.m */; };
 		055C81B30FD74E980097C170 /* CSApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81990FD74BED0097C170 /* CSApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		056997BE0FD8B03100B590DD /* CSEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 056997BD0FD8B03100B590DD /* CSEventDispatcher.m */; };
+		056997C00FD8B03C00B590DD /* CSEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */; };
+		056997C80FD8B06500B590DD /* CSScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 056997C70FD8B06500B590DD /* CSScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		056997CA0FD8B07000B590DD /* CSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 056997C90FD8B07000B590DD /* CSScrollView.m */; };
 		05E686C90FD77F6C003FAC5F /* CSReflectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E686CA0FD77F6C003FAC5F /* CSReflectionMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C40FD77F6C003FAC5F /* CSReflectionMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E686CB0FD77F6C003FAC5F /* CSReflectionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C50FD77F6C003FAC5F /* CSReflectionObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,7 +42,6 @@
 		05E68A680FD80F6F003FAC5F /* CSPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E68A670FD80F6F003FAC5F /* CSPreferences.m */; };
 		05E68A6A0FD80F7D003FAC5F /* CSPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E68A690FD80F7D003FAC5F /* CSPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E9A0740FD73BAA00F2E8B0 /* CSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */; };
-		05E9A0750FD73BAA00F2E8B0 /* CSEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0710FD73BAA00F2E8B0 /* CSEventDispatcher.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -48,7 +50,6 @@
 		054145490FD7519B00D6CB19 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		055C80B80FD73D630097C170 /* CSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSObject.m; path = classes/CSObject.m; sourceTree = "<group>"; };
 		055C80E50FD7435C0097C170 /* CSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEvent.h; sourceTree = "<group>"; };
-		055C80E60FD7435C0097C170 /* CSEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEventDispatcher.h; sourceTree = "<group>"; };
 		055C80E70FD7435C0097C170 /* CSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSObject.h; sourceTree = "<group>"; };
 		055C80F60FD745300097C170 /* CSSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSingleton.h; sourceTree = "<group>"; };
 		055C80F80FD745410097C170 /* CSObjectSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSObjectSingleton.m; path = classes/CSObjectSingleton.m; sourceTree = "<group>"; };
@@ -62,6 +63,10 @@
 		055C819D0FD74C280097C170 /* CSApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSApplication.m; path = classes/CSApplication.m; sourceTree = "<group>"; };
 		055C81A30FD74CE80097C170 /* CSExecution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSExecution.h; sourceTree = "<group>"; };
 		055C81A50FD74CF60097C170 /* CSExecution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSExecution.m; path = classes/CSExecution.m; sourceTree = "<group>"; };
+		056997BD0FD8B03100B590DD /* CSEventDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSEventDispatcher.m; sourceTree = "<group>"; };
+		056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEventDispatcher.h; sourceTree = "<group>"; };
+		056997C70FD8B06500B590DD /* CSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSScrollView.h; sourceTree = "<group>"; };
+		056997C90FD8B07000B590DD /* CSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSScrollView.m; sourceTree = "<group>"; };
 		05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionClass.h; sourceTree = "<group>"; };
 		05E686C40FD77F6C003FAC5F /* CSReflectionMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionMethod.h; sourceTree = "<group>"; };
 		05E686C50FD77F6C003FAC5F /* CSReflectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionObject.h; sourceTree = "<group>"; };
@@ -77,7 +82,6 @@
 		05E68A670FD80F6F003FAC5F /* CSPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSPreferences.m; path = classes/CSPreferences.m; sourceTree = "<group>"; };
 		05E68A690FD80F7D003FAC5F /* CSPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPreferences.h; sourceTree = "<group>"; };
 		05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSEvent.m; path = classes/CSEvent.m; sourceTree = "<group>"; };
-		05E9A0710FD73BAA00F2E8B0 /* CSEventDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSEventDispatcher.m; path = classes/CSEventDispatcher.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -125,7 +129,6 @@
 				055C81990FD74BED0097C170 /* CSApplication.h */,
 				055C81A30FD74CE80097C170 /* CSExecution.h */,
 				055C80E50FD7435C0097C170 /* CSEvent.h */,
-				055C80E60FD7435C0097C170 /* CSEventDispatcher.h */,
 				055C80FF0FD746240097C170 /* CSLogger.h */,
 				055C81000FD746240097C170 /* CSLogMessage.h */,
 				055C80E70FD7435C0097C170 /* CSObject.h */,
@@ -140,6 +143,26 @@
 			);
 			name = include;
 			path = classes/include;
+			sourceTree = "<group>";
+		};
+		056997BB0FD8AFAB00B590DD /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				056997BC0FD8AFAB00B590DD /* include */,
+				056997BD0FD8B03100B590DD /* CSEventDispatcher.m */,
+				056997C90FD8B07000B590DD /* CSScrollView.m */,
+			);
+			name = categories;
+			path = classes/categories;
+			sourceTree = "<group>";
+		};
+		056997BC0FD8AFAB00B590DD /* include */ = {
+			isa = PBXGroup;
+			children = (
+				056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */,
+				056997C70FD8B06500B590DD /* CSScrollView.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 		0867D691FE84028FC02AAC07 /* Cocos */ = {
@@ -175,12 +198,12 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				056997BB0FD8AFAB00B590DD /* categories */,
 				055C80E40FD7435C0097C170 /* include */,
 				055C80E00FD742880097C170 /* protocols */,
 				055C819D0FD74C280097C170 /* CSApplication.m */,
 				055C81A50FD74CF60097C170 /* CSExecution.m */,
 				05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */,
-				05E9A0710FD73BAA00F2E8B0 /* CSEventDispatcher.m */,
 				055C81030FD746330097C170 /* CSLogger.m */,
 				055C81040FD746330097C170 /* CSLogMessage.m */,
 				055C80B80FD73D630097C170 /* CSObject.m */,
@@ -231,7 +254,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				055C80E80FD7435C0097C170 /* CSEvent.h in Headers */,
-				055C80E90FD7435C0097C170 /* CSEventDispatcher.h in Headers */,
 				055C80EA0FD7435C0097C170 /* CSObject.h in Headers */,
 				055C80F70FD745300097C170 /* CSSingleton.h in Headers */,
 				055C80FB0FD7454B0097C170 /* CSObjectSingleton.h in Headers */,
@@ -247,6 +269,8 @@
 				05E686CD0FD77F6C003FAC5F /* CSReflectionProtocol.h in Headers */,
 				05E686CE0FD77F6C003FAC5F /* CSReflectionVariable.h in Headers */,
 				05E68A6A0FD80F7D003FAC5F /* CSPreferences.h in Headers */,
+				056997C00FD8B03C00B590DD /* CSEventDispatcher.h in Headers */,
+				056997C80FD8B06500B590DD /* CSScrollView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E9A0740FD73BAA00F2E8B0 /* CSEvent.m in Sources */,
-				05E9A0750FD73BAA00F2E8B0 /* CSEventDispatcher.m in Sources */,
 				055C80B90FD73D630097C170 /* CSObject.m in Sources */,
 				055C80F90FD745410097C170 /* CSObjectSingleton.m in Sources */,
 				055C81050FD746330097C170 /* CSLogger.m in Sources */,
@@ -321,6 +344,8 @@
 				05E686D90FD77F83003FAC5F /* CSReflectionProtocol.m in Sources */,
 				05E686DA0FD77F83003FAC5F /* CSReflectionVariable.m in Sources */,
 				05E68A680FD80F6F003FAC5F /* CSPreferences.m in Sources */,
+				056997BE0FD8B03100B590DD /* CSEventDispatcher.m in Sources */,
+				056997CA0FD8B07000B590DD /* CSScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
