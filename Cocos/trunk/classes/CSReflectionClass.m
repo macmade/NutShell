@@ -20,6 +20,7 @@
 @synthesize name;
 @synthesize metaClass;
 @synthesize instanceSize;
+@synthesize version;
 @synthesize instanceVariableLayout;
 @synthesize weakInstanceVariableLayout;
 
@@ -61,6 +62,7 @@
         name                       = [ [ NSString alloc ] initWithCString: class_getName( objcClass ) encoding: NSASCIIStringEncoding ];
         metaClass                  = class_isMetaClass( objcClass );
         instanceSize               = [ [ NSNumber alloc ] initWithInt: class_getInstanceSize( objcClass ) ];
+        version                    = [ [ NSNumber alloc ] initWithInt: class_getVersion( objcClass ) ];
         instanceVariableLayout     = [ [ NSString alloc ] initWithCString: class_getIvarLayout( objcClass ) encoding: NSASCIIStringEncoding ];
         weakInstanceVariableLayout = [ [ NSString alloc ] initWithCString: class_getWeakIvarLayout( objcClass ) encoding: NSASCIIStringEncoding ];
     }

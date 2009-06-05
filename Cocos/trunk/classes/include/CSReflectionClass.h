@@ -60,6 +60,11 @@
     /*!
      * @abstract    
      */
+    NSNumber * version;
+    
+    /*!
+     * @abstract    
+     */
     NSDictionary * instanceVariables;
     
     /*!
@@ -120,6 +125,9 @@
 
 /*! @property */
 @property( readonly ) NSNumber * instanceSize;
+
+/*! @property */
+@property( readonly ) NSNumber * version;
 
 /*! @property */
 @property( readonly ) NSDictionary * instanceVariables;
