@@ -23,6 +23,13 @@
     return [ reflector autorelease ];
 }
 
++ ( id )reflectorFromProtocolName:( NSString * )protoName
+{
+    id reflector = [ [ self alloc ] initWithProtocolName: protoName ];
+    
+    return [ reflector autorelease ];
+}
+
 - ( NSString * )description
 {
     NSString * description;
@@ -41,6 +48,11 @@
     }
     
     return self;
+}
+
+- ( id )initWithProtocolName:( NSString * )protoName
+{
+    return [ self initWithProtocol: NSProtocolFromString( protoName ) ];
 }
 
 - ( NSDictionary * )properties

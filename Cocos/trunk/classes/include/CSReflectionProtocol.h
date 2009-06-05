@@ -80,6 +80,16 @@
 /*!
  * @abstract    
  */
++ ( id )reflectorFromProtocolName:( NSString * )protoName;
+
+/*!
+ * @abstract    
+ */
 - ( id )initWithProtocol:( Protocol * )proto;
+
+/*!
+ * @abstract    
+ */
+- ( id )initWithProtocolName:( NSString * )protoName;
 
 @end
