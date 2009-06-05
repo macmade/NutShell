@@ -33,17 +33,17 @@
 @protected
     
     /*!
-     * @abstract    
+     * @abstract    The instance variable
      */
     Ivar variable;
     
     /*!
-     * @abstract    
+     * @abstract    The name of the instance variable
      */
     NSString * name;
     
     /*!
-     * @abstract    
+     * @abstract    The type encoding of the instance variable
      */
     NSString * typeEncoding;
     
@@ -84,12 +84,18 @@
 @property( readonly ) ptrdiff_t offset;
 
 /*!
- * @abstract    
+ * @abstract    Creates a reflector with an instance variable
+ * 
+ * @param       var     The instance variable
+ * @return      The instance of the reflector object
  */
 + ( id )reflectorFromVariable:( Ivar )var;
 
 /*!
- * @abstract    
+ * @abstract    Initializes a newly allocated reflector with an instance variable
+ * 
+ * @param       var     The instance variable
+ * @return      The instance of the reflector object
  */
 - ( id )initWithVariable:( Ivar )var;
 

@@ -25,7 +25,9 @@
 @interface NSScrollView( CSScrollView )
 
 /*!
+ * @abstract    Scrolls the NSScrollView object to the bottom
  * 
+ * @return      void
  */
 - ( void )scrollToBottom;
 
