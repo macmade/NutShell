@@ -105,7 +105,7 @@
     if( properties == nil ) {
         
         classVariables = class_copyIvarList( objcClass, &variableCount );
-        NSLog( @"count: %i", variableCount );
+        
         if( classVariables != NULL && variableCount > 0 ) {
             
             variableDict = [ NSMutableDictionary dictionaryWithCapacity: variableCount ];
