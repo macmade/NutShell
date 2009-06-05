@@ -84,7 +84,7 @@
 @property( readonly ) ptrdiff_t offset;
 
 /*!
- * @abstract    Creates a reflector with an instance variable
+ * @abstract    Creates a new reflector with an instance variable
  * 
  * @param       var     The instance variable
  * @return      The instance of the reflector object
