@@ -197,4 +197,9 @@
  */
 - ( BOOL )conformsToProtocolReflector: ( CNReflectionProtocol * )reflector;
 
+/*!
+ * @abstract    
+ */
+- ( id )createInstance: ( size_t )extraBytes;
+
 @end

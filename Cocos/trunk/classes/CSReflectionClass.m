@@ -252,4 +252,9 @@
     return class_conformsToProtocol( objcClass, ( Protocol * )[ reflector protocol ] );
 }
 
+- ( id )createInstance: ( size_t )extraBytes
+{
+    return class_createInstance( objcClass, extraBytes );
+}
+
 @end
