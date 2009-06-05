@@ -11,4 +11,14 @@
 
 @implementation NSTextView( CSTextView )
 
+- ( void )displayContentOfFile: ( NSString * )filePath
+{
+    NSString * fileContent;
+    
+    fileContent = [ [ NSString alloc ] initWithContentsOfFile: filePath ];
+    self.string = fileContent;
+    
+    [ fileContent release ];
+}
+
 @end

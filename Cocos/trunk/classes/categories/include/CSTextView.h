@@ -24,4 +24,12 @@
  */
 @interface NSTextView( CSTextView )
 
+/*!
+ * @abstract    Displays the content of a file in the textview object
+ * 
+ * @param       path    The path to the file
+ * @return      void
+ */
+- ( void )displayContentOfFile: ( NSString * )filePath;
+
 @end
