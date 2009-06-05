@@ -27,6 +27,15 @@
     return [ reflector autorelease ];
 }
 
+- ( NSString * )description
+{
+    NSString * description;
+    
+    description = [ [ super description ] stringByAppendingFormat: @"\n\t- method:\t\t\t\t%@\n\t- type encoding:\t\t%@\n\t- number of arguments:\t%@\n\t- return type:\t\t%@", name, typeEncoding, numberOfArguments, returnType ];
+    
+    return description;
+}
+
 - ( id )initWithMethod:( Method )objcMethod
 {
     NSMutableArray * args;
