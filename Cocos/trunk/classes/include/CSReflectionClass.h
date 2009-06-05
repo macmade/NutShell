@@ -19,6 +19,9 @@
 // Local includes
 #import "CSObject.h"
 
+// Used classes
+@class CNReflectionMethod, CNReflectionProtocol;
+
 /*!
  * @abstract    Objective-C class reflector
  * 
@@ -165,5 +168,25 @@
  * @abstract    
  */
 - ( id )initWithObject: ( id )object;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )respondsToSelector: ( SEL )selector;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )respondsToMethodReflector: ( CNReflectionMethod * )reflector;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )conformsToProtocol: ( Protocol * )protocol;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )conformsToProtocolReflector: ( CNReflectionProtocol * )reflector;
 
 @end

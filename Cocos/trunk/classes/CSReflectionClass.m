@@ -230,4 +230,24 @@
     return protocols;
 }
 
+- ( BOOL )respondsToSelector: ( SEL )selector
+{
+    return class_respondsToSelector( objcClass, selector );
+}
+
+- ( BOOL )respondsToMethodReflector: ( CNReflectionMethod * )reflector
+{
+    return class_respondsToSelector( objcClass, [ reflector selector ] );
+}
+
+- ( BOOL )conformsToProtocol: ( Protocol * )protocol
+{
+    return class_conformsToProtocol( objcClass, protocol );
+}
+
+- ( BOOL )conformsToProtocolReflector: ( CNReflectionProtocol * )reflector
+{
+    return class_conformsToProtocol( objcClass, ( Protocol * )[ reflector protocol ] );
+}
+
 @end
