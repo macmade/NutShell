@@ -16,6 +16,9 @@
  *              precompiled version.
  */
 
+// System includes
+#import <objc/runtime.h>
+
 // Local includes
 #import "CSObject.h"
 

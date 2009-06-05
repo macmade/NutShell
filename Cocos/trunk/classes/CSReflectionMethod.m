@@ -20,9 +20,6 @@
 @synthesize numberOfArguments;
 @synthesize arguments;
 
-/*!
- * @abstract    
- */
 + ( id )reflectorFromMethod:( Method )objcMethod
 {
     id reflector = [ [ self alloc ] initWithMethod: objcMethod ];
@@ -30,17 +27,42 @@
     return [ reflector autorelease ];
 }
 
-/*!
- * @abstract    
- */
 - ( id )initWithMethod:( Method )objcMethod
 {
+    NSMutableArray * args;
+    int i;
+    
     if( ( self = [ super init ] ) ) {
         
-        // ...
+        method            = objcMethod;
+        selector          = method_getName( method );
+        name              = [ [ NSString alloc ] initWithCString: sel_getName( selector ) encoding: NSASCIIStringEncoding ];
+        implementation    = method_getImplementation( method );
+        typeEncoding      = [ [ NSString alloc ] initWithCString: method_getTypeEncoding( method ) encoding: NSASCIIStringEncoding ];
+        returnType        = [ [ NSString alloc ] initWithCString: method_copyReturnType( method ) encoding: NSASCIIStringEncoding ];
+        numberOfArguments = [ [ NSNumber alloc ] initWithInt: method_getNumberOfArguments( method ) ];
+        
+        args = [ NSMutableArray arrayWithCapacity: [ numberOfArguments intValue ] ];
+        
+        for( i = 0; i < [ numberOfArguments intValue ]; i++ ) {
+            
+            [ args addObject: [ NSString stringWithCString: method_copyArgumentType( method, i ) encoding: NSASCIIStringEncoding ] ];
+        }
+        
+        arguments = [ [ NSArray arrayWithArray: args ] retain ];
     }
     
     return self;
+}
+
+- ( void )dealloc
+{
+    [ name release ];
+    [ typeEncoding release ];
+    [ returnType release ];
+    [ numberOfArguments release ];
+    [ arguments release ];
+    [ super dealloc ];
 }
 
 @end
