@@ -15,6 +15,7 @@
 @synthesize variable;
 @synthesize name;
 @synthesize typeEncoding;
+@synthesize offset;
 
 + ( id )reflectorFromVariable:( Ivar )var
 {
@@ -39,6 +40,7 @@
         variable     = var;
         name         = [ [ NSString alloc ] initWithCString: ivar_getName( var ) encoding: NSUTF8StringEncoding ];
         typeEncoding = [ [ NSString alloc ] initWithCString: ivar_getTypeEncoding( var ) encoding: NSUTF8StringEncoding ];
+        offset       = ivar_getOffset( var );
     }
     
     return self;
