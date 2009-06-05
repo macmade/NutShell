@@ -44,7 +44,7 @@
     if( proto && ( self = [ super init ] ) ) {
         
         protocol = proto;
-        name     = NSStringFromProtocol( proto );
+        name     = [ [ NSString alloc ] initWithCString: protocol_getName( proto ) encoding: NSUTF8StringEncoding ];
     }
     
     return self;
@@ -89,6 +89,7 @@
 
 - ( void )dealloc
 {
+    [ name release ];
     [ properties release ];
     [ super dealloc ];
 }
