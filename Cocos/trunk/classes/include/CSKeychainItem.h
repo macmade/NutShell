@@ -27,6 +27,33 @@
  */
 @interface CSKeychainItem: CSObject
 {
+@protected
+    
+    /*!
+     * Whether the item exists in the keychain
+     */
+    BOOL itemExists;
+    
+    /*!
+     * The item's name
+     */
+    NSString * name;
+    
+    /*!
+     * The item's kind
+     */
+    NSString * kind;
+    
+    /*!
+     * The item's password
+     */
+    NSString * password;
+    
+    /*!
+     * The username
+     */
+    NSString * username;
+    
 @private
     
     /*!
@@ -45,5 +72,65 @@
      */
     id CS_r2;
 }
+
+/*! @property */
+@property( readonly ) BOOL itemExists;
+
+/*! @property */
+@property( readonly ) NSString * name;
+
+/*! @property */
+@property( readonly ) NSString * kind;
+
+/*! @property */
+@property( readonly ) NSString * password;
+
+/*! @property */
+@property( readonly ) NSString * username;
+
+/*!
+ * @abstract    
+ */
++ ( id )createWithName: ( NSString * )itemName;
+
+/*!
+ * @abstract    
+ */
++ ( id )createWithName: ( NSString * )itemName kind: ( NSString * )itemKind;
+
+/*!
+ * @abstract    
+ */
++ ( id )createWithName: ( NSString * )itemName kind: ( NSString * )itemKind username: ( NSString * )itemUser;
+
+/*!
+ * @abstract    
+ */
+- ( id )initWithName: ( NSString * )itemName;
+
+/*!
+ * @abstract    
+ */
+- ( id )initWithName: ( NSString * )itemName kind: ( NSString * )itemKind;
+
+/*!
+ * @abstract    
+ */
+- ( id )initWithName: ( NSString * )itemName kind: ( NSString * )itemKind username: ( NSString * )itemUser;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )create;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )modify: ( NSString * )newPassword;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )remove;
 
 @end
