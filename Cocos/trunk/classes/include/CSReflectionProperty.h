@@ -76,12 +76,12 @@
 @property( readonly ) NSString * attributes;
 
 /*!
- * 
+ * @abstract    
  */
 + ( id )reflectorFromProperty:( objc_property_t )prop;
 
 /*!
- * 
+ * @abstract    
  */
 - ( id )initWithProperty:( objc_property_t )prop;
 

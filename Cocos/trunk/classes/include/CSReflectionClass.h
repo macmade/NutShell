@@ -29,14 +29,49 @@
 {
 @protected
     
+    /*!
+     * @abstract    
+     */
     Class objcClass;
+    
+    /*!
+     * @abstract    
+     */
     NSString * name;
+    
+    /*!
+     * @abstract    
+     */
     CSReflectionClass * superClass;
+    
+    /*!
+     * @abstract    
+     */
     BOOL metaClass;
+    
+    /*!
+     * @abstract    
+     */
     NSNumber * instanceSize;
+    
+    /*!
+     * @abstract    
+     */
     NSDictionary * instanceVariables;
+    
+    /*!
+     * @abstract    
+     */
     NSDictionary * properties;
+    
+    /*!
+     * @abstract    
+     */
     NSDictionary * instanceMethods;
+    
+    /*!
+     * @abstract    
+     */
     NSDictionary * protocols;
     
 @private
@@ -85,11 +120,34 @@
 /*! @property */
 @property( readonly ) NSDictionary * protocols;
 
+/*!
+ * @abstract    
+ */
 + ( id )reflectorFromClass: ( Class )objectivecClass;
+
+/*!
+ * @abstract    
+ */
 + ( id )reflectorFromClassname: ( NSString * )classname;
+
+/*!
+ * @abstract    
+ */
 + ( id )reflectorFromObject: ( id )object;
+
+/*!
+ * @abstract    
+ */
 - ( id )initWithClass: ( Class )objectivecClass;
+
+/*!
+ * @abstract    
+ */
 - ( id )initWithClassname: ( NSString * )classname;
+
+/*!
+ * @abstract    
+ */
 - ( id )initWithObject: ( id )object;
 
 @end

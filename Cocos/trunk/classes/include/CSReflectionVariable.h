@@ -33,17 +33,17 @@
 @protected
     
     /*!
-     * 
+     * @abstract    
      */
     Ivar variable;
     
     /*!
-     * 
+     * @abstract    
      */
     NSString * name;
     
     /*!
-     * 
+     * @abstract    
      */
     NSString * typeEncoding;
     
@@ -76,12 +76,12 @@
 @property( readonly ) NSString * typeEncoding;
 
 /*!
- * 
+ * @abstract    
  */
 + ( id )reflectorFromVariable:( Ivar )var;
 
 /*!
- * 
+ * @abstract    
  */
 - ( id )initWithVariable:( Ivar )var;
 
