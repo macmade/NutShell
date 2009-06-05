@@ -57,7 +57,7 @@
         objcClass    = objectivecClass;
         name         = [ [ NSString alloc ] initWithCString: class_getName( objcClass ) encoding: NSASCIIStringEncoding ];
         metaClass    = class_isMetaClass( objcClass );
-        instanceSize = [ [ NSNumber alloc ] initWithInteger: class_getInstanceSize( objcClass ) ];
+        instanceSize = [ [ NSNumber alloc ] initWithInt: class_getInstanceSize( objcClass ) ];
     }
     
     return self;
