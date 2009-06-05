@@ -83,17 +83,29 @@ enum {
 @property( assign, readwrite ) int type;
 
 /*!
+ * @abstract    Creates a new log message with a specific message text
  * 
+ * @param       str         The message text
+ * @return      The instance of the message object
  */
 + ( id )messageWithMessage: ( NSString * )str;
 
 /*!
+ * @abstract    Creates a new log message with a specific message text and date
  * 
+ * @param       str         The message text
+ * @param       time        The message date
+ * @return      The instance of the message object
  */
 + ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )time;
 
 /*!
+ * @abstract    Creates a new log message with a specific message text, date and type
  * 
+ * @param       str         The message text
+ * @param       time        The message date
+ * @param       messageType The message type
+ * @return      The instance of the message object
  */
 + ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType;
 
