@@ -20,17 +20,13 @@
 #import "CSObject.h"
 
 /*!
- * @abstract    Keychain helper
+ * @abstract    Keychain item helper
  * 
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSKeychain: CSObject
+@interface CSKeychainItem: CSObject
 {
-@protected
-    
-    
-    
 @private
     
     /*!

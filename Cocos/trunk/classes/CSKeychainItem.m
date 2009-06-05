@@ -7,8 +7,8 @@
 
 // $Id$
 
-#import "CSKeychain.h"
+#import "CSKeychainItem.h"
 
-@implementation CSKeychain
+@implementation CSKeychainItem
 
 @end

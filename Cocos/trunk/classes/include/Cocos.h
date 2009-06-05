@@ -30,7 +30,7 @@
 #import "CSApplication.h"
 #import "CSEvent.h"
 #import "CSExecution.h"
-#import "CSKeychain.h"
+#import "CSKeychainItem.h"
 #import "CSLogger.h"
 #import "CSLogMessage.h"
 #import "CSObject.h"
