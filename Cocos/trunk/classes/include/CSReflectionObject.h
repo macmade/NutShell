@@ -19,6 +19,9 @@
 // Local includes
 #import "CSObject.h"
 
+// Used classes
+@class CSReflectionClass;
+
 /*!
  * @abstract    Objective-C class instance object reflector
  * 
@@ -27,6 +30,18 @@
  */
 @interface CSReflectionObject: CSObject
 {
+@protected
+    
+    /*!
+     * @abstract    
+     */
+    CSReflectionClass * classReflector;
+    
+    /*!
+     * @abstract    
+     */
+    NSString * classname;
+    
 @private
     
     /*!
@@ -45,5 +60,16 @@
      */
     id CS_r2;
 }
+
+/*! @property */
+@property( readonly ) CSReflectionClass * classReflector;
+
+/*! @property */
+@property( readonly ) NSString * classname;
+
+/*!
+ * @abstract    
+ */
+- ( id )initWithObject:( id )object;
 
 @end

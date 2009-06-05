@@ -7,8 +7,40 @@
 
 // $Id$
 
+#import <objc/runtime.h>
 #import "CSReflectionObject.h"
+#import "CSReflectionClass.h"
 
 @implementation CSReflectionObject
+
+@synthesize classReflector;
+@synthesize classname;
+
+- ( NSString * )description
+{
+    NSString * description;
+    
+    description = [ [ super description ] stringByAppendingFormat: @"\n\t- classname:\t%@", classname ];
+    
+    return description;
+}
+
+- ( id )initWithObject:( id )object
+{
+    if( ( self = [ super init ] ) ) {
+        
+        classReflector = [ [ CSReflectionClass alloc ] initWithClass: [ object class ] ];
+        classname      = [ [ NSString alloc ] initWithString: [ classReflector name ] ];
+    }
+    
+    return self;
+}
+
+- ( void )dealloc
+{
+    [ classReflector release ];
+    [ classname release ];
+    [ super dealloc ];
+}
 
 @end
