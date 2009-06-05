@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054145490FD7519B00D6CB19 /* Security.framework */; };
+		0550DB600FD9993100DC5241 /* CSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DB5F0FD9993100DC5241 /* CSTextView.m */; };
+		0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DB610FD9993B00DC5241 /* CSTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80B90FD73D630097C170 /* CSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* CSObject.m */; };
 		055C80E80FD7435C0097C170 /* CSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* CSEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80EA0FD7435C0097C170 /* CSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* CSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		054145490FD7519B00D6CB19 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		0550DB5F0FD9993100DC5241 /* CSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTextView.m; sourceTree = "<group>"; };
+		0550DB610FD9993B00DC5241 /* CSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTextView.h; sourceTree = "<group>"; };
 		055C80B80FD73D630097C170 /* CSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSObject.m; path = classes/CSObject.m; sourceTree = "<group>"; };
 		055C80E50FD7435C0097C170 /* CSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEvent.h; sourceTree = "<group>"; };
 		055C80E70FD7435C0097C170 /* CSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSObject.h; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				056997BC0FD8AFAB00B590DD /* include */,
 				056997BD0FD8B03100B590DD /* CSEventDispatcher.m */,
 				056997C90FD8B07000B590DD /* CSScrollView.m */,
+				0550DB5F0FD9993100DC5241 /* CSTextView.m */,
 			);
 			name = categories;
 			path = classes/categories;
@@ -161,6 +166,7 @@
 			children = (
 				056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */,
 				056997C70FD8B06500B590DD /* CSScrollView.h */,
+				0550DB610FD9993B00DC5241 /* CSTextView.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -271,6 +277,7 @@
 				05E68A6A0FD80F7D003FAC5F /* CSPreferences.h in Headers */,
 				056997C00FD8B03C00B590DD /* CSEventDispatcher.h in Headers */,
 				056997C80FD8B06500B590DD /* CSScrollView.h in Headers */,
+				0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +353,7 @@
 				05E68A680FD80F6F003FAC5F /* CSPreferences.m in Sources */,
 				056997BE0FD8B03100B590DD /* CSEventDispatcher.m in Sources */,
 				056997CA0FD8B07000B590DD /* CSScrollView.m in Sources */,
+				0550DB600FD9993100DC5241 /* CSTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

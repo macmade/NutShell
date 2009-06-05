@@ -36,3 +36,4 @@
 #import "CSReflectionProtocol.h"
 #import "CSReflectionVariable.h"
 #import "CSScrollView.h"
+#import "CSTextView.h"
