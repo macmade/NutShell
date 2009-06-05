@@ -73,7 +73,7 @@
  * @param       object  The class instance object
  * @return      The instance of the reflector object
  */
-+ ( id )reflectorWithObject:( id )object;
++ ( id )reflectorFromObject:( id )object;
 
 /*!
  * @abstract    Initializes a newly allocated reflector with an object
