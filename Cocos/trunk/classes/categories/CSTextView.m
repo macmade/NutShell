@@ -9,6 +9,6 @@
 
 #import "CSTextView.h"
 
-implementation NSTextView( CSTextView )
+@implementation NSTextView( CSTextView )
 
 @end
