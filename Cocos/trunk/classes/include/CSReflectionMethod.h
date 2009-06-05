@@ -27,6 +27,48 @@
  */
 @interface CSReflectionMethod: CSObject
 {
+@protected
+    
+    /*!
+     * @abstract
+     */
+    Method method;
+    
+    /*!
+     * @abstract
+     */
+    SEL selector;
+    
+    /*!
+     * @abstract    
+     */
+    NSString * name;
+    
+    /*!
+     * @abstract    
+     */
+    IMP implementation;
+    
+    /*!
+     * @abstract    
+     */
+    NSString * typeEncoding;
+    
+    /*!
+     * @abstract    
+     */
+    NSString * returnType;
+    
+    /*!
+     * @abstract    
+     */
+    NSNumber * numberOfArguments;
+    
+    /*!
+     * @abstract    
+     */
+    NSArray * arguments;
+    
 @private
     
     /*!
@@ -45,5 +87,39 @@
      */
     id CS_r2;
 }
+
+/*! @property */
+@property( readonly ) Method method;
+
+/*! @property */
+@property( readonly ) SEL selector;
+
+/*! @property */
+@property( readonly ) NSString * name;
+
+/*! @property */
+@property( readonly ) IMP implementation;
+
+/*! @property */
+@property( readonly ) NSString * typeEncoding;
+
+/*! @property */
+@property( readonly ) NSString * returnType;
+
+/*! @property */
+@property( readonly ) NSNumber * numberOfArguments;
+
+/*! @property */
+@property( readonly ) NSArray * arguments;
+
+/*!
+ * @abstract    
+ */
++ ( id )reflectorFromMethod:( Method )objcMethod;
+
+/*!
+ * @abstract    
+ */
+- ( id )initWithMethod:( Method )objcMethod;
 
 @end
