@@ -18,22 +18,27 @@
  *              a precompiled version.
  */
 
-// Local includes
+// Categories
+#import "CSEventDispatcher.h"
+#import "CSScrollView.h"
+#import "CSTextView.h"
+
+// Protocols
+#import "CSSingleton.h"
+
+// Classes
 #import "CSEvent.h"
 #import "CSApplication.h"
 #import "CSExecution.h"
-#import "CSEventDispatcher.h"
 #import "CSLogger.h"
 #import "CSLogMessage.h"
 #import "CSObject.h"
 #import "CSObjectSingleton.h"
 #import "CSPreferences.h"
-#import "CSSingleton.h"
 #import "CSReflectionClass.h"
 #import "CSReflectionMethod.h"
 #import "CSReflectionObject.h"
 #import "CSReflectionProperty.h"
 #import "CSReflectionProtocol.h"
 #import "CSReflectionVariable.h"
-#import "CSScrollView.h"
-#import "CSTextView.h"
+
