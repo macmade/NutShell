@@ -92,4 +92,24 @@
  */
 - ( id )initWithProtocolName:( NSString * )protoName;
 
+/*!
+ * 
+ */
+- ( BOOL )isEqual:( Protocol * )proto;
+
+/*!
+ * 
+ */
+- ( BOOL )isEqualToReflector:( CSReflectionProtocol * )proto;
+
+/*!
+ * 
+ */
+- ( BOOL )conformsToProtocol:( Protocol * )proto;
+
+/*!
+ * 
+ */
+- ( BOOL )conformsToProtocolReflector:( CSReflectionProtocol * )proto;
+
 @end

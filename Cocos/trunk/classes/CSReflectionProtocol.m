@@ -87,6 +87,38 @@
     return properties;
 }
 
+/*!
+ * 
+ */
+- ( BOOL )isEqual:( Protocol * )proto
+{
+    return protocol_isEqual( protocol, proto );
+}
+
+/*!
+ * 
+ */
+- ( BOOL )isEqualToReflector:( CSReflectionProtocol * )proto
+{
+    return protocol_isEqual( protocol, proto->protocol );
+}
+
+/*!
+ * 
+ */
+- ( BOOL )conformsToProtocol:( Protocol * )proto
+{
+    return protocol_conformsToProtocol( protocol, proto );
+}
+
+/*!
+ * 
+ */
+- ( BOOL )conformsToProtocolReflector:( CSReflectionProtocol * )proto
+{
+    return protocol_conformsToProtocol( protocol, proto->protocol );
+}
+
 - ( void )dealloc
 {
     [ name release ];
