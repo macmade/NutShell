@@ -73,6 +73,31 @@
 @property( readonly ) NSString *  name;
 
 /*!
+ * @abstract    Creates a new  event with a specific name
+ * 
+ * @param       eventName   The event's name
+ * @return      The instance of the event object
+ */
++ ( id )eventWithName: ( NSString * )eventName;
+
+/*!
+ * @abstract    Creates a new  event with a target object
+ * 
+ * @param       targetObject    The target object
+ * @return      The instance of the event object
+ */
++ ( id )eventWithTarget: ( id )targetObject;
+
+/*!
+ * @abstract    Creates a new event with a specific name and a target object
+ * 
+ * @param       eventName       The event's name
+ * @param       targetObject    The target object
+ * @return      The instance of the event object
+ */
++ ( id )eventWithName: ( NSString * )eventName target: ( id )targetObject;
+
+/*!
  * @abstract    Initializes a newly allocated event with a specific name
  * 
  * @param       eventName   The event's name

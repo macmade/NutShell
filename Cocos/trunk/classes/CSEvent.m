@@ -15,6 +15,27 @@
 @synthesize target;
 @synthesize name;
 
++ ( id )eventWithName: ( NSString * )eventName
+{
+    id event = [ [ self alloc ] initWithName: eventName ];
+    
+    return [ event autorelease ];
+}
+
++ ( id )eventWithTarget: ( id )targetObject
+{
+    id event = [ [ self alloc ] eventWithTarget: targetObject ];
+    
+    return [ event autorelease ];
+}
+
++ ( id )eventWithName: ( NSString * )eventName target: ( id )targetObject
+{
+    id event = [ [ self alloc ] initWithName: eventName target: targetObject ];
+    
+    return [ event autorelease ];
+}
+
 - ( NSString * )description
 {
     NSString * description;
