@@ -16,6 +16,13 @@
 @synthesize classReflector;
 @synthesize classname;
 
++ ( id )reflectorFromObject:( id )object
+{
+    id reflector = [ [ self alloc ] initWithObject: object ];
+    
+    return [ reflector autorelease ];
+}
+
 - ( NSString * )description
 {
     NSString * description;

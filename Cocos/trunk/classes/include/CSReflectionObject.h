@@ -33,12 +33,12 @@
 @protected
     
     /*!
-     * @abstract    
+     * @abstract    The reflector for the object's class
      */
     CSReflectionClass * classReflector;
     
     /*!
-     * @abstract    
+     * @abstract    The name of the object's class
      */
     NSString * classname;
     
@@ -68,7 +68,18 @@
 @property( readonly ) NSString * classname;
 
 /*!
- * @abstract    
+ * @abstract    Creates a new reflector with an object
+ * 
+ * @param       object  The class instance object
+ * @return      The instance of the reflector object
+ */
++ ( id )reflectorWithObject:( id )object;
+
+/*!
+ * @abstract    Initializes a newly allocated reflector with an object
+ * 
+ * @param       object  The class instance object
+ * @return      The instance of the reflector object
  */
 - ( id )initWithObject:( id )object;
 
