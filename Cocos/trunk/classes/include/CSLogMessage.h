@@ -83,6 +83,21 @@ enum {
 @property( assign, readwrite ) int type;
 
 /*!
+ * 
+ */
++ ( id )messageWithMessage: ( NSString * )str;
+
+/*!
+ * 
+ */
++ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )time;
+
+/*!
+ * 
+ */
++ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType;
+
+/*!
  * @abstract    Initializes a newly allocated log message with a specific message text
  * 
  * @param       str         The message text

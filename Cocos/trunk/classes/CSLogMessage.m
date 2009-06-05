@@ -15,6 +15,27 @@
 @synthesize date;
 @synthesize type;
 
++ ( id )messageWithMessage: ( NSString * )str
+{
+    id msg = [ [ self alloc ] initWithMessage: str ];
+    
+    return [ msg autorelease ];
+}
+
++ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )time
+{
+    id msg = [ [ self alloc ] initWithMessage: str date: time ];
+    
+    return [ msg autorelease ];
+}
+
++ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType
+{
+    id msg = [ [ self alloc ] initWithMessage: str date: time type: messageType ];
+    
+    return [ msg autorelease ];
+}
+
 - ( id )init
 {
     if( ( self = [ super init ] ) ) {
