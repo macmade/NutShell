@@ -12,6 +12,7 @@
 #import "CSReflectionVariable.h"
 #import "CSReflectionProperty.h"
 #import "CSReflectionProtocol.h"
+#import "CSReflectionMethod.h"
 
 @implementation CSReflectionClass
 
@@ -161,9 +162,31 @@
 
 - ( NSDictionary * )instanceMethods
 {
+    unsigned int methodCount;
+    Method * methods;
+    CSReflectionMethod * method;
+    NSMutableDictionary * methodDict;
+    unsigned int i;
+    
     if( instanceMethods == nil ) {
         
+        methods = class_copyMethodList( objcClass, &methodCount );
         
+        if( methods != NULL && methodCount > 0 ) {
+            
+            methodDict = [ NSMutableDictionary dictionaryWithCapacity: methodCount ];
+            
+            for( i = 0; i < methodCount; i++ ) {
+                
+                method = [ CSReflectionMethod reflectorFromMethod: methods[ i ] ];
+                
+                [ methodDict setObject: method forKey: [ method name ] ];
+            }
+            
+            instanceMethods = [ [ NSDictionary dictionaryWithDictionary: methodDict ] retain ];
+        }
+        
+        free( methods );
     }
     
     return instanceMethods;
