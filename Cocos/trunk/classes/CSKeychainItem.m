@@ -121,6 +121,41 @@
     return status == noErr;
 }
 
+- ( void )update
+{
+    OSStatus status;
+    UInt32 passwordLength;
+    void * passwordData;
+    
+    status = SecKeychainFindGenericPassword(
+                NULL,
+                [ name length ],
+                [ name cStringUsingEncoding: NSUTF8StringEncoding ],
+                [ username length ],
+                [ username cStringUsingEncoding: NSUTF8StringEncoding ],
+                &passwordLength,
+                &passwordData,
+                &item
+             );
+        
+    if( status == noErr ) {
+        
+        [ password release ];
+        
+        itemExists = YES;
+        password   = [ [ NSString alloc ] initWithCString: passwordData length: passwordLength ];
+        
+        SecKeychainItemFreeContent(
+            NULL,
+            passwordData
+        );
+        
+    } else {
+        
+        itemExists = NO;
+    }
+}
+
 - ( void )dealloc
 {
     CFRelease( item );

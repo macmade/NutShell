@@ -110,4 +110,9 @@
  */
 - ( BOOL )remove;
 
+/*!
+ * @abstract    
+ */
+- ( void )update;
+
 @end
