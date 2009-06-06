@@ -26,11 +26,11 @@
 }
 
 
-- ( id )initWithPropertyList: ( NSString * )filename
+- ( id )initWithPropertyList: ( NSString * )filename owner: ( id )owner
 {
     if( ( self = [ super init ] ) ) {
         
-        defaults = [ NSMutableDictionary dictionaryWithContentsOfFile: [ [ NSBundle bundleForClass: [ self class ] ] pathForResource: filename ofType: @"plist" ] ];
+        defaults = [ NSMutableDictionary dictionaryWithContentsOfFile: [ [ NSBundle bundleForClass: [ owner class ] ] pathForResource: filename ofType: @"plist" ] ];
         values   = [ NSUserDefaults standardUserDefaults ];
         
         [ values registerDefaults: defaults ];

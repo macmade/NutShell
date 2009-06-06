@@ -67,9 +67,10 @@
 /*!
  * @abstract    Initializes a newly allocated event with a property list file
  * 
- * @param       filename   The name to the property list file
+ * @param       filename    The name to the property list file
+ * @param       owner       The object for which to load the property list bundle
  * @return      The instance of the event object
  */
-- ( id )initWithPropertyList: ( NSString * )filename;
+- ( id )initWithPropertyList: ( NSString * )filename owner: ( id )owner;
 
 @end
