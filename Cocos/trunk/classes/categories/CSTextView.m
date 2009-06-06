@@ -21,4 +21,13 @@
     [ fileContent release ];
 }
 
+- ( void )setFontWithNameAndSize: ( NSString * )fontName size: ( int )fontSize
+{
+    NSFont * font;
+    
+    font = [ NSFont fontWithName: fontName size: fontSize ];
+    
+    [ self setFont: font ];
+}
+
 @end

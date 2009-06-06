@@ -32,4 +32,13 @@
  */
 - ( void )displayContentOfFile: ( NSString * )filePath;
 
+/*!
+ * @abstract    Sets the font and size of the textview object
+ * 
+ * @param       fontName    The name of the font
+ * @param       fontSize    The size of the font
+ * @return      void
+ */
+- ( void )setFontWithNameAndSize: ( NSString * )fontName size: ( int )fontSize;
+
 @end
