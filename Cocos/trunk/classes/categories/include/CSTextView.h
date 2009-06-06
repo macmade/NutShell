@@ -46,6 +46,6 @@
  * 
  * @return      void
  */
-- ( void )disablesSoftWrap;
+- ( void )disablesSoftWrapping;
 
 @end

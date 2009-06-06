@@ -30,7 +30,7 @@
     [ self setFont: font ];
 }
 
-- ( void )disablesSoftWrap
+- ( void )disablesSoftWrapping
 {
     [ [ self textContainer ] setContainerSize:NSMakeSize( FLT_MAX, FLT_MAX ) ];
     [ [ self textContainer ] setWidthTracksTextView: NO ];
