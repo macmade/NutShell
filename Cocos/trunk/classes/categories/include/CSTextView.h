@@ -41,4 +41,11 @@
  */
 - ( void )setFontWithNameAndSize: ( NSString * )fontName size: ( int )fontSize;
 
+/*!
+ * @abstract    Disables the use of soft wrapping in the textview object
+ * 
+ * @return      void
+ */
+- ( void )disablesSoftWrap;
+
 @end

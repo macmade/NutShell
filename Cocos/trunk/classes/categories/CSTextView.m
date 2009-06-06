@@ -30,4 +30,11 @@
     [ self setFont: font ];
 }
 
+- ( void )disablesSoftWrap
+{
+    [ [ self textContainer ] setContainerSize:NSMakeSize( FLT_MAX, FLT_MAX ) ];
+    [ [ self textContainer ] setWidthTracksTextView: NO ];
+    [ self setHorizontallyResizable: YES ];
+}
+
 @end
