@@ -30,6 +30,11 @@
 @protected
     
     /*!
+     * The keychain item
+     */
+    SecKeychainItemRef item;
+     
+    /*!
      * Whether the item exists in the keychain
      */
     BOOL itemExists;
@@ -40,19 +45,14 @@
     NSString * name;
     
     /*!
-     * The item's kind
+     * The username
      */
-    NSString * kind;
+    NSString * username;
     
     /*!
      * The item's password
      */
     NSString * password;
-    
-    /*!
-     * The username
-     */
-    NSString * username;
     
 @private
     
@@ -80,43 +80,20 @@
 @property( readonly ) NSString * name;
 
 /*! @property */
-@property( readonly ) NSString * kind;
-
-/*! @property */
-@property( readonly ) NSString * password;
-
-/*! @property */
 @property( readonly ) NSString * username;
 
-/*!
- * @abstract    
- */
-+ ( id )createWithName: ( NSString * )itemName;
+/*! @property */
+@property( copy, readwrite ) NSString * password;
 
 /*!
  * @abstract    
  */
-+ ( id )createWithName: ( NSString * )itemName kind: ( NSString * )itemKind;
++ ( id )createWithName: ( NSString * )itemName username: ( NSString * )itemUser;
 
 /*!
  * @abstract    
  */
-+ ( id )createWithName: ( NSString * )itemName kind: ( NSString * )itemKind username: ( NSString * )itemUser;
-
-/*!
- * @abstract    
- */
-- ( id )initWithName: ( NSString * )itemName;
-
-/*!
- * @abstract    
- */
-- ( id )initWithName: ( NSString * )itemName kind: ( NSString * )itemKind;
-
-/*!
- * @abstract    
- */
-- ( id )initWithName: ( NSString * )itemName kind: ( NSString * )itemKind username: ( NSString * )itemUser;
+- ( id )initWithName: ( NSString * )itemName username: ( NSString * )itemUser;
 
 /*!
  * @abstract    
@@ -126,7 +103,7 @@
 /*!
  * @abstract    
  */
-- ( BOOL )modify: ( NSString * )newPassword;
+- ( BOOL )modify;
 
 /*!
  * @abstract    
