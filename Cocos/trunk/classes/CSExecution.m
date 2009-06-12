@@ -14,7 +14,7 @@
 @synthesize canExecuteWithPrivilege;
 @synthesize authorizationRef;
 
-- ( void )authorizeExecute
+- ( OSStatus )authorizeExecute
 {
     OSStatus status;
     AuthorizationFlags flags;
@@ -55,22 +55,22 @@
         if( status == errAuthorizationSuccess ) {
             
             canExecuteWithPrivilege = YES;
-            return;
+            return status;
         }
     }
     
     canExecuteWithPrivilege = NO;
+    return status;
 }
 
-- ( FILE * )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments
+- ( OSStatus )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments io: ( FILE * )io
 {
-    FILE * io;
     OSStatus status;
     AuthorizationFlags flags;
     
     if( canExecuteWithPrivilege == NO ) {
         
-        [ self authorizeExecute ];
+        status = [ self authorizeExecute ];
     }
     
     if( canExecuteWithPrivilege == YES ) {
@@ -85,7 +85,7 @@
         );
     }
     
-    return io;
+    return status;
 }
 
 - ( NSFileHandle * )execute: ( NSString * )command arguments: ( NSArray * )arguments

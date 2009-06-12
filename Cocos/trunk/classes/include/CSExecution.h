@@ -69,16 +69,17 @@
  * 
  * @return      void
  */
-- ( void )authorizeExecute;
+- ( OSStatus )authorizeExecute;
 
 /*!
  * @abstract    Executes a command line tool with admin privileges
  * 
  * @param       command     The path to the command line tool
  * @param       arguments   The arguments for the command line tool
+ * @param       io          A file pointer
  * @return      An I/O pipe
  */
-- ( FILE * )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments;
+- ( OSStatus )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments io: ( FILE * ) io;
 
 /*!
  * @abstract    Executes a command line tool with admin privileges
