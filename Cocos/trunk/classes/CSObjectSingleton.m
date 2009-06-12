@@ -38,9 +38,9 @@ static NSMutableDictionary * _instances;
         if( [ _instances objectForKey: NSStringFromClass( [ self class ] ) ] == nil ) {
             
             [ _instances setObject: [ super allocWithZone: zone ] forKey: NSStringFromClass( [ self class ] ) ];
-            
-            return [ _instances objectForKey: NSStringFromClass( [ self class ] ) ];
         }
+        
+        return [ _instances objectForKey: NSStringFromClass( [ self class ] ) ];
     }
     
     return nil;
