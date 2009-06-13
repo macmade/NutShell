@@ -31,4 +31,7 @@
  */
 - ( NSNumber * )crc32;
 
+/*! @property */
+@property( readonly ) NSNumber * crc32;
+
 @end
