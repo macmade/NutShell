@@ -53,7 +53,7 @@ static unsigned long CRCTable[ 256 ];
         CRCTableDefined = YES;
     }
     
-    c = 0L ^ 0xFFFFFFFFL;
+    c = 0;
     
     for( i = 0; i < [ self length ]; i++ ) {
         
