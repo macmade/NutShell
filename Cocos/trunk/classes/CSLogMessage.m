@@ -50,7 +50,7 @@
 
 - ( id )initWithMessage: ( NSString * )str
 {
-    if( ( self = [ super init ] ) ) {
+    if( ( self = [ self init ] ) ) {
         
         self.message = str;
     }
@@ -60,7 +60,7 @@
 
 - ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time
 {
-    if( ( self = [ super init ] ) ) {
+    if( ( self = [ self init ] ) ) {
         
         self.message = str;
         self.date    = time;
@@ -71,7 +71,7 @@
 
 - ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType
 {
-    if( ( self = [ super init ] ) ) {
+    if( ( self = [ self init ] ) ) {
         
         self.message = str;
         self.date    = time;
