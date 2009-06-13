@@ -21,6 +21,7 @@
 // Categories
 #import "CSEventDispatcher.h"
 #import "CSScrollView.h"
+#import "CSString.h"
 #import "CSTextView.h"
 
 // Protocols

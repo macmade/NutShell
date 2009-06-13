@@ -45,6 +45,8 @@
 		05E686DA0FD77F83003FAC5F /* CSReflectionVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D40FD77F83003FAC5F /* CSReflectionVariable.m */; };
 		05E68A680FD80F6F003FAC5F /* CSPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E68A670FD80F6F003FAC5F /* CSPreferences.m */; };
 		05E68A6A0FD80F7D003FAC5F /* CSPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E68A690FD80F7D003FAC5F /* CSPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E914EA0FE3C4B6006A901B /* CSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E914E90FE3C4B6006A901B /* CSString.m */; };
+		05E914EC0FE3C4C2006A901B /* CSString.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E914EB0FE3C4C2006A901B /* CSString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E9A0740FD73BAA00F2E8B0 /* CSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
@@ -89,6 +91,8 @@
 		05E686D40FD77F83003FAC5F /* CSReflectionVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSReflectionVariable.m; path = classes/CSReflectionVariable.m; sourceTree = "<group>"; };
 		05E68A670FD80F6F003FAC5F /* CSPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSPreferences.m; path = classes/CSPreferences.m; sourceTree = "<group>"; };
 		05E68A690FD80F7D003FAC5F /* CSPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPreferences.h; sourceTree = "<group>"; };
+		05E914E90FE3C4B6006A901B /* CSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSString.m; sourceTree = "<group>"; };
+		05E914EB0FE3C4C2006A901B /* CSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSString.h; sourceTree = "<group>"; };
 		05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSEvent.m; path = classes/CSEvent.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -160,6 +164,7 @@
 				056997BC0FD8AFAB00B590DD /* include */,
 				056997BD0FD8B03100B590DD /* CSEventDispatcher.m */,
 				056997C90FD8B07000B590DD /* CSScrollView.m */,
+				05E914E90FE3C4B6006A901B /* CSString.m */,
 				0550DB5F0FD9993100DC5241 /* CSTextView.m */,
 			);
 			name = categories;
@@ -171,6 +176,7 @@
 			children = (
 				056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */,
 				056997C70FD8B06500B590DD /* CSScrollView.h */,
+				05E914EB0FE3C4C2006A901B /* CSString.h */,
 				0550DB610FD9993B00DC5241 /* CSTextView.h */,
 			);
 			path = include;
@@ -285,6 +291,7 @@
 				056997C80FD8B06500B590DD /* CSScrollView.h in Headers */,
 				0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */,
 				0550DBB50FD9A28400DC5241 /* CSKeychainItem.h in Headers */,
+				05E914EC0FE3C4C2006A901B /* CSString.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +369,7 @@
 				056997CA0FD8B07000B590DD /* CSScrollView.m in Sources */,
 				0550DB600FD9993100DC5241 /* CSTextView.m in Sources */,
 				0550DBB70FD9A29600DC5241 /* CSKeychainItem.m in Sources */,
+				05E914EA0FE3C4B6006A901B /* CSString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
