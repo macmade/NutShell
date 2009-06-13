@@ -68,7 +68,7 @@ static const unsigned int CRCTable[ 256 ] = {
     
     for( i = 0; i < [ self length ]; i++ ) {
         
-        c =  CRCTable[ ( c ^ *( cString ) ) & 0xFF ] ^ ( (c >> 8 ) & 0x00FFFFFF );
+        c = CRCTable[ ( c ^ *( cString ) ) & 0xFF ] ^ ( ( c >> 8 ) & 0x00FFFFFF );
         
         cString++;
     }
