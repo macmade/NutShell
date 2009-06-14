@@ -48,4 +48,40 @@
  */
 - ( void )disablesSoftWrapping;
 
+/*!
+ * @abstract    Appends a string at the end of the text view contents
+ * 
+ * @param       string  The string to append
+ * @return      void
+ */
+- ( void )appendStringAtEnd: ( NSString * )str;
+
+/*!
+ * @abstract    Places the insertion point at the beginning of the text view contents
+ * 
+ * @return      void
+ */
+- ( void )moveInsertionPointAtStart;
+
+/*!
+ * @abstract    Places the insertion point at the end of the text view contents
+ * 
+ * @return      void
+ */
+- ( void )moveInsertionPointAtEnd;
+
+/*!
+ * @abstract    Scrolls to the beginning of the text view
+ * 
+ * @return      void
+ */
+- ( void )scrollToTop;
+
+/*!
+ * @abstract    Scrolls to the end of the text view
+ * 
+ * @return      void
+ */
+- ( void )scrollToBottom;
+
 @end

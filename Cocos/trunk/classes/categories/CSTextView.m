@@ -37,4 +37,49 @@
     [ self setHorizontallyResizable: YES ];
 }
 
+- ( void )appendStringAtEnd: ( NSString * )str
+{
+    NSRange range;
+    
+    range = NSMakeRange( [ [ self string ] length ], 0 );
+    
+    [ self replaceCharactersInRange: range withString: str ];
+}
+
+- ( void )moveInsertionPointAtStart
+{
+    NSRange range;
+    
+    range = NSMakeRange( 0, 0 );
+    
+    [ self setSelectedRange: range ];
+}
+
+- ( void )moveInsertionPointAtEnd
+{
+    NSRange range;
+    
+    range = NSMakeRange( [ [ self string ] length ], 0 );
+    
+    [ self setSelectedRange: range ];
+}
+
+- ( void )scrollToTop
+{
+    NSRange range;
+    
+    range = NSMakeRange( [ [ self string ] length ], 0 );
+    
+    [ self scrollRangeToVisible: range ];
+}
+
+- ( void )scrollToBottom
+{
+    NSRange range;
+    
+    range = NSMakeRange( 0, 0 );
+    
+    [ self  scrollRangeToVisible: range ];
+}
+
 @end
