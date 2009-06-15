@@ -68,7 +68,7 @@
 {
     NSRange range;
     
-    range = NSMakeRange( [ [ self string ] length ], 0 );
+    range = NSMakeRange( 0, 0 );
     
     [ self scrollRangeToVisible: range ];
 }
@@ -77,9 +77,9 @@
 {
     NSRange range;
     
-    range = NSMakeRange( 0, 0 );
+    range = NSMakeRange( [ [ self string ] length ], 0 );
     
-    [ self  scrollRangeToVisible: range ];
+    [ self scrollRangeToVisible: range ];
 }
 
 @end
