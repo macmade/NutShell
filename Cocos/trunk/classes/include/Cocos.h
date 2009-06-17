@@ -19,6 +19,7 @@
  */
 
 // Categories
+#import "CSDictionary.h"
 #import "CSEventDispatcher.h"
 #import "CSScrollView.h"
 #import "CSString.h"

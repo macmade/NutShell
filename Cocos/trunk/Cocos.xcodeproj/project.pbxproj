@@ -31,6 +31,8 @@
 		056997C00FD8B03C00B590DD /* CSEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		056997C80FD8B06500B590DD /* CSScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 056997C70FD8B06500B590DD /* CSScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		056997CA0FD8B07000B590DD /* CSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 056997C90FD8B07000B590DD /* CSScrollView.m */; };
+		05E24B8C0FE859C200C42604 /* CSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E24B8B0FE859C200C42604 /* CSDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E24B8E0FE859CD00C42604 /* CSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E24B8D0FE859CD00C42604 /* CSDictionary.m */; };
 		05E686C90FD77F6C003FAC5F /* CSReflectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E686CA0FD77F6C003FAC5F /* CSReflectionMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C40FD77F6C003FAC5F /* CSReflectionMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E686CB0FD77F6C003FAC5F /* CSReflectionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C50FD77F6C003FAC5F /* CSReflectionObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,6 +79,8 @@
 		056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEventDispatcher.h; sourceTree = "<group>"; };
 		056997C70FD8B06500B590DD /* CSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSScrollView.h; sourceTree = "<group>"; };
 		056997C90FD8B07000B590DD /* CSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSScrollView.m; sourceTree = "<group>"; };
+		05E24B8B0FE859C200C42604 /* CSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDictionary.h; sourceTree = "<group>"; };
+		05E24B8D0FE859CD00C42604 /* CSDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDictionary.m; sourceTree = "<group>"; };
 		05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionClass.h; sourceTree = "<group>"; };
 		05E686C40FD77F6C003FAC5F /* CSReflectionMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionMethod.h; sourceTree = "<group>"; };
 		05E686C50FD77F6C003FAC5F /* CSReflectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionObject.h; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				056997BC0FD8AFAB00B590DD /* include */,
+				05E24B8D0FE859CD00C42604 /* CSDictionary.m */,
 				056997BD0FD8B03100B590DD /* CSEventDispatcher.m */,
 				056997C90FD8B07000B590DD /* CSScrollView.m */,
 				05E914E90FE3C4B6006A901B /* CSString.m */,
@@ -174,6 +179,7 @@
 		056997BC0FD8AFAB00B590DD /* include */ = {
 			isa = PBXGroup;
 			children = (
+				05E24B8B0FE859C200C42604 /* CSDictionary.h */,
 				056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */,
 				056997C70FD8B06500B590DD /* CSScrollView.h */,
 				05E914EB0FE3C4C2006A901B /* CSString.h */,
@@ -292,6 +298,7 @@
 				0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */,
 				0550DBB50FD9A28400DC5241 /* CSKeychainItem.h in Headers */,
 				05E914EC0FE3C4C2006A901B /* CSString.h in Headers */,
+				05E24B8C0FE859C200C42604 /* CSDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +377,7 @@
 				0550DB600FD9993100DC5241 /* CSTextView.m in Sources */,
 				0550DBB70FD9A29600DC5241 /* CSKeychainItem.m in Sources */,
 				05E914EA0FE3C4B6006A901B /* CSString.m in Sources */,
+				05E24B8E0FE859CD00C42604 /* CSDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
