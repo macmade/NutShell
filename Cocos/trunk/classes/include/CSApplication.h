@@ -44,6 +44,11 @@
      */
     CSLogger * logger;
     
+    /*!
+     * @abstract    The default file manager
+     */
+    NSFileManager * fileManager;
+    
 @private
     
     /*!
@@ -71,5 +76,8 @@
 
 /*! @property */
 @property( readonly ) CSLogger * logger;
+
+/*! @property */
+@property( readonly ) NSFileManager * fileManager;
 
 @end

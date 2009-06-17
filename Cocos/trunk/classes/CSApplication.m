@@ -16,14 +16,16 @@
 @synthesize execution;
 @synthesize workspace;
 @synthesize logger;
+@synthesize fileManager;
 
 - ( id )init
 {
     if( ( self = [ super init ] ) ) {
         
-        execution = [ CSExecution getInstance  ];
-        workspace = [ NSWorkspace sharedWorkspace ];
-        logger    = [ [ CSLogger alloc ] init ];
+        execution   = [ CSExecution getInstance  ];
+        workspace   = [ NSWorkspace sharedWorkspace ];
+        logger      = [ [ CSLogger alloc ] init ];
+        fileManager = [ NSFileManager defaultManager ];
     }
     
     return self;
