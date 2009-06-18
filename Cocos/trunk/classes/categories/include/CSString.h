@@ -34,4 +34,24 @@
 /*! @property */
 @property( readonly ) NSNumber * crc32;
 
+/*!
+ * @abstract    
+ */
+- ( BOOL )regex: ( NSString * )expression;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )regex: ( NSString * )expression flags: ( int )flags;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )regex: ( NSString * )expression matches: ( NSMutableArray * )matches;
+
+/*!
+ * @abstract    
+ */
+- ( BOOL )regex: ( NSString * )expression matches: ( NSMutableArray * )matches flags: ( int )flags;
+
 @end

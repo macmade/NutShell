@@ -8,6 +8,7 @@
 // $Id$
 
 #import "CSString.h"
+#import "regex.h"
 
 @implementation NSString( CSString )
 
@@ -74,6 +75,113 @@ static const unsigned int CRCTable[ 256 ] = {
     }
     
     return [ NSNumber numberWithUnsignedInt: c ^ 0xFFFFFFFF ];
+}
+
+- ( BOOL )regex: ( NSString * )expression
+{
+    return [ self regex: expression flags: REG_EXTENDED ];
+}
+
+- ( BOOL )regex: ( NSString * )expression flags: ( int )flags
+{
+    return [ self regex: expression matches: nil flags: REG_EXTENDED ];
+}
+
+- ( BOOL )regex: ( NSString * )expression matches: ( NSMutableArray * )matches
+{
+    return [ self regex: expression matches: matches flags: REG_EXTENDED ];
+}
+
+- ( BOOL )regex: ( NSString * )expression matches: ( NSMutableArray * )matches flags: ( int )flags
+{
+    int error;
+    int match;
+    unsigned int i;
+    size_t start;
+    size_t end;
+    size_t nmatch;
+    size_t size;
+    regex_t regex;
+    regmatch_t * pmatch;
+    char errorBuffer[ 256 ];
+    char * submatch;
+    NSException * exception;
+    
+    const char * str    = [ self cStringUsingEncoding: NSUTF8StringEncoding ];
+    const char * regexp = [ expression cStringUsingEncoding: NSUTF8StringEncoding ];
+    
+    error = regcomp( &regex, regexp, flags );
+    
+    if( error != 0 ) {
+        
+        regerror( error, &regex, errorBuffer, sizeof( errorBuffer ) );
+        NSLog( @"%s", errorBuffer );
+        regfree( &regex );
+        return NO;
+    }
+    
+    nmatch = regex.re_nsub + 1;
+    
+    if( NULL == ( pmatch = (  regmatch_t * )malloc( sizeof( *pmatch ) * nmatch ) ) ) {
+        
+        exception = [ NSException exceptionWithName: @"CSStringException" reason: @"Malloc error" userInfo: nil ];
+        
+        @throw exception;
+    }
+    
+    match = regexec( &regex, str, nmatch, pmatch, 0 );
+    
+    if( match == REG_NOMATCH ) {
+        
+        free( pmatch );
+        regfree( &regex );
+        return NO;
+        
+    } else if( match != 0 ) {
+        
+        regerror( error, &regex, errorBuffer, sizeof( errorBuffer ) );
+        NSLog( @"%s", errorBuffer );
+        free( pmatch );
+        regfree( &regex );
+        return NO;
+    }
+    
+    if( matches == nil ) {
+        
+        free( pmatch );
+        regfree( &regex );
+        return YES;
+    }
+        
+    for( i = 1; i < nmatch; i++ ) {
+        
+        if( pmatch[ i ].rm_so != -1 ) {
+            
+            start = ( size_t )pmatch[ i ].rm_so;
+            end   = ( size_t )pmatch[ i ].rm_eo;
+            size  = end - start;
+            
+            if( NULL == ( submatch = malloc( sizeof( char * ) * ( size + 1 ) ) ) ) {
+                
+                exception = [ NSException exceptionWithName: @"CSStringException" reason: @"Malloc error" userInfo: nil ];
+                
+                @throw exception;
+            }
+            
+            strncpy( submatch, &str[ start ], size );
+            
+            submatch[ size ] = '\0';
+            
+            [ matches addObject: [ NSString stringWithCString: ( const char * )submatch ] ];
+            
+            free( submatch );
+        }
+    }
+    
+    free( pmatch );
+    regfree( &regex );
+    
+    return YES;
 }
 
 @end
