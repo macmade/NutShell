@@ -11,6 +11,7 @@
 
 @implementation CSWindowFader
 
+@synthesize isFaded;
 @synthesize closeAfterFade;
 @synthesize fadeBy;
 @synthesize fadeInterval;

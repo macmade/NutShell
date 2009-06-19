@@ -42,6 +42,11 @@
     /*!
      * @abstract    
      */
+    BOOL isFaded;
+    
+    /*!
+     * @abstract    
+     */
     BOOL isFading;
     
     /*!
@@ -77,6 +82,9 @@
      */
     id CS_r2;
 }
+
+/*! @property */
+@property( readonly ) BOOL isFaded;
 
 /*! @property */
 @property( assign, readwrite ) BOOL closeAfterFade;
