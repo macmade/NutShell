@@ -232,7 +232,6 @@
 				055C819D0FD74C280097C170 /* CSApplication.m */,
 				055C81A50FD74CF60097C170 /* CSExecution.m */,
 				05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */,
-				05984D5B0FEB43F800A497EF /* CSWindowFader.m */,
 				0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */,
 				055C81030FD746330097C170 /* CSLogger.m */,
 				055C81040FD746330097C170 /* CSLogMessage.m */,
@@ -245,6 +244,7 @@
 				05E686D20FD77F83003FAC5F /* CSReflectionProperty.m */,
 				05E686D30FD77F83003FAC5F /* CSReflectionProtocol.m */,
 				05E686D40FD77F83003FAC5F /* CSReflectionVariable.m */,
+				05984D5B0FEB43F800A497EF /* CSWindowFader.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
