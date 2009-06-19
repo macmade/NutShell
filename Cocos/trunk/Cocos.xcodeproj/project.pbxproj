@@ -31,6 +31,8 @@
 		056997C00FD8B03C00B590DD /* CSEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		056997C80FD8B06500B590DD /* CSScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 056997C70FD8B06500B590DD /* CSScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		056997CA0FD8B07000B590DD /* CSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 056997C90FD8B07000B590DD /* CSScrollView.m */; };
+		05984D5A0FEB43EA00A497EF /* CSWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05984D590FEB43EA00A497EF /* CSWindowFader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05984D5C0FEB43F800A497EF /* CSWindowFader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05984D5B0FEB43F800A497EF /* CSWindowFader.m */; };
 		05E24B8C0FE859C200C42604 /* CSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E24B8B0FE859C200C42604 /* CSDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E24B8E0FE859CD00C42604 /* CSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E24B8D0FE859CD00C42604 /* CSDictionary.m */; };
 		05E686C90FD77F6C003FAC5F /* CSReflectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -79,6 +81,8 @@
 		056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEventDispatcher.h; sourceTree = "<group>"; };
 		056997C70FD8B06500B590DD /* CSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSScrollView.h; sourceTree = "<group>"; };
 		056997C90FD8B07000B590DD /* CSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSScrollView.m; sourceTree = "<group>"; };
+		05984D590FEB43EA00A497EF /* CSWindowFader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSWindowFader.h; sourceTree = "<group>"; };
+		05984D5B0FEB43F800A497EF /* CSWindowFader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSWindowFader.m; path = classes/CSWindowFader.m; sourceTree = "<group>"; };
 		05E24B8B0FE859C200C42604 /* CSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDictionary.h; sourceTree = "<group>"; };
 		05E24B8D0FE859CD00C42604 /* CSDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDictionary.m; sourceTree = "<group>"; };
 		05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionClass.h; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				05E686C60FD77F6C003FAC5F /* CSReflectionProperty.h */,
 				05E686C70FD77F6C003FAC5F /* CSReflectionProtocol.h */,
 				05E686C80FD77F6C003FAC5F /* CSReflectionVariable.h */,
+				05984D590FEB43EA00A497EF /* CSWindowFader.h */,
 			);
 			name = include;
 			path = classes/include;
@@ -227,6 +232,7 @@
 				055C819D0FD74C280097C170 /* CSApplication.m */,
 				055C81A50FD74CF60097C170 /* CSExecution.m */,
 				05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */,
+				05984D5B0FEB43F800A497EF /* CSWindowFader.m */,
 				0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */,
 				055C81030FD746330097C170 /* CSLogger.m */,
 				055C81040FD746330097C170 /* CSLogMessage.m */,
@@ -299,6 +305,7 @@
 				0550DBB50FD9A28400DC5241 /* CSKeychainItem.h in Headers */,
 				05E914EC0FE3C4C2006A901B /* CSString.h in Headers */,
 				05E24B8C0FE859C200C42604 /* CSDictionary.h in Headers */,
+				05984D5A0FEB43EA00A497EF /* CSWindowFader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +385,7 @@
 				0550DBB70FD9A29600DC5241 /* CSKeychainItem.m in Sources */,
 				05E914EA0FE3C4B6006A901B /* CSString.m in Sources */,
 				05E24B8E0FE859CD00C42604 /* CSDictionary.m in Sources */,
+				05984D5C0FEB43F800A497EF /* CSWindowFader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
