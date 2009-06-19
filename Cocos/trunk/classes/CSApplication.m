@@ -23,11 +23,11 @@
 {
     if( ( self = [ super init ] ) ) {
         
-        execution    = [ CSExecution getInstance  ];
-        workspace    = [ NSWorkspace sharedWorkspace ];
-        logger       = [ [ CSLogger alloc ] init ];
-        fileManager  = [ NSFileManager defaultManager ];
-        fonttManager = [ NSFontManager sharedFontManager ];
+        execution   = [ CSExecution getInstance  ];
+        workspace   = [ NSWorkspace sharedWorkspace ];
+        logger      = [ [ CSLogger alloc ] init ];
+        fileManager = [ NSFileManager defaultManager ];
+        fontManager = [ NSFontManager sharedFontManager ];
     }
     
     return self;
