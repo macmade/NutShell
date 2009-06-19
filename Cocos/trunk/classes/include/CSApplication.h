@@ -49,6 +49,11 @@
      */
     NSFileManager * fileManager;
     
+    /*!
+     * @abstract    The default font manager
+     */
+    NSFontManager * fonttManager;
+    
 @private
     
     /*!
@@ -79,5 +84,8 @@
 
 /*! @property */
 @property( readonly ) NSFileManager * fileManager;
+
+/*! @property */
+@property( readonly ) NSFontManager * fonttManager;
 
 @end

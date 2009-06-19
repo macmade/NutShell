@@ -17,15 +17,17 @@
 @synthesize workspace;
 @synthesize logger;
 @synthesize fileManager;
+@synthesize fonttManager;
 
 - ( id )init
 {
     if( ( self = [ super init ] ) ) {
         
-        execution   = [ CSExecution getInstance  ];
-        workspace   = [ NSWorkspace sharedWorkspace ];
-        logger      = [ [ CSLogger alloc ] init ];
-        fileManager = [ NSFileManager defaultManager ];
+        execution    = [ CSExecution getInstance  ];
+        workspace    = [ NSWorkspace sharedWorkspace ];
+        logger       = [ [ CSLogger alloc ] init ];
+        fileManager  = [ NSFileManager defaultManager ];
+        fonttManager = [ NSFontManager sharedFontManager ];
     }
     
     return self;
