@@ -17,7 +17,7 @@
 @synthesize workspace;
 @synthesize logger;
 @synthesize fileManager;
-@synthesize fonttManager;
+@synthesize fontManager;
 
 - ( id )init
 {
