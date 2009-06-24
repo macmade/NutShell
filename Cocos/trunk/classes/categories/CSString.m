@@ -77,22 +77,22 @@ static const unsigned int CRCTable[ 256 ] = {
     return [ NSNumber numberWithUnsignedInt: c ^ 0xFFFFFFFF ];
 }
 
-- ( BOOL )regex: ( NSString * )expression
+- ( BOOL )regexMatch: ( NSString * )expression
 {
-    return [ self regex: expression flags: REG_EXTENDED ];
+    return [ self regexMatch: expression flags: REG_EXTENDED ];
 }
 
-- ( BOOL )regex: ( NSString * )expression flags: ( int )flags
+- ( BOOL )regexMatch: ( NSString * )expression flags: ( int )flags
 {
-    return [ self regex: expression matches: nil flags: REG_EXTENDED ];
+    return [ self regexMatch: expression matches: nil flags: REG_EXTENDED ];
 }
 
-- ( BOOL )regex: ( NSString * )expression matches: ( NSMutableArray * )matches
+- ( BOOL )regexMatch: ( NSString * )expression matches: ( NSMutableArray * )matches
 {
-    return [ self regex: expression matches: matches flags: REG_EXTENDED ];
+    return [ self regexMatch: expression matches: matches flags: REG_EXTENDED ];
 }
 
-- ( BOOL )regex: ( NSString * )expression matches: ( NSMutableArray * )matches flags: ( int )flags
+- ( BOOL )regexMatch: ( NSString * )expression matches: ( NSMutableArray * )matches flags: ( int )flags
 {
     int error;
     int match;

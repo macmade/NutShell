@@ -37,21 +37,21 @@
 /*!
  * @abstract    
  */
-- ( BOOL )regex: ( NSString * )expression;
+- ( BOOL )regexMatch: ( NSString * )expression;
 
 /*!
  * @abstract    
  */
-- ( BOOL )regex: ( NSString * )expression flags: ( int )flags;
+- ( BOOL )regexMatch: ( NSString * )expression flags: ( int )flags;
 
 /*!
  * @abstract    
  */
-- ( BOOL )regex: ( NSString * )expression matches: ( NSMutableArray * )matches;
+- ( BOOL )regexMatch: ( NSString * )expression matches: ( NSMutableArray * )matches;
 
 /*!
  * @abstract    
  */
-- ( BOOL )regex: ( NSString * )expression matches: ( NSMutableArray * )matches flags: ( int )flags;
+- ( BOOL )regexMatch: ( NSString * )expression matches: ( NSMutableArray * )matches flags: ( int )flags;
 
 @end
