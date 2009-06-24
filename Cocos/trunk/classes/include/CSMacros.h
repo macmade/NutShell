@@ -32,3 +32,8 @@
     if( NULL == ( var = ( type * )calloc( x, sizeof( type ) ) ) ) { \
         CSFATAL( @"Malloc error (%s)\n", strerror( errno ) );       \
     }
+
+#define CSREALLOC( var, type, x )                                           \
+    if( NULL == ( var = ( type * )realloc( var, x * sizeof( type ) ) ) ) {  \
+        CSFATAL( "Realloc error (%s)\n", strerror( errno ) );               \
+    }
