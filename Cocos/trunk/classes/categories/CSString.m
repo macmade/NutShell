@@ -184,4 +184,14 @@ static const unsigned int CRCTable[ 256 ] = {
     return YES;
 }
 
+- ( NSString * )regexReplace: ( NSString * )expression
+{
+    return [ self regexReplace: expression flags: REG_EXTENDED ];
+}
+
+- ( NSString * )regexReplace: ( NSString * )expression flags: ( int )flags
+{
+    return self;
+}
+
 @end

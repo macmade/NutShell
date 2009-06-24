@@ -54,4 +54,14 @@
  */
 - ( BOOL )regexMatch: ( NSString * )expression matches: ( NSMutableArray * )matches flags: ( int )flags;
 
+/*!
+ * @abstract    
+ */
+- ( NSString * )regexReplace: ( NSString * )expression;
+
+/*!
+ * @abstract    
+ */
+- ( NSString * )regexReplace: ( NSString * )expression flags: ( int )flags;
+
 @end
