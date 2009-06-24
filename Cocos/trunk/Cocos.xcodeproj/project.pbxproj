@@ -12,6 +12,7 @@
 		0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DB610FD9993B00DC5241 /* CSTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0550DBB50FD9A28400DC5241 /* CSKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0550DBB70FD9A29600DC5241 /* CSKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */; };
+		055740850FF24D6000CA6580 /* CSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 055740840FF24D6000CA6580 /* CSMacros.h */; };
 		055C80B90FD73D630097C170 /* CSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* CSObject.m */; };
 		055C80E80FD7435C0097C170 /* CSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* CSEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80EA0FD7435C0097C170 /* CSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* CSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,6 +63,7 @@
 		0550DB610FD9993B00DC5241 /* CSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTextView.h; sourceTree = "<group>"; };
 		0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKeychainItem.h; sourceTree = "<group>"; };
 		0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSKeychainItem.m; path = classes/CSKeychainItem.m; sourceTree = "<group>"; };
+		055740840FF24D6000CA6580 /* CSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMacros.h; sourceTree = "<group>"; };
 		055C80B80FD73D630097C170 /* CSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSObject.m; path = classes/CSObject.m; sourceTree = "<group>"; };
 		055C80E50FD7435C0097C170 /* CSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEvent.h; sourceTree = "<group>"; };
 		055C80E70FD7435C0097C170 /* CSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSObject.h; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */,
 				055C80FF0FD746240097C170 /* CSLogger.h */,
 				055C81000FD746240097C170 /* CSLogMessage.h */,
+				055740840FF24D6000CA6580 /* CSMacros.h */,
 				055C80E70FD7435C0097C170 /* CSObject.h */,
 				055C80FA0FD7454B0097C170 /* CSObjectSingleton.h */,
 				05E68A690FD80F7D003FAC5F /* CSPreferences.h */,
@@ -306,6 +309,7 @@
 				05E914EC0FE3C4C2006A901B /* CSString.h in Headers */,
 				05E24B8C0FE859C200C42604 /* CSDictionary.h in Headers */,
 				05984D5A0FEB43EA00A497EF /* CSWindowFader.h in Headers */,
+				055740850FF24D6000CA6580 /* CSMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
