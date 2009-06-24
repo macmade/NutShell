@@ -57,6 +57,7 @@
         [ timer invalidate ];
         
         isFading = NO;
+        isFaded  = YES;
         
         if( closeAfterFade == YES ) {
             
@@ -79,6 +80,7 @@
         [ timer invalidate ];
         
         isFading = NO;
+        isFaded  = NO;
     }
 }
 
@@ -107,7 +109,7 @@
     NSTimer * timer;
     NSNumber * alpha;
     
-    if( isFading == NO ) {
+    if( isFading == NO && isFaded == NO ) {
         
         isFading = YES;
         alpha    = [ NSNumber numberWithFloat: alphaValue ];
@@ -121,7 +123,7 @@
     NSTimer * timer;
     NSNumber * alpha;
     
-    if( isFading == NO ) {
+    if( isFading == NO && isFaded == YES ) {
         
         isFading = YES;
         alpha    = [ NSNumber numberWithFloat: alphaValue ];
