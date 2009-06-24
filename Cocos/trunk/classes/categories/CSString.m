@@ -173,14 +173,85 @@ static const unsigned int CRCTable[ 256 ] = {
     return YES;
 }
 
-- ( NSString * )regexReplace: ( NSString * )expression
+- ( NSString * )regexReplace: ( NSString * )expression withString: ( NSString * )replace
 {
-    return [ self regexReplace: expression flags: REG_EXTENDED ];
+    return [ self regexReplace: expression withString: replace flags: REG_EXTENDED ];
 }
 
-- ( NSString * )regexReplace: ( NSString * )expression flags: ( int )flags
+- ( NSString * )regexReplace: ( NSString * )expression withString: ( NSString * )replace flags: ( int )flags
 {
-    return self;
+    int error;
+    int match;
+    unsigned int i;
+    size_t start;
+    size_t end;
+    size_t nmatch;
+    size_t size;
+    regex_t regex;
+    regmatch_t * pmatch;
+    char errorBuffer[ 256 ];
+    char * submatch;
+    NSString * result;
+    
+    const char * str    = [ self cStringUsingEncoding: NSUTF8StringEncoding ];
+    const char * regexp = [ expression cStringUsingEncoding: NSUTF8StringEncoding ];
+    error               = regcomp( &regex, regexp, flags );
+    
+    if( error != 0 ) {
+        
+        regerror( error, &regex, errorBuffer, sizeof( errorBuffer ) );
+        NSLog( @"%s", errorBuffer );
+        regfree( &regex );
+        return [ NSString stringWithString: self ];
+    }
+    
+    nmatch = regex.re_nsub + 1;
+    
+    CSXMALLOC( pmatch, regmatch_t, nmatch );
+    
+    match = regexec( &regex, str, nmatch, pmatch, 0 );
+    
+    if( match == REG_NOMATCH ) {
+        
+        free( pmatch );
+        regfree( &regex );
+        return [ NSString stringWithString: self ];
+        
+    } else if( match != 0 ) {
+        
+        regerror( error, &regex, errorBuffer, sizeof( errorBuffer ) );
+        NSLog( @"%s", errorBuffer );
+        free( pmatch );
+        regfree( &regex );
+        return [ NSString stringWithString: self ];
+    }
+    
+    result = [ NSString stringWithString: replace ];
+    
+    for( i = ( nmatch - 1 ); i > 0; i-- ) {
+        
+        if( pmatch[ i ].rm_so != -1 ) {
+            
+            start = ( size_t )pmatch[ i ].rm_so;
+            end   = ( size_t )pmatch[ i ].rm_eo;
+            size  = end - start;
+            
+            CSXMALLOC( submatch, char, size + 1 );
+            
+            strncpy( submatch, &str[ start ], size );
+            
+            submatch[ size ] = '\0';
+            
+            result = [ result stringByReplacingOccurrencesOfString: [ NSString stringWithFormat: @"\\%i", i ] withString: [ NSString stringWithCString: ( const char * )submatch ] ];
+            
+            free( submatch );
+        }
+    }
+    
+    free( pmatch );
+    regfree( &regex );
+    
+    return [ NSString stringWithString: result ];
 }
 
 @end

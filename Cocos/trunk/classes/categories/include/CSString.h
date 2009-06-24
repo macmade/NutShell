@@ -57,11 +57,11 @@
 /*!
  * @abstract    
  */
-- ( NSString * )regexReplace: ( NSString * )expression;
+- ( NSString * )regexReplace: ( NSString * )expression withString: ( NSString * )replace;
 
 /*!
  * @abstract    
  */
-- ( NSString * )regexReplace: ( NSString * )expression flags: ( int )flags;
+- ( NSString * )regexReplace: ( NSString * )expression withString: ( NSString * )replace flags: ( int )flags;
 
 @end
