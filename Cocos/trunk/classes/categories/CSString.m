@@ -105,7 +105,6 @@ static const unsigned int CRCTable[ 256 ] = {
     regmatch_t * pmatch;
     char errorBuffer[ 256 ];
     char * submatch;
-    NSException * exception;
     
     const char * str    = [ self cStringUsingEncoding: NSUTF8StringEncoding ];
     const char * regexp = [ expression cStringUsingEncoding: NSUTF8StringEncoding ];
@@ -122,12 +121,7 @@ static const unsigned int CRCTable[ 256 ] = {
     
     nmatch = regex.re_nsub + 1;
     
-    if( NULL == ( pmatch = (  regmatch_t * )malloc( sizeof( *pmatch ) * nmatch ) ) ) {
-        
-        exception = [ NSException exceptionWithName: @"CSStringException" reason: @"Malloc error" userInfo: nil ];
-        
-        @throw exception;
-    }
+    CSXMALLOC( pmatch, regmatch_t, nmatch );
     
     match = regexec( &regex, str, nmatch, pmatch, 0 );
     
@@ -161,12 +155,7 @@ static const unsigned int CRCTable[ 256 ] = {
             end   = ( size_t )pmatch[ i ].rm_eo;
             size  = end - start;
             
-            if( NULL == ( submatch = malloc( sizeof( char * ) * ( size + 1 ) ) ) ) {
-                
-                exception = [ NSException exceptionWithName: @"CSStringException" reason: @"Malloc error" userInfo: nil ];
-                
-                @throw exception;
-            }
+            CSXMALLOC( submatch, char, size + 1 );
             
             strncpy( submatch, &str[ start ], size );
             
