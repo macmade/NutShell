@@ -39,6 +39,11 @@
     if( ( self = [ self init ] ) ) {
         
         window = windowObject;
+        
+        if( [ window alphaValue ] < 1 ) {
+            
+            isFaded = YES;
+        }
     }
     
     return self;
@@ -70,7 +75,7 @@
 - ( void )doUnFade: ( NSTimer * )timer
 {
     NSNumber * alpha;
-    
+    NSLog( @"lala" );
     alpha = ( NSNumber * )[ timer userInfo ];
     
     [ window setAlphaValue: [ window alphaValue ] + fadeBy ];
