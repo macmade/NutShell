@@ -75,7 +75,7 @@
 - ( void )doUnFade: ( NSTimer * )timer
 {
     NSNumber * alpha;
-    NSLog( @"lala" );
+    
     alpha = ( NSNumber * )[ timer userInfo ];
     
     [ window setAlphaValue: [ window alphaValue ] + fadeBy ];
