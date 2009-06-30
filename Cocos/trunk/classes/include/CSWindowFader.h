@@ -37,6 +37,11 @@
     /*!
      * @abstract    
      */
+    NSTimer * timer;
+    
+    /*!
+     * @abstract    
+     */
     id windowDelegate;
     
     /*!

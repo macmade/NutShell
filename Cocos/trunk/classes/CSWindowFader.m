@@ -49,17 +49,17 @@
     return self;
 }
 
-- ( void )doFade: ( NSTimer * )timer
+- ( void )doFade: ( NSTimer * )timerObject
 {
     NSNumber * alpha;
     
-    alpha = ( NSNumber * )[ timer userInfo ];
+    alpha = ( NSNumber * )[ timerObject userInfo ];
     
     [ window setAlphaValue: [ window alphaValue ] - fadeBy ];
     
     if( [ window alphaValue ] <= [ alpha floatValue ] ) {
         
-        [ timer invalidate ];
+        [ timerObject invalidate ];
         
         isFading = NO;
         isFaded  = YES;
@@ -72,17 +72,17 @@
     }
 }
 
-- ( void )doUnFade: ( NSTimer * )timer
+- ( void )doUnFade: ( NSTimer * )timerObject
 {
     NSNumber * alpha;
     
-    alpha = ( NSNumber * )[ timer userInfo ];
+    alpha = ( NSNumber * )[ timerObject userInfo ];
     
     [ window setAlphaValue: [ window alphaValue ] + fadeBy ];
     
     if( [ window alphaValue ] >= [ alpha floatValue ] ) {
         
-        [ timer invalidate ];
+        [ timerObject invalidate ];
         
         isFading = NO;
         isFaded  = NO;
@@ -111,8 +111,14 @@
 
 - ( void )fadeTo: ( float )alphaValue
 {
-    NSTimer * timer;
     NSNumber * alpha;
+    
+    if( [ timer isValid ] ) {
+        
+        [ timer invalidate ];
+        isFaded  = NO;
+        isFading = NO;
+    }
     
     if( isFading == NO && isFaded == NO ) {
         
@@ -125,8 +131,14 @@
 
 - ( void )unFadeTo: ( float )alphaValue
 {
-    NSTimer * timer;
     NSNumber * alpha;
+    
+    if( [ timer isValid ] ) {
+        
+        [ timer invalidate ];
+        isFaded  = YES;
+        isFading = NO;
+    }
     
     if( isFading == NO && isFaded == YES ) {
         
