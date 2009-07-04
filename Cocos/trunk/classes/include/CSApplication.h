@@ -54,6 +54,11 @@
      */
     NSFontManager * fontManager;
     
+    /*!
+     * @abstract    The default help manager
+     */
+    NSHelpManager * helpManager;
+    
 @private
     
     /*!
@@ -87,5 +92,8 @@
 
 /*! @property */
 @property( readonly ) NSFontManager * fontManager;
+
+/*! @property */
+@property( readonly ) NSHelpManager * helpManager;
 
 @end

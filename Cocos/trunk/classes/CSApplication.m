@@ -18,6 +18,7 @@
 @synthesize logger;
 @synthesize fileManager;
 @synthesize fontManager;
+@synthesize helpManager;
 
 - ( id )init
 {
@@ -28,6 +29,7 @@
         logger      = [ [ CSLogger alloc ] init ];
         fileManager = [ NSFileManager defaultManager ];
         fontManager = [ NSFontManager sharedFontManager ];
+        helpManager = [ NSHelpManager sharedHelpManager ];
     }
     
     return self;
