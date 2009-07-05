@@ -99,9 +99,6 @@
                     
                     if( installed == NO ) {
                         
-                        [ progressBar setIndeterminate: YES ];
-                        [ progressBar startAnimation: nil ];
-                        
                         [ self dispatchEvent: @"InstallerPhase" ];
                     }
                 }
@@ -173,6 +170,9 @@
     
     [ progressBar setMinValue: 0 ];
     [ progressBar setMaxValue: 1 ];
+    [ progressBar setDoubleValue: 0 ];
+    [ progressBar setIndeterminate: YES ];
+    [ progressBar startAnimation: nil ];
     
     [ self dispatchEvent: @"InstallerStart" ];
     
