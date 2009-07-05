@@ -79,7 +79,7 @@
  * @param       io          A file pointer
  * @return      An I/O pipe
  */
-- ( OSStatus )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments io: ( FILE * ) io;
+- ( OSStatus )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments io: ( FILE ** ) io;
 
 /*!
  * @abstract    Executes a command line tool with admin privileges

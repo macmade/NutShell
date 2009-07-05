@@ -63,7 +63,7 @@
     return status;
 }
 
-- ( OSStatus )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments io: ( FILE * )io
+- ( OSStatus )executeWithPrivileges: ( char * )command arguments: ( char * [] )arguments io: ( FILE ** )io
 {
     OSStatus status;
     AuthorizationFlags flags;
@@ -81,7 +81,7 @@
             command,
             flags,
             arguments,
-            &io
+            io
         );
     }
     
