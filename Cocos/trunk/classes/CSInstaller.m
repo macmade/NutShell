@@ -86,7 +86,7 @@
                 
                 action = [ log substringToIndex: range.location ];
                 
-                if( [ action isEqualToString: @"STATUS" ] ) {
+                if( [ action isEqualToString: @"STATUS" ] && installed == NO ) {
                     
                     [ progressBar setIndeterminate: NO ];
                     [ statusText setStringValue: [ log substringFromIndex: range.location + 1 ] ];
@@ -99,6 +99,8 @@
                     
                     if( installed == NO ) {
                         
+                        [ progressBar setIndeterminate: YES ];
+                        [ progressBar startAnimation: nil ];
                         [ self dispatchEvent: @"InstallerPhase" ];
                     }
                 }
