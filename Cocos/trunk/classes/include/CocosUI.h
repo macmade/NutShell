@@ -20,3 +20,4 @@
 
 // Classes
 #import "CSUIInstaller.h"
+#import "CSUIURLDownloader.h"
