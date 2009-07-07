@@ -49,6 +49,16 @@
      */
     NSProgressIndicator * progressBar;
     
+    /*!
+     * @abstract    
+     */
+    NSButton * installButton;
+    
+    /*!
+     * @abstract    
+     */
+    NSButton * quitButton;
+    
 @private
     
     /*!
@@ -79,5 +89,16 @@
 
 /*! @property */
 @property( assign, readwrite ) NSProgressIndicator * progressBar;
+
+/*! @property */
+@property( assign, readwrite ) NSButton * installButton;
+
+/*! @property */
+@property( assign, readwrite ) NSButton * quitButton;
+
+/*!
+ * @abstract    
+ */
+- ( void )install: ( id )sender;
 
 @end

@@ -16,6 +16,8 @@
 @synthesize statusText;
 @synthesize progressBar;
 @synthesize indeterminateProgressForNewPhases;
+@synthesize installButton;
+@synthesize quitButton;
 
 - ( id )init
 {
@@ -61,9 +63,12 @@
 {
     [ progressBar setIndeterminate: NO ];
     [ progressBar setDoubleValue:   1 ];
+    
+    [ installButton setEnabled: NO ];
+    [ quitButton setEnabled: YES ];
 }
 
-- ( OSStatus )installWithTarget: ( NSString * )target
+- ( OSStatus )installWithTarget: ( NSString * )destTarget
 {
     [ progressBar setMinValue:      0 ];
     [ progressBar setMaxValue:      1 ];
@@ -71,7 +76,26 @@
     [ progressBar setIndeterminate: YES ];
     [ progressBar startAnimation:   nil ];
     
-    return [ super installWithTarget: target ];
+    return [ super installWithTarget: destTarget ];
+}
+
+- ( void )install: ( id )sender
+{
+    OSStatus execStatus;
+    
+    execStatus = [ self install ];
+    
+    if( execStatus == 0 ) {
+        
+        [ installButton setEnabled: NO ];
+        [ quitButton setEnabled: NO ];
+        
+    } else {
+        
+        [ installButton setEnabled: YES ];
+        [ quitButton setEnabled: YES ];
+    }
+    
 }
 
 @end
