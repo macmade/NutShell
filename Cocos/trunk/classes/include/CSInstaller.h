@@ -44,6 +44,11 @@
     /*!
      * @abstract    
      */
+    double progress;
+    
+    /*!
+     * @abstract    
+     */
     FILE * io;
     
     /*!
@@ -54,17 +59,12 @@
     /*!
      * @abstract    
      */
-    NSTextField * phaseText;
+    NSString * phase;
     
     /*!
      * @abstract    
      */
-    NSTextField * statusText;
-    
-    /*!
-     * @abstract    
-     */
-    NSProgressIndicator * progressBar;
+    NSString * status;
     
     /*!
      * @abstract    
@@ -97,16 +97,16 @@
 @property( readonly, getter=isInstalled ) BOOL installed;
 
 /*! @property */
+@property( readonly ) double progress;
+
+/*! @property */
 @property( copy, readwrite ) NSString * packagePath;
 
 /*! @property */
-@property( assign, readwrite ) NSTextField * phaseText;
+@property( readonly ) NSString * phase;
 
 /*! @property */
-@property( assign, readwrite ) NSTextField * statusText;
-
-/*! @property */
-@property( assign, readwrite ) NSProgressIndicator * progressBar;
+@property( readonly ) NSString * status;
 
 /*!
  * @abstract        
@@ -117,6 +117,11 @@
  * @abstract        
  */
 - ( id )initWithPackage: ( NSString * )path;
+
+/*!
+ * @abstract        
+ */
+- ( void )updateInstallerStatus: ( NSTimer * )timer;
 
 /*!
  * @abstract        

@@ -14,15 +14,15 @@
 @implementation CSInstaller
 
 @synthesize packagePath;
-@synthesize phaseText;
-@synthesize statusText;
-@synthesize progressBar;
+@synthesize phase;
+@synthesize status;
+@synthesize progress;
 @synthesize installing;
 @synthesize installed;
 
 + ( id )installerWithPackage: ( NSString * )path
 {
-    id installer = [ [ CSInstaller alloc ] initWithPackage: path ];
+    id installer = [ [ self alloc ] initWithPackage: path ];
     
     return [ installer autorelease ];
 }
@@ -50,6 +50,8 @@
 - ( void )dealloc
 {
     [ packagePath release ];
+    [ phase release ];
+    [ status release ];
     [ super dealloc ];
 }
 
@@ -58,7 +60,6 @@
     NSString * log;
     NSRange range;
     NSString * action;
-    double percent;
     
     if( str != nil && [ str length ] > 11 && [ [ str substringToIndex: 10 ] isEqualToString: @"installer:" ] ) {
         
@@ -66,11 +67,11 @@
         
         if( [ [ log substringToIndex: 1 ] isEqualToString: @"%" ] && [ log length ] > 2 ) {
             
-            percent = [ [ log substringFromIndex: 1 ] doubleValue ];
+            progress = [ [ log substringFromIndex: 1 ] doubleValue ];
             
-            [ progressBar setDoubleValue: percent ];
+            [ self dispatchEvent: @"InstallerProgress" ];
             
-            if( percent == 1 ) {
+            if( progress == 1 ) {
                 
                 installed  = YES;
                 installing = NO;
@@ -88,19 +89,20 @@
                 
                 if( [ action isEqualToString: @"STATUS" ] && installed == NO ) {
                     
-                    [ progressBar setIndeterminate: NO ];
-                    [ statusText setStringValue: [ log substringFromIndex: range.location + 1 ] ];
+                    [ status release ];
+                    
+                    status = [ [ log substringFromIndex: range.location + 1 ] retain ];
                     
                     [ self dispatchEvent: @"InstallerStatus" ];
                     
                 } else if( [ action isEqualToString: @"PHASE" ] ) {
                     
-                    [ phaseText setStringValue: [ log substringFromIndex: range.location + 1 ] ];
+                    [ phase release ];
+                    
+                    phase = [ [ log substringFromIndex: range.location + 1 ] retain ];
                     
                     if( installed == NO ) {
                         
-                        [ progressBar setIndeterminate: YES ];
-                        [ progressBar startAnimation: nil ];
                         [ self dispatchEvent: @"InstallerPhase" ];
                     }
                 }
@@ -122,7 +124,6 @@
         
     } else {
         
-        [ progressBar setIndeterminate: NO ];
         [ timer invalidate ];
         fclose( io );
     }
@@ -136,7 +137,7 @@
 - ( OSStatus )installWithTarget: ( NSString * )target
 {
     char * args[ 6 ];
-    OSStatus status;
+    OSStatus execStatus;
     NSTimer * timer;
     
     if( packagePath == nil ) {
@@ -160,27 +161,21 @@
     
     args[ 5 ] = NULL;
     
-    status = [ execution executeWithPrivileges: "/usr/sbin/installer" arguments: args io: &io ];
+    execStatus = [ execution executeWithPrivileges: "/usr/sbin/installer" arguments: args io: &io ];
     
-    if( status != 0 ) {
+    if( execStatus != 0 ) {
         
-        return status;
+        return execStatus;
     }
     
     installing = YES;
     installed  = NO;
     
-    [ progressBar setMinValue: 0 ];
-    [ progressBar setMaxValue: 1 ];
-    [ progressBar setDoubleValue: 0 ];
-    [ progressBar setIndeterminate: YES ];
-    [ progressBar startAnimation: nil ];
-    
     [ self dispatchEvent: @"InstallerStart" ];
     
     timer = [ NSTimer scheduledTimerWithTimeInterval: 0.1 target: self selector: @selector( updateInstallerStatus: ) userInfo: nil repeats: YES ];
     
-    return status;
+    return execStatus;
 }
 
 @end
