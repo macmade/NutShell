@@ -17,3 +17,6 @@
  *              is preferred over importing individual files because it will use
  *              a precompiled version.
  */
+
+// Classes
+#import "CSUIInstaller.h"

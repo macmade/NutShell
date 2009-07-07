@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052297221002FD170033A3B9 /* CocosUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 052297211002FD170033A3B9 /* CocosUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0522984B10030C960033A3B9 /* CSUIInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0522984A10030C960033A3B9 /* CSUIInstaller.m */; };
+		0522984D10030C9D0033A3B9 /* CSUIInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522984C10030C9D0033A3B9 /* CSUIInstaller.h */; };
 		0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054145490FD7519B00D6CB19 /* Security.framework */; };
 		0550DB600FD9993100DC5241 /* CSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DB5F0FD9993100DC5241 /* CSTextView.m */; };
 		0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DB610FD9993B00DC5241 /* CSTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,6 +63,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052297211002FD170033A3B9 /* CocosUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosUI.h; sourceTree = "<group>"; };
+		0522984A10030C960033A3B9 /* CSUIInstaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUIInstaller.m; sourceTree = "<group>"; };
+		0522984C10030C9D0033A3B9 /* CSUIInstaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUIInstaller.h; sourceTree = "<group>"; };
 		054145490FD7519B00D6CB19 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		0550DB5F0FD9993100DC5241 /* CSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTextView.m; sourceTree = "<group>"; };
 		0550DB610FD9993B00DC5241 /* CSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTextView.h; sourceTree = "<group>"; };
@@ -139,6 +145,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		0522970E1002FCD00033A3B9 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				052297101002FCD00033A3B9 /* include */,
+				0522984A10030C960033A3B9 /* CSUIInstaller.m */,
+			);
+			name = ui;
+			path = classes/ui;
+			sourceTree = "<group>";
+		};
+		052297101002FCD00033A3B9 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0522984C10030C9D0033A3B9 /* CSUIInstaller.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		055C80E00FD742880097C170 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				055C81600FD749F40097C170 /* Cocos.h */,
+				052297211002FD170033A3B9 /* CocosUI.h */,
 				055C81990FD74BED0097C170 /* CSApplication.h */,
 				055C81A30FD74CE80097C170 /* CSExecution.h */,
 				055C80E50FD7435C0097C170 /* CSEvent.h */,
@@ -237,6 +262,7 @@
 				056997BB0FD8AFAB00B590DD /* categories */,
 				055C80E40FD7435C0097C170 /* include */,
 				055C80E00FD742880097C170 /* protocols */,
+				0522970E1002FCD00033A3B9 /* ui */,
 				055C819D0FD74C280097C170 /* CSApplication.m */,
 				055C81A50FD74CF60097C170 /* CSExecution.m */,
 				05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */,
@@ -317,6 +343,8 @@
 				05984D5A0FEB43EA00A497EF /* CSWindowFader.h in Headers */,
 				055740850FF24D6000CA6580 /* CSMacros.h in Headers */,
 				059107D01000D41B00F3003A /* CSInstaller.h in Headers */,
+				052297221002FD170033A3B9 /* CocosUI.h in Headers */,
+				0522984D10030C9D0033A3B9 /* CSUIInstaller.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +426,7 @@
 				05E24B8E0FE859CD00C42604 /* CSDictionary.m in Sources */,
 				05984D5C0FEB43F800A497EF /* CSWindowFader.m in Sources */,
 				059107CE1000D40800F3003A /* CSInstaller.m in Sources */,
+				0522984B10030C960033A3B9 /* CSUIInstaller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
