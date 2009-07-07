@@ -45,4 +45,5 @@
 #import "CSReflectionProperty.h"
 #import "CSReflectionProtocol.h"
 #import "CSReflectionVariable.h"
+#import "CSURLDownloader.h"
 #import "CSWindowFader.h"

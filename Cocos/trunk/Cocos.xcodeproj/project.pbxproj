@@ -10,6 +10,8 @@
 		052297221002FD170033A3B9 /* CocosUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 052297211002FD170033A3B9 /* CocosUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0522984B10030C960033A3B9 /* CSUIInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0522984A10030C960033A3B9 /* CSUIInstaller.m */; };
 		0522984D10030C9D0033A3B9 /* CSUIInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522984C10030C9D0033A3B9 /* CSUIInstaller.h */; };
+		0522986510030CD80033A3B9 /* CSURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0522986410030CD80033A3B9 /* CSURLDownloader.m */; };
+		0522986710030CE50033A3B9 /* CSURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522986610030CE50033A3B9 /* CSURLDownloader.h */; };
 		0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054145490FD7519B00D6CB19 /* Security.framework */; };
 		0550DB600FD9993100DC5241 /* CSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DB5F0FD9993100DC5241 /* CSTextView.m */; };
 		0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DB610FD9993B00DC5241 /* CSTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,6 +68,8 @@
 		052297211002FD170033A3B9 /* CocosUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosUI.h; sourceTree = "<group>"; };
 		0522984A10030C960033A3B9 /* CSUIInstaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUIInstaller.m; sourceTree = "<group>"; };
 		0522984C10030C9D0033A3B9 /* CSUIInstaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUIInstaller.h; sourceTree = "<group>"; };
+		0522986410030CD80033A3B9 /* CSURLDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSURLDownloader.m; path = classes/CSURLDownloader.m; sourceTree = "<group>"; };
+		0522986610030CE50033A3B9 /* CSURLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSURLDownloader.h; sourceTree = "<group>"; };
 		054145490FD7519B00D6CB19 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		0550DB5F0FD9993100DC5241 /* CSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTextView.m; sourceTree = "<group>"; };
 		0550DB610FD9993B00DC5241 /* CSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTextView.h; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				05E686C60FD77F6C003FAC5F /* CSReflectionProperty.h */,
 				05E686C70FD77F6C003FAC5F /* CSReflectionProtocol.h */,
 				05E686C80FD77F6C003FAC5F /* CSReflectionVariable.h */,
+				0522986610030CE50033A3B9 /* CSURLDownloader.h */,
 				05984D590FEB43EA00A497EF /* CSWindowFader.h */,
 			);
 			name = include;
@@ -279,6 +284,7 @@
 				05E686D20FD77F83003FAC5F /* CSReflectionProperty.m */,
 				05E686D30FD77F83003FAC5F /* CSReflectionProtocol.m */,
 				05E686D40FD77F83003FAC5F /* CSReflectionVariable.m */,
+				0522986410030CD80033A3B9 /* CSURLDownloader.m */,
 				05984D5B0FEB43F800A497EF /* CSWindowFader.m */,
 			);
 			name = Classes;
@@ -345,6 +351,7 @@
 				059107D01000D41B00F3003A /* CSInstaller.h in Headers */,
 				052297221002FD170033A3B9 /* CocosUI.h in Headers */,
 				0522984D10030C9D0033A3B9 /* CSUIInstaller.h in Headers */,
+				0522986710030CE50033A3B9 /* CSURLDownloader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +434,7 @@
 				05984D5C0FEB43F800A497EF /* CSWindowFader.m in Sources */,
 				059107CE1000D40800F3003A /* CSInstaller.m in Sources */,
 				0522984B10030C960033A3B9 /* CSUIInstaller.m in Sources */,
+				0522986510030CD80033A3B9 /* CSURLDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
