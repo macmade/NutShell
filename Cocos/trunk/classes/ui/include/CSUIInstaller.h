@@ -19,8 +19,6 @@
 // Local includes
 #import "CSInstaller.h"
 
-@class CSExecution;
-
 /*!
  * @abstract    
  * 
