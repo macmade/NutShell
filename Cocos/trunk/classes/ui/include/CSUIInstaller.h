@@ -37,6 +37,16 @@
     /*!
      * @abstract    
      */
+    BOOL playSoundOnInstallComplete;
+    
+    /*!
+     * @abstract    
+     */
+    NSSound * completeSound;
+    
+    /*!
+     * @abstract    
+     */
     NSTextField * phaseText;
     
     /*!
@@ -80,6 +90,12 @@
 
 /*! @property */
 @property( assign, readwrite ) BOOL indeterminateProgressForNewPhases;
+
+/*! @property */
+@property( assign, readwrite ) BOOL playSoundOnInstallComplete;
+
+/*! @property */
+@property( copy, readwrite ) NSSound * completeSound;
 
 /*! @property */
 @property( assign, readwrite ) NSTextField * phaseText;

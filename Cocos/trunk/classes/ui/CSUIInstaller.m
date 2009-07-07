@@ -16,6 +16,8 @@
 @synthesize statusText;
 @synthesize progressBar;
 @synthesize indeterminateProgressForNewPhases;
+@synthesize playSoundOnInstallComplete;
+@synthesize completeSound;
 @synthesize installButton;
 @synthesize quitButton;
 
@@ -29,6 +31,7 @@
         [ self addEventListener: @"InstallerComplete" target: self selector: @selector( installationComplete: ) ];
         
         indeterminateProgressForNewPhases = YES;
+        playSoundOnInstallComplete        = YES;
     }
     
     return self;
@@ -66,6 +69,11 @@
     
     [ installButton setEnabled: NO ];
     [ quitButton setEnabled: YES ];
+    
+    if( playSoundOnInstallComplete == YES ) {
+        
+        [ completeSound play ];
+    }
 }
 
 - ( OSStatus )installWithTarget: ( NSString * )destTarget
@@ -79,11 +87,16 @@
     return [ super installWithTarget: destTarget ];
 }
 
+- ( void )install
+{
+    return [ self install: nil ];
+}
+
 - ( void )install: ( id )sender
 {
     OSStatus execStatus;
     
-    execStatus = [ self install ];
+    execStatus = [ super install ];
     
     if( execStatus == 0 ) {
         
