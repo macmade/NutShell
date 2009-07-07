@@ -71,11 +71,11 @@
     [ super dealloc ];
 }
 
-- ( void )start
+- ( BOOL )start
 {
     if( downloading ) {
         
-        return;
+        return NO;
     }
     if( !downloadDirectory ) {
         
@@ -86,16 +86,18 @@
     
     if( !download ) {
         
-        CSFATAL( @"Impossible to create the NSURLDownload object" );
+        return NO;
     }
     
-    timer             = [ NSTimer scheduledTimerWithTimeInterval: 1 target: self selector: @selector( updateDownloadSpeed: ) userInfo: nil repeats: YES ];
+    timer             = [ NSTimer scheduledTimerWithTimeInterval: 1 target: self selector: @selector( updateSpeed: ) userInfo: nil repeats: YES ];
     downloading       = YES;
-    downloading       = NO;
+    downloaded        = NO;
     bytesReceived     = 0;
     lastBytesReceived = 0;
     
     [ self dispatchEvent: @"DownloadStarted" ];
+    
+    return YES;
 }
 
 - ( void )cancel
@@ -169,7 +171,7 @@
 }
 
 
-- ( void )updateDownloadSpeed: ( NSTimer * )timerObject
+- ( void )updateSpeed: ( NSTimer * )timerObject
 {
     bytesPerSecond    = bytesReceived - lastBytesReceived;
     lastBytesReceived = bytesReceived;

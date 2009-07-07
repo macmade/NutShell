@@ -184,7 +184,7 @@
 /*!
  * @abstract    
  */
-- ( void )start;
+- ( BOOL )start;
 
 /*!
  * @abstract    
