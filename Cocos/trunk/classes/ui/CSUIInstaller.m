@@ -17,6 +17,21 @@
 @synthesize progressBar;
 @synthesize indeterminateProgressForNewPhases;
 
+- ( id )init
+{
+    if( ( self = [ super init ] ) ) {
+        
+        [ self addEventListener: @"InstallerProgress" target: self selector: @selector( updateProgressBar: ) ];
+        [ self addEventListener: @"InstallerPhase" target: self selector: @selector( updatePhaseText: ) ];
+        [ self addEventListener: @"InstallerStatus" target: self selector: @selector( updateStatusText: ) ];
+        [ self addEventListener: @"InstallerComplete" target: self selector: @selector( installationComplete: ) ];
+        
+        indeterminateProgressForNewPhases = YES;
+    }
+    
+    return self;
+}
+
 - ( void )updateProgressBar: ( CSEvent * )event
 {
     [ progressBar setIndeterminate: NO ];
@@ -55,11 +70,6 @@
     [ progressBar setDoubleValue:   0 ];
     [ progressBar setIndeterminate: YES ];
     [ progressBar startAnimation:   nil ];
-    
-    [ self addEventListener: @"InstallerProgress" target: self selector: @selector( updateProgressBar: ) ];
-    [ self addEventListener: @"InstallerPhase" target: self selector: @selector( updatePhaseText: ) ];
-    [ self addEventListener: @"InstallerStatus" target: self selector: @selector( updateStatusText: ) ];
-    [ self addEventListener: @"InstallerComplete" target: self selector: @selector( installationComplete: ) ];
     
     return [ super installWithTarget: target ];
 }
