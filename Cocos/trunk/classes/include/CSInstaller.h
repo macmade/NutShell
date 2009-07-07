@@ -69,6 +69,11 @@
     /*!
      * @abstract    
      */
+    NSString * target;
+    
+    /*!
+     * @abstract    
+     */
     CSExecution * execution;
     
 @private
@@ -108,6 +113,9 @@
 /*! @property */
 @property( readonly ) NSString * status;
 
+/*! @property */
+@property( copy, readwrite ) NSString * target;
+
 /*!
  * @abstract        
  */
@@ -131,6 +139,6 @@
 /*!
  * @abstract        
  */
-- ( OSStatus )installWithTarget: ( NSString * )target;
+- ( OSStatus )installWithTarget: ( NSString * )destTarget;
 
 @end

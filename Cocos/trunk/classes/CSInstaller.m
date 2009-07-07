@@ -19,6 +19,7 @@
 @synthesize progress;
 @synthesize installing;
 @synthesize installed;
+@synthesize target;
 
 + ( id )installerWithPackage: ( NSString * )path
 {
@@ -131,10 +132,17 @@
 
 - ( OSStatus )install
 {
-    return [ self installWithTarget: @"/" ];
+    if( [ target length ] > 0 ) {
+        
+        return [ self installWithTarget: target ];
+        
+    } else {
+        
+        return [ self installWithTarget: @"/" ];
+    }
 }
 
-- ( OSStatus )installWithTarget: ( NSString * )target
+- ( OSStatus )installWithTarget: ( NSString * )destTarget
 {
     char * args[ 6 ];
     OSStatus execStatus;
@@ -150,9 +158,9 @@
     args[ 2 ] = ( char * )[ packagePath cStringUsingEncoding: NSUTF8StringEncoding ];
     args[ 3 ] = "-target";
     
-    if( target != nil && [ target length ] > 0 ) {
+    if( destTarget != nil && [ destTarget length ] > 0 ) {
         
-        args[ 4 ] = ( char * )[ target cStringUsingEncoding: NSUTF8StringEncoding ];
+        args[ 4 ] = ( char * )[ destTarget cStringUsingEncoding: NSUTF8StringEncoding ];
         
     } else {
         
