@@ -93,6 +93,10 @@
 
 - ( void )downloadError: ( CSEvent * )event
 {
+    NSAlert  * alert;
+    NSError  * error;
+    NSString * errorText;
+    
     [ downloadButton setEnabled:  YES ];
     [ cancelButton   setEnabled:  NO ];
     [ progressBar setDoubleValue: 0 ];
@@ -102,10 +106,6 @@
     [ timeRemainingText setStringValue: @"" ];
     
     if( displayErrors == YES ) {
-        
-        NSAlert  * alert;
-        NSError  * error;
-        NSString * errorText;
         
         error     = [ event target ];
         errorText =  [ NSString stringWithFormat: errorFormat, [ error localizedDescription ] ];
