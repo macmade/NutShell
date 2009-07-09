@@ -79,7 +79,7 @@
     }
     if( !downloadDirectory ) {
         
-        downloadDirectory = [ [ [ NSString alloc ] initWithString: NSHomeDirectory() ] stringByAppendingPathComponent: @"Downloads" ];
+        self.downloadDirectory = [ NSHomeDirectory() stringByAppendingPathComponent: @"Downloads" ];
     }
     
     download = [ [ NSURLDownload alloc ] initWithRequest: request delegate: self ];
