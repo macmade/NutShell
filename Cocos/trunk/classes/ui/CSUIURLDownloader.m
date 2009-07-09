@@ -12,6 +12,7 @@
 
 @implementation CSUIURLDownloader
 
+@synthesize displayErrors;
 @synthesize playSoundOnDownloadComplete;
 @synthesize progressBar;
 @synthesize statusText;
@@ -68,6 +69,7 @@
         self.errorOk                      = @"OK";
         self.unknown                      = @"Unknown";
         self.playSoundOnDownloadComplete  = YES;
+        self.displayErrors                = YES;
         
         [ self addEventListener: @"DataReceived" target: self selector: @selector( updateDownloadProgress: ) ];
         [ self addEventListener: @"DownloadSpeedUpdated" target: self selector: @selector( updateDownloadSpeed: ) ];
@@ -91,10 +93,6 @@
 
 - ( void )downloadError: ( CSEvent * )event
 {
-    NSAlert  * alert;
-    NSError  * error;
-    NSString * errorText;
-    
     [ downloadButton setEnabled:  YES ];
     [ cancelButton   setEnabled:  NO ];
     [ progressBar setDoubleValue: 0 ];
@@ -103,13 +101,20 @@
     [ speedText setStringValue: @"" ];
     [ timeRemainingText setStringValue: @"" ];
     
-    error     = [ event target ];
-    errorText =  [ NSString stringWithFormat: errorFormat, [ error localizedDescription ] ];
-    
-    alert = [ NSAlert alertWithMessageText: errorTitle defaultButton: errorOk alternateButton: nil otherButton: nil informativeTextWithFormat: errorText ];
-    
-    [ alert setAlertStyle: NSCriticalAlertStyle ];
-    [ alert runModal ];
+    if( displayErrors == YES ) {
+        
+        NSAlert  * alert;
+        NSError  * error;
+        NSString * errorText;
+        
+        error     = [ event target ];
+        errorText =  [ NSString stringWithFormat: errorFormat, [ error localizedDescription ] ];
+        
+        alert = [ NSAlert alertWithMessageText: errorTitle defaultButton: errorOk alternateButton: nil otherButton: nil informativeTextWithFormat: errorText ];
+        
+        [ alert setAlertStyle: NSCriticalAlertStyle ];
+        [ alert runModal ];
+    }
 }
 
 - ( void )downloadComplete: ( CSEvent * )event

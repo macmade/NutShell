@@ -32,6 +32,11 @@
     /*!
      * @abstract    
      */
+    BOOL displayErrors;
+    
+    /*!
+     * @abstract    
+     */
     BOOL playSoundOnDownloadComplete;
     
     /*!
@@ -192,6 +197,9 @@
      */
     id CS_r4;
 }
+
+/*! @property */
+@property( assign, readwrite ) BOOL displayErrors;
 
 /*! @property */
 @property( assign, readwrite ) BOOL playSoundOnDownloadComplete;
