@@ -18,6 +18,9 @@
  *              a precompiled version.
  */
 
+// Functions
+#import "CSLog.h"
+
 // Categories
 #import "CSDictionary.h"
 #import "CSEventDispatcher.h"
