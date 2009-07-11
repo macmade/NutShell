@@ -3,4 +3,5 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
     #import "CSMacros.h"
+    #import "CSLog.h"
 #endif
