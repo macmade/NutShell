@@ -219,7 +219,7 @@
     defaults     = [ NSUserDefaults standardUserDefaults ];
     autoSaveName = [ name copy ];
     
-    [ defaults setInteger: indexOfSelectedView forKey: autoSaveName ];
+    [ self selectView: [ defaults integerForKey: autoSaveName ] ];
 }
 
 - ( NSUInteger )indexOfSelectedView
