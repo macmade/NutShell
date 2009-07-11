@@ -148,22 +148,26 @@
         if( r3.size.width < r2.size.width ) {
             
             r1.size.width -= r2.size.width - r3.size.width;
+            r1.origin.x   += ( r2.size.width - r3.size.width ) / 2;
             r2.size.width -= r2.size.width - r3.size.width;
             
         } else if( r3.size.width > r2.size.width ) {
             
             r1.size.width += r3.size.width - r2.size.width;
+            r1.origin.x   -= ( r3.size.width - r2.size.width ) / 2;
             r2.size.width += r3.size.width - r2.size.width;
         }
         
         if( r3.size.height < r2.size.height ) {
             
             r1.size.height -= ( r2.size.height - r3.size.height ) - r4.size.height;
+            r1.origin.y    += ( ( r2.size.height - r3.size.height ) - r4.size.height ) / 2;
             r2.size.height -= ( r2.size.height - r3.size.height ) - r4.size.height;
             
         } else if( r3.size.height > r2.size.height ) {
             
             r1.size.height += ( r3.size.height - r2.size.height ) + r4.size.height;
+            r1.origin.y    -= ( ( r3.size.height - r2.size.height ) - r4.size.height ) / 2;
             r2.size.height += ( r3.size.height - r2.size.height ) + r4.size.height;
         }
         
