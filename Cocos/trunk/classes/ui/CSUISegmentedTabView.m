@@ -87,6 +87,8 @@
     rect.size.width  = [ viewObject frame ].size.width;
     rect.size.height = [ viewObject frame ].size.height;
     
+    [ viewObject setFrame: rect ];
+    
     if( [ views count ] - 1 == indexOfSelectedView ) {
         
         [ self selectView: indexOfSelectedView ];
