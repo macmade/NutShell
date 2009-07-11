@@ -8,6 +8,7 @@
 // $Id$
 
 #import "CSUISegmentedTabView.h"
+#import "CSEventDispatcher.h"
 
 @implementation CSUISegmentedTabView
 
@@ -189,6 +190,8 @@
             
             [ defaults setInteger: indexOfSelectedView forKey: autoSaveName ];
         }
+        
+        [ self dispatchEvent: @"TabSelected" ];
         
     } else {
         
