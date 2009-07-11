@@ -31,9 +31,9 @@
         [ control sizeToFit ];
         [ self addSubview: control ];
         
-        rect.origin.x    = 0;
+        rect.origin.x    = 16;
         rect.origin.y    = frame.size.height - [ control frame ].size.height;
-        rect.size.width  = frame.size.width;
+        rect.size.width  = frame.size.width - 36;
         rect.size.height = [ control frame ].size.height;
         
         [ control setFrame: rect ];
@@ -60,16 +60,16 @@
     
     for( i = 0; i < count; i++ ) {
         
-        [ control setWidth: [ self frame ].size.width / count forSegment: i ];
+        [ control setWidth: ( ( [ self frame ].size.width ) / count ) - 10 forSegment: i ];
     }
     
     [ control sizeToFit ];
     
-    margin = ( [ control frame ].size.width - [ self frame ].size.width ) / count;
+    margin = ( ( [ control frame ].size.width - [ self frame ].size.width ) / count ) + ( 54 / count );
     
     for( i = 0; i < count; i++ ) {
         
-        [ control setWidth: ( [ self frame ].size.width / count ) - margin forSegment: i ];
+        [ control setWidth: ( ( [ self frame ].size.width ) / count ) - margin forSegment: i ];
     }
 }
 
