@@ -19,6 +19,10 @@
 		0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DB610FD9993B00DC5241 /* CSTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0550DBB50FD9A28400DC5241 /* CSKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0550DBB70FD9A29600DC5241 /* CSKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */; };
+		0552BB4A100829A900F0B59F /* CSUISegmentedTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552BB49100829A900F0B59F /* CSUISegmentedTabView.m */; };
+		0552BB4C100829BA00F0B59F /* CSUISegmentedTabView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0552BB4B100829BA00F0B59F /* CSUISegmentedTabView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0552BD7B10084D4600F0B59F /* CSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552BD7810084D4600F0B59F /* CSLog.m */; };
+		0552BD7C10084D4600F0B59F /* CSLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0552BD7A10084D4600F0B59F /* CSLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055740850FF24D6000CA6580 /* CSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 055740840FF24D6000CA6580 /* CSMacros.h */; };
 		055C80B90FD73D630097C170 /* CSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* CSObject.m */; };
 		055C80E80FD7435C0097C170 /* CSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* CSEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -79,6 +83,10 @@
 		0550DB610FD9993B00DC5241 /* CSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTextView.h; sourceTree = "<group>"; };
 		0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKeychainItem.h; sourceTree = "<group>"; };
 		0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSKeychainItem.m; path = classes/CSKeychainItem.m; sourceTree = "<group>"; };
+		0552BB49100829A900F0B59F /* CSUISegmentedTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUISegmentedTabView.m; sourceTree = "<group>"; };
+		0552BB4B100829BA00F0B59F /* CSUISegmentedTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUISegmentedTabView.h; sourceTree = "<group>"; };
+		0552BD7810084D4600F0B59F /* CSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLog.m; path = functions/CSLog.m; sourceTree = "<group>"; };
+		0552BD7A10084D4600F0B59F /* CSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLog.h; sourceTree = "<group>"; };
 		055740840FF24D6000CA6580 /* CSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMacros.h; sourceTree = "<group>"; };
 		055C80B80FD73D630097C170 /* CSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSObject.m; path = classes/CSObject.m; sourceTree = "<group>"; };
 		055C80E50FD7435C0097C170 /* CSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEvent.h; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 				052297101002FCD00033A3B9 /* include */,
 				0522984A10030C960033A3B9 /* CSUIInstaller.m */,
 				052298C210031B540033A3B9 /* CSUIURLDownloader.m */,
+				0552BB49100829A900F0B59F /* CSUISegmentedTabView.m */,
 			);
 			name = ui;
 			path = classes/ui;
@@ -169,8 +178,27 @@
 			children = (
 				0522984C10030C9D0033A3B9 /* CSUIInstaller.h */,
 				052298C410031B5F0033A3B9 /* CSUIURLDownloader.h */,
+				0552BB4B100829BA00F0B59F /* CSUISegmentedTabView.h */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		0552BD6A10084D1D00F0B59F /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				0552BD7910084D4600F0B59F /* include */,
+				0552BD7810084D4600F0B59F /* CSLog.m */,
+			);
+			name = Functions;
+			sourceTree = "<group>";
+		};
+		0552BD7910084D4600F0B59F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0552BD7A10084D4600F0B59F /* CSLog.h */,
+			);
+			name = include;
+			path = functions/include;
 			sourceTree = "<group>";
 		};
 		055C80E00FD742880097C170 /* protocols */ = {
@@ -241,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				08FB77AEFE84172EC02AAC07 /* Classes */,
+				0552BD6A10084D1D00F0B59F /* Functions */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
@@ -359,6 +388,8 @@
 				0522984D10030C9D0033A3B9 /* CSUIInstaller.h in Headers */,
 				0522986710030CE50033A3B9 /* CSURLDownloader.h in Headers */,
 				052298C510031B5F0033A3B9 /* CSUIURLDownloader.h in Headers */,
+				0552BB4C100829BA00F0B59F /* CSUISegmentedTabView.h in Headers */,
+				0552BD7C10084D4600F0B59F /* CSLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +474,8 @@
 				0522984B10030C960033A3B9 /* CSUIInstaller.m in Sources */,
 				0522986510030CD80033A3B9 /* CSURLDownloader.m in Sources */,
 				052298C310031B540033A3B9 /* CSUIURLDownloader.m in Sources */,
+				0552BB4A100829A900F0B59F /* CSUISegmentedTabView.m in Sources */,
+				0552BD7B10084D4600F0B59F /* CSLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
