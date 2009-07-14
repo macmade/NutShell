@@ -105,6 +105,11 @@
 /*!
  * @abstract    
  */
+- ( void )setControlStyle: ( NSSegmentStyle )style;
+
+/*!
+ * @abstract    
+ */
 - ( void )addView: ( NSView * )viewObject title: ( NSString * )title;
 
 /*!

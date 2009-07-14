@@ -25,6 +25,7 @@
         titles  = [ [ NSMutableArray arrayWithCapacity: 5 ] retain ];
         control = [ [ NSSegmentedControl alloc ] init ];
         
+        [ control setSegmentStyle: NSSegmentStyleTexturedRounded ];
         [ control setFocusRingType: NSFocusRingTypeNone ];
         [ control setSegmentCount: 0 ];
         [ control setTarget: self ];
@@ -51,26 +52,21 @@
     [ super dealloc ];
 }
 
+- ( void )setControlStyle: ( NSSegmentStyle )style
+{
+    [ control setSegmentStyle: style ];
+}
+
 - ( void )updateWidthOfSegments
 {
     int count;
     int i;
-    CGFloat margin;
     
     count = [ control segmentCount ];
     
     for( i = 0; i < count; i++ ) {
         
-        [ control setWidth: ( ( [ self frame ].size.width ) / count ) - 10 forSegment: i ];
-    }
-    
-    [ control sizeToFit ];
-    
-    margin = ( ( [ control frame ].size.width - [ self frame ].size.width ) / count ) + ( 54 / count );
-    
-    for( i = 0; i < count; i++ ) {
-        
-        [ control setWidth: ( ( [ self frame ].size.width ) / count ) - margin forSegment: i ];
+        [ control setWidth: ( ( [ self frame ].size.width - 36 ) / count ) - ( 5 / count ) - 1 forSegment: i ];
     }
 }
 
