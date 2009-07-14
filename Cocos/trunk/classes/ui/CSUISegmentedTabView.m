@@ -66,7 +66,7 @@
     
     for( i = 0; i < count; i++ ) {
         
-        [ control setWidth: ( ( [ self frame ].size.width - 36 ) / count ) - ( 5 / count ) - 1 forSegment: i ];
+        [ control setWidth: ( ( [ self frame ].size.width - 36 ) / count ) - ( 6 / count ) - 1 forSegment: i ];
     }
 }
 
