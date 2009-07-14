@@ -157,7 +157,7 @@
             r1.size.width -= r2.size.width - r3.size.width;
             r2.size.width -= r2.size.width - r3.size.width;
             
-        } else if( r3.size.width > r2.size.width ) {
+        } else {
             
             r1.size.width += r3.size.width - r2.size.width;
             r2.size.width += r3.size.width - r2.size.width;
@@ -169,7 +169,7 @@
             r1.origin.y    += ( r2.size.height - r3.size.height ) - r4.size.height;
             r2.size.height -= ( r2.size.height - r3.size.height ) - r4.size.height;
             
-        } else if( r3.size.height > r2.size.height ) {
+        } else {
             
             r1.size.height += ( r3.size.height - r2.size.height ) + r4.size.height;
             r1.origin.y    -= ( r3.size.height - r2.size.height ) + r4.size.height;
