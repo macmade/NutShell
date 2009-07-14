@@ -27,8 +27,8 @@
 {
     if( ( self = [ super init ] ) ) {
         
-        fadeBy       = ( float )0.2;
-        fadeInterval = ( float )0.05;
+        fadeBy       = ( float )0.1;
+        fadeInterval = ( float )0.02;
     }
     
     return self;
