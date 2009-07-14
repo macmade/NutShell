@@ -33,7 +33,7 @@
         [ control sizeToFit ];
         [ self addSubview: control ];
         
-        rect.origin.x    = 16;
+        rect.origin.x    = 18;
         rect.origin.y    = frame.size.height - [ control frame ].size.height;
         rect.size.width  = frame.size.width - 36;
         rect.size.height = [ control frame ].size.height;
@@ -61,12 +61,22 @@
 {
     int count;
     int i;
+    CGFloat margin;
     
     count = [ control segmentCount ];
     
     for( i = 0; i < count; i++ ) {
         
-        [ control setWidth: ( ( [ self frame ].size.width - 36 ) / count ) - ( 6 / count ) - 1 forSegment: i ];
+        [ control setWidth: ( ( [ self frame ].size.width - 36 ) / count ) forSegment: i ];
+    }
+    
+    [ control sizeToFit ];
+    
+    margin = [ control frame ].size.width - ( [ self frame ].size.width - 36 );
+    
+    for( i = 0; i < count; i++ ) {
+        
+        [ control setWidth: ( ( [ self frame ].size.width - 36 ) / count ) - ( margin / count ) forSegment: i ];
     }
 }
 
