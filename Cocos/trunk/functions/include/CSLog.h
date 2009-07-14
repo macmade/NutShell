@@ -30,3 +30,8 @@ void CSLogSize( NSSize size );
  * @header      
  */
 void CSLogRect( NSRect rect );
+
+/*!
+ * @header      
+ */
+void CSLogRange( NSRange range );

@@ -28,3 +28,9 @@ void CSLogRect( NSRect rect )
     NSLog( @"Width:  %f", rect.size.width );
     NSLog( @"Height: %f", rect.size.height );
 }
+
+void CSLogRange( NSRange range )
+{
+    NSLog( @"Location:  %i", range.location );
+    NSLog( @"Length:    %i", range.length );
+}
