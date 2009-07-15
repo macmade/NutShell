@@ -94,10 +94,10 @@
     NSTask * task;
     NSPipe * pipe;
     
-    task = [ [ NSTask alloc ] init ];
+    task = [ [ [ NSTask alloc ] init ] autorelease ];
     
     [ task setLaunchPath: command ];
-    [task setArguments: arguments ];
+    [ task setArguments: arguments ];
     
     pipe = [ NSPipe pipe ];
     
