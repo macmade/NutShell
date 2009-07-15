@@ -7,10 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0516C208100E008800C6B853 /* CSApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1F5100E008800C6B853 /* CSApplication.m */; };
+		0516C209100E008800C6B853 /* CSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1F6100E008800C6B853 /* CSEvent.m */; };
+		0516C20A100E008800C6B853 /* CSExecution.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1F7100E008800C6B853 /* CSExecution.m */; };
+		0516C20B100E008800C6B853 /* CSHostReachabilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1F8100E008800C6B853 /* CSHostReachabilityTest.m */; };
+		0516C20C100E008800C6B853 /* CSInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1F9100E008800C6B853 /* CSInstaller.m */; };
+		0516C20D100E008800C6B853 /* CSKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1FA100E008800C6B853 /* CSKeychainItem.m */; };
+		0516C20E100E008800C6B853 /* CSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1FB100E008800C6B853 /* CSLogger.m */; };
+		0516C20F100E008800C6B853 /* CSLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1FC100E008800C6B853 /* CSLogMessage.m */; };
+		0516C210100E008800C6B853 /* CSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1FD100E008800C6B853 /* CSObject.m */; };
+		0516C211100E008800C6B853 /* CSObjectSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1FE100E008800C6B853 /* CSObjectSingleton.m */; };
+		0516C212100E008800C6B853 /* CSPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1FF100E008800C6B853 /* CSPreferences.m */; };
+		0516C213100E008800C6B853 /* CSReflectionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C200100E008800C6B853 /* CSReflectionClass.m */; };
+		0516C214100E008800C6B853 /* CSReflectionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C201100E008800C6B853 /* CSReflectionMethod.m */; };
+		0516C215100E008800C6B853 /* CSReflectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C202100E008800C6B853 /* CSReflectionObject.m */; };
+		0516C216100E008800C6B853 /* CSReflectionProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C203100E008800C6B853 /* CSReflectionProperty.m */; };
+		0516C217100E008800C6B853 /* CSReflectionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C204100E008800C6B853 /* CSReflectionProtocol.m */; };
+		0516C218100E008800C6B853 /* CSReflectionVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C205100E008800C6B853 /* CSReflectionVariable.m */; };
+		0516C219100E008800C6B853 /* CSURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C206100E008800C6B853 /* CSURLDownloader.m */; };
+		0516C21A100E008800C6B853 /* CSWindowFader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C207100E008800C6B853 /* CSWindowFader.m */; };
 		052297221002FD170033A3B9 /* CocosUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 052297211002FD170033A3B9 /* CocosUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0522984B10030C960033A3B9 /* CSUIInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0522984A10030C960033A3B9 /* CSUIInstaller.m */; };
 		0522984D10030C9D0033A3B9 /* CSUIInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522984C10030C9D0033A3B9 /* CSUIInstaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0522986510030CD80033A3B9 /* CSURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0522986410030CD80033A3B9 /* CSURLDownloader.m */; };
 		0522986710030CE50033A3B9 /* CSURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522986610030CE50033A3B9 /* CSURLDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		052298C310031B540033A3B9 /* CSUIURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 052298C210031B540033A3B9 /* CSUIURLDownloader.m */; };
 		052298C510031B5F0033A3B9 /* CSUIURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 052298C410031B5F0033A3B9 /* CSUIURLDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,36 +36,26 @@
 		0550DB600FD9993100DC5241 /* CSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DB5F0FD9993100DC5241 /* CSTextView.m */; };
 		0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DB610FD9993B00DC5241 /* CSTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0550DBB50FD9A28400DC5241 /* CSKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0550DBB70FD9A29600DC5241 /* CSKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */; };
 		0552BB4A100829A900F0B59F /* CSUISegmentedTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552BB49100829A900F0B59F /* CSUISegmentedTabView.m */; };
 		0552BB4C100829BA00F0B59F /* CSUISegmentedTabView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0552BB4B100829BA00F0B59F /* CSUISegmentedTabView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0552BD7B10084D4600F0B59F /* CSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552BD7810084D4600F0B59F /* CSLog.m */; };
 		0552BD7C10084D4600F0B59F /* CSLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0552BD7A10084D4600F0B59F /* CSLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055740850FF24D6000CA6580 /* CSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 055740840FF24D6000CA6580 /* CSMacros.h */; };
-		055C80B90FD73D630097C170 /* CSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80B80FD73D630097C170 /* CSObject.m */; };
 		055C80E80FD7435C0097C170 /* CSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* CSEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80EA0FD7435C0097C170 /* CSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* CSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C80F70FD745300097C170 /* CSSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80F60FD745300097C170 /* CSSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C80F90FD745410097C170 /* CSObjectSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C80F80FD745410097C170 /* CSObjectSingleton.m */; };
 		055C80FB0FD7454B0097C170 /* CSObjectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FA0FD7454B0097C170 /* CSObjectSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C81010FD746240097C170 /* CSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FF0FD746240097C170 /* CSLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C81020FD746240097C170 /* CSLogMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81000FD746240097C170 /* CSLogMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C81050FD746330097C170 /* CSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81030FD746330097C170 /* CSLogger.m */; };
-		055C81060FD746330097C170 /* CSLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81040FD746330097C170 /* CSLogMessage.m */; };
 		055C81610FD749F40097C170 /* Cocos.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81600FD749F40097C170 /* Cocos.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		055C81A40FD74CE80097C170 /* CSExecution.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81A30FD74CE80097C170 /* CSExecution.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		055C81A60FD74CF60097C170 /* CSExecution.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C81A50FD74CF60097C170 /* CSExecution.m */; };
-		055C81B20FD74E970097C170 /* CSApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 055C819D0FD74C280097C170 /* CSApplication.m */; };
 		055C81B30FD74E980097C170 /* CSApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81990FD74BED0097C170 /* CSApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		056997BE0FD8B03100B590DD /* CSEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 056997BD0FD8B03100B590DD /* CSEventDispatcher.m */; };
 		056997C00FD8B03C00B590DD /* CSEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		056997C80FD8B06500B590DD /* CSScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 056997C70FD8B06500B590DD /* CSScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		056997CA0FD8B07000B590DD /* CSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 056997C90FD8B07000B590DD /* CSScrollView.m */; };
-		059107CE1000D40800F3003A /* CSInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 059107CD1000D40800F3003A /* CSInstaller.m */; };
 		059107D01000D41B00F3003A /* CSInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 059107CF1000D41B00F3003A /* CSInstaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05984D5A0FEB43EA00A497EF /* CSWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05984D590FEB43EA00A497EF /* CSWindowFader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05984D5C0FEB43F800A497EF /* CSWindowFader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05984D5B0FEB43F800A497EF /* CSWindowFader.m */; };
-		05D5AB6C100DA51700832BFD /* CSHostReachabilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D5AB6B100DA51700832BFD /* CSHostReachabilityTest.m */; };
 		05D5AB6E100DA52400832BFD /* CSHostReachabilityTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05D5AB7B100DA62900832BFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */; };
 		05E24B8C0FE859C200C42604 /* CSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E24B8B0FE859C200C42604 /* CSDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,26 +66,36 @@
 		05E686CC0FD77F6C003FAC5F /* CSReflectionProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C60FD77F6C003FAC5F /* CSReflectionProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E686CD0FD77F6C003FAC5F /* CSReflectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C70FD77F6C003FAC5F /* CSReflectionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E686CE0FD77F6C003FAC5F /* CSReflectionVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C80FD77F6C003FAC5F /* CSReflectionVariable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05E686D50FD77F83003FAC5F /* CSReflectionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686CF0FD77F83003FAC5F /* CSReflectionClass.m */; };
-		05E686D60FD77F83003FAC5F /* CSReflectionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D00FD77F83003FAC5F /* CSReflectionMethod.m */; };
-		05E686D70FD77F83003FAC5F /* CSReflectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D10FD77F83003FAC5F /* CSReflectionObject.m */; };
-		05E686D80FD77F83003FAC5F /* CSReflectionProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D20FD77F83003FAC5F /* CSReflectionProperty.m */; };
-		05E686D90FD77F83003FAC5F /* CSReflectionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D30FD77F83003FAC5F /* CSReflectionProtocol.m */; };
-		05E686DA0FD77F83003FAC5F /* CSReflectionVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E686D40FD77F83003FAC5F /* CSReflectionVariable.m */; };
-		05E68A680FD80F6F003FAC5F /* CSPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E68A670FD80F6F003FAC5F /* CSPreferences.m */; };
 		05E68A6A0FD80F7D003FAC5F /* CSPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E68A690FD80F7D003FAC5F /* CSPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E914EA0FE3C4B6006A901B /* CSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E914E90FE3C4B6006A901B /* CSString.m */; };
 		05E914EC0FE3C4C2006A901B /* CSString.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E914EB0FE3C4C2006A901B /* CSString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05E9A0740FD73BAA00F2E8B0 /* CSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0516C1F5100E008800C6B853 /* CSApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSApplication.m; sourceTree = "<group>"; };
+		0516C1F6100E008800C6B853 /* CSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSEvent.m; sourceTree = "<group>"; };
+		0516C1F7100E008800C6B853 /* CSExecution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSExecution.m; sourceTree = "<group>"; };
+		0516C1F8100E008800C6B853 /* CSHostReachabilityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHostReachabilityTest.m; sourceTree = "<group>"; };
+		0516C1F9100E008800C6B853 /* CSInstaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSInstaller.m; sourceTree = "<group>"; };
+		0516C1FA100E008800C6B853 /* CSKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSKeychainItem.m; sourceTree = "<group>"; };
+		0516C1FB100E008800C6B853 /* CSLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLogger.m; sourceTree = "<group>"; };
+		0516C1FC100E008800C6B853 /* CSLogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLogMessage.m; sourceTree = "<group>"; };
+		0516C1FD100E008800C6B853 /* CSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSObject.m; sourceTree = "<group>"; };
+		0516C1FE100E008800C6B853 /* CSObjectSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSObjectSingleton.m; sourceTree = "<group>"; };
+		0516C1FF100E008800C6B853 /* CSPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPreferences.m; sourceTree = "<group>"; };
+		0516C200100E008800C6B853 /* CSReflectionClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSReflectionClass.m; sourceTree = "<group>"; };
+		0516C201100E008800C6B853 /* CSReflectionMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSReflectionMethod.m; sourceTree = "<group>"; };
+		0516C202100E008800C6B853 /* CSReflectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSReflectionObject.m; sourceTree = "<group>"; };
+		0516C203100E008800C6B853 /* CSReflectionProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSReflectionProperty.m; sourceTree = "<group>"; };
+		0516C204100E008800C6B853 /* CSReflectionProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSReflectionProtocol.m; sourceTree = "<group>"; };
+		0516C205100E008800C6B853 /* CSReflectionVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSReflectionVariable.m; sourceTree = "<group>"; };
+		0516C206100E008800C6B853 /* CSURLDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSURLDownloader.m; sourceTree = "<group>"; };
+		0516C207100E008800C6B853 /* CSWindowFader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSWindowFader.m; sourceTree = "<group>"; };
 		052297211002FD170033A3B9 /* CocosUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosUI.h; sourceTree = "<group>"; };
 		0522984A10030C960033A3B9 /* CSUIInstaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUIInstaller.m; sourceTree = "<group>"; };
 		0522984C10030C9D0033A3B9 /* CSUIInstaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUIInstaller.h; sourceTree = "<group>"; };
-		0522986410030CD80033A3B9 /* CSURLDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSURLDownloader.m; path = classes/CSURLDownloader.m; sourceTree = "<group>"; };
 		0522986610030CE50033A3B9 /* CSURLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSURLDownloader.h; sourceTree = "<group>"; };
 		052298C210031B540033A3B9 /* CSUIURLDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUIURLDownloader.m; sourceTree = "<group>"; };
 		052298C410031B5F0033A3B9 /* CSUIURLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUIURLDownloader.h; sourceTree = "<group>"; };
@@ -85,36 +103,26 @@
 		0550DB5F0FD9993100DC5241 /* CSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTextView.m; sourceTree = "<group>"; };
 		0550DB610FD9993B00DC5241 /* CSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTextView.h; sourceTree = "<group>"; };
 		0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKeychainItem.h; sourceTree = "<group>"; };
-		0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSKeychainItem.m; path = classes/CSKeychainItem.m; sourceTree = "<group>"; };
 		0552BB49100829A900F0B59F /* CSUISegmentedTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUISegmentedTabView.m; sourceTree = "<group>"; };
 		0552BB4B100829BA00F0B59F /* CSUISegmentedTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUISegmentedTabView.h; sourceTree = "<group>"; };
 		0552BD7810084D4600F0B59F /* CSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLog.m; path = functions/CSLog.m; sourceTree = "<group>"; };
 		0552BD7A10084D4600F0B59F /* CSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLog.h; sourceTree = "<group>"; };
 		055740840FF24D6000CA6580 /* CSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMacros.h; sourceTree = "<group>"; };
-		055C80B80FD73D630097C170 /* CSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSObject.m; path = classes/CSObject.m; sourceTree = "<group>"; };
 		055C80E50FD7435C0097C170 /* CSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEvent.h; sourceTree = "<group>"; };
 		055C80E70FD7435C0097C170 /* CSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSObject.h; sourceTree = "<group>"; };
 		055C80F60FD745300097C170 /* CSSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSingleton.h; sourceTree = "<group>"; };
-		055C80F80FD745410097C170 /* CSObjectSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSObjectSingleton.m; path = classes/CSObjectSingleton.m; sourceTree = "<group>"; };
 		055C80FA0FD7454B0097C170 /* CSObjectSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSObjectSingleton.h; sourceTree = "<group>"; };
 		055C80FF0FD746240097C170 /* CSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLogger.h; sourceTree = "<group>"; };
 		055C81000FD746240097C170 /* CSLogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLogMessage.h; sourceTree = "<group>"; };
-		055C81030FD746330097C170 /* CSLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLogger.m; path = classes/CSLogger.m; sourceTree = "<group>"; };
-		055C81040FD746330097C170 /* CSLogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLogMessage.m; path = classes/CSLogMessage.m; sourceTree = "<group>"; };
 		055C81600FD749F40097C170 /* Cocos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cocos.h; sourceTree = "<group>"; };
 		055C81990FD74BED0097C170 /* CSApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSApplication.h; sourceTree = "<group>"; };
-		055C819D0FD74C280097C170 /* CSApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSApplication.m; path = classes/CSApplication.m; sourceTree = "<group>"; };
 		055C81A30FD74CE80097C170 /* CSExecution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSExecution.h; sourceTree = "<group>"; };
-		055C81A50FD74CF60097C170 /* CSExecution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSExecution.m; path = classes/CSExecution.m; sourceTree = "<group>"; };
 		056997BD0FD8B03100B590DD /* CSEventDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSEventDispatcher.m; sourceTree = "<group>"; };
 		056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEventDispatcher.h; sourceTree = "<group>"; };
 		056997C70FD8B06500B590DD /* CSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSScrollView.h; sourceTree = "<group>"; };
 		056997C90FD8B07000B590DD /* CSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSScrollView.m; sourceTree = "<group>"; };
-		059107CD1000D40800F3003A /* CSInstaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSInstaller.m; path = classes/CSInstaller.m; sourceTree = "<group>"; };
 		059107CF1000D41B00F3003A /* CSInstaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSInstaller.h; sourceTree = "<group>"; };
 		05984D590FEB43EA00A497EF /* CSWindowFader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSWindowFader.h; sourceTree = "<group>"; };
-		05984D5B0FEB43F800A497EF /* CSWindowFader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSWindowFader.m; path = classes/CSWindowFader.m; sourceTree = "<group>"; };
-		05D5AB6B100DA51700832BFD /* CSHostReachabilityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSHostReachabilityTest.m; path = classes/CSHostReachabilityTest.m; sourceTree = "<group>"; };
 		05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHostReachabilityTest.h; sourceTree = "<group>"; };
 		05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
 		05E24B8B0FE859C200C42604 /* CSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDictionary.h; sourceTree = "<group>"; };
@@ -125,17 +133,9 @@
 		05E686C60FD77F6C003FAC5F /* CSReflectionProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionProperty.h; sourceTree = "<group>"; };
 		05E686C70FD77F6C003FAC5F /* CSReflectionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionProtocol.h; sourceTree = "<group>"; };
 		05E686C80FD77F6C003FAC5F /* CSReflectionVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionVariable.h; sourceTree = "<group>"; };
-		05E686CF0FD77F83003FAC5F /* CSReflectionClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSReflectionClass.m; path = classes/CSReflectionClass.m; sourceTree = "<group>"; };
-		05E686D00FD77F83003FAC5F /* CSReflectionMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSReflectionMethod.m; path = classes/CSReflectionMethod.m; sourceTree = "<group>"; };
-		05E686D10FD77F83003FAC5F /* CSReflectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSReflectionObject.m; path = classes/CSReflectionObject.m; sourceTree = "<group>"; };
-		05E686D20FD77F83003FAC5F /* CSReflectionProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSReflectionProperty.m; path = classes/CSReflectionProperty.m; sourceTree = "<group>"; };
-		05E686D30FD77F83003FAC5F /* CSReflectionProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSReflectionProtocol.m; path = classes/CSReflectionProtocol.m; sourceTree = "<group>"; };
-		05E686D40FD77F83003FAC5F /* CSReflectionVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSReflectionVariable.m; path = classes/CSReflectionVariable.m; sourceTree = "<group>"; };
-		05E68A670FD80F6F003FAC5F /* CSPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSPreferences.m; path = classes/CSPreferences.m; sourceTree = "<group>"; };
 		05E68A690FD80F7D003FAC5F /* CSPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPreferences.h; sourceTree = "<group>"; };
 		05E914E90FE3C4B6006A901B /* CSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSString.m; sourceTree = "<group>"; };
 		05E914EB0FE3C4C2006A901B /* CSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSString.h; sourceTree = "<group>"; };
-		05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSEvent.m; path = classes/CSEvent.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -176,8 +176,7 @@
 				052298C210031B540033A3B9 /* CSUIURLDownloader.m */,
 				0552BB49100829A900F0B59F /* CSUISegmentedTabView.m */,
 			);
-			name = ui;
-			path = classes/ui;
+			path = ui;
 			sourceTree = "<group>";
 		};
 		052297101002FCD00033A3B9 /* include */ = {
@@ -213,8 +212,7 @@
 			children = (
 				055C80F60FD745300097C170 /* CSSingleton.h */,
 			);
-			name = protocols;
-			path = classes/protocols;
+			path = protocols;
 			sourceTree = "<group>";
 		};
 		055C80E40FD7435C0097C170 /* include */ = {
@@ -243,8 +241,7 @@
 				0522986610030CE50033A3B9 /* CSURLDownloader.h */,
 				05984D590FEB43EA00A497EF /* CSWindowFader.h */,
 			);
-			name = include;
-			path = classes/include;
+			path = include;
 			sourceTree = "<group>";
 		};
 		056997BB0FD8AFAB00B590DD /* categories */ = {
@@ -257,8 +254,7 @@
 				05E914E90FE3C4B6006A901B /* CSString.m */,
 				0550DB5F0FD9993100DC5241 /* CSTextView.m */,
 			);
-			name = categories;
-			path = classes/categories;
+			path = categories;
 			sourceTree = "<group>";
 		};
 		056997BC0FD8AFAB00B590DD /* include */ = {
@@ -276,7 +272,7 @@
 		0867D691FE84028FC02AAC07 /* Cocos */ = {
 			isa = PBXGroup;
 			children = (
-				08FB77AEFE84172EC02AAC07 /* Classes */,
+				08FB77AEFE84172EC02AAC07 /* classes */,
 				0552BD6A10084D1D00F0B59F /* Functions */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
@@ -304,34 +300,34 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+		08FB77AEFE84172EC02AAC07 /* classes */ = {
 			isa = PBXGroup;
 			children = (
 				056997BB0FD8AFAB00B590DD /* categories */,
 				055C80E40FD7435C0097C170 /* include */,
 				055C80E00FD742880097C170 /* protocols */,
 				0522970E1002FCD00033A3B9 /* ui */,
-				055C819D0FD74C280097C170 /* CSApplication.m */,
-				055C81A50FD74CF60097C170 /* CSExecution.m */,
-				05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */,
-				05D5AB6B100DA51700832BFD /* CSHostReachabilityTest.m */,
-				059107CD1000D40800F3003A /* CSInstaller.m */,
-				0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */,
-				055C81030FD746330097C170 /* CSLogger.m */,
-				055C81040FD746330097C170 /* CSLogMessage.m */,
-				055C80B80FD73D630097C170 /* CSObject.m */,
-				055C80F80FD745410097C170 /* CSObjectSingleton.m */,
-				05E68A670FD80F6F003FAC5F /* CSPreferences.m */,
-				05E686CF0FD77F83003FAC5F /* CSReflectionClass.m */,
-				05E686D00FD77F83003FAC5F /* CSReflectionMethod.m */,
-				05E686D10FD77F83003FAC5F /* CSReflectionObject.m */,
-				05E686D20FD77F83003FAC5F /* CSReflectionProperty.m */,
-				05E686D30FD77F83003FAC5F /* CSReflectionProtocol.m */,
-				05E686D40FD77F83003FAC5F /* CSReflectionVariable.m */,
-				0522986410030CD80033A3B9 /* CSURLDownloader.m */,
-				05984D5B0FEB43F800A497EF /* CSWindowFader.m */,
+				0516C1F5100E008800C6B853 /* CSApplication.m */,
+				0516C1F6100E008800C6B853 /* CSEvent.m */,
+				0516C1F7100E008800C6B853 /* CSExecution.m */,
+				0516C1F8100E008800C6B853 /* CSHostReachabilityTest.m */,
+				0516C1F9100E008800C6B853 /* CSInstaller.m */,
+				0516C1FA100E008800C6B853 /* CSKeychainItem.m */,
+				0516C1FB100E008800C6B853 /* CSLogger.m */,
+				0516C1FC100E008800C6B853 /* CSLogMessage.m */,
+				0516C1FD100E008800C6B853 /* CSObject.m */,
+				0516C1FE100E008800C6B853 /* CSObjectSingleton.m */,
+				0516C1FF100E008800C6B853 /* CSPreferences.m */,
+				0516C200100E008800C6B853 /* CSReflectionClass.m */,
+				0516C201100E008800C6B853 /* CSReflectionMethod.m */,
+				0516C202100E008800C6B853 /* CSReflectionObject.m */,
+				0516C203100E008800C6B853 /* CSReflectionProperty.m */,
+				0516C204100E008800C6B853 /* CSReflectionProtocol.m */,
+				0516C205100E008800C6B853 /* CSReflectionVariable.m */,
+				0516C206100E008800C6B853 /* CSURLDownloader.m */,
+				0516C207100E008800C6B853 /* CSWindowFader.m */,
 			);
-			name = Classes;
+			path = classes;
 			sourceTree = "<group>";
 		};
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
@@ -460,34 +456,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E9A0740FD73BAA00F2E8B0 /* CSEvent.m in Sources */,
-				055C80B90FD73D630097C170 /* CSObject.m in Sources */,
-				055C80F90FD745410097C170 /* CSObjectSingleton.m in Sources */,
-				055C81050FD746330097C170 /* CSLogger.m in Sources */,
-				055C81060FD746330097C170 /* CSLogMessage.m in Sources */,
-				055C81A60FD74CF60097C170 /* CSExecution.m in Sources */,
-				055C81B20FD74E970097C170 /* CSApplication.m in Sources */,
-				05E686D50FD77F83003FAC5F /* CSReflectionClass.m in Sources */,
-				05E686D60FD77F83003FAC5F /* CSReflectionMethod.m in Sources */,
-				05E686D70FD77F83003FAC5F /* CSReflectionObject.m in Sources */,
-				05E686D80FD77F83003FAC5F /* CSReflectionProperty.m in Sources */,
-				05E686D90FD77F83003FAC5F /* CSReflectionProtocol.m in Sources */,
-				05E686DA0FD77F83003FAC5F /* CSReflectionVariable.m in Sources */,
-				05E68A680FD80F6F003FAC5F /* CSPreferences.m in Sources */,
 				056997BE0FD8B03100B590DD /* CSEventDispatcher.m in Sources */,
 				056997CA0FD8B07000B590DD /* CSScrollView.m in Sources */,
 				0550DB600FD9993100DC5241 /* CSTextView.m in Sources */,
-				0550DBB70FD9A29600DC5241 /* CSKeychainItem.m in Sources */,
 				05E914EA0FE3C4B6006A901B /* CSString.m in Sources */,
 				05E24B8E0FE859CD00C42604 /* CSDictionary.m in Sources */,
-				05984D5C0FEB43F800A497EF /* CSWindowFader.m in Sources */,
-				059107CE1000D40800F3003A /* CSInstaller.m in Sources */,
 				0522984B10030C960033A3B9 /* CSUIInstaller.m in Sources */,
-				0522986510030CD80033A3B9 /* CSURLDownloader.m in Sources */,
 				052298C310031B540033A3B9 /* CSUIURLDownloader.m in Sources */,
 				0552BB4A100829A900F0B59F /* CSUISegmentedTabView.m in Sources */,
 				0552BD7B10084D4600F0B59F /* CSLog.m in Sources */,
-				05D5AB6C100DA51700832BFD /* CSHostReachabilityTest.m in Sources */,
+				0516C208100E008800C6B853 /* CSApplication.m in Sources */,
+				0516C209100E008800C6B853 /* CSEvent.m in Sources */,
+				0516C20A100E008800C6B853 /* CSExecution.m in Sources */,
+				0516C20B100E008800C6B853 /* CSHostReachabilityTest.m in Sources */,
+				0516C20C100E008800C6B853 /* CSInstaller.m in Sources */,
+				0516C20D100E008800C6B853 /* CSKeychainItem.m in Sources */,
+				0516C20E100E008800C6B853 /* CSLogger.m in Sources */,
+				0516C20F100E008800C6B853 /* CSLogMessage.m in Sources */,
+				0516C210100E008800C6B853 /* CSObject.m in Sources */,
+				0516C211100E008800C6B853 /* CSObjectSingleton.m in Sources */,
+				0516C212100E008800C6B853 /* CSPreferences.m in Sources */,
+				0516C213100E008800C6B853 /* CSReflectionClass.m in Sources */,
+				0516C214100E008800C6B853 /* CSReflectionMethod.m in Sources */,
+				0516C215100E008800C6B853 /* CSReflectionObject.m in Sources */,
+				0516C216100E008800C6B853 /* CSReflectionProperty.m in Sources */,
+				0516C217100E008800C6B853 /* CSReflectionProtocol.m in Sources */,
+				0516C218100E008800C6B853 /* CSReflectionVariable.m in Sources */,
+				0516C219100E008800C6B853 /* CSURLDownloader.m in Sources */,
+				0516C21A100E008800C6B853 /* CSWindowFader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
