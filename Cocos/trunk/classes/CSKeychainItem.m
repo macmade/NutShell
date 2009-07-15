@@ -48,7 +48,7 @@
         if( status == noErr ) {
             
             itemExists = YES;
-            password   = [ [ NSString alloc ] initWithCString: passwordData encoding: NSUTF8StringEncoding ];
+            password   = [ [ NSString alloc ] initWithCString: passwordData length: passwordLength ];
             
             SecKeychainItemFreeContent(
                 NULL,
@@ -143,7 +143,7 @@
         [ password release ];
         
         itemExists = YES;
-        password   = [ [ NSString alloc ] initWithCString: passwordData encoding: NSUTF8StringEncoding ];
+        password   = [ [ NSString alloc ] initWithCString: passwordData length: passwordLength ];
         
         SecKeychainItemFreeContent(
             NULL,
