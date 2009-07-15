@@ -18,9 +18,9 @@
 
 + ( id )createWithName: ( NSString * )itemName username: ( NSString * )itemUser
 {
-    id item = [ [ self alloc ] initWithName: itemName username: itemUser ];
+    id keychain = [ [ self alloc ] initWithName: itemName username: itemUser ];
     
-    return [ item autorelease ];
+    return [ keychain autorelease ];
 }
 
 - ( id )initWithName: ( NSString * )itemName username: ( NSString * )itemUser
@@ -48,7 +48,7 @@
         if( status == noErr ) {
             
             itemExists = YES;
-            password   = [ [ NSString alloc ] initWithCString: passwordData length: passwordLength ];
+            password   = [ [ NSString alloc ] initWithCString: passwordData encoding: NSUTF8StringEncoding ];
             
             SecKeychainItemFreeContent(
                 NULL,
@@ -143,7 +143,7 @@
         [ password release ];
         
         itemExists = YES;
-        password   = [ [ NSString alloc ] initWithCString: passwordData length: passwordLength ];
+        password   = [ [ NSString alloc ] initWithCString: passwordData encoding: NSUTF8StringEncoding ];
         
         SecKeychainItemFreeContent(
             NULL,
@@ -160,10 +160,9 @@
 {
     CFRelease( item );
     
-    self.password = nil;
-    
     [ name release ];
     [ username release ];
+    [ password release ];
     [ super dealloc ];
 }
 
