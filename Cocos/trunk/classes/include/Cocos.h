@@ -35,6 +35,7 @@
 #import "CSApplication.h"
 #import "CSEvent.h"
 #import "CSExecution.h"
+#import "CSHostReachabilityTest.h"
 #import "CSInstaller.h"
 #import "CSKeychainItem.h"
 #import "CSLogger.h"

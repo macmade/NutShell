@@ -47,6 +47,9 @@
 		059107D01000D41B00F3003A /* CSInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 059107CF1000D41B00F3003A /* CSInstaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05984D5A0FEB43EA00A497EF /* CSWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05984D590FEB43EA00A497EF /* CSWindowFader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05984D5C0FEB43F800A497EF /* CSWindowFader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05984D5B0FEB43F800A497EF /* CSWindowFader.m */; };
+		05D5AB6C100DA51700832BFD /* CSHostReachabilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D5AB6B100DA51700832BFD /* CSHostReachabilityTest.m */; };
+		05D5AB6E100DA52400832BFD /* CSHostReachabilityTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05D5AB7B100DA62900832BFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */; };
 		05E24B8C0FE859C200C42604 /* CSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E24B8B0FE859C200C42604 /* CSDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E24B8E0FE859CD00C42604 /* CSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E24B8D0FE859CD00C42604 /* CSDictionary.m */; };
 		05E686C90FD77F6C003FAC5F /* CSReflectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -111,6 +114,9 @@
 		059107CF1000D41B00F3003A /* CSInstaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSInstaller.h; sourceTree = "<group>"; };
 		05984D590FEB43EA00A497EF /* CSWindowFader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSWindowFader.h; sourceTree = "<group>"; };
 		05984D5B0FEB43F800A497EF /* CSWindowFader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSWindowFader.m; path = classes/CSWindowFader.m; sourceTree = "<group>"; };
+		05D5AB6B100DA51700832BFD /* CSHostReachabilityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSHostReachabilityTest.m; path = classes/CSHostReachabilityTest.m; sourceTree = "<group>"; };
+		05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHostReachabilityTest.h; sourceTree = "<group>"; };
+		05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
 		05E24B8B0FE859C200C42604 /* CSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDictionary.h; sourceTree = "<group>"; };
 		05E24B8D0FE859CD00C42604 /* CSDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDictionary.m; sourceTree = "<group>"; };
 		05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionClass.h; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 			files = (
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 				0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */,
+				05D5AB7B100DA62900832BFD /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +225,7 @@
 				055C81990FD74BED0097C170 /* CSApplication.h */,
 				055C81A30FD74CE80097C170 /* CSExecution.h */,
 				055C80E50FD7435C0097C170 /* CSEvent.h */,
+				05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */,
 				059107CF1000D41B00F3003A /* CSInstaller.h */,
 				0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */,
 				055C80FF0FD746240097C170 /* CSLogger.h */,
@@ -306,6 +314,7 @@
 				055C819D0FD74C280097C170 /* CSApplication.m */,
 				055C81A50FD74CF60097C170 /* CSExecution.m */,
 				05E9A0700FD73BAA00F2E8B0 /* CSEvent.m */,
+				05D5AB6B100DA51700832BFD /* CSHostReachabilityTest.m */,
 				059107CD1000D40800F3003A /* CSInstaller.m */,
 				0550DBB60FD9A29600DC5241 /* CSKeychainItem.m */,
 				055C81030FD746330097C170 /* CSLogger.m */,
@@ -328,8 +337,9 @@
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				054145490FD7519B00D6CB19 /* Security.framework */,
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				054145490FD7519B00D6CB19 /* Security.framework */,
+				05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -390,6 +400,7 @@
 				052298C510031B5F0033A3B9 /* CSUIURLDownloader.h in Headers */,
 				0552BB4C100829BA00F0B59F /* CSUISegmentedTabView.h in Headers */,
 				0552BD7C10084D4600F0B59F /* CSLog.h in Headers */,
+				05D5AB6E100DA52400832BFD /* CSHostReachabilityTest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +487,7 @@
 				052298C310031B540033A3B9 /* CSUIURLDownloader.m in Sources */,
 				0552BB4A100829A900F0B59F /* CSUISegmentedTabView.m in Sources */,
 				0552BD7B10084D4600F0B59F /* CSLog.m in Sources */,
+				05D5AB6C100DA51700832BFD /* CSHostReachabilityTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
