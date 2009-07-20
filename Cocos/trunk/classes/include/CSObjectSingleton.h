@@ -27,7 +27,11 @@
  * @namespace   Cocos
  */
 @interface CSObjectSingleton: CSObject < CSSingleton >
-{}
+{
+@private
+    
+    BOOL CS_inited;
+}
 
 /*!
  * @abstract    Gets the unique (singleton) instance of the class
@@ -35,5 +39,19 @@
  * @return      The unique instance of the class
  */
 + ( id )getInstance;
+
+/*!
+ * @abstract    
+ * 
+ * @return      
+ */
+- ( BOOL )isInited;
+
+/*!
+ * @abstract    
+ * 
+ * @return      
+ */
+- ( id )csInit;
 
 @end

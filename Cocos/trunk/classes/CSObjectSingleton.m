@@ -19,7 +19,7 @@ static NSMutableDictionary * _instances;
         
         if( [ _instances objectForKey: NSStringFromClass( [ self class ] ) ] == nil ) {
             
-            [ [ self alloc ] init ];
+            [ [ [ self alloc ] init ] csInit ];
         }
     }
     
@@ -66,6 +66,18 @@ static NSMutableDictionary * _instances;
 
 - ( id )autorelease
 {
+    return self;
+}
+
+- ( BOOL )isInited
+{
+    return CS_inited;
+}
+
+- ( id )csInit
+{
+    CS_inited = YES;
+    
     return self;
 }
 
