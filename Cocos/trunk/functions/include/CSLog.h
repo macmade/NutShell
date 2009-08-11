@@ -19,6 +19,11 @@
 /*!
  * @header      
  */
+void CSLog( id object );
+
+/*!
+ * @header      
+ */
 void CSLogPoint( NSPoint point );
 
 /*!

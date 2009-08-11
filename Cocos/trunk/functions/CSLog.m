@@ -9,6 +9,11 @@
 
 #import "CSLog.h"
 
+void CSLog( id object )
+{
+    NSLog( @"%@", object );
+}
+
 void CSLogPoint( NSPoint point )
 {
     NSLog( @"X: %f", point.x );
