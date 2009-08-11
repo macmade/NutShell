@@ -132,6 +132,8 @@
 		05DF4E8910316FBC00862FA4 /* CSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF4E8810316FBC00862FA4 /* CSFileManager.m */; };
 		05DF4E8A10316FC300862FA4 /* CSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF4E8810316FBC00862FA4 /* CSFileManager.m */; };
 		05DF4E8B10316FC700862FA4 /* CSFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF4E8610316FB000862FA4 /* CSFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DF527F1031F03A00862FA4 /* CSSystemProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF527E1031F03A00862FA4 /* CSSystemProfiler.m */; };
+		05DF52811031F04C00862FA4 /* CSSystemProfiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF52801031F04C00862FA4 /* CSSystemProfiler.h */; };
 		05E24B8C0FE859C200C42604 /* CSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E24B8B0FE859C200C42604 /* CSDictionary.h */; settings = {ATTRIBUTES = (); }; };
 		05E24B8E0FE859CD00C42604 /* CSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E24B8D0FE859CD00C42604 /* CSDictionary.m */; };
 		05E686C90FD77F6C003FAC5F /* CSReflectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */; settings = {ATTRIBUTES = (); }; };
@@ -205,6 +207,8 @@
 		05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
 		05DF4E8610316FB000862FA4 /* CSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSFileManager.h; sourceTree = "<group>"; };
 		05DF4E8810316FBC00862FA4 /* CSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSFileManager.m; sourceTree = "<group>"; };
+		05DF527E1031F03A00862FA4 /* CSSystemProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSystemProfiler.m; sourceTree = "<group>"; };
+		05DF52801031F04C00862FA4 /* CSSystemProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSystemProfiler.h; sourceTree = "<group>"; };
 		05E24B8B0FE859C200C42604 /* CSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDictionary.h; sourceTree = "<group>"; };
 		05E24B8D0FE859CD00C42604 /* CSDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDictionary.m; sourceTree = "<group>"; };
 		05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionClass.h; sourceTree = "<group>"; };
@@ -331,6 +335,7 @@
 				05E686C60FD77F6C003FAC5F /* CSReflectionProperty.h */,
 				05E686C70FD77F6C003FAC5F /* CSReflectionProtocol.h */,
 				05E686C80FD77F6C003FAC5F /* CSReflectionVariable.h */,
+				05DF52801031F04C00862FA4 /* CSSystemProfiler.h */,
 				0522986610030CE50033A3B9 /* CSURLDownloader.h */,
 				05984D590FEB43EA00A497EF /* CSWindowFader.h */,
 			);
@@ -421,6 +426,7 @@
 				0516C203100E008800C6B853 /* CSReflectionProperty.m */,
 				0516C204100E008800C6B853 /* CSReflectionProtocol.m */,
 				0516C205100E008800C6B853 /* CSReflectionVariable.m */,
+				05DF527E1031F03A00862FA4 /* CSSystemProfiler.m */,
 				0516C206100E008800C6B853 /* CSURLDownloader.m */,
 				0516C207100E008800C6B853 /* CSWindowFader.m */,
 			);
@@ -538,6 +544,7 @@
 				05D5AB6E100DA52400832BFD /* CSHostReachabilityTest.h in Headers */,
 				05394B32102E72C1009E42E3 /* CSImage.h in Headers */,
 				05DF4E8710316FB000862FA4 /* CSFileManager.h in Headers */,
+				05DF52811031F04C00862FA4 /* CSSystemProfiler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +699,7 @@
 				0516C21A100E008800C6B853 /* CSWindowFader.m in Sources */,
 				05394B34102E72CE009E42E3 /* CSImage.m in Sources */,
 				05DF4E8910316FBC00862FA4 /* CSFileManager.m in Sources */,
+				05DF527F1031F03A00862FA4 /* CSSystemProfiler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
