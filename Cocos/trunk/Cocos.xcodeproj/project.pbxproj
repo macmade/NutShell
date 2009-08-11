@@ -49,7 +49,7 @@
 		0516C2E6100E065300C6B853 /* CSString.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E914EB0FE3C4C2006A901B /* CSString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2E7100E065300C6B853 /* CSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E24B8B0FE859C200C42604 /* CSDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2E8100E065300C6B853 /* CSWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05984D590FEB43EA00A497EF /* CSWindowFader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0516C2E9100E065300C6B853 /* CSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 055740840FF24D6000CA6580 /* CSMacros.h */; };
+		0516C2E9100E065300C6B853 /* CSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 055740840FF24D6000CA6580 /* CSMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2EA100E065300C6B853 /* CSInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 059107CF1000D41B00F3003A /* CSInstaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2EB100E065300C6B853 /* CocosUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 052297211002FD170033A3B9 /* CocosUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2EC100E065300C6B853 /* CSUIInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522984C10030C9D0033A3B9 /* CSUIInstaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -96,6 +96,12 @@
 		0522986710030CE50033A3B9 /* CSURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522986610030CE50033A3B9 /* CSURLDownloader.h */; settings = {ATTRIBUTES = (); }; };
 		052298C310031B540033A3B9 /* CSUIURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 052298C210031B540033A3B9 /* CSUIURLDownloader.m */; };
 		052298C510031B5F0033A3B9 /* CSUIURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 052298C410031B5F0033A3B9 /* CSUIURLDownloader.h */; settings = {ATTRIBUTES = (); }; };
+		05394B32102E72C1009E42E3 /* CSImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 05394B31102E72C1009E42E3 /* CSImage.h */; };
+		05394B34102E72CE009E42E3 /* CSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 05394B33102E72CE009E42E3 /* CSImage.m */; };
+		05394B41102E7404009E42E3 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05394B40102E7404009E42E3 /* QuickLook.framework */; };
+		05394B61102E7527009E42E3 /* CSImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 05394B31102E72C1009E42E3 /* CSImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05394B62102E752B009E42E3 /* CSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 05394B33102E72CE009E42E3 /* CSImage.m */; };
+		05394B65102E7542009E42E3 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05394B40102E7404009E42E3 /* QuickLook.framework */; };
 		0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054145490FD7519B00D6CB19 /* Security.framework */; };
 		0550DB600FD9993100DC5241 /* CSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DB5F0FD9993100DC5241 /* CSTextView.m */; };
 		0550DB620FD9993B00DC5241 /* CSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DB610FD9993B00DC5241 /* CSTextView.h */; settings = {ATTRIBUTES = (); }; };
@@ -122,6 +128,10 @@
 		05984D5A0FEB43EA00A497EF /* CSWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05984D590FEB43EA00A497EF /* CSWindowFader.h */; settings = {ATTRIBUTES = (); }; };
 		05D5AB6E100DA52400832BFD /* CSHostReachabilityTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */; settings = {ATTRIBUTES = (); }; };
 		05D5AB7B100DA62900832BFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */; };
+		05DF4E8710316FB000862FA4 /* CSFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF4E8610316FB000862FA4 /* CSFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DF4E8910316FBC00862FA4 /* CSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF4E8810316FBC00862FA4 /* CSFileManager.m */; };
+		05DF4E8A10316FC300862FA4 /* CSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF4E8810316FBC00862FA4 /* CSFileManager.m */; };
+		05DF4E8B10316FC700862FA4 /* CSFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF4E8610316FB000862FA4 /* CSFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E24B8C0FE859C200C42604 /* CSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E24B8B0FE859C200C42604 /* CSDictionary.h */; settings = {ATTRIBUTES = (); }; };
 		05E24B8E0FE859CD00C42604 /* CSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E24B8D0FE859CD00C42604 /* CSDictionary.m */; };
 		05E686C90FD77F6C003FAC5F /* CSReflectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */; settings = {ATTRIBUTES = (); }; };
@@ -164,6 +174,9 @@
 		0522986610030CE50033A3B9 /* CSURLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSURLDownloader.h; sourceTree = "<group>"; };
 		052298C210031B540033A3B9 /* CSUIURLDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUIURLDownloader.m; sourceTree = "<group>"; };
 		052298C410031B5F0033A3B9 /* CSUIURLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUIURLDownloader.h; sourceTree = "<group>"; };
+		05394B31102E72C1009E42E3 /* CSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSImage.h; sourceTree = "<group>"; };
+		05394B33102E72CE009E42E3 /* CSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSImage.m; sourceTree = "<group>"; };
+		05394B40102E7404009E42E3 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = /System/Library/Frameworks/QuickLook.framework; sourceTree = "<absolute>"; };
 		054145490FD7519B00D6CB19 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		0550DB5F0FD9993100DC5241 /* CSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTextView.m; sourceTree = "<group>"; };
 		0550DB610FD9993B00DC5241 /* CSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTextView.h; sourceTree = "<group>"; };
@@ -190,6 +203,8 @@
 		05984D590FEB43EA00A497EF /* CSWindowFader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSWindowFader.h; sourceTree = "<group>"; };
 		05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHostReachabilityTest.h; sourceTree = "<group>"; };
 		05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		05DF4E8610316FB000862FA4 /* CSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSFileManager.h; sourceTree = "<group>"; };
+		05DF4E8810316FBC00862FA4 /* CSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSFileManager.m; sourceTree = "<group>"; };
 		05E24B8B0FE859C200C42604 /* CSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDictionary.h; sourceTree = "<group>"; };
 		05E24B8D0FE859CD00C42604 /* CSDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDictionary.m; sourceTree = "<group>"; };
 		05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionClass.h; sourceTree = "<group>"; };
@@ -219,6 +234,7 @@
 				0516C312100E065300C6B853 /* Cocoa.framework in Frameworks */,
 				0516C313100E065300C6B853 /* Security.framework in Frameworks */,
 				0516C314100E065300C6B853 /* SystemConfiguration.framework in Frameworks */,
+				05394B65102E7542009E42E3 /* QuickLook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +245,7 @@
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 				0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */,
 				05D5AB7B100DA62900832BFD /* SystemConfiguration.framework in Frameworks */,
+				05394B41102E7404009E42E3 /* QuickLook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +343,8 @@
 				056997BC0FD8AFAB00B590DD /* include */,
 				05E24B8D0FE859CD00C42604 /* CSDictionary.m */,
 				056997BD0FD8B03100B590DD /* CSEventDispatcher.m */,
+				05DF4E8810316FBC00862FA4 /* CSFileManager.m */,
+				05394B33102E72CE009E42E3 /* CSImage.m */,
 				056997C90FD8B07000B590DD /* CSScrollView.m */,
 				05E914E90FE3C4B6006A901B /* CSString.m */,
 				0550DB5F0FD9993100DC5241 /* CSTextView.m */,
@@ -338,6 +357,8 @@
 			children = (
 				05E24B8B0FE859C200C42604 /* CSDictionary.h */,
 				056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */,
+				05DF4E8610316FB000862FA4 /* CSFileManager.h */,
+				05394B31102E72C1009E42E3 /* CSImage.h */,
 				056997C70FD8B06500B590DD /* CSScrollView.h */,
 				05E914EB0FE3C4C2006A901B /* CSString.h */,
 				0550DB610FD9993B00DC5241 /* CSTextView.h */,
@@ -412,6 +433,7 @@
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
 				054145490FD7519B00D6CB19 /* Security.framework */,
 				05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */,
+				05394B40102E7404009E42E3 /* QuickLook.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -473,6 +495,8 @@
 				0516C2EF100E065300C6B853 /* CSUISegmentedTabView.h in Headers */,
 				0516C2F0100E065300C6B853 /* CSLog.h in Headers */,
 				0516C2F1100E065300C6B853 /* CSHostReachabilityTest.h in Headers */,
+				05394B61102E7527009E42E3 /* CSImage.h in Headers */,
+				05DF4E8B10316FC700862FA4 /* CSFileManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +536,8 @@
 				0552BB4C100829BA00F0B59F /* CSUISegmentedTabView.h in Headers */,
 				0552BD7C10084D4600F0B59F /* CSLog.h in Headers */,
 				05D5AB6E100DA52400832BFD /* CSHostReachabilityTest.h in Headers */,
+				05394B32102E72C1009E42E3 /* CSImage.h in Headers */,
+				05DF4E8710316FB000862FA4 /* CSFileManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +653,8 @@
 				0516C30E100E065300C6B853 /* CSReflectionVariable.m in Sources */,
 				0516C30F100E065300C6B853 /* CSURLDownloader.m in Sources */,
 				0516C310100E065300C6B853 /* CSWindowFader.m in Sources */,
+				05394B62102E752B009E42E3 /* CSImage.m in Sources */,
+				05DF4E8A10316FC300862FA4 /* CSFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +690,8 @@
 				0516C218100E008800C6B853 /* CSReflectionVariable.m in Sources */,
 				0516C219100E008800C6B853 /* CSURLDownloader.m in Sources */,
 				0516C21A100E008800C6B853 /* CSWindowFader.m in Sources */,
+				05394B34102E72CE009E42E3 /* CSImage.m in Sources */,
+				05DF4E8910316FBC00862FA4 /* CSFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
