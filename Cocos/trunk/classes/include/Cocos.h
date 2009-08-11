@@ -24,6 +24,8 @@
 // Categories
 #import "CSDictionary.h"
 #import "CSEventDispatcher.h"
+#import "CSFileManager.h"
+#import "CSImage.h"
 #import "CSScrollView.h"
 #import "CSString.h"
 #import "CSTextView.h"
