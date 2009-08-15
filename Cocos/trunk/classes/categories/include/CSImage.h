@@ -30,6 +30,6 @@
  * @param       
  * @return      
  */
-+ ( NSImage * )quickLookPreviewFromFile:( NSString * )path size:( NSSize )size;
++ ( NSImage * )previewImageForFile:( NSString * )path size:( NSSize )size;
 
 @end
