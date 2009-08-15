@@ -123,6 +123,8 @@
 		059107D01000D41B00F3003A /* CSInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 059107CF1000D41B00F3003A /* CSInstaller.h */; settings = {ATTRIBUTES = (); }; };
 		05948CB1103758F900284538 /* CSDelegateChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 05948CB0103758F900284538 /* CSDelegateChain.m */; };
 		05948CB31037590900284538 /* CSDelegateChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 05948CB21037590900284538 /* CSDelegateChain.h */; };
+		05948CDC10375E2D00284538 /* CSDelegateChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 05948CB21037590900284538 /* CSDelegateChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05948CDD10375E3200284538 /* CSDelegateChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 05948CB0103758F900284538 /* CSDelegateChain.m */; };
 		05984D5A0FEB43EA00A497EF /* CSWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05984D590FEB43EA00A497EF /* CSWindowFader.h */; settings = {ATTRIBUTES = (); }; };
 		05D5AB6E100DA52400832BFD /* CSHostReachabilityTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */; settings = {ATTRIBUTES = (); }; };
 		05D5AB7B100DA62900832BFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */; };
@@ -535,6 +537,7 @@
 				05DF56F41035D6C400862FA4 /* CSColor.h in Headers */,
 				05DF57361035D91C00862FA4 /* CSLogFunctions.h in Headers */,
 				05DF57A01035DCB600862FA4 /* CSMakeFunctions.h in Headers */,
+				05948CDC10375E2D00284538 /* CSDelegateChain.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +704,7 @@
 				05DF56F11035D6B300862FA4 /* CSColor.m in Sources */,
 				05DF57351035D91C00862FA4 /* CSLogFunctions.m in Sources */,
 				05DF579D1035DCAE00862FA4 /* CSMakeFunctions.m in Sources */,
+				05948CDD10375E3200284538 /* CSDelegateChain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,7 +799,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Cocos_Prefix.pch;
-				INFOPLIST_FILE = "/Users/macmade/Desktop/Mac OS X Development /Cocos/trunk/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Frameworks;
 				PRODUCT_NAME = Cocos;
 				SEPARATE_STRIP = YES;

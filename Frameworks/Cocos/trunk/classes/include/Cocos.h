@@ -37,6 +37,7 @@
 
 // Classes
 #import "CSApplication.h"
+#import "CSDelegateChain.h"
 #import "CSEvent.h"
 #import "CSExecution.h"
 #import "CSHostReachabilityTest.h"
