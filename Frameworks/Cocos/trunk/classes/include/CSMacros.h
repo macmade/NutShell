@@ -34,8 +34,8 @@
     }
 
 #define CSREALLOC( var, type, x )                                           \
-    if( NULL == ( var = ( type * )realloc( var, x * sizeof( type ) ) ) ) {  \
-        CSFATAL( "Realloc error (%s)\n", strerror( errno ) );               \
+    if( NULL == ( var = ( type * )realloc( var, ( x ) * sizeof( type ) ) ) ) {  \
+        CSFATAL( @"Realloc error (%s)\n", strerror( errno ) );               \
     }
 
 #define CSSIGSET( handler, type, flags, sa1, sa2 )  \
@@ -43,5 +43,5 @@
     sigemptyset( &sa1.sa_mask );                    \
     sa1.sa_flags = flags;                           \
     if( sigaction( type, &sa1, &sa2 ) != 0 ) {      \
-        CSFATAL( "Sigaction error" );               \
+        CSFATAL( @"Sigaction error" );               \
     }
