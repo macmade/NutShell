@@ -49,7 +49,7 @@
 		0516C2E6100E065300C6B853 /* CSString.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E914EB0FE3C4C2006A901B /* CSString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2E7100E065300C6B853 /* CSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E24B8B0FE859C200C42604 /* CSDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2E8100E065300C6B853 /* CSWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05984D590FEB43EA00A497EF /* CSWindowFader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0516C2E9100E065300C6B853 /* CSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 055740840FF24D6000CA6580 /* CSMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0516C2E9100E065300C6B853 /* CSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 055740840FF24D6000CA6580 /* CSMacros.h */; settings = {ATTRIBUTES = (); }; };
 		0516C2EA100E065300C6B853 /* CSInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 059107CF1000D41B00F3003A /* CSInstaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2EB100E065300C6B853 /* CocosUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 052297211002FD170033A3B9 /* CocosUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2EC100E065300C6B853 /* CSUIInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522984C10030C9D0033A3B9 /* CSUIInstaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -164,6 +164,16 @@
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05948EA61037693600284538 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0516C2D0100E065300C6B853;
+			remoteInfo = "Cocos (Public)";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0516C1F5100E008800C6B853 /* CSApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSApplication.m; sourceTree = "<group>"; };
@@ -621,6 +631,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				05948EA71037693600284538 /* PBXTargetDependency */,
 			);
 			name = "Cocos (Private)";
 			productInstallPath = "$(HOME)/Library/Frameworks";
@@ -751,6 +762,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05948EA71037693600284538 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0516C2D0100E065300C6B853 /* Cocos (Public) */;
+			targetProxy = 05948EA61037693600284538 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
