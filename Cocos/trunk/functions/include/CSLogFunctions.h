@@ -17,26 +17,26 @@
  */
 
 /*!
- * @header      
+ * abstract     
  */
 void CSLog( id object );
 
 /*!
- * @header      
+ * abstract     
  */
 void CSLogPoint( NSPoint point );
 
 /*!
- * @header      
+ * abstract     
  */
 void CSLogSize( NSSize size );
 
 /*!
- * @header      
+ * abstract     
  */
 void CSLogRect( NSRect rect );
 
 /*!
- * @header      
+ * abstract     
  */
 void CSLogRange( NSRange range );

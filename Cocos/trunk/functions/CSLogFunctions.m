@@ -7,7 +7,7 @@
 
 // $Id$
 
-#import "CSLog.h"
+#import "CSLogFunctions.h"
 
 void CSLog( id object )
 {
