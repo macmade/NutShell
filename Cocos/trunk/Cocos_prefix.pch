@@ -3,5 +3,6 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
     #import "CSMacros.h"
-    #import "CSLog.h"
+    #import "CSLogFunctions.h"
+    #import "CSMakeFunctions.h"
 #endif

@@ -19,9 +19,11 @@
  */
 
 // Functions
-#import "CSLog.h"
+#import "CSLogFunctions.h"
+#import "CSMakeFunctions.h"
 
 // Categories
+#import "CSColor.h"
 #import "CSDictionary.h"
 #import "CSEventDispatcher.h"
 #import "CSFileManager.h"
@@ -52,4 +54,5 @@
 #import "CSReflectionProtocol.h"
 #import "CSReflectionVariable.h"
 #import "CSURLDownloader.h"
+#import "CSView.h"
 #import "CSWindowFader.h"
