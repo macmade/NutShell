@@ -56,7 +56,6 @@
 		0516C2ED100E065300C6B853 /* CSURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522986610030CE50033A3B9 /* CSURLDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2EE100E065300C6B853 /* CSUIURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 052298C410031B5F0033A3B9 /* CSUIURLDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2EF100E065300C6B853 /* CSUISegmentedTabView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0552BB4B100829BA00F0B59F /* CSUISegmentedTabView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0516C2F0100E065300C6B853 /* CSLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0552BD7A10084D4600F0B59F /* CSLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2F1100E065300C6B853 /* CSHostReachabilityTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0516C2F3100E065300C6B853 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		0516C2F5100E065300C6B853 /* CSEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 056997BD0FD8B03100B590DD /* CSEventDispatcher.m */; };
@@ -67,7 +66,6 @@
 		0516C2FA100E065300C6B853 /* CSUIInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0522984A10030C960033A3B9 /* CSUIInstaller.m */; };
 		0516C2FB100E065300C6B853 /* CSUIURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 052298C210031B540033A3B9 /* CSUIURLDownloader.m */; };
 		0516C2FC100E065300C6B853 /* CSUISegmentedTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552BB49100829A900F0B59F /* CSUISegmentedTabView.m */; };
-		0516C2FD100E065300C6B853 /* CSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552BD7810084D4600F0B59F /* CSLog.m */; };
 		0516C2FE100E065300C6B853 /* CSApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1F5100E008800C6B853 /* CSApplication.m */; };
 		0516C2FF100E065300C6B853 /* CSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1F6100E008800C6B853 /* CSEvent.m */; };
 		0516C300100E065300C6B853 /* CSExecution.m in Sources */ = {isa = PBXBuildFile; fileRef = 0516C1F7100E008800C6B853 /* CSExecution.m */; };
@@ -108,8 +106,6 @@
 		0550DBB50FD9A28400DC5241 /* CSKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */; settings = {ATTRIBUTES = (); }; };
 		0552BB4A100829A900F0B59F /* CSUISegmentedTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552BB49100829A900F0B59F /* CSUISegmentedTabView.m */; };
 		0552BB4C100829BA00F0B59F /* CSUISegmentedTabView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0552BB4B100829BA00F0B59F /* CSUISegmentedTabView.h */; settings = {ATTRIBUTES = (); }; };
-		0552BD7B10084D4600F0B59F /* CSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552BD7810084D4600F0B59F /* CSLog.m */; };
-		0552BD7C10084D4600F0B59F /* CSLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0552BD7A10084D4600F0B59F /* CSLog.h */; settings = {ATTRIBUTES = (); }; };
 		055740850FF24D6000CA6580 /* CSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 055740840FF24D6000CA6580 /* CSMacros.h */; };
 		055C80E80FD7435C0097C170 /* CSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* CSEvent.h */; settings = {ATTRIBUTES = (); }; };
 		055C80EA0FD7435C0097C170 /* CSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* CSObject.h */; settings = {ATTRIBUTES = (); }; };
@@ -128,12 +124,28 @@
 		05984D5A0FEB43EA00A497EF /* CSWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05984D590FEB43EA00A497EF /* CSWindowFader.h */; settings = {ATTRIBUTES = (); }; };
 		05D5AB6E100DA52400832BFD /* CSHostReachabilityTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */; settings = {ATTRIBUTES = (); }; };
 		05D5AB7B100DA62900832BFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */; };
-		05DF4E8710316FB000862FA4 /* CSFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF4E8610316FB000862FA4 /* CSFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DF4E8710316FB000862FA4 /* CSFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF4E8610316FB000862FA4 /* CSFileManager.h */; settings = {ATTRIBUTES = (); }; };
 		05DF4E8910316FBC00862FA4 /* CSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF4E8810316FBC00862FA4 /* CSFileManager.m */; };
 		05DF4E8A10316FC300862FA4 /* CSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF4E8810316FBC00862FA4 /* CSFileManager.m */; };
 		05DF4E8B10316FC700862FA4 /* CSFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF4E8610316FB000862FA4 /* CSFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DF527F1031F03A00862FA4 /* CSSystemProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF527E1031F03A00862FA4 /* CSSystemProfiler.m */; };
 		05DF52811031F04C00862FA4 /* CSSystemProfiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF52801031F04C00862FA4 /* CSSystemProfiler.h */; };
+		05DF536C1035A85400862FA4 /* CSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF536B1035A85400862FA4 /* CSView.m */; };
+		05DF536E1035A87A00862FA4 /* CSView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF536D1035A87A00862FA4 /* CSView.h */; settings = {ATTRIBUTES = (); }; };
+		05DF536F1035A87A00862FA4 /* CSView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF536D1035A87A00862FA4 /* CSView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DF53701035A88100862FA4 /* CSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF536B1035A85400862FA4 /* CSView.m */; };
+		05DF56F01035D6B300862FA4 /* CSColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF56EF1035D6B300862FA4 /* CSColor.m */; };
+		05DF56F11035D6B300862FA4 /* CSColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF56EF1035D6B300862FA4 /* CSColor.m */; };
+		05DF56F31035D6C400862FA4 /* CSColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF56F21035D6C400862FA4 /* CSColor.h */; };
+		05DF56F41035D6C400862FA4 /* CSColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF56F21035D6C400862FA4 /* CSColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DF57331035D91C00862FA4 /* CSLogFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF57301035D91C00862FA4 /* CSLogFunctions.m */; };
+		05DF57341035D91C00862FA4 /* CSLogFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF57321035D91C00862FA4 /* CSLogFunctions.h */; };
+		05DF57351035D91C00862FA4 /* CSLogFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF57301035D91C00862FA4 /* CSLogFunctions.m */; };
+		05DF57361035D91C00862FA4 /* CSLogFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF57321035D91C00862FA4 /* CSLogFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05DF579C1035DCAE00862FA4 /* CSMakeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF579B1035DCAE00862FA4 /* CSMakeFunctions.m */; };
+		05DF579D1035DCAE00862FA4 /* CSMakeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF579B1035DCAE00862FA4 /* CSMakeFunctions.m */; };
+		05DF579F1035DCB600862FA4 /* CSMakeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF579E1035DCB600862FA4 /* CSMakeFunctions.h */; };
+		05DF57A01035DCB600862FA4 /* CSMakeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF579E1035DCB600862FA4 /* CSMakeFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E24B8C0FE859C200C42604 /* CSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E24B8B0FE859C200C42604 /* CSDictionary.h */; settings = {ATTRIBUTES = (); }; };
 		05E24B8E0FE859CD00C42604 /* CSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E24B8D0FE859CD00C42604 /* CSDictionary.m */; };
 		05E686C90FD77F6C003FAC5F /* CSReflectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */; settings = {ATTRIBUTES = (); }; };
@@ -185,8 +197,6 @@
 		0550DBB40FD9A28400DC5241 /* CSKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSKeychainItem.h; sourceTree = "<group>"; };
 		0552BB49100829A900F0B59F /* CSUISegmentedTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUISegmentedTabView.m; sourceTree = "<group>"; };
 		0552BB4B100829BA00F0B59F /* CSUISegmentedTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUISegmentedTabView.h; sourceTree = "<group>"; };
-		0552BD7810084D4600F0B59F /* CSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLog.m; path = functions/CSLog.m; sourceTree = "<group>"; };
-		0552BD7A10084D4600F0B59F /* CSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLog.h; sourceTree = "<group>"; };
 		055740840FF24D6000CA6580 /* CSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMacros.h; sourceTree = "<group>"; };
 		055C80E50FD7435C0097C170 /* CSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEvent.h; sourceTree = "<group>"; };
 		055C80E70FD7435C0097C170 /* CSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSObject.h; sourceTree = "<group>"; };
@@ -209,6 +219,14 @@
 		05DF4E8810316FBC00862FA4 /* CSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSFileManager.m; sourceTree = "<group>"; };
 		05DF527E1031F03A00862FA4 /* CSSystemProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSystemProfiler.m; sourceTree = "<group>"; };
 		05DF52801031F04C00862FA4 /* CSSystemProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSystemProfiler.h; sourceTree = "<group>"; };
+		05DF536B1035A85400862FA4 /* CSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSView.m; sourceTree = "<group>"; };
+		05DF536D1035A87A00862FA4 /* CSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSView.h; sourceTree = "<group>"; };
+		05DF56EF1035D6B300862FA4 /* CSColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSColor.m; sourceTree = "<group>"; };
+		05DF56F21035D6C400862FA4 /* CSColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSColor.h; sourceTree = "<group>"; };
+		05DF57301035D91C00862FA4 /* CSLogFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLogFunctions.m; sourceTree = "<group>"; };
+		05DF57321035D91C00862FA4 /* CSLogFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLogFunctions.h; sourceTree = "<group>"; };
+		05DF579B1035DCAE00862FA4 /* CSMakeFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSMakeFunctions.m; sourceTree = "<group>"; };
+		05DF579E1035DCB600862FA4 /* CSMakeFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMakeFunctions.h; sourceTree = "<group>"; };
 		05E24B8B0FE859C200C42604 /* CSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDictionary.h; sourceTree = "<group>"; };
 		05E24B8D0FE859CD00C42604 /* CSDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDictionary.m; sourceTree = "<group>"; };
 		05E686C30FD77F6C003FAC5F /* CSReflectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSReflectionClass.h; sourceTree = "<group>"; };
@@ -286,24 +304,6 @@
 			path = include;
 			sourceTree = "<group>";
 		};
-		0552BD6A10084D1D00F0B59F /* Functions */ = {
-			isa = PBXGroup;
-			children = (
-				0552BD7910084D4600F0B59F /* include */,
-				0552BD7810084D4600F0B59F /* CSLog.m */,
-			);
-			name = Functions;
-			sourceTree = "<group>";
-		};
-		0552BD7910084D4600F0B59F /* include */ = {
-			isa = PBXGroup;
-			children = (
-				0552BD7A10084D4600F0B59F /* CSLog.h */,
-			);
-			name = include;
-			path = functions/include;
-			sourceTree = "<group>";
-		};
 		055C80E00FD742880097C170 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +337,7 @@
 				05E686C80FD77F6C003FAC5F /* CSReflectionVariable.h */,
 				05DF52801031F04C00862FA4 /* CSSystemProfiler.h */,
 				0522986610030CE50033A3B9 /* CSURLDownloader.h */,
+				05DF536D1035A87A00862FA4 /* CSView.h */,
 				05984D590FEB43EA00A497EF /* CSWindowFader.h */,
 			);
 			path = include;
@@ -346,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				056997BC0FD8AFAB00B590DD /* include */,
+				05DF56EF1035D6B300862FA4 /* CSColor.m */,
 				05E24B8D0FE859CD00C42604 /* CSDictionary.m */,
 				056997BD0FD8B03100B590DD /* CSEventDispatcher.m */,
 				05DF4E8810316FBC00862FA4 /* CSFileManager.m */,
@@ -360,6 +362,7 @@
 		056997BC0FD8AFAB00B590DD /* include */ = {
 			isa = PBXGroup;
 			children = (
+				05DF56F21035D6C400862FA4 /* CSColor.h */,
 				05E24B8B0FE859C200C42604 /* CSDictionary.h */,
 				056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */,
 				05DF4E8610316FB000862FA4 /* CSFileManager.h */,
@@ -371,11 +374,30 @@
 			path = include;
 			sourceTree = "<group>";
 		};
+		05DF572F1035D91C00862FA4 /* functions */ = {
+			isa = PBXGroup;
+			children = (
+				05DF57311035D91C00862FA4 /* include */,
+				05DF57301035D91C00862FA4 /* CSLogFunctions.m */,
+				05DF579B1035DCAE00862FA4 /* CSMakeFunctions.m */,
+			);
+			path = functions;
+			sourceTree = "<group>";
+		};
+		05DF57311035D91C00862FA4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				05DF57321035D91C00862FA4 /* CSLogFunctions.h */,
+				05DF579E1035DCB600862FA4 /* CSMakeFunctions.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		0867D691FE84028FC02AAC07 /* Cocos */ = {
 			isa = PBXGroup;
 			children = (
 				08FB77AEFE84172EC02AAC07 /* classes */,
-				0552BD6A10084D1D00F0B59F /* Functions */,
+				05DF572F1035D91C00862FA4 /* functions */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
@@ -428,6 +450,7 @@
 				0516C205100E008800C6B853 /* CSReflectionVariable.m */,
 				05DF527E1031F03A00862FA4 /* CSSystemProfiler.m */,
 				0516C206100E008800C6B853 /* CSURLDownloader.m */,
+				05DF536B1035A85400862FA4 /* CSView.m */,
 				0516C207100E008800C6B853 /* CSWindowFader.m */,
 			);
 			path = classes;
@@ -499,10 +522,13 @@
 				0516C2ED100E065300C6B853 /* CSURLDownloader.h in Headers */,
 				0516C2EE100E065300C6B853 /* CSUIURLDownloader.h in Headers */,
 				0516C2EF100E065300C6B853 /* CSUISegmentedTabView.h in Headers */,
-				0516C2F0100E065300C6B853 /* CSLog.h in Headers */,
 				0516C2F1100E065300C6B853 /* CSHostReachabilityTest.h in Headers */,
 				05394B61102E7527009E42E3 /* CSImage.h in Headers */,
 				05DF4E8B10316FC700862FA4 /* CSFileManager.h in Headers */,
+				05DF536F1035A87A00862FA4 /* CSView.h in Headers */,
+				05DF56F41035D6C400862FA4 /* CSColor.h in Headers */,
+				05DF57361035D91C00862FA4 /* CSLogFunctions.h in Headers */,
+				05DF57A01035DCB600862FA4 /* CSMakeFunctions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,11 +566,14 @@
 				0522986710030CE50033A3B9 /* CSURLDownloader.h in Headers */,
 				052298C510031B5F0033A3B9 /* CSUIURLDownloader.h in Headers */,
 				0552BB4C100829BA00F0B59F /* CSUISegmentedTabView.h in Headers */,
-				0552BD7C10084D4600F0B59F /* CSLog.h in Headers */,
 				05D5AB6E100DA52400832BFD /* CSHostReachabilityTest.h in Headers */,
 				05394B32102E72C1009E42E3 /* CSImage.h in Headers */,
 				05DF4E8710316FB000862FA4 /* CSFileManager.h in Headers */,
 				05DF52811031F04C00862FA4 /* CSSystemProfiler.h in Headers */,
+				05DF536E1035A87A00862FA4 /* CSView.h in Headers */,
+				05DF56F31035D6C400862FA4 /* CSColor.h in Headers */,
+				05DF57341035D91C00862FA4 /* CSLogFunctions.h in Headers */,
+				05DF579F1035DCB600862FA4 /* CSMakeFunctions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,7 +669,6 @@
 				0516C2FA100E065300C6B853 /* CSUIInstaller.m in Sources */,
 				0516C2FB100E065300C6B853 /* CSUIURLDownloader.m in Sources */,
 				0516C2FC100E065300C6B853 /* CSUISegmentedTabView.m in Sources */,
-				0516C2FD100E065300C6B853 /* CSLog.m in Sources */,
 				0516C2FE100E065300C6B853 /* CSApplication.m in Sources */,
 				0516C2FF100E065300C6B853 /* CSEvent.m in Sources */,
 				0516C300100E065300C6B853 /* CSExecution.m in Sources */,
@@ -662,6 +690,10 @@
 				0516C310100E065300C6B853 /* CSWindowFader.m in Sources */,
 				05394B62102E752B009E42E3 /* CSImage.m in Sources */,
 				05DF4E8A10316FC300862FA4 /* CSFileManager.m in Sources */,
+				05DF53701035A88100862FA4 /* CSView.m in Sources */,
+				05DF56F11035D6B300862FA4 /* CSColor.m in Sources */,
+				05DF57351035D91C00862FA4 /* CSLogFunctions.m in Sources */,
+				05DF579D1035DCAE00862FA4 /* CSMakeFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,7 +709,6 @@
 				0522984B10030C960033A3B9 /* CSUIInstaller.m in Sources */,
 				052298C310031B540033A3B9 /* CSUIURLDownloader.m in Sources */,
 				0552BB4A100829A900F0B59F /* CSUISegmentedTabView.m in Sources */,
-				0552BD7B10084D4600F0B59F /* CSLog.m in Sources */,
 				0516C208100E008800C6B853 /* CSApplication.m in Sources */,
 				0516C209100E008800C6B853 /* CSEvent.m in Sources */,
 				0516C20A100E008800C6B853 /* CSExecution.m in Sources */,
@@ -700,6 +731,10 @@
 				05394B34102E72CE009E42E3 /* CSImage.m in Sources */,
 				05DF4E8910316FBC00862FA4 /* CSFileManager.m in Sources */,
 				05DF527F1031F03A00862FA4 /* CSSystemProfiler.m in Sources */,
+				05DF536C1035A85400862FA4 /* CSView.m in Sources */,
+				05DF56F01035D6B300862FA4 /* CSColor.m in Sources */,
+				05DF57331035D91C00862FA4 /* CSLogFunctions.m in Sources */,
+				05DF579C1035DCAE00862FA4 /* CSMakeFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
