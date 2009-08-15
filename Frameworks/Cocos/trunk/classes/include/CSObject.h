@@ -23,6 +23,33 @@
  * @namespace   Cocos
  */
 @interface CSObject: NSObject
-{}
+{
+@protected
+    
+    /*!
+     * @abstract    The logger object
+     */
+    id delegate;
+}
+
+/*! @property */
+@property( assign, readwrite ) id delegate;
+
+/*! @property */
+@property( readonly ) NSArray * delegates;
+
+/*!
+ * @abstract    
+ * 
+ * @return      
+ */
+- ( void )addDelegate: ( id )object;
+
+/*!
+ * @abstract    
+ * 
+ * @return      
+ */
+- ( void )removeDelegate: ( id )object;
 
 @end
