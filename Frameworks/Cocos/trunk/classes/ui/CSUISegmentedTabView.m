@@ -229,6 +229,8 @@
 {
     NSUserDefaults * defaults;
     
+    [ autoSaveName release ];
+    
     defaults     = [ NSUserDefaults standardUserDefaults ];
     autoSaveName = [ name copy ];
     
