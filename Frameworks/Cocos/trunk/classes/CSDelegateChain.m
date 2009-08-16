@@ -15,7 +15,7 @@
 {
     if( ( self = [ super init ] ) ) {
         
-        delegateHashs = [ NSMutableDictionary dictionaryWithCapacity: 10 ];
+        delegateHashs = [ [ NSMutableDictionary dictionaryWithCapacity: 10 ] retain ];
         
         numberOfDelegates    = 0;
         sizeOfDelegatesArray = 10;
