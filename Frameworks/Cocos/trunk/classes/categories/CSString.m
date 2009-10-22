@@ -161,7 +161,7 @@ static const unsigned int CRCTable[ 256 ] = {
             
             submatch[ size ] = '\0';
             
-            [ matches addObject: [ NSString stringWithCString: ( const char * )submatch ] ];
+            [ matches addObject: [ NSString stringWithCString: ( const char * )submatch encoding: NSASCIIStringEncoding ] ];
             
             free( submatch );
         }
@@ -242,7 +242,7 @@ static const unsigned int CRCTable[ 256 ] = {
             
             submatch[ size ] = '\0';
             
-            result = [ result stringByReplacingOccurrencesOfString: [ NSString stringWithFormat: @"\\%i", i ] withString: [ NSString stringWithCString: ( const char * )submatch ] ];
+            result = [ result stringByReplacingOccurrencesOfString: [ NSString stringWithFormat: @"\\%i", i ] withString: [ NSString stringWithCString: ( const char * )submatch encoding: NSASCIIStringEncoding ] ];
             
             free( submatch );
         }
