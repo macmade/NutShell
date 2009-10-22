@@ -115,6 +115,6 @@
 /*!
  * @abstract    
  */
-- ( void )install: ( id )sender;
+- ( OSStatus )install: ( id )sender;
 
 @end

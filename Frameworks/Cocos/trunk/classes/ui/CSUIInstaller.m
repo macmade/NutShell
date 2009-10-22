@@ -87,12 +87,12 @@
     return [ super installWithTarget: destTarget ];
 }
 
-- ( void )install
+- ( OSStatus )install
 {
     return [ self install: nil ];
 }
 
-- ( void )install: ( id )sender
+- ( OSStatus )install: ( id )sender
 {
     OSStatus execStatus;
     
@@ -109,6 +109,7 @@
         [ quitButton setEnabled: YES ];
     }
     
+    return execStatus;
 }
 
 @end
