@@ -176,6 +176,8 @@
         delegates[ i ] = delegates[ i + 1 ];
     }
     
+    [ delegateHashs removeObjectForKey: hash ];
+    
     numberOfDelegates--;
 }
 
