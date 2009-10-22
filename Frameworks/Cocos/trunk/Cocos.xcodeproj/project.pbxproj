@@ -128,7 +128,7 @@
 		05984D5A0FEB43EA00A497EF /* CSWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05984D590FEB43EA00A497EF /* CSWindowFader.h */; settings = {ATTRIBUTES = (); }; };
 		059D4CF3106A7CF2001FDA9D /* CSFileInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 059D4CF2106A7CF2001FDA9D /* CSFileInfos.m */; };
 		059D4CF4106A7CF2001FDA9D /* CSFileInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 059D4CF2106A7CF2001FDA9D /* CSFileInfos.m */; };
-		059D4CF6106A81A7001FDA9D /* CSFileInfos.h in Headers */ = {isa = PBXBuildFile; fileRef = 059D4CF5106A81A7001FDA9D /* CSFileInfos.h */; };
+		059D4CF6106A81A7001FDA9D /* CSFileInfos.h in Headers */ = {isa = PBXBuildFile; fileRef = 059D4CF5106A81A7001FDA9D /* CSFileInfos.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		059D4CF7106A81A7001FDA9D /* CSFileInfos.h in Headers */ = {isa = PBXBuildFile; fileRef = 059D4CF5106A81A7001FDA9D /* CSFileInfos.h */; };
 		05D5AB6E100DA52400832BFD /* CSHostReachabilityTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D5AB6D100DA52400832BFD /* CSHostReachabilityTest.h */; settings = {ATTRIBUTES = (); }; };
 		05D5AB7B100DA62900832BFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */; };

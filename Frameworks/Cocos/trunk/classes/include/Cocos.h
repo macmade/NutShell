@@ -40,6 +40,7 @@
 #import "CSDelegateChain.h"
 #import "CSEvent.h"
 #import "CSExecution.h"
+#import "CSFileInfos.h"
 #import "CSHostReachabilityTest.h"
 #import "CSInstaller.h"
 #import "CSKeychainItem.h"
