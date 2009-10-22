@@ -13,20 +13,7 @@
 
 - ( BOOL )hasKey: ( NSString * )key
 {
-    NSArray * keys;
-    NSString * curKey;
-    
-    keys = [ self allKeys ];
-    
-    for( curKey in keys ) {
-        
-        if( [ key isEqualToString: curKey ] == YES ) {
-            
-            return YES;
-        }
-    }
-    
-    return NO;
+    return [ self objectForKey: key ] != nil;
 }
 
 @end
