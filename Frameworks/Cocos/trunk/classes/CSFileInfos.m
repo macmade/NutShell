@@ -302,7 +302,7 @@
         
         if( [ [ path substringToIndex: 1 ] isEqualToString: @"/" ] ) {
             
-            url = [ [ NSURL URLWithString: [ NSString stringWithFormat: @"file://", path ] ] retain ];
+            url = [ [ NSURL URLWithString: [ NSString stringWithFormat: @"file://localhost%@", path ] ] retain ];
             
         } else {
             
@@ -399,6 +399,7 @@
             @"%@\n"
             "{\n"
             "   Path:                       %@\n"
+            "   URL:                        %@\n"
             "   Filename:                   %@\n"
             "   Display name:               %@\n"
             "   File extension:             %@\n"
@@ -450,6 +451,7 @@
             "}",
             [ super description ],
             path,
+            [ url description ],
             filename,
             displayName,
             fileExtension,
