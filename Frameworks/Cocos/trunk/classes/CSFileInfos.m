@@ -36,6 +36,7 @@
 @synthesize HFSTypeCode;
 @synthesize numberOfSubFiles;
 @synthesize path;
+@synthesize url;
 @synthesize filename;
 @synthesize displayName;
 @synthesize fileExtension;
@@ -299,6 +300,15 @@
         path        = [ filePath copy ];
         fileManager = [ NSFileManager defaultManager ];
         
+        if( [ [ path substringToIndex: 1 ] isEqualToString: @"/" ] ) {
+            
+            url = [ [ NSURL URLWithString: [ NSString stringWithFormat: @"file://", path ] ] retain ];
+            
+        } else {
+            
+            url = [ [ NSURL URLWithString: path ] retain ];
+        }
+        
         if( [ fileManager fileExistsAtPath: path ] == NO ) {
             
             return nil;
@@ -366,6 +376,7 @@
 - ( void )dealloc
 {
     [ path release ];
+    [ url release ];
     [ filename release ];
     [ displayName release ];
     [ fileExtension release ];

@@ -47,6 +47,7 @@ typedef struct {
     NSUInteger       HFSTypeCode;
     NSUInteger       numberOfSubFiles;
     NSString       * path;
+    NSURL          * url;
     NSString       * filename;
     NSString       * displayName;
     NSString       * fileExtension;
@@ -102,6 +103,7 @@ typedef struct {
 @property( readonly ) NSUInteger HFSTypeCode;
 @property( readonly ) NSUInteger numberOfSubFiles;
 @property( readonly ) NSString * path;
+@property( readonly ) NSURL    * url;
 @property( readonly ) NSString * filename;
 @property( readonly ) NSString * displayName;
 @property( readonly ) NSString * fileExtension;
