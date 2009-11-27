@@ -25,6 +25,11 @@
 @interface NSDictionary( CSDictionary )
 
 /*!
+ * @abstract    
+ */
++ ( NSDictionary * )dictionaryByFilteringDictionary: ( NSDictionary * )source withCallback: ( BOOL ( ^ )( id ) )callback;
+
+/*!
  * @abstract    Checks whether a key exists in the dictionary
  * 
  * @param       key     The key to check for
