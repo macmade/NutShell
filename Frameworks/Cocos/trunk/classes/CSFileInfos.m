@@ -332,7 +332,7 @@
         
         if( isDirectory == YES ) {
             
-            numberOfSubFiles = [ [ fileManager directoryContentsAtPath: path ] count ];
+            numberOfSubFiles = [ [ fileManager contentsOfDirectoryAtPath: path error: NULL ] count ];
         }
         
         if( isSymbolicLink == YES ) {
