@@ -23,6 +23,7 @@
 #import "CSMakeFunctions.h"
 
 // Categories
+#import "CSArray.h"
 #import "CSColor.h"
 #import "CSDictionary.h"
 #import "CSEventDispatcher.h"

@@ -165,6 +165,10 @@
 		05E68A6A0FD80F7D003FAC5F /* CSPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E68A690FD80F7D003FAC5F /* CSPreferences.h */; settings = {ATTRIBUTES = (); }; };
 		05E914EA0FE3C4B6006A901B /* CSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E914E90FE3C4B6006A901B /* CSString.m */; };
 		05E914EC0FE3C4C2006A901B /* CSString.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E914EB0FE3C4C2006A901B /* CSString.h */; settings = {ATTRIBUTES = (); }; };
+		05F47F6E10B00A78003AE0A2 /* CSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F47F6D10B00A78003AE0A2 /* CSArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05F47F6F10B00A78003AE0A2 /* CSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F47F6D10B00A78003AE0A2 /* CSArray.h */; };
+		05F47F7110B00AE5003AE0A2 /* CSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F47F7010B00AE5003AE0A2 /* CSArray.m */; };
+		05F47F7210B00AE5003AE0A2 /* CSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F47F7010B00AE5003AE0A2 /* CSArray.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -260,6 +264,8 @@
 		05E68A690FD80F7D003FAC5F /* CSPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPreferences.h; sourceTree = "<group>"; };
 		05E914E90FE3C4B6006A901B /* CSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSString.m; sourceTree = "<group>"; };
 		05E914EB0FE3C4C2006A901B /* CSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSString.h; sourceTree = "<group>"; };
+		05F47F6D10B00A78003AE0A2 /* CSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSArray.h; sourceTree = "<group>"; };
+		05F47F7010B00AE5003AE0A2 /* CSArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSArray.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -371,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				056997BC0FD8AFAB00B590DD /* include */,
+				05F47F7010B00AE5003AE0A2 /* CSArray.m */,
 				05DF56EF1035D6B300862FA4 /* CSColor.m */,
 				05E24B8D0FE859CD00C42604 /* CSDictionary.m */,
 				056997BD0FD8B03100B590DD /* CSEventDispatcher.m */,
@@ -386,6 +393,7 @@
 		056997BC0FD8AFAB00B590DD /* include */ = {
 			isa = PBXGroup;
 			children = (
+				05F47F6D10B00A78003AE0A2 /* CSArray.h */,
 				05DF56F21035D6C400862FA4 /* CSColor.h */,
 				05E24B8B0FE859C200C42604 /* CSDictionary.h */,
 				056997BF0FD8B03C00B590DD /* CSEventDispatcher.h */,
@@ -557,6 +565,7 @@
 				05DF57A01035DCB600862FA4 /* CSMakeFunctions.h in Headers */,
 				05948CDC10375E2D00284538 /* CSDelegateChain.h in Headers */,
 				059D4CF6106A81A7001FDA9D /* CSFileInfos.h in Headers */,
+				05F47F6E10B00A78003AE0A2 /* CSArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +613,7 @@
 				05DF579F1035DCB600862FA4 /* CSMakeFunctions.h in Headers */,
 				05948CB31037590900284538 /* CSDelegateChain.h in Headers */,
 				059D4CF7106A81A7001FDA9D /* CSFileInfos.h in Headers */,
+				05F47F6F10B00A78003AE0A2 /* CSArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +737,7 @@
 				05DF579D1035DCAE00862FA4 /* CSMakeFunctions.m in Sources */,
 				05948CDD10375E3200284538 /* CSDelegateChain.m in Sources */,
 				059D4CF4106A7CF2001FDA9D /* CSFileInfos.m in Sources */,
+				05F47F7110B00AE5003AE0A2 /* CSArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +781,7 @@
 				05DF579C1035DCAE00862FA4 /* CSMakeFunctions.m in Sources */,
 				05948CB1103758F900284538 /* CSDelegateChain.m in Sources */,
 				059D4CF3106A7CF2001FDA9D /* CSFileInfos.m in Sources */,
+				05F47F7210B00AE5003AE0A2 /* CSArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
