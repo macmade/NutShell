@@ -2,9 +2,9 @@
 
 #import <sys/stat.h>
 
-#import "CSFileInfos.h"
+#import "NLFileInfos.h"
 
-@implementation CSFileInfos
+@implementation NLFileInfos
 
 @synthesize isDirectory;
 @synthesize isRegularFile;
@@ -56,9 +56,9 @@
 
 + ( id )createFromPath: ( NSString * )filePath
 {
-    CSFileInfos * fileInfos;
+    NLFileInfos * fileInfos;
     
-    fileInfos = [ [ CSFileInfos alloc ] initWithPath: filePath ];
+    fileInfos = [ [ NLFileInfos alloc ] initWithPath: filePath ];
     
     return [ fileInfos autorelease ];
 }
@@ -255,7 +255,7 @@
 
 - ( void )getSubTypes
 {
-    CSFileInfos * infos;
+    NLFileInfos * infos;
     
     infos = ( isSymbolicLink ) ? targetFile : self;
     
@@ -351,7 +351,7 @@
                 }
             }
             
-            targetFile = [ [ CSFileInfos createFromPath: symLinkTarget ] retain ];
+            targetFile = [ [ NLFileInfos createFromPath: symLinkTarget ] retain ];
         }
         
         [ self getSubTypes ];

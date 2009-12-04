@@ -8,11 +8,11 @@
 // $Id$
 
 // Local includes
-#import "CSLogger.h"
-#import "CSLogMessage.h"
-#import "CSEventDispatcher.h"
+#import "NLLogger.h"
+#import "NLLogMessage.h"
+#import "NLEventDispatcher.h"
 
-@implementation CSLogger
+@implementation NLLogger
 
 @synthesize messages;
 @synthesize debug;
@@ -33,7 +33,7 @@
     [ super dealloc ];
 }
 
-- ( void )message: ( CSLogMessage * ) message
+- ( void )message: ( NLLogMessage * ) message
 {
     [ messages addObject: message ];
     
@@ -42,9 +42,9 @@
 
 - ( void )log: ( NSString * )message
 {
-   CSLogMessage * msg;
+   NLLogMessage * msg;
     
-    msg = [ [ CSLogMessage alloc ] initWithMessage: message ];
+    msg = [ [ NLLogMessage alloc ] initWithMessage: message ];
     
     [ messages addObject: msg ];
     
@@ -53,12 +53,12 @@
 
 - ( void )debug: ( NSString * )message
 {
-    CSLogMessage * msg;
+    NLLogMessage * msg;
     
     if( debug == YES ) {
         
-        msg      = [ [ CSLogMessage alloc ] initWithMessage: message ];
-        msg.type = CSMessageDebug;
+        msg      = [ [ NLLogMessage alloc ] initWithMessage: message ];
+        msg.type = NLMessageDebug;
         
         [ messages addObject: msg ];
         

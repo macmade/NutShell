@@ -7,10 +7,10 @@
 
 // $Id$
 
-#import "CSString.h"
+#import "NLString.h"
 #import "regex.h"
 
-@implementation NSString( CSString )
+@implementation NSString( NLString )
 
 static const unsigned int CRCTable[ 256 ] = {
     0x00000000, 0x77073096, 0xEE0E612C, 0x990951BA, 0x076DC419, 0x706AF48F,
@@ -121,7 +121,7 @@ static const unsigned int CRCTable[ 256 ] = {
     
     nmatch = regex.re_nsub + 1;
     
-    CSXMALLOC( pmatch, regmatch_t, nmatch );
+    NLXMALLOC( pmatch, regmatch_t, nmatch );
     
     match = regexec( &regex, str, nmatch, pmatch, 0 );
     
@@ -155,7 +155,7 @@ static const unsigned int CRCTable[ 256 ] = {
             end   = ( size_t )pmatch[ i ].rm_eo;
             size  = end - start;
             
-            CSXMALLOC( submatch, char, size + 1 );
+            NLXMALLOC( submatch, char, size + 1 );
             
             strncpy( submatch, &str[ start ], size );
             
@@ -207,7 +207,7 @@ static const unsigned int CRCTable[ 256 ] = {
     
     nmatch = regex.re_nsub + 1;
     
-    CSXMALLOC( pmatch, regmatch_t, nmatch );
+    NLXMALLOC( pmatch, regmatch_t, nmatch );
     
     match = regexec( &regex, str, nmatch, pmatch, 0 );
     
@@ -236,7 +236,7 @@ static const unsigned int CRCTable[ 256 ] = {
             end   = ( size_t )pmatch[ i ].rm_eo;
             size  = end - start;
             
-            CSXMALLOC( submatch, char, size + 1 );
+            NLXMALLOC( submatch, char, size + 1 );
             
             strncpy( submatch, &str[ start ], size );
             

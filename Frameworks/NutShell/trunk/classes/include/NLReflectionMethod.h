@@ -20,7 +20,7 @@
 #import <objc/runtime.h>
 
 // Local includes
-#import "CSObject.h"
+#import "NLObject.h"
 
 /*!
  * @abstract    Objective-C class method reflector
@@ -28,7 +28,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSReflectionMethod: CSObject
+@interface NLReflectionMethod: NLObject
 {
 @protected
     
@@ -80,7 +80,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r1;
+    id NL_r1;
     
     /*!
      * @abstract    Reserved 2
@@ -88,7 +88,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r2;
+    id NL_r2;
 }
 
 /*! @property */
@@ -133,6 +133,6 @@
 /*!
  * @abstract    
  */
-- ( BOOL )isEqualToReflector:( CSReflectionMethod * )methodRef;
+- ( BOOL )isEqualToReflector:( NLReflectionMethod * )methodRef;
 
 @end

@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSHostReachabilityTest.h"
+#import "NLHostReachabilityTest.h"
 
-@implementation CSHostReachabilityTest
+@implementation NLHostReachabilityTest
 
 @synthesize target;
 @synthesize flags;

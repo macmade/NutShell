@@ -17,7 +17,7 @@
  */
 
 // Used classes
-@class CSLogger, CSExecution;
+@class NLLogger, NLExecution;
 
 /*!
  * @abstract    Application base
@@ -25,14 +25,14 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSApplication: NSApplication
+@interface NLApplication: NSApplication
 {
 @protected
     
     /*!
      * @abstract    The execution object
      */
-    CSExecution * execution;
+    NLExecution * execution;
     
     /*!
      * @abstract    The shared workspace
@@ -42,7 +42,7 @@
     /*!
      * @abstract    The logger object
      */
-    CSLogger * logger;
+    NLLogger * logger;
     
     /*!
      * @abstract    The default file manager
@@ -67,7 +67,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r1;
+    id NL_r1;
     
     /*!
      * @abstract    Reserved 2
@@ -75,17 +75,17 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r2;
+    id NL_r2;
 }
 
 /*! @property */
-@property( readonly ) CSExecution * execution;
+@property( readonly ) NLExecution * execution;
 
 /*! @property */
 @property( readonly ) NSWorkspace * workspace;
 
 /*! @property */
-@property( readonly ) CSLogger * logger;
+@property( readonly ) NLLogger * logger;
 
 /*! @property */
 @property( readonly ) NSFileManager * fileManager;

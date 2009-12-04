@@ -9,19 +9,19 @@
 
 #import <sys/stat.h>
 
-#import "CSFileManager.h"
-#import "CSDictionary.h"
+#import "NLFileManager.h"
+#import "NLDictionary.h"
 
-NSString * const CSFileFlagArchived         = @"CSFileFlagArchived";
-NSString * const CSFileFlagHidden           = @"CSFileFlagHidden";
-NSString * const CSFileFlagNoDump           = @"CSFileFlagNoDump";
-NSString * const CSFileFlagOpaque           = @"CSFileFlagOpaque";
-NSString * const CSFileFlagSystemAppendOnly = @"CSFileFlagSystemAppendOnly";
-NSString * const CSFileFlagSystemImmutable  = @"CSFileFlagSystemImmutable";
-NSString * const CSFileFlagUserAppendOnly   = @"CSFileFlagUserAppendOnly";
-NSString * const CSFileFlagUserImmutable    = @"CSFileFlagUserImmutable";
+NSString * const NLFileFlagArchived         = @"NLFileFlagArchived";
+NSString * const NLFileFlagHidden           = @"NLFileFlagHidden";
+NSString * const NLFileFlagNoDump           = @"NLFileFlagNoDump";
+NSString * const NLFileFlagOpaque           = @"NLFileFlagOpaque";
+NSString * const NLFileFlagSystemAppendOnly = @"NLFileFlagSystemAppendOnly";
+NSString * const NLFileFlagSystemImmutable  = @"NLFileFlagSystemImmutable";
+NSString * const NLFileFlagUserAppendOnly   = @"NLFileFlagUserAppendOnly";
+NSString * const NLFileFlagUserImmutable    = @"NLFileFlagUserImmutable";
 
-@implementation NSFileManager( CSFileManager )
+@implementation NSFileManager( NLFileManager )
 
 - ( NSDictionary * )flagsOfItemAtPath: ( NSString * )path error: ( NSError ** )error;
 {
@@ -42,14 +42,14 @@ NSString * const CSFileFlagUserImmutable    = @"CSFileFlagUserImmutable";
     }
     
     flags = [ NSDictionary dictionaryWithObjectsAndKeys:
-                [ NSNumber numberWithBool: ( fileStat.st_flags & SF_ARCHIVED )  ? YES : NO ], CSFileFlagArchived,
-                [ NSNumber numberWithBool: ( fileStat.st_flags & UF_HIDDEN )    ? YES : NO ], CSFileFlagHidden,
-                [ NSNumber numberWithBool: ( fileStat.st_flags & UF_NODUMP )    ? YES : NO ], CSFileFlagNoDump,
-                [ NSNumber numberWithBool: ( fileStat.st_flags & UF_OPAQUE )    ? YES : NO ], CSFileFlagOpaque,
-                [ NSNumber numberWithBool: ( fileStat.st_flags & SF_APPEND )    ? YES : NO ], CSFileFlagSystemAppendOnly,
-                [ NSNumber numberWithBool: ( fileStat.st_flags & SF_IMMUTABLE ) ? YES : NO ], CSFileFlagSystemImmutable,
-                [ NSNumber numberWithBool: ( fileStat.st_flags & UF_APPEND )    ? YES : NO ], CSFileFlagUserAppendOnly,
-                [ NSNumber numberWithBool: ( fileStat.st_flags & UF_IMMUTABLE ) ? YES : NO ], CSFileFlagUserImmutable,
+                [ NSNumber numberWithBool: ( fileStat.st_flags & SF_ARCHIVED )  ? YES : NO ], NLFileFlagArchived,
+                [ NSNumber numberWithBool: ( fileStat.st_flags & UF_HIDDEN )    ? YES : NO ], NLFileFlagHidden,
+                [ NSNumber numberWithBool: ( fileStat.st_flags & UF_NODUMP )    ? YES : NO ], NLFileFlagNoDump,
+                [ NSNumber numberWithBool: ( fileStat.st_flags & UF_OPAQUE )    ? YES : NO ], NLFileFlagOpaque,
+                [ NSNumber numberWithBool: ( fileStat.st_flags & SF_APPEND )    ? YES : NO ], NLFileFlagSystemAppendOnly,
+                [ NSNumber numberWithBool: ( fileStat.st_flags & SF_IMMUTABLE ) ? YES : NO ], NLFileFlagSystemImmutable,
+                [ NSNumber numberWithBool: ( fileStat.st_flags & UF_APPEND )    ? YES : NO ], NLFileFlagUserAppendOnly,
+                [ NSNumber numberWithBool: ( fileStat.st_flags & UF_IMMUTABLE ) ? YES : NO ], NLFileFlagUserImmutable,
                 nil
             ];
     
@@ -76,74 +76,74 @@ NSString * const CSFileFlagUserImmutable    = @"CSFileFlagUserImmutable";
     
     flagsValue = fileStat.st_flags;
     
-    if( [ flags hasKey: CSFileFlagArchived ] && [ [ flags objectForKey: CSFileFlagArchived ] intValue ] == 0 ) {
+    if( [ flags hasKey: NLFileFlagArchived ] && [ [ flags objectForKey: NLFileFlagArchived ] intValue ] == 0 ) {
         
         flagsValue &= ~SF_ARCHIVED;
         
-    } else if( [ flags hasKey: CSFileFlagArchived ] ) {
+    } else if( [ flags hasKey: NLFileFlagArchived ] ) {
         
         flagsValue |= SF_ARCHIVED;
     }
     
-    if( [ flags hasKey: CSFileFlagHidden ] && [ [ flags objectForKey: CSFileFlagHidden ] intValue ] == 0 ) {
+    if( [ flags hasKey: NLFileFlagHidden ] && [ [ flags objectForKey: NLFileFlagHidden ] intValue ] == 0 ) {
         
         flagsValue &= ~UF_HIDDEN;
         
-    } else if( [ flags hasKey: CSFileFlagHidden ] ) {
+    } else if( [ flags hasKey: NLFileFlagHidden ] ) {
         
         flagsValue |= UF_HIDDEN;
     }
     
-    if( [ flags hasKey: CSFileFlagNoDump ] && [ [ flags objectForKey: CSFileFlagNoDump ] intValue ] == 0 ) {
+    if( [ flags hasKey: NLFileFlagNoDump ] && [ [ flags objectForKey: NLFileFlagNoDump ] intValue ] == 0 ) {
         
         flagsValue &= ~UF_NODUMP;
         
-    } else if( [ flags hasKey: CSFileFlagNoDump ] ) {
+    } else if( [ flags hasKey: NLFileFlagNoDump ] ) {
         
         flagsValue |= UF_NODUMP;
     }
     
-    if( [ flags hasKey: CSFileFlagOpaque ] && [ [ flags objectForKey: CSFileFlagOpaque ] intValue ] == 0 ) {
+    if( [ flags hasKey: NLFileFlagOpaque ] && [ [ flags objectForKey: NLFileFlagOpaque ] intValue ] == 0 ) {
         
         flagsValue &= ~UF_OPAQUE;
         
-    } else if( [ flags hasKey: CSFileFlagOpaque ] ) {
+    } else if( [ flags hasKey: NLFileFlagOpaque ] ) {
         
         flagsValue |= UF_OPAQUE;
     }
     
-    if( [ flags hasKey: CSFileFlagSystemAppendOnly ] && [ [ flags objectForKey: CSFileFlagSystemAppendOnly ] intValue ] == 0 ) {
+    if( [ flags hasKey: NLFileFlagSystemAppendOnly ] && [ [ flags objectForKey: NLFileFlagSystemAppendOnly ] intValue ] == 0 ) {
         
         flagsValue &= ~SF_APPEND;
         
-    } else if( [ flags hasKey: CSFileFlagSystemAppendOnly ] ) {
+    } else if( [ flags hasKey: NLFileFlagSystemAppendOnly ] ) {
         
         flagsValue |= SF_APPEND;
     }
     
-    if( [ flags hasKey: CSFileFlagSystemImmutable ] && [ [ flags objectForKey: CSFileFlagSystemImmutable ] intValue ] == 0 ) {
+    if( [ flags hasKey: NLFileFlagSystemImmutable ] && [ [ flags objectForKey: NLFileFlagSystemImmutable ] intValue ] == 0 ) {
         
         flagsValue &= ~SF_IMMUTABLE;
         
-    } else if( [ flags hasKey: CSFileFlagSystemImmutable ] ) {
+    } else if( [ flags hasKey: NLFileFlagSystemImmutable ] ) {
         
         flagsValue |= SF_IMMUTABLE;
     }
     
-    if( [ flags hasKey: CSFileFlagUserAppendOnly ] && [ [ flags objectForKey: CSFileFlagUserAppendOnly ] intValue ] == 0 ) {
+    if( [ flags hasKey: NLFileFlagUserAppendOnly ] && [ [ flags objectForKey: NLFileFlagUserAppendOnly ] intValue ] == 0 ) {
         
         flagsValue &= ~UF_APPEND;
         
-    } else if( [ flags hasKey: CSFileFlagUserAppendOnly ] ) {
+    } else if( [ flags hasKey: NLFileFlagUserAppendOnly ] ) {
         
         flagsValue |= UF_APPEND;
     }
     
-    if( [ flags hasKey: CSFileFlagUserImmutable ] && [ [ flags objectForKey: CSFileFlagUserImmutable ] intValue ] == 0 ) {
+    if( [ flags hasKey: NLFileFlagUserImmutable ] && [ [ flags objectForKey: NLFileFlagUserImmutable ] intValue ] == 0 ) {
         
         flagsValue &= ~UF_IMMUTABLE;
         
-    } else if( [ flags hasKey: CSFileFlagUserImmutable ] ) {
+    } else if( [ flags hasKey: NLFileFlagUserImmutable ] ) {
         
         flagsValue |= UF_IMMUTABLE;
     }

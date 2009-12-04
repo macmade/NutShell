@@ -7,26 +7,26 @@
 
 // $Id$
 
-#import "CSLogFunctions.h"
+#import "NLLogFunctions.h"
 
-void CSLog( id object )
+void NLLog( id object )
 {
     NSLog( @"%@", object );
 }
 
-void CSLogPoint( NSPoint point )
+void NLLogPoint( NSPoint point )
 {
     NSLog( @"X: %f", point.x );
     NSLog( @"Y: %f", point.y );
 }
 
-void CSLogSize( NSSize size )
+void NLLogSize( NSSize size )
 {
     NSLog( @"Width:  %f", size.width );
     NSLog( @"Height: %f", size.height );
 }
 
-void CSLogRect( NSRect rect )
+void NLLogRect( NSRect rect )
 {
     NSLog( @"X:      %f", rect.origin.x );
     NSLog( @"Y:      %f", rect.origin.y );
@@ -34,7 +34,7 @@ void CSLogRect( NSRect rect )
     NSLog( @"Height: %f", rect.size.height );
 }
 
-void CSLogRange( NSRange range )
+void NLLogRange( NSRange range )
 {
     NSLog( @"Location:  %i", range.location );
     NSLog( @"Length:    %i", range.length );

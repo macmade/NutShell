@@ -17,7 +17,7 @@
  */
 
 // Local includes
-#import "CSObject.h"
+#import "NLObject.h"
 
 /*!
  * @abstract    Keychain item helper
@@ -25,7 +25,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSKeychainItem: CSObject
+@interface NLKeychainItem: NLObject
 {
 @protected
     
@@ -62,7 +62,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r1;
+    id NL_r1;
     
     /*!
      * @abstract    Reserved 2
@@ -70,7 +70,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r2;
+    id NL_r2;
 }
 
 /*! @property */

@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSTextView.h"
+#import "NLTextView.h"
 
-@implementation NSTextView( CSTextView )
+@implementation NSTextView( NLTextView )
 
 - ( void )displayContentOfFile: ( NSString * )filePath
 {

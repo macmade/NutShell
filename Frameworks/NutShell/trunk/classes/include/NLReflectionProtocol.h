@@ -17,7 +17,7 @@
  */
 
 // Local includes
-#import "CSObject.h"
+#import "NLObject.h"
 
 /*!
  * @abstract    Objective-C protocol reflector
@@ -25,7 +25,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSReflectionProtocol: CSObject
+@interface NLReflectionProtocol: NLObject
 {
 @protected
     
@@ -52,7 +52,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r1;
+    id NL_r1;
     
     /*!
      * @abstract    Reserved 2
@@ -60,7 +60,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r2;
+    id NL_r2;
 }
 
 /*! @property */
@@ -100,7 +100,7 @@
 /*!
  * 
  */
-- ( BOOL )isEqualToReflector:( CSReflectionProtocol * )proto;
+- ( BOOL )isEqualToReflector:( NLReflectionProtocol * )proto;
 
 /*!
  * 
@@ -110,6 +110,6 @@
 /*!
  * 
  */
-- ( BOOL )conformsToProtocolReflector:( CSReflectionProtocol * )proto;
+- ( BOOL )conformsToProtocolReflector:( NLReflectionProtocol * )proto;
 
 @end

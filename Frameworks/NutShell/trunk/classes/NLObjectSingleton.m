@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSObjectSingleton.h"
+#import "NLObjectSingleton.h"
 
-@implementation CSObjectSingleton
+@implementation NLObjectSingleton
 
 static NSMutableDictionary * _instances;
 
@@ -71,12 +71,12 @@ static NSMutableDictionary * _instances;
 
 - ( BOOL )isInited
 {
-    return CS_inited;
+    return NL_inited;
 }
 
 - ( id )csInit
 {
-    CS_inited = YES;
+    NL_inited = YES;
     
     return self;
 }

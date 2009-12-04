@@ -5,11 +5,11 @@
  * All rights reserved.
  ******************************************************************************/
 
-// $Id: CSColor.m 728 2009-08-15 13:35:58Z  $
+// $Id: NLColor.m 728 2009-08-15 13:35:58Z  $
 
-#import "CSArray.h"
+#import "NLArray.h"
 
-@implementation NSArray( CSArray )
+@implementation NSArray( NLArray )
 
 + ( NSArray * )arrayByFilteringArray: ( NSArray * )source withCallback: ( BOOL ( ^ )( id ) )callback
 {

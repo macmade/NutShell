@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSSystemProfiler.h"
+#import "NLSystemProfiler.h"
 
-@implementation CSSystemProfiler
+@implementation NLSystemProfiler
 
 - ( id )init
 {

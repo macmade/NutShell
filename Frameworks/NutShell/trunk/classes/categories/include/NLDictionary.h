@@ -22,7 +22,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface NSDictionary( CSDictionary )
+@interface NSDictionary( NLDictionary )
 
 /*!
  * @abstract    

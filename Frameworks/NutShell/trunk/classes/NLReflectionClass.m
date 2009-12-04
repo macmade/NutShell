@@ -8,13 +8,13 @@
 // $Id$
 
 #import <objc/runtime.h>
-#import "CSReflectionClass.h"
-#import "CSReflectionVariable.h"
-#import "CSReflectionProperty.h"
-#import "CSReflectionProtocol.h"
-#import "CSReflectionMethod.h"
+#import "NLReflectionClass.h"
+#import "NLReflectionVariable.h"
+#import "NLReflectionProperty.h"
+#import "NLReflectionProtocol.h"
+#import "NLReflectionMethod.h"
 
-@implementation CSReflectionClass
+@implementation NLReflectionClass
 
 @synthesize objcClass;
 @synthesize name;
@@ -94,11 +94,11 @@
     [ super dealloc ];
 }
 
-- ( CSReflectionClass * )superClass
+- ( NLReflectionClass * )superClass
 {
     if( superClass == nil ) {
         
-        superClass = [ [ CSReflectionClass alloc ] initWithClass: class_getSuperclass( objcClass ) ];
+        superClass = [ [ NLReflectionClass alloc ] initWithClass: class_getSuperclass( objcClass ) ];
     }
     
     return superClass;
@@ -108,7 +108,7 @@
 {
     unsigned int variableCount;
     Ivar * classVariables;
-    CSReflectionProperty * variable;
+    NLReflectionProperty * variable;
     NSMutableDictionary * variableDict;
     unsigned int i;
     
@@ -122,7 +122,7 @@
             
             for( i = 0; i < variableCount; i++ ) {
                 
-                variable = [ CSReflectionVariable reflectorFromVariable: classVariables[ i ] ];
+                variable = [ NLReflectionVariable reflectorFromVariable: classVariables[ i ] ];
                 
                 [ variableDict setObject: variable forKey: [ variable name ] ];
             }
@@ -140,7 +140,7 @@
 {
     unsigned int propertyCount;
     objc_property_t * classProperties;
-    CSReflectionProperty * property;
+    NLReflectionProperty * property;
     NSMutableDictionary * propertyDict;
     unsigned int i;
     
@@ -154,7 +154,7 @@
             
             for( i = 0; i < propertyCount; i++ ) {
                 
-                property = [ CSReflectionProperty reflectorFromProperty: classProperties[ i ] ];
+                property = [ NLReflectionProperty reflectorFromProperty: classProperties[ i ] ];
                 
                 [ propertyDict setObject: property forKey: [ property name ] ];
             }
@@ -172,7 +172,7 @@
 {
     unsigned int methodCount;
     Method * methods;
-    CSReflectionMethod * method;
+    NLReflectionMethod * method;
     NSMutableDictionary * methodDict;
     unsigned int i;
     
@@ -186,7 +186,7 @@
             
             for( i = 0; i < methodCount; i++ ) {
                 
-                method = [ CSReflectionMethod reflectorFromMethod: methods[ i ] ];
+                method = [ NLReflectionMethod reflectorFromMethod: methods[ i ] ];
                 
                 [ methodDict setObject: method forKey: [ method name ] ];
             }
@@ -204,7 +204,7 @@
 {
     unsigned int protocolCount;
     Protocol ** classProtocols;
-    CSReflectionProtocol * protocol;
+    NLReflectionProtocol * protocol;
     NSMutableDictionary * protocolDict;
     unsigned int i;
     
@@ -218,7 +218,7 @@
             
             for( i = 0; i < protocolCount; i++ ) {
                 
-                protocol = [ CSReflectionProtocol reflectorFromProtocol: classProtocols[ i ] ];
+                protocol = [ NLReflectionProtocol reflectorFromProtocol: classProtocols[ i ] ];
                 
                 [ protocolDict setObject: protocol forKey: [ protocol name ] ];
             }

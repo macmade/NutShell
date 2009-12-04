@@ -22,7 +22,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface NSScrollView( CSScrollView )
+@interface NSScrollView( NLScrollView )
 
 /*!
  * @abstract    Scrolls the NSScrollView object to the bottom

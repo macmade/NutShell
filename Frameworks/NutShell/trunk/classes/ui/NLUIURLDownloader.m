@@ -7,10 +7,10 @@
 
 // $Id$
 
-#import "CSUIURLDownloader.h"
-#import "CSEventDispatcher.h"
+#import "NLUIURLDownloader.h"
+#import "NLEventDispatcher.h"
 
-@implementation CSUIURLDownloader
+@implementation NLUIURLDownloader
 
 @synthesize displayErrors;
 @synthesize playSoundOnDownloadComplete;
@@ -91,7 +91,7 @@
     [ super dealloc ];
 }
 
-- ( void )downloadError: ( CSEvent * )event
+- ( void )downloadError: ( NLEvent * )event
 {
     NSAlert  * alert;
     NSError  * error;
@@ -117,7 +117,7 @@
     }
 }
 
-- ( void )downloadComplete: ( CSEvent * )event
+- ( void )downloadComplete: ( NLEvent * )event
 {
     [ downloadButton setEnabled:  YES ];
     [ cancelButton   setEnabled:  NO ];
@@ -133,7 +133,7 @@
     }
 }
 
-- ( void )updateDownloadProgress: ( CSEvent * )event
+- ( void )updateDownloadProgress: ( NLEvent * )event
 {
     double current;
     double total;
@@ -197,7 +197,7 @@
     } 
 }
 
-- ( void )updateDownloadSpeed: ( CSEvent * )event
+- ( void )updateDownloadSpeed: ( NLEvent * )event
 {
     double downloadSpeed;
     double time;

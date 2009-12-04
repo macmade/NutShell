@@ -7,10 +7,10 @@
 
 // $Id$
 
-#import "CSUISegmentedTabView.h"
-#import "CSEventDispatcher.h"
+#import "NLUISegmentedTabView.h"
+#import "NLEventDispatcher.h"
 
-@implementation CSUISegmentedTabView
+@implementation NLUISegmentedTabView
 
 @synthesize control;
 @synthesize view;
@@ -201,7 +201,7 @@
         
     } else {
         
-        CSFATAL( @"Trying to select view %@ which does not exist", index );
+        NLFATAL( @"Trying to select view %@ which does not exist", index );
     }
 }
 

@@ -17,7 +17,7 @@
  */
 
 // Local includes
-#import "CSObject.h"
+#import "NLObject.h"
 
 /*!
  * @enum        MessageTypes
@@ -25,8 +25,8 @@
  * @abstract    The types of the log messages
  */
 enum {
-    CSMessageLog   = 0,
-    CSMessageDebug = 1
+    NLMessageLog   = 0,
+    NLMessageDebug = 1
 };
 
 /*!
@@ -35,7 +35,7 @@ enum {
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSLogMessage: CSObject
+@interface NLLogMessage: NLObject
 {
 @protected
     
@@ -62,7 +62,7 @@ enum {
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r1;
+    id NL_r1;
     
     /*!
      * @abstract    Reserved 2
@@ -70,7 +70,7 @@ enum {
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r2;
+    id NL_r2;
 }
 
 /*! @property */

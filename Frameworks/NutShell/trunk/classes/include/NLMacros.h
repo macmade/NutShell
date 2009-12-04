@@ -15,33 +15,33 @@
  *              applications that use the Cocos framework
  */
 
-#define CSFATAL( ... )                                      \
+#define NLFATAL( ... )                                      \
     NSException * _csInternalException = [ NSException      \
-        exceptionWithName: @"CSFatalException"              \
+        exceptionWithName: @"NLFatalException"              \
         reason: [ NSString stringWithFormat: __VA_ARGS__ ]  \
         userInfo: nil                                       \
     ];                                                      \
     @throw _csInternalException;
 
-#define CSMALLOC( var, type )                                       \
+#define NLMALLOC( var, type )                                       \
     if( NULL == ( var = ( type * )calloc( 1, sizeof( type ) ) ) ) { \
-        CSFATAL( @"Malloc error (%s)\n", strerror( errno ) );       \
+        NLFATAL( @"Malloc error (%s)\n", strerror( errno ) );       \
     }
 
-#define CSXMALLOC( var, type, x )                                   \
+#define NLXMALLOC( var, type, x )                                   \
     if( NULL == ( var = ( type * )calloc( x, sizeof( type ) ) ) ) { \
-        CSFATAL( @"Malloc error (%s)\n", strerror( errno ) );       \
+        NLFATAL( @"Malloc error (%s)\n", strerror( errno ) );       \
     }
 
-#define CSREALLOC( var, type, x )                                               \
+#define NLREALLOC( var, type, x )                                               \
     if( NULL == ( var = ( type * )realloc( var, ( x ) * sizeof( type ) ) ) ) {  \
-        CSFATAL( @"Realloc error (%s)\n", strerror( errno ) );                  \
+        NLFATAL( @"Realloc error (%s)\n", strerror( errno ) );                  \
     }
 
-#define CSSIGSET( handler, type, flags, sa1, sa2 )  \
+#define NLSIGSET( handler, type, flags, sa1, sa2 )  \
     sa1.sa_handler = handler;                       \
     sigemptyset( &sa1.sa_mask );                    \
     sa1.sa_flags = flags;                           \
     if( sigaction( type, &sa1, &sa2 ) != 0 ) {      \
-        CSFATAL( @"Sigaction error" );              \
+        NLFATAL( @"Sigaction error" );              \
     }

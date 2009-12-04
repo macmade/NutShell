@@ -11,9 +11,9 @@ typedef struct {
     BOOL userAppendOnly;
     BOOL userImmutable;
     
-} CSFileInfosFlags;
+} NLFileInfosFlags;
 
-@interface CSFileInfos: NSObject
+@interface NLFileInfos: NSObject
 {
 @protected
     
@@ -33,7 +33,7 @@ typedef struct {
     BOOL             isExecutable;
     BOOL             isImage;
     BOOL             isAudio;
-    CSFileInfosFlags flags;
+    NLFileInfosFlags flags;
     NSUInteger       size;
     NSUInteger       referenceCount;
     NSUInteger       deviceIdentifier;
@@ -61,7 +61,7 @@ typedef struct {
     NSDate         * modificationDate;
     NSDictionary   * attributes;
     NSFileManager  * fileManager;
-    CSFileInfos    * targetFile;
+    NLFileInfos    * targetFile;
     NSString       * gigaByteSymbol;
     NSString       * megaByteSymbol;
     NSString       * kiloByteSymbol;
@@ -89,7 +89,7 @@ typedef struct {
 @property( readonly ) BOOL isExecutable;
 @property( readonly ) BOOL isImage;
 @property( readonly ) BOOL isAudio;
-@property( readonly ) CSFileInfosFlags flags;
+@property( readonly ) NLFileInfosFlags flags;
 @property( readonly ) NSUInteger size;
 @property( readonly ) NSUInteger referenceCount;
 @property( readonly ) NSUInteger deviceIdentifier;
@@ -115,7 +115,7 @@ typedef struct {
 @property( readonly ) NSString * humanReadablePermissions;
 @property( readonly ) NSDate * creationDate;
 @property( readonly ) NSDate * modificationDate;
-@property( readonly ) CSFileInfos * targetFile;
+@property( readonly ) NLFileInfos * targetFile;
 @property( copy, readwrite ) NSString * gigaByteSymbol;
 @property( copy, readwrite ) NSString * megaByteSymbol;
 @property( copy, readwrite ) NSString * kiloByteSymbol;

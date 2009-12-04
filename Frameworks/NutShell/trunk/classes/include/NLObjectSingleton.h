@@ -17,8 +17,8 @@
  */
 
 // Local includes
-#import "CSSingleton.h"
-#import "CSObject.h"
+#import "NLSingleton.h"
+#import "NLObject.h"
 
 /*!
  * @abstract    Base class for the singleton objects
@@ -26,11 +26,11 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSObjectSingleton: CSObject < CSSingleton >
+@interface NLObjectSingleton: NLObject < NLSingleton >
 {
 @private
     
-    BOOL CS_inited;
+    BOOL NL_inited;
 }
 
 /*!

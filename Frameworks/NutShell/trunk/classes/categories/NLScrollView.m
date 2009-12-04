@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSScrollView.h"
+#import "NLScrollView.h"
 
-@implementation NSScrollView( CSScrollView )
+@implementation NSScrollView( NLScrollView )
 
 - ( void )scrollToBottom
 {

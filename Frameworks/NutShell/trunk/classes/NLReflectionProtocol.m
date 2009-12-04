@@ -8,10 +8,10 @@
 // $Id$
 
 #import <objc/runtime.h>
-#import "CSReflectionProtocol.h"
-#import "CSReflectionProperty.h"
+#import "NLReflectionProtocol.h"
+#import "NLReflectionProperty.h"
 
-@implementation CSReflectionProtocol
+@implementation NLReflectionProtocol
 
 @synthesize protocol;
 @synthesize name;
@@ -59,7 +59,7 @@
 {
     unsigned int propertyCount;
     objc_property_t * protocolProperties;
-    CSReflectionProperty * property;
+    NLReflectionProperty * property;
     NSMutableDictionary * propertyDict;
     unsigned int i;
     
@@ -73,7 +73,7 @@
             
             for( i = 0; i < propertyCount; i++ ) {
                 
-                property = [ CSReflectionProperty reflectorFromProperty: protocolProperties[ i ] ];
+                property = [ NLReflectionProperty reflectorFromProperty: protocolProperties[ i ] ];
                 
                 [ propertyDict setObject: property forKey: [ property name ] ];
             }
@@ -98,7 +98,7 @@
 /*!
  * 
  */
-- ( BOOL )isEqualToReflector:( CSReflectionProtocol * )proto
+- ( BOOL )isEqualToReflector:( NLReflectionProtocol * )proto
 {
     return protocol_isEqual( protocol, proto->protocol );
 }
@@ -114,7 +114,7 @@
 /*!
  * 
  */
-- ( BOOL )conformsToProtocolReflector:( CSReflectionProtocol * )proto
+- ( BOOL )conformsToProtocolReflector:( NLReflectionProtocol * )proto
 {
     return protocol_conformsToProtocol( protocol, proto->protocol );
 }

@@ -7,16 +7,16 @@
 
 // $Id$
 
-#import "CSObject.h"
-#import "CSDelegateChain.h"
+#import "NLObject.h"
+#import "NLDelegateChain.h"
 
-@implementation CSObject
+@implementation NLObject
 
 - ( id )init
 {
     if( ( self = [ super init ] ) ) {
         
-        delegate = [ [ CSDelegateChain alloc ] init ];
+        delegate = [ [ NLDelegateChain alloc ] init ];
     }
     
     return self;

@@ -17,7 +17,7 @@
  */
 
 // Used classes
-@class CSEvent;
+@class NLEvent;
 
 /*!
  * @abstract    NSObject additions to provide an event dispatcher on all Cocoa objects
@@ -25,7 +25,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface NSObject( CSEventDispatcher )
+@interface NSObject( NLEventDispatcher )
 
 /*!
  * @abstract    Dispatches a named event
@@ -50,7 +50,7 @@
  * @param       event   The event object to dispatch
  " @return      void
  */
-- ( void )dispatchEventObject: ( CSEvent * )event;
+- ( void )dispatchEventObject: ( NLEvent * )event;
 
 /*!
  * @abstract    Adds an event listener on an event of the current object

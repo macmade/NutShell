@@ -7,10 +7,10 @@
 
 // $Id$
 
-#import "CSUIInstaller.h"
-#import "CSEventDispatcher.h"
+#import "NLUIInstaller.h"
+#import "NLEventDispatcher.h"
 
-@implementation CSUIInstaller
+@implementation NLUIInstaller
 
 @synthesize phaseText;
 @synthesize statusText;
@@ -37,14 +37,14 @@
     return self;
 }
 
-- ( void )updateProgressBar: ( CSEvent * )event
+- ( void )updateProgressBar: ( NLEvent * )event
 {
     [ progressBar setIndeterminate: NO ];
     [ progressBar stopAnimation: nil ];
     [ progressBar setDoubleValue: progress ];
 }
 
-- ( void )updatePhaseText: ( CSEvent * )event
+- ( void )updatePhaseText: ( NLEvent * )event
 {
     [ phaseText setStringValue: [ NSString stringWithString: phase ] ];
     
@@ -55,14 +55,14 @@
     }
 }
 
-- ( void )updateStatusText: ( CSEvent * )event
+- ( void )updateStatusText: ( NLEvent * )event
 {
     [ progressBar setIndeterminate: NO ];
     [ progressBar stopAnimation: nil ];
     [ statusText setStringValue: [ NSString stringWithString: status ] ];
 }
 
-- ( void )installationComplete: ( CSEvent * )event
+- ( void )installationComplete: ( NLEvent * )event
 {
     [ progressBar setIndeterminate: NO ];
     [ progressBar setDoubleValue:   1 ];

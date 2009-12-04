@@ -7,10 +7,10 @@
 
 // $Id$
 
-#import "CSView.h"
-#import "CSColor.h"
+#import "NLView.h"
+#import "NLColor.h"
 
-@implementation CSView
+@implementation NLView
 
 @synthesize borderType;
 @synthesize backgroundColor;

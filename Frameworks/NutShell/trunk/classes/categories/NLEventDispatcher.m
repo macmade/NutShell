@@ -7,10 +7,10 @@
 
 // $Id$
 
-#import "CSEventDispatcher.h"
-#import "CSEvent.h"
+#import "NLEventDispatcher.h"
+#import "NLEvent.h"
 
-@implementation NSObject( CSEventDispatcher )
+@implementation NSObject( NLEventDispatcher )
 
 static NSMutableDictionary * _events;
 
@@ -21,15 +21,15 @@ static NSMutableDictionary * _events;
 
 - ( void )dispatchEvent: ( NSString * )name target: ( id )target
 {
-    CSEvent * event;
-    event = [ [ CSEvent alloc ] initWithName: name target: target ];
+    NLEvent * event;
+    event = [ [ NLEvent alloc ] initWithName: name target: target ];
     
     [ self dispatchEventObject: event ];
     
     [ event release ];
 }
 
-- ( void )dispatchEventObject: ( CSEvent * )event
+- ( void )dispatchEventObject: ( NLEvent * )event
 {
     NSString * classname;
     NSString * instanceId;

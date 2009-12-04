@@ -8,9 +8,9 @@
 // $Id$
 
 #import <objc/runtime.h>
-#import "CSReflectionVariable.h"
+#import "NLReflectionVariable.h"
 
-@implementation CSReflectionVariable
+@implementation NLReflectionVariable
 
 @synthesize variable;
 @synthesize name;

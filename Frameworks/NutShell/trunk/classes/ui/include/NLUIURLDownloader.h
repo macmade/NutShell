@@ -17,7 +17,7 @@
  */
 
 // Local includes
-#import "CSURLDownloader.h"
+#import "NLURLDownloader.h"
 
 /*!
  * @abstract    
@@ -25,7 +25,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSUIURLDownloader: CSURLDownloader
+@interface NLUIURLDownloader: NLURLDownloader
 {
 @protected
     
@@ -187,7 +187,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r3;
+    id NL_r3;
     
     /*!
      * @abstract    Reserved 2
@@ -195,7 +195,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r4;
+    id NL_r4;
 }
 
 /*! @property */

@@ -8,10 +8,10 @@
 // $Id$
 
 #import <objc/runtime.h>
-#import "CSReflectionObject.h"
-#import "CSReflectionClass.h"
+#import "NLReflectionObject.h"
+#import "NLReflectionClass.h"
 
-@implementation CSReflectionObject
+@implementation NLReflectionObject
 
 @synthesize classReflector;
 @synthesize classname;
@@ -36,7 +36,7 @@
 {
     if( ( self = [ super init ] ) ) {
         
-        classReflector = [ [ CSReflectionClass alloc ] initWithClass: [ object class ] ];
+        classReflector = [ [ NLReflectionClass alloc ] initWithClass: [ object class ] ];
         classname      = [ [ NSString alloc ] initWithString: [ classReflector name ] ];
     }
     

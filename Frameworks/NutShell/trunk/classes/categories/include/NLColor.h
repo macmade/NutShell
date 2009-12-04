@@ -22,7 +22,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface NSColor( CSColor )
+@interface NSColor( NLColor )
 
 /*!
  * @abstract    

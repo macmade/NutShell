@@ -7,11 +7,11 @@
 
 // $Id$
 
-#import "CSInstaller.h"
-#import "CSEventDispatcher.h"
-#import "CSExecution.h"
+#import "NLInstaller.h"
+#import "NLEventDispatcher.h"
+#import "NLExecution.h"
 
-@implementation CSInstaller
+@implementation NLInstaller
 
 @synthesize packagePath;
 @synthesize phase;
@@ -32,7 +32,7 @@
 {
     if( ( self = [ super init ] ) ) {
         
-        execution = [ CSExecution getInstance ];
+        execution = [ NLExecution getInstance ];
     }
     
     return self;
@@ -150,7 +150,7 @@
     
     if( packagePath == nil ) {
         
-        CSFATAL( @"No package has been set" );
+        NLFATAL( @"No package has been set" );
     }
     
     args[ 0 ] = "-verboseR";

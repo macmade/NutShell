@@ -7,10 +7,10 @@
 
 // $Id$
 
-#import "CSURLDownloader.h"
-#import "CSEventDispatcher.h"
+#import "NLURLDownloader.h"
+#import "NLEventDispatcher.h"
 
-@implementation CSURLDownloader
+@implementation NLURLDownloader
 
 @synthesize downloading;
 @synthesize downloaded;

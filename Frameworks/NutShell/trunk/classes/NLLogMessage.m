@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSLogMessage.h"
+#import "NLLogMessage.h"
 
-@implementation CSLogMessage
+@implementation NLLogMessage
 
 @synthesize message;
 @synthesize date;
@@ -42,7 +42,7 @@
         
         self.message = @"";
         self.date    = [ NSDate date ];
-        self.type    = CSMessageLog;
+        self.type    = NLMessageLog;
     }
     
     return self;

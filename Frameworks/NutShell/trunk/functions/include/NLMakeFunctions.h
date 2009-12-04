@@ -21,12 +21,12 @@
  */
 typedef enum {
     
-    CSColorTypeRGB = 0,
-    CSColorTypeHSB = 1
+    NLColorTypeRGB = 0,
+    NLColorTypeHSB = 1
     
-} CSColorType;
+} NLColorType;
 
 /*!
  * abstract     
  */
-NSColor * CSMakeColor( NSUInteger v1, NSUInteger v2, NSUInteger v3, NSUInteger alpha, CSColorType type );
+NSColor * NLMakeColor( NSUInteger v1, NSUInteger v2, NSUInteger v3, NSUInteger alpha, NLColorType type );

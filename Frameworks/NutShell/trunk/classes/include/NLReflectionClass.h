@@ -17,7 +17,7 @@
  */
 
 // Local includes
-#import "CSObject.h"
+#import "NLObject.h"
 
 // Used classes
 @class CNReflectionMethod, CNReflectionProtocol;
@@ -28,7 +28,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSReflectionClass: CSObject
+@interface NLReflectionClass: NLObject
 {
 @protected
     
@@ -45,7 +45,7 @@
     /*!
      * @abstract    
      */
-    CSReflectionClass * superClass;
+    NLReflectionClass * superClass;
     
     /*!
      * @abstract    
@@ -100,7 +100,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r1;
+    id NL_r1;
     
     /*!
      * @abstract    Reserved 2
@@ -108,7 +108,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r2;
+    id NL_r2;
 }
 
 /*! @property */
@@ -118,7 +118,7 @@
 @property( readonly ) NSString * name;
 
 /*! @property */
-@property( readonly ) CSReflectionClass * superClass;
+@property( readonly ) NLReflectionClass * superClass;
 
 /*! @property */
 @property( readonly, getter=isMetaClass ) BOOL metaClass;

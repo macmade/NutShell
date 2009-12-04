@@ -20,9 +20,9 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 
 // Local includes
-#import "CSObject.h"
+#import "NLObject.h"
 
-@interface CSHostReachabilityTest: NSObject
+@interface NLHostReachabilityTest: NSObject
 {
 @protected
     
@@ -35,8 +35,8 @@
     
 @private
     
-    id CS_r1;
-    id CS_r2;
+    id NL_r1;
+    id NL_r2;
 }
 
 @property( readonly ) SCNetworkReachabilityRef target;

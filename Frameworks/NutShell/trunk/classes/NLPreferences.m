@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSPreferences.h"
+#import "NLPreferences.h"
 
-@implementation CSPreferences
+@implementation NLPreferences
 
 @synthesize defaults;
 @synthesize values;

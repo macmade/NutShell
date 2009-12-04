@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSWindowFader.h"
+#import "NLWindowFader.h"
 
-@implementation CSWindowFader
+@implementation NLWindowFader
 
 @synthesize isFaded;
 @synthesize closeAfterFade;

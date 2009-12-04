@@ -5,7 +5,7 @@
  * All rights reserved.
  ******************************************************************************/
 
-// $Id: CSColor.h 728 2009-08-15 13:35:58Z  $
+// $Id: NLColor.h 728 2009-08-15 13:35:58Z  $
 
 /*!
  * @header
@@ -22,7 +22,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface NSArray( CSArray )
+@interface NSArray( NLArray )
 
 /*!
  * @abstract    

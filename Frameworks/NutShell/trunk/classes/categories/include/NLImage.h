@@ -22,7 +22,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface NSImage( CSImage )
+@interface NSImage( NLImage )
 
 /*!
  * @abstract    

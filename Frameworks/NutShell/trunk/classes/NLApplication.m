@@ -7,11 +7,11 @@
 
 // $Id$
 
-#import "CSApplication.h"
-#import "CSExecution.h"
-#import "CSLogger.h"
+#import "NLApplication.h"
+#import "NLExecution.h"
+#import "NLLogger.h"
 
-@implementation CSApplication
+@implementation NLApplication
 
 @synthesize execution;
 @synthesize workspace;
@@ -24,9 +24,9 @@
 {
     if( ( self = [ super init ] ) ) {
         
-        execution   = [ CSExecution getInstance  ];
+        execution   = [ NLExecution getInstance  ];
         workspace   = [ NSWorkspace sharedWorkspace ];
-        logger      = [ [ CSLogger alloc ] init ];
+        logger      = [ [ NLLogger alloc ] init ];
         fileManager = [ NSFileManager defaultManager ];
         fontManager = [ NSFontManager sharedFontManager ];
         helpManager = [ NSHelpManager sharedHelpManager ];

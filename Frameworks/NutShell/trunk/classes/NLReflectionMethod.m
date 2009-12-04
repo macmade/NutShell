@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSReflectionMethod.h"
+#import "NLReflectionMethod.h"
 
-@implementation CSReflectionMethod
+@implementation NLReflectionMethod
 
 @synthesize method;
 @synthesize selector;
@@ -75,7 +75,7 @@
 /*!
  * @abstract    
  */
-- ( BOOL )isEqualToReflector:( CSReflectionMethod * )methodRef
+- ( BOOL )isEqualToReflector:( NLReflectionMethod * )methodRef
 {
     return sel_isEqual( selector, methodRef->selector );
 }

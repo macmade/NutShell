@@ -17,10 +17,10 @@
  */
 
 // Local includes
-#import "CSObject.h"
+#import "NLObject.h"
 
 // Used classes
-@class CSReflectionClass;
+@class NLReflectionClass;
 
 /*!
  * @abstract    Objective-C class instance object reflector
@@ -28,14 +28,14 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSReflectionObject: CSObject
+@interface NLReflectionObject: NLObject
 {
 @protected
     
     /*!
      * @abstract    The reflector for the object's class
      */
-    CSReflectionClass * classReflector;
+    NLReflectionClass * classReflector;
     
     /*!
      * @abstract    The name of the object's class
@@ -50,7 +50,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r1;
+    id NL_r1;
     
     /*!
      * @abstract    Reserved 2
@@ -58,11 +58,11 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r2;
+    id NL_r2;
 }
 
 /*! @property */
-@property( readonly ) CSReflectionClass * classReflector;
+@property( readonly ) NLReflectionClass * classReflector;
 
 /*! @property */
 @property( readonly ) NSString * classname;

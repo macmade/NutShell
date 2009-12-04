@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSDictionary.h"
+#import "NLDictionary.h"
 
-@implementation NSDictionary( CSDictionary )
+@implementation NSDictionary( NLDictionary )
 
 /*!
  * @abstract    

@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSExecution.h"
+#import "NLExecution.h"
 
-@implementation CSExecution
+@implementation NLExecution
 
 @synthesize canExecuteWithPrivilege;
 @synthesize authorizationRef;

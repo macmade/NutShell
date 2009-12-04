@@ -9,9 +9,9 @@
 
 #import <QuickLook/QuickLook.h>
 
-#import "CSImage.h"
+#import "NLImage.h"
 
-@implementation NSImage( CSImage )
+@implementation NSImage( NLImage )
 
 + ( NSImage * )previewImageForFile:( NSString * )path size:( NSSize )size;
 {

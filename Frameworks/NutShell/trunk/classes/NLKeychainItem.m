@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSKeychainItem.h"
+#import "NLKeychainItem.h"
 
-@implementation CSKeychainItem
+@implementation NLKeychainItem
 
 @synthesize name;
 @synthesize itemExists;

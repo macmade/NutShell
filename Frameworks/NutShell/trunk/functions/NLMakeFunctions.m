@@ -7,13 +7,13 @@
 
 // $Id$
 
-#import "CSMakeFunctions.h"
+#import "NLMakeFunctions.h"
 
-NSColor * CSMakeColor( NSUInteger v1, NSUInteger v2, NSUInteger v3, NSUInteger alpha, CSColorType type )
+NSColor * NLMakeColor( NSUInteger v1, NSUInteger v2, NSUInteger v3, NSUInteger alpha, NLColorType type )
 {
     switch( type ) {
         
-        case CSColorTypeHSB:
+        case NLColorTypeHSB:
             
             return [ NSColor colorWithCalibratedHue: ( CGFloat )v1 / 360 saturation: ( CGFloat )v2 / 100 brightness: ( CGFloat )v3 / 100 alpha: ( CGFloat )alpha / 100 ];
             

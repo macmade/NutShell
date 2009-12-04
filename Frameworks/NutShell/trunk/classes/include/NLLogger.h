@@ -17,10 +17,10 @@
  */
 
 // Local includes
-#import "CSObjectSingleton.h"
+#import "NLObjectSingleton.h"
 
 // Used classes
-@class CSLogMessage;
+@class NLLogMessage;
 
 /*!
  * @abstract    Logger object
@@ -28,7 +28,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface CSLogger: CSObject
+@interface NLLogger: NLObject
 {
 @protected
     
@@ -50,7 +50,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r1;
+    id NL_r1;
     
     /*!
      * @abstract    Reserved 2
@@ -58,7 +58,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id CS_r2;
+    id NL_r2;
 }
 
 /*! @property */
@@ -73,7 +73,7 @@
  * @param       message The message to add
  * @return      void
  */
-- ( void )message: ( CSLogMessage * ) message;
+- ( void )message: ( NLLogMessage * ) message;
 
 /*!
  * @abstract    Adds a log message

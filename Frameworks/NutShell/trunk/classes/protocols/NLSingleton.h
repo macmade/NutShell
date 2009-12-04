@@ -22,7 +22,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@protocol CSSingleton
+@protocol NLSingleton
 
 /*!
  * @abstract    Gets the unique (singleton) instance of the class

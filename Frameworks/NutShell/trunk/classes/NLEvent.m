@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSEvent.h"
+#import "NLEvent.h"
 
-@implementation CSEvent
+@implementation NLEvent
 
 @synthesize propagating;
 @synthesize target;

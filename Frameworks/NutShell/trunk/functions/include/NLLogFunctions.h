@@ -19,24 +19,24 @@
 /*!
  * abstract     
  */
-void CSLog( id object );
+void NLLog( id object );
 
 /*!
  * abstract     
  */
-void CSLogPoint( NSPoint point );
+void NLLogPoint( NSPoint point );
 
 /*!
  * abstract     
  */
-void CSLogSize( NSSize size );
+void NLLogSize( NSSize size );
 
 /*!
  * abstract     
  */
-void CSLogRect( NSRect rect );
+void NLLogRect( NSRect rect );
 
 /*!
  * abstract     
  */
-void CSLogRange( NSRange range );
+void NLLogRange( NSRange range );

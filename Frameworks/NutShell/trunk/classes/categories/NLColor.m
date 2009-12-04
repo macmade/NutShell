@@ -7,18 +7,18 @@
 
 // $Id$
 
-#import "CSColor.h"
+#import "NLColor.h"
 
-@implementation NSColor( CSColor )
+@implementation NSColor( NLColor )
 
 + ( NSColor * )finderSidebarColor
 {
-    return CSMakeColor( 214, 221, 229, 100, CSColorTypeRGB );
+    return NLMakeColor( 214, 221, 229, 100, NLColorTypeRGB );
 }
 
 + ( NSColor * )disabledFinderSidebarColor
 {
-    return CSMakeColor( 232, 232, 232, 100, CSColorTypeRGB );
+    return NLMakeColor( 232, 232, 232, 100, NLColorTypeRGB );
 }
 
 @end

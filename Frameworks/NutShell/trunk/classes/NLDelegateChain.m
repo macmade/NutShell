@@ -7,9 +7,9 @@
 
 // $Id$
 
-#import "CSDelegateChain.h"
+#import "NLDelegateChain.h"
 
-@implementation CSDelegateChain
+@implementation NLDelegateChain
 
 - ( id )init
 {
@@ -20,7 +20,7 @@
         numberOfDelegates    = 0;
         sizeOfDelegatesArray = 10;
         
-        CSXMALLOC( delegates, id, 10 );
+        NLXMALLOC( delegates, id, 10 );
     }
     
     return self;
@@ -132,7 +132,7 @@
     
     if( numberOfDelegates == sizeOfDelegatesArray ) {
         
-        CSREALLOC( delegates, id, sizeOfDelegatesArray + 10 );
+        NLREALLOC( delegates, id, sizeOfDelegatesArray + 10 );
         
         sizeOfDelegatesArray += 10;
     }

@@ -8,9 +8,9 @@
 // $Id$
 
 #import <objc/runtime.h>
-#import "CSReflectionProperty.h"
+#import "NLReflectionProperty.h"
 
-@implementation CSReflectionProperty
+@implementation NLReflectionProperty
 
 @synthesize property;
 @synthesize name;

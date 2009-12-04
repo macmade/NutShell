@@ -22,7 +22,7 @@
  * @version     1.0
  * @namespace   Cocos
  */
-@interface NSFileManager( CSFileManager )
+@interface NSFileManager( NLFileManager )
 
 /*!
  * @abstract    Gets the flags of a given file or directory
@@ -52,11 +52,11 @@
 #pragma mark -
 #pragma mark File flags keys
 
-FOUNDATION_EXPORT NSString * const CSFileFlagArchived;
-FOUNDATION_EXPORT NSString * const CSFileFlagHidden;
-FOUNDATION_EXPORT NSString * const CSFileFlagNoDump;
-FOUNDATION_EXPORT NSString * const CSFileFlagOpaque;
-FOUNDATION_EXPORT NSString * const CSFileFlagSystemAppendOnly;
-FOUNDATION_EXPORT NSString * const CSFileFlagSystemImmutable;
-FOUNDATION_EXPORT NSString * const CSFileFlagUserAppendOnly;
-FOUNDATION_EXPORT NSString * const CSFileFlagUserImmutable;
+FOUNDATION_EXPORT NSString * const NLFileFlagArchived;
+FOUNDATION_EXPORT NSString * const NLFileFlagHidden;
+FOUNDATION_EXPORT NSString * const NLFileFlagNoDump;
+FOUNDATION_EXPORT NSString * const NLFileFlagOpaque;
+FOUNDATION_EXPORT NSString * const NLFileFlagSystemAppendOnly;
+FOUNDATION_EXPORT NSString * const NLFileFlagSystemImmutable;
+FOUNDATION_EXPORT NSString * const NLFileFlagUserAppendOnly;
+FOUNDATION_EXPORT NSString * const NLFileFlagUserImmutable;
