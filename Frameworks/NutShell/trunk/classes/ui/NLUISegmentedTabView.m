@@ -19,8 +19,8 @@
 {
     NSRect rect;
     
-    if( ( self = [ super initWithFrame: frame ] ) ) {
-        
+    if( ( self = [ super initWithFrame: frame ] ) )
+    {
         views   = [ [ NSMutableArray arrayWithCapacity: 5 ] retain ];
         titles  = [ [ NSMutableArray arrayWithCapacity: 5 ] retain ];
         control = [ [ NSSegmentedControl alloc ] init ];
@@ -65,8 +65,8 @@
     
     count = [ control segmentCount ];
     
-    for( i = 0; i < count; i++ ) {
-        
+    for( i = 0; i < count; i++ )
+    {
         [ control setWidth: ( ( [ self frame ].size.width - 36 ) / count ) forSegment: i ];
     }
     
@@ -74,8 +74,8 @@
     
     margin = [ control frame ].size.width - ( [ self frame ].size.width - 36 );
     
-    for( i = 0; i < count; i++ ) {
-        
+    for( i = 0; i < count; i++ )
+    {
         [ control setWidth: ( ( [ self frame ].size.width - 36 ) / count ) - ( margin / count ) forSegment: i ];
     }
 }
@@ -96,8 +96,8 @@
     
     [ viewObject setFrame: rect ];
     
-    if( [ views count ] - 1 == indexOfSelectedView ) {
-        
+    if( [ views count ] - 1 == indexOfSelectedView )
+    {
         [ self selectView: indexOfSelectedView ];
     }
     
@@ -108,8 +108,8 @@
 {
     int i;
     
-    if( index == indexOfSelectedView ) {
-        
+    if( index == indexOfSelectedView )
+    {
         [ self.selectedView removeFromSuperview ];
     }
     
@@ -118,8 +118,8 @@
     
     [ control setSegmentCount: [ control segmentCount ] -1 ];
     
-    for( i = 0; i < [ control segmentCount ]; i++ ) {
-        
+    for( i = 0; i < [ control segmentCount ]; i++ )
+    {
         [ control setLabel: [ titles objectAtIndex: i ] forSegment: i ];
     }
     
@@ -139,8 +139,8 @@
     NSRect r3;
     NSRect r4;
     
-    if( index < [ views count ] ) {
-        
+    if( index < [ views count ] )
+    {
         [ self.selectedView removeFromSuperview ];
         
         indexOfSelectedView = index;
@@ -152,25 +152,25 @@
         r3 = [ [ views objectAtIndex: indexOfSelectedView ] frame ];
         r4 = [ control frame ];
         
-        if( r3.size.width < r2.size.width ) {
-            
+        if( r3.size.width < r2.size.width )
+        {
             r1.size.width -= r2.size.width - r3.size.width;
             r2.size.width -= r2.size.width - r3.size.width;
-            
-        } else {
-            
+        }
+        else
+        {
             r1.size.width += r3.size.width - r2.size.width;
             r2.size.width += r3.size.width - r2.size.width;
         }
         
-        if( r3.size.height < r2.size.height ) {
-            
+        if( r3.size.height < r2.size.height )
+        {
             r1.size.height -= ( r2.size.height - r3.size.height ) - r4.size.height;
             r1.origin.y    += ( r2.size.height - r3.size.height ) - r4.size.height;
             r2.size.height -= ( r2.size.height - r3.size.height ) - r4.size.height;
-            
-        } else {
-            
+        }
+        else
+        {
             r1.size.height += ( r3.size.height - r2.size.height ) + r4.size.height;
             r1.origin.y    -= ( r3.size.height - r2.size.height ) + r4.size.height;
             r2.size.height += ( r3.size.height - r2.size.height ) + r4.size.height;
@@ -190,8 +190,8 @@
         
         [ [ views objectAtIndex: indexOfSelectedView ] setFrame: r3 ];
         
-        if( autoSaveName ) {
-            
+        if( autoSaveName )
+        {
             defaults = [ NSUserDefaults standardUserDefaults ];
             
             [ defaults setInteger: indexOfSelectedView forKey: autoSaveName ];
@@ -199,8 +199,9 @@
         
         [ self dispatchEvent: @"TabSelected" ];
         
-    } else {
-        
+    }
+    else
+    {
         NLFATAL( @"Trying to select view %@ which does not exist", index );
     }
 }
@@ -217,8 +218,8 @@
 
 - ( NSString * )autoSaveName
 {
-    if( autoSaveName ) {
-        
+    if( autoSaveName )
+    {
         return [ NSString stringWithString: autoSaveName ];
     }
     

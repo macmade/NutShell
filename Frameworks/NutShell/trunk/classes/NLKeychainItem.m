@@ -29,12 +29,13 @@
     UInt32 passwordLength;
     void * passwordData;
     
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         name     = [ itemName copy ];
         username = [ itemUser copy ];
         
-        status = SecKeychainFindGenericPassword(
+        status = SecKeychainFindGenericPassword
+        (
             NULL,
             [ name length ],
             [ name cStringUsingEncoding: NSUTF8StringEncoding ],
@@ -45,12 +46,13 @@
             &item
         );
         
-        if( status == noErr ) {
-            
+        if( status == noErr )
+        {
             itemExists = YES;
             password   = [ [ NSString alloc ] initWithCString: passwordData length: passwordLength ];
             
-            SecKeychainItemFreeContent(
+            SecKeychainItemFreeContent
+            (
                 NULL,
                 passwordData
             );
@@ -64,12 +66,13 @@
 {
     OSStatus status;
     
-    if( self.itemExists == YES ) {
-        
+    if( self.itemExists == YES )
+    {
         return YES;
     }
     
-    status = SecKeychainAddGenericPassword( 
+    status = SecKeychainAddGenericPassword
+    (
         NULL,
         [ name length ],
         [ name cStringUsingEncoding: NSUTF8StringEncoding ],
@@ -87,17 +90,18 @@
 {
     OSStatus status;
     
-    if( self.itemExists == NO ) {
-        
+    if( self.itemExists == NO )
+    {
         return [ self create ];
     }
     
-    if( self.itemExists == NO ) {
-        
+    if( self.itemExists == NO )
+    {
         return NO;
     }
     
-    status = SecKeychainItemModifyAttributesAndData(
+    status = SecKeychainItemModifyAttributesAndData
+    (
         item,
         NULL,
         [ password length ],
@@ -111,8 +115,8 @@
 {
     OSStatus status;
     
-    if( self.itemExists == NO ) {
-        
+    if( self.itemExists == NO )
+    {
         return YES;
     }
     
@@ -127,31 +131,33 @@
     UInt32 passwordLength;
     void * passwordData;
     
-    status = SecKeychainFindGenericPassword(
-                NULL,
-                [ name length ],
-                [ name cStringUsingEncoding: NSUTF8StringEncoding ],
-                [ username length ],
-                [ username cStringUsingEncoding: NSUTF8StringEncoding ],
-                &passwordLength,
-                &passwordData,
-                &item
-             );
+    status = SecKeychainFindGenericPassword
+    (
+        NULL,
+        [ name length ],
+        [ name cStringUsingEncoding: NSUTF8StringEncoding ],
+        [ username length ],
+        [ username cStringUsingEncoding: NSUTF8StringEncoding ],
+        &passwordLength,
+        &passwordData,
+        &item
+     );
         
-    if( status == noErr ) {
-        
+    if( status == noErr )
+    {
         [ password release ];
         
         itemExists = YES;
         password   = [ [ NSString alloc ] initWithCString: passwordData length: passwordLength ];
         
-        SecKeychainItemFreeContent(
+        SecKeychainItemFreeContent
+        (
             NULL,
             passwordData
         );
-        
-    } else {
-        
+    }
+    else
+    {
         itemExists = NO;
     }
 }

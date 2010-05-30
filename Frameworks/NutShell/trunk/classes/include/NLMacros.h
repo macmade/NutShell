@@ -24,17 +24,20 @@
     @throw _csInternalException;
 
 #define NLMALLOC( var, type )                                       \
-    if( NULL == ( var = ( type * )calloc( 1, sizeof( type ) ) ) ) { \
+    if( NULL == ( var = ( type * )calloc( 1, sizeof( type ) ) ) )   \
+    {                                                               \
         NLFATAL( @"Malloc error (%s)\n", strerror( errno ) );       \
     }
 
 #define NLXMALLOC( var, type, x )                                   \
-    if( NULL == ( var = ( type * )calloc( x, sizeof( type ) ) ) ) { \
+    if( NULL == ( var = ( type * )calloc( x, sizeof( type ) ) ) )   \
+    {                                                               \
         NLFATAL( @"Malloc error (%s)\n", strerror( errno ) );       \
     }
 
 #define NLREALLOC( var, type, x )                                               \
-    if( NULL == ( var = ( type * )realloc( var, ( x ) * sizeof( type ) ) ) ) {  \
+    if( NULL == ( var = ( type * )realloc( var, ( x ) * sizeof( type ) ) ) )    \
+    {                                                                           \
         NLFATAL( @"Realloc error (%s)\n", strerror( errno ) );                  \
     }
 
@@ -42,6 +45,7 @@
     sa1.sa_handler = handler;                       \
     sigemptyset( &sa1.sa_mask );                    \
     sa1.sa_flags = flags;                           \
-    if( sigaction( type, &sa1, &sa2 ) != 0 ) {      \
+    if( sigaction( type, &sa1, &sa2 ) != 0 )        \
+    {                                               \
         NLFATAL( @"Sigaction error" );              \
     }

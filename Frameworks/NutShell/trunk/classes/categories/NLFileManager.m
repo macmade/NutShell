@@ -31,10 +31,10 @@ NSString * const NLFileFlagUserImmutable    = @"NLFileFlagUserImmutable";
     
     err = stat( ( char * )[ path cStringUsingEncoding: NSUTF8StringEncoding ], &fileStat );
     
-    if( err != 0 ) {
-        
-        if( error != NULL ) {
-            
+    if( err != 0 )
+    {
+        if( error != NULL )
+        {
             *( error ) = [ NSError errorWithDomain: NSPOSIXErrorDomain code: err userInfo: nil ];
         }
         
@@ -64,10 +64,10 @@ NSString * const NLFileFlagUserImmutable    = @"NLFileFlagUserImmutable";
     
     err = stat( ( char * )[ path cStringUsingEncoding: NSUTF8StringEncoding ], &fileStat );
     
-    if( err != 0 ) {
-        
-        if( error != NULL ) {
-            
+    if( err != 0 )
+    {
+        if( error != NULL )
+        {
             *( error ) = [ NSError errorWithDomain: NSPOSIXErrorDomain code: err userInfo: nil ];
         }
         
@@ -76,84 +76,84 @@ NSString * const NLFileFlagUserImmutable    = @"NLFileFlagUserImmutable";
     
     flagsValue = fileStat.st_flags;
     
-    if( [ flags hasKey: NLFileFlagArchived ] && [ [ flags objectForKey: NLFileFlagArchived ] intValue ] == 0 ) {
-        
+    if( [ flags hasKey: NLFileFlagArchived ] && [ [ flags objectForKey: NLFileFlagArchived ] intValue ] == 0 )
+    {
         flagsValue &= ~SF_ARCHIVED;
-        
-    } else if( [ flags hasKey: NLFileFlagArchived ] ) {
-        
+    }
+    else if( [ flags hasKey: NLFileFlagArchived ] )
+    {
         flagsValue |= SF_ARCHIVED;
     }
     
-    if( [ flags hasKey: NLFileFlagHidden ] && [ [ flags objectForKey: NLFileFlagHidden ] intValue ] == 0 ) {
-        
+    if( [ flags hasKey: NLFileFlagHidden ] && [ [ flags objectForKey: NLFileFlagHidden ] intValue ] == 0 )
+    {
         flagsValue &= ~UF_HIDDEN;
-        
-    } else if( [ flags hasKey: NLFileFlagHidden ] ) {
-        
+    }
+    else if( [ flags hasKey: NLFileFlagHidden ] )
+    {
         flagsValue |= UF_HIDDEN;
     }
     
-    if( [ flags hasKey: NLFileFlagNoDump ] && [ [ flags objectForKey: NLFileFlagNoDump ] intValue ] == 0 ) {
-        
+    if( [ flags hasKey: NLFileFlagNoDump ] && [ [ flags objectForKey: NLFileFlagNoDump ] intValue ] == 0 )
+    {
         flagsValue &= ~UF_NODUMP;
-        
-    } else if( [ flags hasKey: NLFileFlagNoDump ] ) {
-        
+    }
+    else if( [ flags hasKey: NLFileFlagNoDump ] )
+    {
         flagsValue |= UF_NODUMP;
     }
     
-    if( [ flags hasKey: NLFileFlagOpaque ] && [ [ flags objectForKey: NLFileFlagOpaque ] intValue ] == 0 ) {
-        
+    if( [ flags hasKey: NLFileFlagOpaque ] && [ [ flags objectForKey: NLFileFlagOpaque ] intValue ] == 0 )
+    {
         flagsValue &= ~UF_OPAQUE;
-        
-    } else if( [ flags hasKey: NLFileFlagOpaque ] ) {
-        
+    }
+    else if( [ flags hasKey: NLFileFlagOpaque ] )
+    {
         flagsValue |= UF_OPAQUE;
     }
     
-    if( [ flags hasKey: NLFileFlagSystemAppendOnly ] && [ [ flags objectForKey: NLFileFlagSystemAppendOnly ] intValue ] == 0 ) {
-        
+    if( [ flags hasKey: NLFileFlagSystemAppendOnly ] && [ [ flags objectForKey: NLFileFlagSystemAppendOnly ] intValue ] == 0 )
+    {
         flagsValue &= ~SF_APPEND;
-        
-    } else if( [ flags hasKey: NLFileFlagSystemAppendOnly ] ) {
-        
+    }
+    else if( [ flags hasKey: NLFileFlagSystemAppendOnly ] )
+    {
         flagsValue |= SF_APPEND;
     }
     
-    if( [ flags hasKey: NLFileFlagSystemImmutable ] && [ [ flags objectForKey: NLFileFlagSystemImmutable ] intValue ] == 0 ) {
-        
+    if( [ flags hasKey: NLFileFlagSystemImmutable ] && [ [ flags objectForKey: NLFileFlagSystemImmutable ] intValue ] == 0 )
+    {
         flagsValue &= ~SF_IMMUTABLE;
-        
-    } else if( [ flags hasKey: NLFileFlagSystemImmutable ] ) {
-        
+    }
+    else if( [ flags hasKey: NLFileFlagSystemImmutable ] )
+    {
         flagsValue |= SF_IMMUTABLE;
     }
     
-    if( [ flags hasKey: NLFileFlagUserAppendOnly ] && [ [ flags objectForKey: NLFileFlagUserAppendOnly ] intValue ] == 0 ) {
-        
+    if( [ flags hasKey: NLFileFlagUserAppendOnly ] && [ [ flags objectForKey: NLFileFlagUserAppendOnly ] intValue ] == 0 )
+    {
         flagsValue &= ~UF_APPEND;
-        
-    } else if( [ flags hasKey: NLFileFlagUserAppendOnly ] ) {
-        
+    }
+    else if( [ flags hasKey: NLFileFlagUserAppendOnly ] )
+    {
         flagsValue |= UF_APPEND;
     }
     
-    if( [ flags hasKey: NLFileFlagUserImmutable ] && [ [ flags objectForKey: NLFileFlagUserImmutable ] intValue ] == 0 ) {
-        
+    if( [ flags hasKey: NLFileFlagUserImmutable ] && [ [ flags objectForKey: NLFileFlagUserImmutable ] intValue ] == 0 )
+    {
         flagsValue &= ~UF_IMMUTABLE;
-        
-    } else if( [ flags hasKey: NLFileFlagUserImmutable ] ) {
-        
+    }
+    else if( [ flags hasKey: NLFileFlagUserImmutable ] )
+    {
         flagsValue |= UF_IMMUTABLE;
     }
     
     err = chflags( [ path cStringUsingEncoding: NSUTF8StringEncoding ], flagsValue );
     
-    if( err != 0 ) {
-        
-        if( error != NULL ) {
-            
+    if( err != 0 )
+    {
+        if( error != NULL )
+        {
             *( error ) = [ NSError errorWithDomain: NSPOSIXErrorDomain code: err userInfo: nil ];
         }
         

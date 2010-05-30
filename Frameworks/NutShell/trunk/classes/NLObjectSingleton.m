@@ -15,10 +15,10 @@ static NSMutableDictionary * _instances;
 
 + ( id )getInstance
 {
-    @synchronized( self ) {
-        
-        if( [ _instances objectForKey: NSStringFromClass( [ self class ] ) ] == nil ) {
-            
+    @synchronized( self )
+    {
+        if( [ _instances objectForKey: NSStringFromClass( [ self class ] ) ] == nil )
+        {
             [ [ [ self alloc ] init ] csInit ];
         }
     }
@@ -28,15 +28,15 @@ static NSMutableDictionary * _instances;
 
 + ( id )allocWithZone:( NSZone * )zone 
 {
-    @synchronized( self ) {
-        
-        if( _instances == nil ) {
-            
+    @synchronized( self )
+    {
+        if( _instances == nil )
+        {
             _instances = [ [ NSMutableDictionary dictionaryWithCapacity: 100 ] retain ];
         }
         
-        if( [ _instances objectForKey: NSStringFromClass( [ self class ] ) ] == nil ) {
-            
+        if( [ _instances objectForKey: NSStringFromClass( [ self class ] ) ] == nil )
+        {
             [ _instances setObject: [ super allocWithZone: zone ] forKey: NSStringFromClass( [ self class ] ) ];
         }
         

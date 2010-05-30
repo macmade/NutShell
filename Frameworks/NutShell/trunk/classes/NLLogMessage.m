@@ -38,8 +38,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         self.message = @"";
         self.date    = [ NSDate date ];
         self.type    = NLMessageLog;
@@ -50,8 +50,8 @@
 
 - ( id )initWithMessage: ( NSString * )str
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         self.message = str;
     }
     
@@ -60,8 +60,8 @@
 
 - ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         self.message = str;
         self.date    = time;
     }
@@ -71,8 +71,8 @@
 
 - ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         self.message = str;
         self.date    = time;
         self.type    = messageType;

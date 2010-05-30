@@ -18,10 +18,10 @@
     
     result = [ NSMutableArray arrayWithCapacity: [ source count ] ];
     
-    for( element in source ) {
-        
-        if( callback( element ) == YES ) {
-            
+    for( element in source )
+    {
+        if( callback( element ) == YES )
+        {
             [ result addObject: element ];
         }
     }

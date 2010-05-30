@@ -45,8 +45,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         self.byteSymbol                   = @"B";
         self.kiloByteSymbol               = @"KB";
         self.megaByteSymbol               = @"MB";
@@ -105,12 +105,11 @@
     [ speedText setStringValue: @"" ];
     [ timeRemainingText setStringValue: @"" ];
     
-    if( displayErrors == YES ) {
-        
+    if( displayErrors == YES )
+    {
         error     = [ event target ];
         errorText =  [ NSString stringWithFormat: errorFormat, [ error localizedDescription ] ];
-        
-        alert = [ NSAlert alertWithMessageText: errorTitle defaultButton: errorOk alternateButton: nil otherButton: nil informativeTextWithFormat: errorText ];
+        alert     = [ NSAlert alertWithMessageText: errorTitle defaultButton: errorOk alternateButton: nil otherButton: nil informativeTextWithFormat: errorText ];
         
         [ alert setAlertStyle: NSCriticalAlertStyle ];
         [ alert runModal ];
@@ -127,8 +126,8 @@
     [ speedText setStringValue: @"" ];
     [ timeRemainingText setStringValue: @"" ];
     
-    if( playSoundOnDownloadComplete ) {
-        
+    if( playSoundOnDownloadComplete )
+    {
         [ completeSound play ];
     }
 }
@@ -140,57 +139,57 @@
     NSString * currentUnit;
     NSString * totalUnit;
     
-    if( bytesReceived > ( 1024 * 1024 * 1024 ) ) {
-        
+    if( bytesReceived > ( 1024 * 1024 * 1024 ) )
+    {
         current     = ( double )( ( double )( bytesReceived / 1024 ) / 1024 ) / 1024;
         currentUnit = [ NSString stringWithString: gigaByteSymbol ];
-        
-    } else if( bytesReceived > ( 1024 * 1024 ) ) {
-        
+    }
+    else if( bytesReceived > ( 1024 * 1024 ) )
+    {
         current     = ( double )( bytesReceived / 1024 ) / 1024;
         currentUnit = [ NSString stringWithString: megaByteSymbol ];
-        
-    } else if( bytesReceived > 1024 ) {
-        
+    }
+    else if( bytesReceived > 1024 )
+    {
         current     = ( double )( bytesReceived / 1024 );
         currentUnit = [ NSString stringWithString: kiloByteSymbol ];
-        
-    } else {
-        
+    }
+    else
+    {
         current     = bytesReceived;
         currentUnit = [ NSString stringWithString: byteSymbol ];
     }
     
-    if( bytesTotal > ( 1024 * 1024 * 1024 ) ) {
-        
+    if( bytesTotal > ( 1024 * 1024 * 1024 ) )
+    {
         total     = ( double )( ( double )( bytesTotal / 1024 ) / 1024 ) / 1024;
         totalUnit = [ NSString stringWithString: gigaByteSymbol ];
-        
-    } else if( bytesTotal > ( 1024 * 1024 ) ) {
-        
+    }
+    else if( bytesTotal > ( 1024 * 1024 ) )
+    {
         total     = ( double )( bytesTotal / 1024 ) / 1024;
         totalUnit = [ NSString stringWithString: megaByteSymbol ];
-        
-    } else if( bytesTotal > 1024 ) {
-        
+    }
+    else if( bytesTotal > 1024 )
+    {
         total     = ( double )( bytesTotal / 1024 );
         totalUnit = [ NSString stringWithString: kiloByteSymbol ];
-        
-    } else {
-        
+    }
+    else
+    {
         total     = bytesTotal;
         totalUnit = [ NSString stringWithString: byteSymbol ];
     }
     
-    if( bytesTotal != NSURLResponseUnknownLength ) {
-        
+    if( bytesTotal != NSURLResponseUnknownLength )
+    {
         [ progressBar stopAnimation: nil ];
         [ progressBar setIndeterminate: NO ];
         [ progressBar setDoubleValue: ( double )percentComplete ];
         [ statusText setStringValue: [ NSString stringWithFormat: statusFormat, current, currentUnit, total, totalUnit, percentComplete, percentSymbol ] ];
-        
-    } else {
-        
+    }
+    else
+    {
         [ progressBar setIndeterminate: YES ];
         [ progressBar startAnimation: nil ];
         [ statusText setStringValue: unknown ];
@@ -204,23 +203,23 @@
     NSString * downloadSpeedUnit;
     NSString * timeUnit;
     
-    if( bytesPerSecond > ( 1024 * 1024 * 1024 ) ) {
-        
+    if( bytesPerSecond > ( 1024 * 1024 * 1024 ) )
+    {
         downloadSpeed     = ( double )( ( double )( bytesPerSecond / 1024 ) / 1024 ) / 1024;
         downloadSpeedUnit = [ NSString stringWithString: gigaByteSymbol ];
-        
-    } else if( bytesPerSecond > ( 1024 * 1024 ) ) {
-        
+    }
+    else if( bytesPerSecond > ( 1024 * 1024 ) )
+    {
         downloadSpeed     = ( double )( bytesPerSecond / 1024 ) / 1024;
         downloadSpeedUnit = [ NSString stringWithString: megaByteSymbol ];
-        
-    } else if( bytesPerSecond > 1024 ) {
-        
+    }
+    else if( bytesPerSecond > 1024 )
+    {
         downloadSpeed     = ( double )( bytesPerSecond / 1024 );
         downloadSpeedUnit = [ NSString stringWithString: kiloByteSymbol ];
-        
-    } else {
-        
+    }
+    else
+    {
         downloadSpeed     = bytesPerSecond;
         downloadSpeedUnit = [ NSString stringWithString: byteSymbol ];
     }
@@ -229,23 +228,23 @@
     
     time = ( bytesTotal - bytesReceived ) / bytesPerSecond;
     
-    if( time > 86400 ) {
-        
+    if( time > 86400 )
+    {
         time     = time / 86400;
         timeUnit = ( time < 2 ) ? [ NSString stringWithString: daySymbol ] : [ NSString stringWithString: daysSymbol ];
-        
-    } else if( time > 3600 ) {
-        
+    }
+    else if( time > 3600 )
+    {
         time     = time / 3600;
         timeUnit = ( time < 2 ) ? [ NSString stringWithString: hourSymbol ] : [ NSString stringWithString: hoursSymbol ];
-        
-    } else if ( time > 60 ) {
-        
+    }
+    else if ( time > 60 )
+    {
         time     = time / 60;
         timeUnit = ( time < 2 ) ? [ NSString stringWithString: minuteSymbol ] : [ NSString stringWithString: minutesSymbol ];
-        
-    } else {
-        
+    }
+    else
+    {
         timeUnit = ( time < 2 ) ? [ NSString stringWithString: secondSymbol ] : [ NSString stringWithString: secondsSymbol ];
         
         [ timeRemainingText setStringValue: [ NSString stringWithFormat: timeRemainingNoDecimalFormat, time, timeUnit ] ];
@@ -267,8 +266,8 @@
     
     hasStarted = [ super start ];
     
-    if ( hasStarted == YES ) {
-        
+    if ( hasStarted == YES )
+    {
         [ downloadButton setEnabled: NO ];
         [ cancelButton   setEnabled: YES ];
     }
@@ -280,12 +279,12 @@
 {
     [ super cancel ];
     
-    [ downloadButton setEnabled:  YES ];
-    [ cancelButton   setEnabled:  NO ];
-    [ progressBar setDoubleValue: 0 ];
-    [ progressBar setIndeterminate: YES ];
-    [ statusText setStringValue: @"" ];
-    [ speedText setStringValue: @"" ];
+    [ downloadButton setEnabled:        YES ];
+    [ cancelButton   setEnabled:        NO ];
+    [ progressBar setDoubleValue:       0 ];
+    [ progressBar setIndeterminate:     YES ];
+    [ statusText setStringValue:        @"" ];
+    [ speedText setStringValue:         @"" ];
     [ timeRemainingText setStringValue: @"" ];
 }
 

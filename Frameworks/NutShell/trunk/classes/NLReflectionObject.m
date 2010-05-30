@@ -34,8 +34,8 @@
 
 - ( id )initWithObject:( id )object
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         classReflector = [ [ NLReflectionClass alloc ] initWithClass: [ object class ] ];
         classname      = [ [ NSString alloc ] initWithString: [ classReflector name ] ];
     }

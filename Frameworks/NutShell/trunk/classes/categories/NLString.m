@@ -12,7 +12,8 @@
 
 @implementation NSString( NLString )
 
-static const unsigned int CRCTable[ 256 ] = {
+static const unsigned int CRCTable[ 256 ] =
+{
     0x00000000, 0x77073096, 0xEE0E612C, 0x990951BA, 0x076DC419, 0x706AF48F,
     0xE963A535, 0x9E6495A3, 0x0EDB8832, 0x79DCB8A4, 0xE0D5E91E, 0x97D2D988,
     0x6DDDE4EB, 0x7EB17CBD, 0xE7B82D07, 0x90BF1D91, 0x1DB71064, 0x6AB020F2,
@@ -67,8 +68,8 @@ static const unsigned int CRCTable[ 256 ] = {
     c        = 0xFFFFFFFF;
     cString  = [ self cStringUsingEncoding: NSUTF8StringEncoding ];
     
-    for( i = 0; i < [ self length ]; i++ ) {
-        
+    for( i = 0; i < [ self length ]; i++ )
+    {
         c = CRCTable[ ( c ^ *( cString ) ) & 0xFF ] ^ ( ( c >> 8 ) & 0x00FFFFFF );
         
         cString++;
@@ -111,8 +112,8 @@ static const unsigned int CRCTable[ 256 ] = {
     
     error = regcomp( &regex, regexp, flags );
     
-    if( error != 0 ) {
-        
+    if( error != 0 )
+    {
         regerror( error, &regex, errorBuffer, sizeof( errorBuffer ) );
         NSLog( @"%s", errorBuffer );
         regfree( &regex );
@@ -125,14 +126,14 @@ static const unsigned int CRCTable[ 256 ] = {
     
     match = regexec( &regex, str, nmatch, pmatch, 0 );
     
-    if( match == REG_NOMATCH ) {
-        
+    if( match == REG_NOMATCH )
+    {
         free( pmatch );
         regfree( &regex );
         return NO;
-        
-    } else if( match != 0 ) {
-        
+    }
+    else if( match != 0 )
+    {
         regerror( error, &regex, errorBuffer, sizeof( errorBuffer ) );
         NSLog( @"%s", errorBuffer );
         free( pmatch );
@@ -140,17 +141,17 @@ static const unsigned int CRCTable[ 256 ] = {
         return NO;
     }
     
-    if( matches == nil ) {
-        
+    if( matches == nil )
+    {
         free( pmatch );
         regfree( &regex );
         return YES;
     }
         
-    for( i = 1; i < nmatch; i++ ) {
-        
-        if( pmatch[ i ].rm_so != -1 ) {
-            
+    for( i = 1; i < nmatch; i++ )
+    {
+        if( pmatch[ i ].rm_so != -1 )
+        {
             start = ( size_t )pmatch[ i ].rm_so;
             end   = ( size_t )pmatch[ i ].rm_eo;
             size  = end - start;
@@ -197,8 +198,8 @@ static const unsigned int CRCTable[ 256 ] = {
     const char * regexp = [ expression cStringUsingEncoding: NSUTF8StringEncoding ];
     error               = regcomp( &regex, regexp, flags );
     
-    if( error != 0 ) {
-        
+    if( error != 0 )
+    {
         regerror( error, &regex, errorBuffer, sizeof( errorBuffer ) );
         NSLog( @"%s", errorBuffer );
         regfree( &regex );
@@ -211,27 +212,29 @@ static const unsigned int CRCTable[ 256 ] = {
     
     match = regexec( &regex, str, nmatch, pmatch, 0 );
     
-    if( match == REG_NOMATCH ) {
-        
+    if( match == REG_NOMATCH )
+    {
         free( pmatch );
         regfree( &regex );
+        
         return [ NSString stringWithString: self ];
-        
-    } else if( match != 0 ) {
-        
+    }
+    else if( match != 0 )
+    {
         regerror( error, &regex, errorBuffer, sizeof( errorBuffer ) );
         NSLog( @"%s", errorBuffer );
         free( pmatch );
         regfree( &regex );
+        
         return [ NSString stringWithString: self ];
     }
     
     result = [ NSString stringWithString: replace ];
     
-    for( i = ( nmatch - 1 ); i > 0; i-- ) {
-        
-        if( pmatch[ i ].rm_so != -1 ) {
-            
+    for( i = ( nmatch - 1 ); i > 0; i-- )
+    {
+        if( pmatch[ i ].rm_so != -1 )
+        {
             start = ( size_t )pmatch[ i ].rm_so;
             end   = ( size_t )pmatch[ i ].rm_eo;
             size  = end - start;

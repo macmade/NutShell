@@ -22,8 +22,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         execution   = [ NLExecution getInstance  ];
         workspace   = [ NSWorkspace sharedWorkspace ];
         logger      = [ [ NLLogger alloc ] init ];

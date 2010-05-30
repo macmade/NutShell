@@ -14,8 +14,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         delegate = [ [ NLDelegateChain alloc ] init ];
     }
     

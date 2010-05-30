@@ -34,8 +34,8 @@
 
 - ( id )initWithProperty:( objc_property_t )prop
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         property   = prop;
         name       = [ [ NSString alloc ] initWithCString: property_getName( prop ) encoding: NSASCIIStringEncoding ];
         attributes = [ [ NSString alloc ] initWithCString: property_getAttributes( prop ) encoding: NSASCIIStringEncoding ];

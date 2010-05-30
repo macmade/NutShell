@@ -24,12 +24,12 @@
     scrollXPos   = [ [ self horizontalScroller ] floatValue  ];
     xPos         = ( documentRect.size.width - contentRect.size.width ) * scrollXPos;
     
-    if( [ [ self documentView ] isFlipped ] ) {
-        
+    if( [ [ self documentView ] isFlipped ] )
+    {
         newScrollOrigin = NSMakePoint( xPos, NSMaxY( documentRect ) - NSHeight( contentRect  ) );
-        
-    } else {
-        
+    }
+    else
+    {
         newScrollOrigin = NSMakePoint( xPos, ( float )0.0 );
     }
     

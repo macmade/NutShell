@@ -30,8 +30,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         execution = [ NLExecution getInstance ];
     }
     
@@ -40,8 +40,8 @@
 
 - ( id )initWithPackage: ( NSString * )path
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         packagePath = [ path copy ];
     }
     
@@ -62,48 +62,49 @@
     NSRange range;
     NSString * action;
     
-    if( str != nil && [ str length ] > 11 && [ [ str substringToIndex: 10 ] isEqualToString: @"installer:" ] ) {
-        
+    if( str != nil && [ str length ] > 11 && [ [ str substringToIndex: 10 ] isEqualToString: @"installer:" ] )
+    {
         log   = [ str substringFromIndex: 10 ];
         
-        if( [ [ log substringToIndex: 1 ] isEqualToString: @"%" ] && [ log length ] > 2 ) {
-            
+        if( [ [ log substringToIndex: 1 ] isEqualToString: @"%" ] && [ log length ] > 2 )
+        {
             progress = [ [ log substringFromIndex: 1 ] doubleValue ];
             
             [ self dispatchEvent: @"InstallerProgress" ];
             
-            if( progress == 1 ) {
-                
+            if( progress == 1 )
+            {
                 installed  = YES;
                 installing = NO;
                 
                 [ self dispatchEvent: @"InstallerComplete" ];
             }
-            
-        } else {
-            
+        }
+        else
+        {
             range = [ log rangeOfString: @":" ];
             
-            if( range.location != NSNotFound ) {
-                
+            if( range.location != NSNotFound )
+            {
                 action = [ log substringToIndex: range.location ];
                 
-                if( [ action isEqualToString: @"STATUS" ] && installed == NO ) {
-                    
+                if( [ action isEqualToString: @"STATUS" ] && installed == NO )
+                {
                     [ status release ];
                     
                     status = [ [ log substringFromIndex: range.location + 1 ] retain ];
                     
                     [ self dispatchEvent: @"InstallerStatus" ];
                     
-                } else if( [ action isEqualToString: @"PHASE" ] ) {
-                    
+                }
+                else if( [ action isEqualToString: @"PHASE" ] )
+                {
                     [ phase release ];
                     
                     phase = [ [ log substringFromIndex: range.location + 1 ] retain ];
                     
-                    if( installed == NO ) {
-                        
+                    if( installed == NO )
+                    {
                         [ self dispatchEvent: @"InstallerPhase" ];
                     }
                 }
@@ -119,12 +120,12 @@
     char buffer[ 128 ];
     i++;
     
-    if( fgets( buffer, sizeof( buffer ), io ) ) {
-        
+    if( fgets( buffer, sizeof( buffer ), io ) )
+    {
         [ self parseInstallerLog: [ NSString stringWithCString: ( const char * )&buffer encoding: NSUTF8StringEncoding ] ];
-        
-    } else {
-        
+    }
+    else
+    {
         [ timer invalidate ];
         fclose( io );
     }
@@ -132,12 +133,12 @@
 
 - ( OSStatus )install
 {
-    if( [ target length ] > 0 ) {
-        
+    if( [ target length ] > 0 )
+    {
         return [ self installWithTarget: target ];
-        
-    } else {
-        
+    }
+    else
+    {
         return [ self installWithTarget: @"/" ];
     }
 }
@@ -148,8 +149,8 @@
     OSStatus execStatus;
     NSTimer * timer;
     
-    if( packagePath == nil ) {
-        
+    if( packagePath == nil )
+    {
         NLFATAL( @"No package has been set" );
     }
     
@@ -158,12 +159,12 @@
     args[ 2 ] = ( char * )[ packagePath cStringUsingEncoding: NSUTF8StringEncoding ];
     args[ 3 ] = "-target";
     
-    if( destTarget != nil && [ destTarget length ] > 0 ) {
-        
+    if( destTarget != nil && [ destTarget length ] > 0 )
+    {
         args[ 4 ] = ( char * )[ destTarget cStringUsingEncoding: NSUTF8StringEncoding ];
-        
-    } else {
-        
+    }
+    else
+    {
         args[ 4 ] = "/";
     }
     
@@ -171,8 +172,8 @@
     
     execStatus = [ execution executeWithPrivileges: "/usr/sbin/installer" arguments: args io: &io ];
     
-    if( execStatus != 0 ) {
-        
+    if( execStatus != 0 )
+    {
         return execStatus;
     }
     

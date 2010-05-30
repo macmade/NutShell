@@ -13,8 +13,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         delegateHashs = [ [ NSMutableDictionary dictionaryWithCapacity: 10 ] retain ];
         
         numberOfDelegates    = 0;
@@ -37,15 +37,15 @@
 {
     NSUInteger i;
     
-    if( [ cocoaDelegate respondsToSelector: selector ] == YES ) {
-        
+    if( [ cocoaDelegate respondsToSelector: selector ] == YES )
+    {
         return [ [ cocoaDelegate class ] instanceMethodSignatureForSelector: selector ];
     }
     
-    for( i = 0; i < numberOfDelegates; i++ ) {
-        
-        if( [ delegates[ i ] respondsToSelector: selector ] == YES ) {
-            
+    for( i = 0; i < numberOfDelegates; i++ )
+    {
+        if( [ delegates[ i ] respondsToSelector: selector ] == YES )
+        {
             return [ [ delegates[ i ] class ] instanceMethodSignatureForSelector: selector ];
         }
     }
@@ -57,15 +57,15 @@
 {
     NSUInteger i;
     
-    if( [ cocoaDelegate respondsToSelector: [ invocation selector ] ] == YES ) {
-        
+    if( [ cocoaDelegate respondsToSelector: [ invocation selector ] ] == YES )
+    {
         [ invocation invokeWithTarget: cocoaDelegate ];
     }
     
-    for( i = 0; i < numberOfDelegates; i++ ) {
-        
-        if( [ delegates[ i ] respondsToSelector: [ invocation selector ] ] == YES ) {
-            
+    for( i = 0; i < numberOfDelegates; i++ )
+    {
+        if( [ delegates[ i ] respondsToSelector: [ invocation selector ] ] == YES )
+        {
             [ invocation invokeWithTarget: delegates[ i ] ];
         }
     }
@@ -75,15 +75,15 @@
 {
     NSUInteger i;
     
-    if( [ cocoaDelegate respondsToSelector: selector ] == YES ) {
-        
+    if( [ cocoaDelegate respondsToSelector: selector ] == YES )
+    {
         return YES;
     }
     
-    for( i = 0; i < numberOfDelegates; i++ ) {
-        
-        if( [ delegates[ i ] respondsToSelector: selector ] == YES ) {
-            
+    for( i = 0; i < numberOfDelegates; i++ )
+    {
+        if( [ delegates[ i ] respondsToSelector: selector ] == YES )
+        {
             return YES;
         }
     }
@@ -96,15 +96,15 @@
     NSUInteger i;
     NSMutableArray * delegatesArray;
     
-    if( numberOfDelegates == 0 ) {
-        
+    if( numberOfDelegates == 0 )
+    {
         return [ NSArray array ];
     }
     
     delegatesArray = [ NSMutableArray arrayWithCapacity: numberOfDelegates ];
     
-    for( i = 0; i < numberOfDelegates; i++ ) {
-        
+    for( i = 0; i < numberOfDelegates; i++ )
+    {
         [ delegatesArray addObject: delegates[ i ] ];
     }
     
@@ -125,13 +125,13 @@
 {
     NSString * hash;
     
-    if( object == nil ) {
-        
+    if( object == nil )
+    {
         return;
     }
     
-    if( numberOfDelegates == sizeOfDelegatesArray ) {
-        
+    if( numberOfDelegates == sizeOfDelegatesArray )
+    {
         NLREALLOC( delegates, id, sizeOfDelegatesArray + 10 );
         
         sizeOfDelegatesArray += 10;
@@ -139,8 +139,8 @@
     
     hash = [ [ NSNumber numberWithUnsignedInteger: ( NSUInteger )object ] stringValue ];
     
-    if( [ delegateHashs objectForKey: hash ] != nil ) {
-        
+    if( [ delegateHashs objectForKey: hash ] != nil )
+    {
         return;
     }
     
@@ -157,22 +157,22 @@
     NSUInteger   index;
     NSUInteger   i;
     
-    if( object == nil || numberOfDelegates == 0 ) {
-        
+    if( object == nil || numberOfDelegates == 0 )
+    {
         return;
     }
     
     hash = [ [ NSNumber numberWithUnsignedInteger: ( NSUInteger )object ] stringValue ];
     
-    if( [ delegateHashs objectForKey: hash ] == nil ) {
-        
+    if( [ delegateHashs objectForKey: hash ] == nil )
+    {
         return;
     }
     
     index = [ [ delegateHashs objectForKey: hash ] unsignedIntegerValue ];
     
-    for( i = index; i < numberOfDelegates - 1; i++ ) {
-        
+    for( i = index; i < numberOfDelegates - 1; i++ )
+    {
         delegates[ i ] = delegates[ i + 1 ];
     }
     

@@ -35,8 +35,8 @@
 
 - ( id )initWithVariable:( Ivar )var
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         variable     = var;
         name         = [ [ NSString alloc ] initWithCString: ivar_getName( var ) encoding: NSASCIIStringEncoding ];
         typeEncoding = [ [ NSString alloc ] initWithCString: ivar_getTypeEncoding( var ) encoding: NSASCIIStringEncoding ];

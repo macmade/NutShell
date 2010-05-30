@@ -81,13 +81,13 @@
     isBlockSpecial     = [ attributes objectForKey: NSFileType ] == NSFileTypeBlockSpecial;
     isUnknown          = [ attributes objectForKey: NSFileType ] == NSFileTypeUnknown;
     
-    if( isDirectory == NO && isRegularFile == NO && isSymbolicLink == NO && isSocket == NO && isCharacterSpecial == NO && isBlockSpecial == NO ) {
-        
+    if( isDirectory == NO && isRegularFile == NO && isSymbolicLink == NO && isSocket == NO && isCharacterSpecial == NO && isBlockSpecial == NO )
+    {
         isUnknown = YES;
         type      = [ [ NSString alloc ] initWithString: NSFileTypeUnknown ];
-        
-    } else {
-        
+    }
+    else
+    {
         type = [ [ NSString alloc ] initWithString: [ attributes objectForKey: NSFileType ] ];
     }
 }
@@ -116,8 +116,8 @@
     gid   = getgid();
     perms = [ attributes objectForKey: NSFilePosixPermissions ];
     
-    if( perms == nil ) {
-        
+    if( perms == nil )
+    {
         permissions              = 0;
         octalPermissions         = 0;
         humanReadablePermissions = [ [ NSString alloc ] initWithString: @"--- --- ---" ];
@@ -136,45 +136,45 @@
     octalPermissions = ( u * 100 ) + ( g * 10 ) + o;
     humanPerms       = @"";
     
-    for( i = 0; i < 3; i++ ) {
-        
+    for( i = 0; i < 3; i++ )
+    {
         humanPerms   = [ [ NSString stringWithFormat: @"%@%@%@ ", ( decimalPerms & 4 ) ? @"r" : @"-", ( decimalPerms & 2 ) ? @"w" : @"-", ( decimalPerms & 1 ) ? @"x" : @"-" ] stringByAppendingString: humanPerms ];
         decimalPerms = decimalPerms >> 3;
     }
     
     humanReadablePermissions = [ [ NSString alloc ] initWithString: humanPerms ];
     
-    if( ownerID == uid ) {
-        
+    if( ownerID == uid )
+    {
         isReadable   = ( u & 4 ) ? YES : NO;
         isWriteable  = ( u & 2 ) ? YES : NO;
         isExecutable = ( u & 1 ) ? YES : NO;
-        
-    } else if( groupID == gid ) {
-        
+    }
+    else if( groupID == gid )
+    {
         isReadable   = ( g & 4 ) ? YES : NO;
         isWriteable  = ( g & 2 ) ? YES : NO;
         isExecutable = ( g & 1 ) ? YES : NO;
-        
-    } else {
-        
+    }
+    else
+    {
         isReadable   = ( o & 4 ) ? YES : NO;
         isWriteable  = ( o & 2 ) ? YES : NO;
         isExecutable = ( o & 1 ) ? YES : NO;
     }
     
-    if( isReadable == NO && [ fileManager isReadableFileAtPath: path ] == YES ) {
-        
+    if( isReadable == NO && [ fileManager isReadableFileAtPath: path ] == YES )
+    {
         isReadable = YES;
     }
     
-    if( isWriteable == NO && [ fileManager isWritableFileAtPath: path ] == YES ) {
-        
+    if( isWriteable == NO && [ fileManager isWritableFileAtPath: path ] == YES )
+    {
         isWriteable = YES;
     }
     
-    if( isExecutable == NO && [ fileManager isExecutableFileAtPath: path ] == YES ) {
-        
+    if( isExecutable == NO && [ fileManager isExecutableFileAtPath: path ] == YES )
+    {
         isExecutable = YES;
     }
 }
@@ -191,8 +191,8 @@
     
     err = stat( ( char * )[ path cStringUsingEncoding: NSUTF8StringEncoding ], &fileStat );
     
-    if( err != 0 ) {
-        
+    if( err != 0 )
+    {
         return;
     }
     
@@ -213,23 +213,23 @@
     
     size = ( [ attributes objectForKey: NSFileSize ] == nil ) ? 0 : [ [ attributes objectForKey: NSFileSize ] integerValue ];
     
-    if( size > ( 1024 * 1024 * 1024 ) ) {
-        
+    if( size > ( 1024 * 1024 * 1024 ) )
+    {
         sizeUnit = self.gigaByteSymbol;
         fileSize = ( double )( ( double )( size / 1024 ) / 1024 ) / 1024;
-        
-    } else if( size > ( 1024 * 1024 ) ) {
-        
+    }
+    else if( size > ( 1024 * 1024 ) )
+    {
         sizeUnit = self.megaByteSymbol;
         fileSize = ( double )( size / 1024 ) / 1024;
-        
-    } else if( size > 1024 ) {
-        
+    }
+    else if( size > 1024 )
+    {
         sizeUnit = self.kiloByteSymbol;
         fileSize = ( double )( size / 1024 );
-        
-    } else {
-        
+    }
+    else
+    {
         sizeUnit = self.byteSymbol;
         fileSize = size;
     }
@@ -259,34 +259,46 @@
     
     infos = ( isSymbolicLink ) ? targetFile : self;
     
-    if(       infos.isRegularFile &&
-       (   [ [ infos.fileExtension lowercaseString ] isEqualToString: @"mp3" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"aac" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"aifc" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"aiff" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"caf" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"m4a" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"mp4" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"m4r" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"3gp" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"wav" ] )
-       ) {
+    if
+    (
+        infos.isRegularFile
+        &&
+        (
+               [ [ infos.fileExtension lowercaseString ] isEqualToString: @"mp3" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"aac" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"aifc" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"aiff" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"caf" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"m4a" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"mp4" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"m4r" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"3gp" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"wav" ]
+        )
+    )
+    {
         isAudio = YES;
     }
     
-    if(       infos.isRegularFile &&
-       (   [ [ infos.fileExtension lowercaseString ] isEqualToString: @"png" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"tif" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"tiff" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"jpg" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"jpeg" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"gif" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"bmp" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"bmpf" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"ico" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"cur" ]
-        || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"xbm" ] )
-       ) {
+    if
+    (
+        infos.isRegularFile
+        &&
+        (
+               [ [ infos.fileExtension lowercaseString ] isEqualToString: @"png" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"tif" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"tiff" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"jpg" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"jpeg" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"gif" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"bmp" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"bmpf" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"ico" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"cur" ]
+            || [ [ infos.fileExtension lowercaseString ] isEqualToString: @"xbm" ]
+        )
+    )
+    {
         isImage = YES;
     }
 }
@@ -295,29 +307,29 @@
 {
     NSString * symLinkTarget;
     
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         path        = [ filePath copy ];
         fileManager = [ NSFileManager defaultManager ];
         
-        if( [ [ path substringToIndex: 1 ] isEqualToString: @"/" ] ) {
-            
+        if( [ [ path substringToIndex: 1 ] isEqualToString: @"/" ] )
+        {
             url = [ [ NSURL URLWithString: [ NSString stringWithFormat: @"file://localhost%@", path ] ] retain ];
-            
-        } else {
-            
+        }
+        else
+        {
             url = [ [ NSURL URLWithString: path ] retain ];
         }
         
-        if( [ fileManager fileExistsAtPath: path ] == NO ) {
-            
+        if( [ fileManager fileExistsAtPath: path ] == NO )
+        {
             return nil;
         }
         
         attributes = [ [ fileManager attributesOfItemAtPath: path error: NULL ] retain ];
         
-        if( attributes == nil ) {
-            
+        if( attributes == nil )
+        {
             return nil;
         }
         
@@ -330,23 +342,23 @@
         [ self getDates ];
         [ self getFileSystemAttributes ];
         
-        if( isDirectory == YES ) {
-            
+        if( isDirectory == YES )
+        {
             numberOfSubFiles = [ [ fileManager contentsOfDirectoryAtPath: path error: NULL ] count ];
         }
         
-        if( isSymbolicLink == YES ) {
-            
+        if( isSymbolicLink == YES )
+        {
             symLinkTarget = [ fileManager destinationOfSymbolicLinkAtPath: path error: NULL ];
             
-            if( [ symLinkTarget characterAtIndex: 0 ] != '/' ) {
-                
-                if( [ parentDirectoryPath characterAtIndex: [ parentDirectoryPath length ] - 1 ] == '/' ) {
-                    
+            if( [ symLinkTarget characterAtIndex: 0 ] != '/' )
+            {
+                if( [ parentDirectoryPath characterAtIndex: [ parentDirectoryPath length ] - 1 ] == '/' )
+                {
                     symLinkTarget = [ parentDirectoryPath stringByAppendingString: symLinkTarget ];
-                    
-                } else {
-                    
+                }
+                else
+                {
                     symLinkTarget = [ NSString stringWithFormat: @"%@/%@", parentDirectoryPath, symLinkTarget ];
                 }
             }
@@ -362,8 +374,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         self.gigaByteSymbol = @"%@GB";
         self.megaByteSymbol = @"%@MB";
         self.kiloByteSymbol = @"%@KB";
@@ -500,7 +512,7 @@
             ( extensionIsHidden      == YES ) ? @"yes" : @"no",
             ( isImage                == YES ) ? @"yes" : @"no",
             ( isAudio                == YES ) ? @"yes" : @"no"
-            ];
+        ];
 }
 
 @end

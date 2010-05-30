@@ -47,8 +47,8 @@
 
 - ( id ) init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         propagating = YES;
     }
     
@@ -57,8 +57,8 @@
 
 - ( id )initWithName: ( NSString * )eventName
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         name = [ eventName copy ];
     }
     
@@ -67,8 +67,8 @@
 
 - ( id )initWithTarget: ( id )targetObject
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         target = targetObject;
     }
     
@@ -77,8 +77,8 @@
 
 - ( id )initWithName: ( NSString * )eventName target: ( id )targetObject
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         name   = [ eventName copy ];
         target = targetObject;
     }

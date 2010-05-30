@@ -22,29 +22,30 @@
     AuthorizationRights rights;
     
     flags  = kAuthorizationFlagDefaults;
-    status = AuthorizationCreate(
+    status = AuthorizationCreate
+    (
          NULL,
          kAuthorizationEmptyEnvironment,
          flags,
          &authorizationRef
      );
     
-    if( status == errAuthorizationSuccess ) {
-        
-        item.name        = kAuthorizationRightExecute;
-        item.valueLength = 0;
-        item.value       = NULL;
-        item.flags       = 0;
-        
-        rights.count = 1;
-        rights.items = &item;
+    if( status == errAuthorizationSuccess )
+    {
+        item.name        =  kAuthorizationRightExecute;
+        item.valueLength =  0;
+        item.value       =  NULL;
+        item.flags       =  0;
+        rights.count     =  1;
+        rights.items     =& item;
         
         flags = kAuthorizationFlagDefaults
               | kAuthorizationFlagInteractionAllowed
               | kAuthorizationFlagPreAuthorize
               | kAuthorizationFlagExtendRights;
         
-        status = AuthorizationCopyRights(
+        status = AuthorizationCopyRights
+        (
              authorizationRef,
              &rights,
              NULL,
@@ -52,8 +53,8 @@
              NULL
          );
         
-        if( status == errAuthorizationSuccess ) {
-            
+        if( status == errAuthorizationSuccess )
+        {
             canExecuteWithPrivilege = YES;
             return status;
         }
@@ -68,15 +69,16 @@
     OSStatus status;
     AuthorizationFlags flags;
     
-    if( canExecuteWithPrivilege == NO ) {
-        
+    if( canExecuteWithPrivilege == NO )
+    {
         status = [ self authorizeExecute ];
     }
     
-    if( canExecuteWithPrivilege == YES ) {
-        
+    if( canExecuteWithPrivilege == YES )
+    {
         flags  = kAuthorizationFlagDefaults;
-        status = AuthorizationExecuteWithPrivileges(
+        status = AuthorizationExecuteWithPrivileges
+        (
             authorizationRef,
             command,
             flags,

@@ -13,10 +13,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) && [ self isInited ] == NO ) {
-        
-        
-    }
+    if( ( self = [ super init ] ) && [ self isInited ] == NO )
+    {}
     
     return self;
 }

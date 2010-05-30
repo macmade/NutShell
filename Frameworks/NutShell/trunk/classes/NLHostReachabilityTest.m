@@ -25,8 +25,8 @@
 
 - ( id )initWithHost: ( NSString * )host
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         hostname   = [ host copy ];
         target     = SCNetworkReachabilityCreateWithName( kCFAllocatorDefault, [ hostname UTF8String ] );
         timeout    = 5;
@@ -39,8 +39,8 @@
 
 - ( void )dealloc
 {
-    if( target != NULL ) {
-        
+    if( target != NULL )
+    {
         CFRelease( target );
     }
     
@@ -71,18 +71,18 @@
     
     runLoop = [ NSRunLoop currentRunLoop ];
     
-    while( hasFlags == NO ) {
-        
+    while( hasFlags == NO )
+    {
         [ runLoop runUntilDate: [ NSDate date ] ];
     }
     
-    if( !validFlags ) {
-        
+    if( !validFlags )
+    {
         return NO;
     }
     
-    if( flags & kSCNetworkFlagsReachable && ( !( flags & kSCNetworkFlagsConnectionRequired ) || flags & kSCNetworkFlagsConnectionAutomatic ) ) {
-        
+    if( flags & kSCNetworkFlagsReachable && ( !( flags & kSCNetworkFlagsConnectionRequired ) || flags & kSCNetworkFlagsConnectionAutomatic ) )
+    {
         return YES;
     }
     

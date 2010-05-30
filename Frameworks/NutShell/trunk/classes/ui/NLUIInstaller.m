@@ -23,8 +23,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         [ self addEventListener: @"InstallerProgress" target: self selector: @selector( updateProgressBar: ) ];
         [ self addEventListener: @"InstallerPhase" target: self selector: @selector( updatePhaseText: ) ];
         [ self addEventListener: @"InstallerStatus" target: self selector: @selector( updateStatusText: ) ];
@@ -48,8 +48,8 @@
 {
     [ phaseText setStringValue: [ NSString stringWithString: phase ] ];
     
-    if( indeterminateProgressForNewPhases == YES ) {
-        
+    if( indeterminateProgressForNewPhases == YES )
+    {
         [ progressBar setIndeterminate: YES ];
         [ progressBar startAnimation:   nil ];
     }
@@ -70,8 +70,8 @@
     [ installButton setEnabled: NO ];
     [ quitButton setEnabled: YES ];
     
-    if( playSoundOnInstallComplete == YES ) {
-        
+    if( playSoundOnInstallComplete == YES )
+    {
         [ completeSound play ];
     }
 }
@@ -98,13 +98,13 @@
     
     execStatus = [ super install ];
     
-    if( execStatus == 0 ) {
-        
+    if( execStatus == 0 )
+    {
         [ installButton setEnabled: NO ];
         [ quitButton setEnabled: NO ];
-        
-    } else {
-        
+    }
+    else
+    {
         [ installButton setEnabled: YES ];
         [ quitButton setEnabled: YES ];
     }

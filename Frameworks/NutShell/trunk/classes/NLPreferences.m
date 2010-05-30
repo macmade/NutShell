@@ -16,8 +16,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         defaults = [ [ NSMutableDictionary dictionaryWithCapacity: 10 ] retain ];
         values   = [ NSUserDefaults standardUserDefaults ];
     }
@@ -27,8 +27,8 @@
 
 - ( id )initWithPropertyList: ( NSString * )filename owner: ( id )owner
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         defaults = [ [ NSMutableDictionary dictionaryWithContentsOfFile: [ [ NSBundle bundleForClass: [ owner class ] ] pathForResource: filename ofType: @"plist" ] ] retain ];
         values   = [ NSUserDefaults standardUserDefaults ];
         

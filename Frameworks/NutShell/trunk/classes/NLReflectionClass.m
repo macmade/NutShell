@@ -56,8 +56,8 @@
 
 - ( id )initWithClass: ( Class )objectivecClass
 {
-    if( objectivecClass && ( self = [ super init ] ) ) {
-        
+    if( objectivecClass && ( self = [ super init ] ) )
+    {
         objcClass                  = objectivecClass;
         name                       = [ [ NSString alloc ] initWithCString: class_getName( objcClass ) encoding: NSASCIIStringEncoding ];
         metaClass                  = class_isMetaClass( objcClass );
@@ -96,8 +96,8 @@
 
 - ( NLReflectionClass * )superClass
 {
-    if( superClass == nil ) {
-        
+    if( superClass == nil )
+    {
         superClass = [ [ NLReflectionClass alloc ] initWithClass: class_getSuperclass( objcClass ) ];
     }
     
@@ -112,16 +112,16 @@
     NSMutableDictionary * variableDict;
     unsigned int i;
     
-    if( properties == nil ) {
-        
+    if( properties == nil )
+    {
         classVariables = class_copyIvarList( objcClass, &variableCount );
         
-        if( classVariables != NULL && variableCount > 0 ) {
-            
+        if( classVariables != NULL && variableCount > 0 )
+        {
             variableDict = [ NSMutableDictionary dictionaryWithCapacity: variableCount ];
             
-            for( i = 0; i < variableCount; i++ ) {
-                
+            for( i = 0; i < variableCount; i++ )
+            {
                 variable = [ NLReflectionVariable reflectorFromVariable: classVariables[ i ] ];
                 
                 [ variableDict setObject: variable forKey: [ variable name ] ];
@@ -144,16 +144,16 @@
     NSMutableDictionary * propertyDict;
     unsigned int i;
     
-    if( properties == nil ) {
-        
+    if( properties == nil )
+    {
         classProperties = class_copyPropertyList( objcClass, &propertyCount );
         
-        if( classProperties != NULL && propertyCount > 0 ) {
-            
+        if( classProperties != NULL && propertyCount > 0 )
+        {
             propertyDict = [ NSMutableDictionary dictionaryWithCapacity: propertyCount ];
             
-            for( i = 0; i < propertyCount; i++ ) {
-                
+            for( i = 0; i < propertyCount; i++ )
+            {
                 property = [ NLReflectionProperty reflectorFromProperty: classProperties[ i ] ];
                 
                 [ propertyDict setObject: property forKey: [ property name ] ];
@@ -176,16 +176,16 @@
     NSMutableDictionary * methodDict;
     unsigned int i;
     
-    if( instanceMethods == nil ) {
-        
+    if( instanceMethods == nil )
+    {
         methods = class_copyMethodList( objcClass, &methodCount );
         
-        if( methods != NULL && methodCount > 0 ) {
-            
+        if( methods != NULL && methodCount > 0 )
+        {
             methodDict = [ NSMutableDictionary dictionaryWithCapacity: methodCount ];
             
-            for( i = 0; i < methodCount; i++ ) {
-                
+            for( i = 0; i < methodCount; i++ )
+            {
                 method = [ NLReflectionMethod reflectorFromMethod: methods[ i ] ];
                 
                 [ methodDict setObject: method forKey: [ method name ] ];
@@ -208,16 +208,16 @@
     NSMutableDictionary * protocolDict;
     unsigned int i;
     
-    if( protocols == nil ) {
-        
+    if( protocols == nil )
+    {
         classProtocols = class_copyProtocolList( objcClass, &protocolCount );
         
-        if( classProtocols != NULL && protocolCount > 0 ) {
-            
+        if( classProtocols != NULL && protocolCount > 0 )
+        {
             protocolDict = [ NSMutableDictionary dictionaryWithCapacity: protocolCount ];
             
-            for( i = 0; i < protocolCount; i++ ) {
-                
+            for( i = 0; i < protocolCount; i++ )
+            {
                 protocol = [ NLReflectionProtocol reflectorFromProtocol: classProtocols[ i ] ];
                 
                 [ protocolDict setObject: protocol forKey: [ protocol name ] ];

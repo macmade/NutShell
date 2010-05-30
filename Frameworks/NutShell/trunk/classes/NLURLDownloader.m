@@ -40,8 +40,8 @@
 
 - ( id )initWithURL: ( NSURL * )urlObject
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         url      = [ urlObject copy ];
         request  = [ [ NSURLRequest requestWithURL: url cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 60.0 ] retain ];
     }
@@ -51,8 +51,8 @@
 
 - ( id )initWithString: ( NSString * )str
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         url      = [ [ NSURL URLWithString: str ] retain ];
         request  = [ [ NSURLRequest requestWithURL: url cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 60.0 ] retain ];
     }
@@ -73,19 +73,20 @@
 
 - ( BOOL )start
 {
-    if( downloading ) {
-        
+    if( downloading )
+    {
         return NO;
     }
-    if( !downloadDirectory ) {
-        
+    
+    if( !downloadDirectory )
+    {
         self.downloadDirectory = [ NSHomeDirectory() stringByAppendingPathComponent: @"Downloads" ];
     }
     
     download = [ [ NSURLDownload alloc ] initWithRequest: request delegate: self ];
     
-    if( !download ) {
-        
+    if( !download )
+    {
         return NO;
     }
     
@@ -102,8 +103,8 @@
 
 - ( void )cancel
 {
-    if( downloading ) {
-        
+    if( downloading )
+    {
         [ download cancel ];
         [ timer invalidate ];
         
@@ -162,8 +163,8 @@
 {
     bytesReceived += length;
     
-    if( bytesTotal != NSURLResponseUnknownLength ) {
-        
+    if( bytesTotal != NSURLResponseUnknownLength )
+    {
         percentComplete = ( bytesReceived / ( double )bytesTotal ) * 100.0;
     }
     

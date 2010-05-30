@@ -18,8 +18,8 @@
 
 - ( id )initWithFrame: ( NSRect )frameRect
 {
-    if( ( self = [ super initWithFrame: frameRect ] ) ) {
-        
+    if( ( self = [ super initWithFrame: frameRect ] ) )
+    {   
         self.borderType               = NSBezelBorder;
         self.backgroundColor          = [ NSColor finderSidebarColor ];
     }
@@ -90,8 +90,8 @@
     [ right setLineWidth: 2 ];
     [ bottom setLineWidth: 2 ];
     
-    switch( borderType ) {
-            
+    switch( borderType )
+    {
         case NSBezelBorder:
             
             [ [ NSColor colorWithCalibratedHue: 0 saturation: 0 brightness: ( CGFloat )0.45 alpha: 1 ] set ];
@@ -149,12 +149,12 @@
     
     [ pattern unlockFocus];
     
-    if( NSEqualSizes( [ pattern size ], [ path bounds ].size ) ) {
-        
+    if( NSEqualSizes( [ pattern size ], [ path bounds ].size ) )
+    {
         foreground = pattern;
-        
-    } else {
-        
+    }
+    else
+    {
         foreground = [ [ [ NSImage alloc] initWithSize: bounds.size ] autorelease ];
         
         [ foreground lockFocus ];
@@ -175,17 +175,17 @@
 {
     [ [ NSGraphicsContext currentContext ] saveGraphicsState ];
 
-    if( hasBackgroundImage ) { 
-        
+    if( hasBackgroundImage )
+    {
         [ self drawBackgroundImage ];
-        
-    } else {
-        
+    }
+    else
+    {
         [ self drawBackground ];
     }
 
-    if( borderType == NSLineBorder || borderType == NSBezelBorder ) {
-        
+    if( borderType == NSLineBorder || borderType == NSBezelBorder )
+    {
         [ self drawBorder ];
     }
 

@@ -22,12 +22,12 @@
     
     result = [ NSMutableDictionary dictionaryWithCapacity: [ source count ] ];
     
-    for( key in source ) {
-        
+    for( key in source )
+    {
         element = [ source objectForKey: source ];
         
-        if( callback( element ) == YES ) {
-            
+        if( callback( element ) == YES )
+        {
             [ result setObject: element forKey: key ];
         }
     }

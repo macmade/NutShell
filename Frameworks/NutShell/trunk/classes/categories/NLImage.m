@@ -24,15 +24,15 @@
     file    = [ NSURL fileURLWithPath: path ];
     options = [ NSDictionary dictionary ];
     
-    if ( !file ) {
-        
+    if ( !file )
+    {
         return nil;
     }
     
     img = QLThumbnailImageCreate( kCFAllocatorDefault, ( CFURLRef )file, CGSizeMake( size.width, size.height ), ( CFDictionaryRef )options );
     
-    if( img == NULL ) {
-        
+    if( img == NULL )
+    {
         preview = [ [ NSWorkspace sharedWorkspace ] iconForFile: path ];
         
         [ preview setSize: size ];
@@ -44,8 +44,8 @@
     
     CFRelease( img );
     
-    if ( !bitmap ) {
-        
+    if ( !bitmap )
+    {
         return nil;
     }
     

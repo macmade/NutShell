@@ -1,7 +1,7 @@
 /* $Id$ */
 
-typedef struct {
-    
+typedef struct
+{
     BOOL archived;
     BOOL hidden;
     BOOL noDump;
@@ -10,8 +10,8 @@ typedef struct {
     BOOL systemImmutable;
     BOOL userAppendOnly;
     BOOL userImmutable;
-    
-} NLFileInfosFlags;
+}
+NLFileInfosFlags;
 
 @interface NLFileInfos: NSObject
 {

@@ -19,12 +19,12 @@
 /*!
  * abstract     
  */
-typedef enum {
-    
+typedef enum
+{
     NLColorTypeRGB = 0,
     NLColorTypeHSB = 1
-    
-} NLColorType;
+}
+NLColorType;
 
 /*!
  * abstract     

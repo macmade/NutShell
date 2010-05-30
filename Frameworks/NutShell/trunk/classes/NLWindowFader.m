@@ -25,8 +25,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         fadeBy       = ( float )0.1;
         fadeInterval = ( float )0.025;
     }
@@ -36,12 +36,12 @@
 
 - ( id )initWithWindow: ( NSWindow * )windowObject
 {
-    if( ( self = [ self init ] ) ) {
-        
+    if( ( self = [ self init ] ) )
+    {
         window = windowObject;
         
-        if( [ window alphaValue ] < 1 ) {
-            
+        if( [ window alphaValue ] < 1 )
+        {
             isFaded = YES;
         }
     }
@@ -57,15 +57,15 @@
     
     [ window setAlphaValue: [ window alphaValue ] - fadeBy ];
     
-    if( [ window alphaValue ] <= [ alpha floatValue ] ) {
-        
+    if( [ window alphaValue ] <= [ alpha floatValue ] )
+    {
         [ timerObject invalidate ];
         
         isFading = NO;
         isFaded  = YES;
         
-        if( closeAfterFade == YES ) {
-            
+        if( closeAfterFade == YES )
+        {
             [ window close ];
             [ window setAlphaValue: 1 ];
         }
@@ -80,8 +80,8 @@
     
     [ window setAlphaValue: [ window alphaValue ] + fadeBy ];
     
-    if( [ window alphaValue ] >= [ alpha floatValue ] ) {
-        
+    if( [ window alphaValue ] >= [ alpha floatValue ] )
+    {
         [ timerObject invalidate ];
         
         isFading = NO;
@@ -113,15 +113,15 @@
 {
     NSNumber * alpha;
     
-    if( [ timer isValid ] ) {
-        
+    if( [ timer isValid ] )
+    {
         [ timer invalidate ];
         isFaded  = NO;
         isFading = NO;
     }
     
-    if( isFading == NO && isFaded == NO ) {
-        
+    if( isFading == NO && isFaded == NO )
+    {
         isFading = YES;
         alpha    = [ NSNumber numberWithFloat: alphaValue ];
         timer    = [ NSTimer scheduledTimerWithTimeInterval: fadeInterval target: self selector: @selector( doFade: ) userInfo: alpha repeats: YES ];
@@ -133,15 +133,15 @@
 {
     NSNumber * alpha;
     
-    if( [ timer isValid ] ) {
-        
+    if( [ timer isValid ] )
+    {
         [ timer invalidate ];
         isFaded  = YES;
         isFading = NO;
     }
     
-    if( isFading == NO && isFaded == YES ) {
-        
+    if( isFading == NO && isFaded == YES )
+    {
         isFading = YES;
         alpha    = [ NSNumber numberWithFloat: alphaValue ];
         timer    = [ NSTimer scheduledTimerWithTimeInterval: fadeInterval target: self selector: @selector( doUnFade: ) userInfo: alpha repeats: YES ];

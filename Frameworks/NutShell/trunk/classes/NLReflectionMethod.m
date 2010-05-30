@@ -41,8 +41,8 @@
     NSMutableArray * args;
     int i;
     
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         method            = objcMethod;
         selector          = method_getName( method );
         name              = [ [ NSString alloc ] initWithCString: sel_getName( selector ) encoding: NSASCIIStringEncoding ];
@@ -53,8 +53,8 @@
         
         args = [ NSMutableArray arrayWithCapacity: [ numberOfArguments intValue ] ];
         
-        for( i = 0; i < [ numberOfArguments intValue ]; i++ ) {
-            
+        for( i = 0; i < [ numberOfArguments intValue ]; i++ )
+        {
             [ args addObject: [ NSString stringWithCString: method_copyArgumentType( method, i ) encoding: NSASCIIStringEncoding ] ];
         }
         

@@ -24,7 +24,8 @@
  * 
  * @abstract    The types of the log messages
  */
-enum {
+enum
+{
     NLMessageLog   = 0,
     NLMessageDebug = 1
 };

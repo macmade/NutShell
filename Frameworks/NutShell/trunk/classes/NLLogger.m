@@ -19,8 +19,8 @@
 
 - ( id )init
 {
-    if( ( self = [ super init ] ) ) {
-        
+    if( ( self = [ super init ] ) )
+    {
         messages = [ [ NSMutableArray arrayWithCapacity: 100 ] retain ];
     }
     
@@ -55,8 +55,8 @@
 {
     NLLogMessage * msg;
     
-    if( debug == YES ) {
-        
+    if( debug == YES )
+    {
         msg      = [ [ NLLogMessage alloc ] initWithMessage: message ];
         msg.type = NLMessageDebug;
         

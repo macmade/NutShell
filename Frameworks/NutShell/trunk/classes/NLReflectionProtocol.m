@@ -41,8 +41,8 @@
 
 - ( id )initWithProtocol:( Protocol * )proto
 {
-    if( proto && ( self = [ super init ] ) ) {
-        
+    if( proto && ( self = [ super init ] ) )
+    {
         protocol = proto;
         name     = [ [ NSString alloc ] initWithCString: protocol_getName( proto ) encoding: NSASCIIStringEncoding ];
     }
@@ -63,16 +63,16 @@
     NSMutableDictionary * propertyDict;
     unsigned int i;
     
-    if( properties == nil ) {
-        
+    if( properties == nil )
+    {
         protocolProperties = protocol_copyPropertyList( protocol, &propertyCount );
         
-        if( protocolProperties != NULL && propertyCount > 0 ) {
-            
+        if( protocolProperties != NULL && propertyCount > 0 )
+        {
             propertyDict = [ NSMutableDictionary dictionaryWithCapacity: propertyCount ];
             
-            for( i = 0; i < propertyCount; i++ ) {
-                
+            for( i = 0; i < propertyCount; i++ )
+            {
                 property = [ NLReflectionProperty reflectorFromProperty: protocolProperties[ i ] ];
                 
                 [ propertyDict setObject: property forKey: [ property name ] ];
