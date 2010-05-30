@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Cocos Framework
+ * NutShell Framework
  * 
  * Copyright (c) 2009, Jean-David Gadina (macmade@eosgarden.com)
  * All rights reserved.
@@ -11,8 +11,8 @@
  * @header
  * 
  * @discussion  This file contains the C preprocessor macros used internally by
- *              the Cocos Framework. It's not supposed to be public, nor used by
- *              applications that use the Cocos framework
+ *              the NutShell Framework. It's not supposed to be public, nor used by
+ *              applications that use the NutShell framework
  */
 
 #define NLFATAL( ... )                                      \

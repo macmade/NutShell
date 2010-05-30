@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Cocos Framework
+ * NutShell Framework
  * 
  * Copyright (c) 2009, Jean-David Gadina (macmade@eosgarden.com)
  * All rights reserved.
@@ -10,10 +10,10 @@
 /*!
  * @header
  * 
- * @abstract    Cocos framework main header file
+ * @abstract    NutShell framework main header file
  * 
  * @discussion  This file should be included by all application source files
- *              using the Cocos framework for easy building.  Using this file
+ *              using the NutShell framework for easy building.  Using this file
  *              is preferred over importing individual files because it will use
  *              a precompiled version.
  */
