@@ -22,16 +22,16 @@
     return [ msg autorelease ];
 }
 
-+ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )time
++ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )messageTime
 {
-    id msg = [ [ self alloc ] initWithMessage: str date: time ];
+    id msg = [ [ self alloc ] initWithMessage: str date: messageTime ];
     
     return [ msg autorelease ];
 }
 
-+ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType
++ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )messageTime type: ( int )messageType
 {
-    id msg = [ [ self alloc ] initWithMessage: str date: time type: messageType ];
+    id msg = [ [ self alloc ] initWithMessage: str date: messageTime type: messageType ];
     
     return [ msg autorelease ];
 }
@@ -58,23 +58,23 @@
     return self;
 }
 
-- ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time
+- ( id )initWithMessage: ( NSString * )str date: ( NSDate * )messageTime
 {
     if( ( self = [ self init ] ) )
     {
         self.message = str;
-        self.date    = time;
+        self.date    = messageTime;
     }
     
     return self;
 }
 
-- ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType
+- ( id )initWithMessage: ( NSString * )str date: ( NSDate * )messageTime type: ( int )messageType
 {
     if( ( self = [ self init ] ) )
     {
         self.message = str;
-        self.date    = time;
+        self.date    = messageTime;
         self.type    = messageType;
     }
     

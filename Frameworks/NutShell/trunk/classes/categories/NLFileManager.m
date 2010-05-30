@@ -23,7 +23,7 @@ NSString * const NLFileFlagUserImmutable    = @"NLFileFlagUserImmutable";
 
 @implementation NSFileManager( NLFileManager )
 
-- ( NSDictionary * )flagsOfItemAtPath: ( NSString * )path error: ( NSError ** )error;
+- ( NSDictionary * )flagsOfItemAtPath: ( NSString * )path error: ( NSError ** )error
 {
     int err;
     struct stat fileStat;

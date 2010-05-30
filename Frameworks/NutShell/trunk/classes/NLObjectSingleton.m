@@ -48,6 +48,8 @@ static NSMutableDictionary * _instances;
 
 - ( id )copyWithZone:( NSZone * )zone 
 {
+    ( void )zone;
+    
     return self;
 }
 

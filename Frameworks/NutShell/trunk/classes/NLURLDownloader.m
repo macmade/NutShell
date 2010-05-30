@@ -10,6 +10,12 @@
 #import "NLURLDownloader.h"
 #import "NLEventDispatcher.h"
 
+@interface NLURLDownloader( Private )
+
+- ( void )updateSpeed: ( NSTimer * )timerObject;
+
+@end
+
 @implementation NLURLDownloader
 
 @synthesize downloading;
@@ -114,6 +120,8 @@
 
 - ( void )downloadDidFinish: ( NSURLDownload * )downloadObject 
 {
+    ( void )downloadObject;
+    
     [ timer invalidate ];
     
     downloading = NO;
@@ -124,6 +132,8 @@
 
 - ( void )download: ( NSURLDownload * )downloadObject didFailWithError: ( NSError * )error 
 {
+    ( void )downloadObject;
+    
     [ timer invalidate ];
     
     downloading = NO;
@@ -142,6 +152,8 @@
 
 - ( void )download: ( NSURLDownload * )downloadObject didCreateDestination: ( NSString * )path
 {
+    ( void )downloadObject;
+    
     [ downloadLocation release ];
     
     downloadLocation = [ path copy ];
@@ -149,6 +161,8 @@
 
 - ( void )download: ( NSURLDownload * )downloadObject didReceiveResponse: ( NSURLResponse * )responseObject
 {
+    ( void )downloadObject;
+    
     [ responseObject retain];
     [ response release];
     
@@ -161,6 +175,8 @@
 
 - ( void )download: ( NSURLDownload * )downloadObject didReceiveDataOfLength: ( unsigned int)length 
 {
+    ( void )downloadObject;
+    
     bytesReceived += length;
     
     if( bytesTotal != NSURLResponseUnknownLength )
@@ -171,9 +187,10 @@
     [ self dispatchEvent: @"DataReceived" ];
 }
 
-
 - ( void )updateSpeed: ( NSTimer * )timerObject
 {
+    ( void )timerObject;
+    
     bytesPerSecond    = bytesReceived - lastBytesReceived;
     lastBytesReceived = bytesReceived;
     secondsRemaining  = ( bytesTotal - bytesReceived ) / bytesPerSecond;

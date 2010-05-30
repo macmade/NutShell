@@ -173,6 +173,8 @@
 
 - ( void )drawRect: ( NSRect )rect
 {
+    ( void )rect;
+    
     [ [ NSGraphicsContext currentContext ] saveGraphicsState ];
 
     if( hasBackgroundImage )

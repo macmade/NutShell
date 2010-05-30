@@ -20,7 +20,7 @@
 #import "NLObject.h"
 
 // Used classes
-@class CNReflectionMethod, CNReflectionProtocol;
+@class NLReflectionMethod, NLReflectionProtocol;
 
 /*!
  * @abstract    Objective-C class reflector
@@ -185,7 +185,7 @@
 /*!
  * @abstract    
  */
-- ( BOOL )respondsToMethodReflector: ( CNReflectionMethod * )reflector;
+- ( BOOL )respondsToMethodReflector: ( NLReflectionMethod * )reflector;
 
 /*!
  * @abstract    
@@ -195,7 +195,7 @@
 /*!
  * @abstract    
  */
-- ( BOOL )conformsToProtocolReflector: ( CNReflectionProtocol * )reflector;
+- ( BOOL )conformsToProtocolReflector: ( NLReflectionProtocol * )reflector;
 
 /*!
  * @abstract    

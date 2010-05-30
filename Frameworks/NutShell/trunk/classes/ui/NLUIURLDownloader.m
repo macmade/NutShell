@@ -9,6 +9,16 @@
 
 #import "NLUIURLDownloader.h"
 #import "NLEventDispatcher.h"
+#import "NLEvent.h"
+
+@interface NLUIURLDownloader( Private )
+
+- ( void )updateDownloadProgress: ( NLEvent * )event;
+- ( void )updateDownloadSpeed: ( NLEvent * )event;
+- ( void )downloadComplete: ( NLEvent * )event;
+- ( void )downloadError: ( NLEvent * )event;
+
+@end
 
 @implementation NLUIURLDownloader
 
@@ -118,6 +128,8 @@
 
 - ( void )downloadComplete: ( NLEvent * )event
 {
+    ( void )event;
+    
     [ downloadButton setEnabled:  YES ];
     [ cancelButton   setEnabled:  NO ];
     [ progressBar setDoubleValue: 100 ];
@@ -138,6 +150,8 @@
     double total;
     NSString * currentUnit;
     NSString * totalUnit;
+    
+    ( void )event;
     
     if( bytesReceived > ( 1024 * 1024 * 1024 ) )
     {
@@ -199,9 +213,11 @@
 - ( void )updateDownloadSpeed: ( NLEvent * )event
 {
     double downloadSpeed;
-    double time;
+    double remainingTime;
     NSString * downloadSpeedUnit;
     NSString * timeUnit;
+    
+    ( void )event;
     
     if( bytesPerSecond > ( 1024 * 1024 * 1024 ) )
     {
@@ -226,33 +242,33 @@
     
     [ speedText setStringValue: [ NSString stringWithFormat: speedFormat, downloadSpeed, downloadSpeedUnit, secondSymbol ] ];
     
-    time = ( bytesTotal - bytesReceived ) / bytesPerSecond;
+    remainingTime = ( bytesTotal - bytesReceived ) / bytesPerSecond;
     
-    if( time > 86400 )
+    if( remainingTime > 86400 )
     {
-        time     = time / 86400;
-        timeUnit = ( time < 2 ) ? [ NSString stringWithString: daySymbol ] : [ NSString stringWithString: daysSymbol ];
+        remainingTime = remainingTime / 86400;
+        timeUnit      = ( remainingTime < 2 ) ? [ NSString stringWithString: daySymbol ] : [ NSString stringWithString: daysSymbol ];
     }
-    else if( time > 3600 )
+    else if( remainingTime > 3600 )
     {
-        time     = time / 3600;
-        timeUnit = ( time < 2 ) ? [ NSString stringWithString: hourSymbol ] : [ NSString stringWithString: hoursSymbol ];
+        remainingTime = remainingTime / 3600;
+        timeUnit      = ( remainingTime < 2 ) ? [ NSString stringWithString: hourSymbol ] : [ NSString stringWithString: hoursSymbol ];
     }
-    else if ( time > 60 )
+    else if ( remainingTime > 60 )
     {
-        time     = time / 60;
-        timeUnit = ( time < 2 ) ? [ NSString stringWithString: minuteSymbol ] : [ NSString stringWithString: minutesSymbol ];
+        remainingTime = remainingTime / 60;
+        timeUnit      = ( remainingTime < 2 ) ? [ NSString stringWithString: minuteSymbol ] : [ NSString stringWithString: minutesSymbol ];
     }
     else
     {
-        timeUnit = ( time < 2 ) ? [ NSString stringWithString: secondSymbol ] : [ NSString stringWithString: secondsSymbol ];
+        timeUnit = ( remainingTime < 2 ) ? [ NSString stringWithString: secondSymbol ] : [ NSString stringWithString: secondsSymbol ];
         
-        [ timeRemainingText setStringValue: [ NSString stringWithFormat: timeRemainingNoDecimalFormat, time, timeUnit ] ];
+        [ timeRemainingText setStringValue: [ NSString stringWithFormat: timeRemainingNoDecimalFormat, remainingTime, timeUnit ] ];
         
         return;
     }
     
-    [ timeRemainingText setStringValue: [ NSString stringWithFormat: timeRemainingFormat, time, timeUnit ] ];
+    [ timeRemainingText setStringValue: [ NSString stringWithFormat: timeRemainingFormat, remainingTime, timeUnit ] ];
 }
 
 - ( BOOL )start

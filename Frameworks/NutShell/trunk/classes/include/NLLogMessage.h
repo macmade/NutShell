@@ -98,7 +98,7 @@ enum
  * @param       time        The message date
  * @return      The instance of the message object
  */
-+ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )time;
++ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )messageTime;
 
 /*!
  * @abstract    Creates a new log message with a specific message text, date and type
@@ -108,7 +108,7 @@ enum
  * @param       messageType The message type
  * @return      The instance of the message object
  */
-+ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType;
++ ( id )messageWithMessage: ( NSString * )str date: ( NSDate * )messageTime type: ( int )messageType;
 
 /*!
  * @abstract    Initializes a newly allocated log message with a specific message text
@@ -125,7 +125,7 @@ enum
  * @param       time        The message date
  * @return      The instance of the message object
  */
-- ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time;
+- ( id )initWithMessage: ( NSString * )str date: ( NSDate * )messageTime;
 
 /*!
  * @abstract    Initializes a newly allocated log message with a specific message text, date and type
@@ -135,6 +135,6 @@ enum
  * @param       messageType The message type
  * @return      The instance of the message object
  */
-- ( id )initWithMessage: ( NSString * )str date: ( NSDate * )time type: ( int )messageType;
+- ( id )initWithMessage: ( NSString * )str date: ( NSDate * )messageTime type: ( int )messageType;
 
 @end

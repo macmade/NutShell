@@ -91,11 +91,15 @@
 
 - ( IBAction )fade: ( id )sender
 {
+    ( void )sender;
+    
     [ self fade ];
 }
 
 - ( IBAction )unFade: ( id )sender
 {
+    ( void )sender;
+    
     [ self unFade ];
 }
 

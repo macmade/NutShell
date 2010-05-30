@@ -58,17 +58,17 @@
 
 - ( void )parseInstallerLog: ( NSString * )str
 {
-    NSString * log;
-    NSRange range;
+    NSRange    range;
+    NSString * logMessage;
     NSString * action;
     
     if( str != nil && [ str length ] > 11 && [ [ str substringToIndex: 10 ] isEqualToString: @"installer:" ] )
     {
-        log   = [ str substringFromIndex: 10 ];
+        logMessage = [ str substringFromIndex: 10 ];
         
-        if( [ [ log substringToIndex: 1 ] isEqualToString: @"%" ] && [ log length ] > 2 )
+        if( [ [ logMessage substringToIndex: 1 ] isEqualToString: @"%" ] && [ logMessage length ] > 2 )
         {
-            progress = [ [ log substringFromIndex: 1 ] doubleValue ];
+            progress = [ [ logMessage substringFromIndex: 1 ] doubleValue ];
             
             [ self dispatchEvent: @"InstallerProgress" ];
             
@@ -82,17 +82,17 @@
         }
         else
         {
-            range = [ log rangeOfString: @":" ];
+            range = [ logMessage rangeOfString: @":" ];
             
             if( range.location != NSNotFound )
             {
-                action = [ log substringToIndex: range.location ];
+                action = [ logMessage substringToIndex: range.location ];
                 
                 if( [ action isEqualToString: @"STATUS" ] && installed == NO )
                 {
                     [ status release ];
                     
-                    status = [ [ log substringFromIndex: range.location + 1 ] retain ];
+                    status = [ [ logMessage substringFromIndex: range.location + 1 ] retain ];
                     
                     [ self dispatchEvent: @"InstallerStatus" ];
                     
@@ -101,7 +101,7 @@
                 {
                     [ phase release ];
                     
-                    phase = [ [ log substringFromIndex: range.location + 1 ] retain ];
+                    phase = [ [ logMessage substringFromIndex: range.location + 1 ] retain ];
                     
                     if( installed == NO )
                     {

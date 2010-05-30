@@ -69,12 +69,13 @@
     OSStatus status;
     AuthorizationFlags flags;
     
+    status = 0;
+    
     if( canExecuteWithPrivilege == NO )
     {
         status = [ self authorizeExecute ];
     }
-    
-    if( canExecuteWithPrivilege == YES )
+    else
     {
         flags  = kAuthorizationFlagDefaults;
         status = AuthorizationExecuteWithPrivileges
@@ -93,19 +94,19 @@
 - ( NSFileHandle * )execute: ( NSString * )command arguments: ( NSArray * )arguments
 {
     NSFileHandle * io;
-    NSTask * task;
-    NSPipe * pipe;
+    NSTask       * task;
+    NSPipe       * execPipe;
     
     task = [ [ [ NSTask alloc ] init ] autorelease ];
     
     [ task setLaunchPath: command ];
     [ task setArguments: arguments ];
     
-    pipe = [ NSPipe pipe ];
+    execPipe = [ NSPipe pipe ];
     
-    [ task setStandardOutput: pipe ];
+    [ task setStandardOutput: execPipe ];
     
-    io = [ pipe fileHandleForReading ];
+    io = [ execPipe fileHandleForReading ];
     
     [ task launch ];
     

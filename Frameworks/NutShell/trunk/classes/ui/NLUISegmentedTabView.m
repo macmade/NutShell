@@ -104,17 +104,17 @@
     [ self updateWidthOfSegments ];
 }
 
-- ( void )removeView: ( NSUInteger )index
+- ( void )removeView: ( NSUInteger )viewIndex
 {
     int i;
     
-    if( index == indexOfSelectedView )
+    if( viewIndex == indexOfSelectedView )
     {
         [ self.selectedView removeFromSuperview ];
     }
     
-    [ views removeObjectAtIndex: index ];
-    [ titles removeObjectAtIndex: index ];
+    [ views removeObjectAtIndex: viewIndex ];
+    [ titles removeObjectAtIndex: viewIndex ];
     
     [ control setSegmentCount: [ control segmentCount ] -1 ];
     
@@ -131,7 +131,7 @@
     [ self selectView: [ sender selectedSegment ] ];
 }
 
-- ( void )selectView: ( NSUInteger )index
+- ( void )selectView: ( NSUInteger )viewIndex
 {
     NSUserDefaults * defaults;
     NSRect r1;
@@ -139,17 +139,17 @@
     NSRect r3;
     NSRect r4;
     
-    if( index < [ views count ] )
+    if( viewIndex < [ views count ] )
     {
         [ self.selectedView removeFromSuperview ];
         
-        indexOfSelectedView = index;
+        indexOfSelectedView = viewIndex;
         
         [ control setSelectedSegment: indexOfSelectedView ];
         
         r1 = [ [ self window ] frame ];
         r2 = [ self frame ];
-        r3 = [ [ views objectAtIndex: indexOfSelectedView ] frame ];
+        r3 = [ ( NSView * )[ views objectAtIndex: indexOfSelectedView ] frame ];
         r4 = [ control frame ];
         
         if( r3.size.width < r2.size.width )
@@ -188,7 +188,7 @@
         [ self updateWidthOfSegments ];
         [ self addSubview: [ views objectAtIndex: indexOfSelectedView ] ];
         
-        [ [ views objectAtIndex: indexOfSelectedView ] setFrame: r3 ];
+        [ ( NSView * )[ views objectAtIndex: indexOfSelectedView ] setFrame: r3 ];
         
         if( autoSaveName )
         {
@@ -243,9 +243,9 @@
     return indexOfSelectedView;
 }
 
-- ( void )setIndexOfSelectedView: ( NSUInteger )index
+- ( void )setIndexOfSelectedView: ( NSUInteger )viewIndex
 {
-    [ self selectView: index ];
+    [ self selectView: viewIndex ];
 }
 
 - ( NSView * )selectedView

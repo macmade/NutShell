@@ -13,7 +13,7 @@
 
 @implementation NSImage( NLImage )
 
-+ ( NSImage * )previewImageForFile:( NSString * )path size:( NSSize )size;
++ ( NSImage * )previewImageForFile:( NSString * )path size:( NSSize )size
 {
     CGImageRef img;
     NSURL            * file;

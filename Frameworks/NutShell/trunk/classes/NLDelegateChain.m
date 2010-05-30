@@ -154,7 +154,7 @@
 - ( void )removeDelegate: ( id )object
 {
     NSString   * hash;
-    NSUInteger   index;
+    NSUInteger   delegateIndex;
     NSUInteger   i;
     
     if( object == nil || numberOfDelegates == 0 )
@@ -169,9 +169,9 @@
         return;
     }
     
-    index = [ [ delegateHashs objectForKey: hash ] unsignedIntegerValue ];
+    delegateIndex = [ [ delegateHashs objectForKey: hash ] unsignedIntegerValue ];
     
-    for( i = index; i < numberOfDelegates - 1; i++ )
+    for( i = delegateIndex; i < numberOfDelegates - 1; i++ )
     {
         delegates[ i ] = delegates[ i + 1 ];
     }

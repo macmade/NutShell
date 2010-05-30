@@ -19,8 +19,8 @@
     float scrollXPos;
     float xPos;
     
-    contentRect  = [ [ self contentView ] bounds ];
-    documentRect = [ [ self documentView ] bounds ];
+    contentRect  = [ ( NSView * )[ self contentView ] bounds ];
+    documentRect = [ ( NSView * )[ self documentView ] bounds ];
     scrollXPos   = [ [ self horizontalScroller ] floatValue  ];
     xPos         = ( documentRect.size.width - contentRect.size.width ) * scrollXPos;
     

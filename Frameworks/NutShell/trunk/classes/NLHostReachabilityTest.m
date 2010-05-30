@@ -50,12 +50,16 @@
 
 - ( void )getFlags: ( id )nothing
 {
+    ( void )nothing;
+    
     validFlags = SCNetworkReachabilityGetFlags( target, &flags );
     hasFlags   = YES;
 }
 
 - ( void )checkTimeout: ( id )nothing
 {
+    ( void )nothing;
+    
     sleep( timeout );
     
     hasFlags   = YES;

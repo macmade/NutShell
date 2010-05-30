@@ -115,11 +115,11 @@
 /*!
  * @abstract    
  */
-- ( void )removeView: ( NSUInteger )index;
+- ( void )removeView: ( NSUInteger )viewIndex;
 
 /*!
  * @abstract    
  */
-- ( void )selectView: ( NSUInteger )index;
+- ( void )selectView: ( NSUInteger )viewIndex;
 
 @end

@@ -45,7 +45,7 @@
     return description;
 }
 
-- ( id ) init
+- ( id )init
 {
     if( ( self = [ super init ] ) )
     {

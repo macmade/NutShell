@@ -85,7 +85,7 @@ static const unsigned int CRCTable[ 256 ] =
 
 - ( BOOL )regexMatch: ( NSString * )expression flags: ( int )flags
 {
-    return [ self regexMatch: expression matches: nil flags: REG_EXTENDED ];
+    return [ self regexMatch: expression matches: nil flags: flags ];
 }
 
 - ( BOOL )regexMatch: ( NSString * )expression matches: ( NSMutableArray * )matches

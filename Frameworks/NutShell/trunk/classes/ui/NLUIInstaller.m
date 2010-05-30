@@ -10,6 +10,15 @@
 #import "NLUIInstaller.h"
 #import "NLEventDispatcher.h"
 
+@interface NLUIInstaller( Private )
+
+- ( void )updateProgressBar: ( NLEvent * )event;
+- ( void )updatePhaseText: ( NLEvent * )event;
+- ( void )updateStatusText: ( NLEvent * )event;
+- ( void )installationComplete: ( NLEvent * )event;
+
+@end
+
 @implementation NLUIInstaller
 
 @synthesize phaseText;
@@ -39,6 +48,8 @@
 
 - ( void )updateProgressBar: ( NLEvent * )event
 {
+    ( void )event;
+    
     [ progressBar setIndeterminate: NO ];
     [ progressBar stopAnimation: nil ];
     [ progressBar setDoubleValue: progress ];
@@ -46,6 +57,8 @@
 
 - ( void )updatePhaseText: ( NLEvent * )event
 {
+    ( void )event;
+    
     [ phaseText setStringValue: [ NSString stringWithString: phase ] ];
     
     if( indeterminateProgressForNewPhases == YES )
@@ -57,6 +70,8 @@
 
 - ( void )updateStatusText: ( NLEvent * )event
 {
+    ( void )event;
+    
     [ progressBar setIndeterminate: NO ];
     [ progressBar stopAnimation: nil ];
     [ statusText setStringValue: [ NSString stringWithString: status ] ];
@@ -64,6 +79,8 @@
 
 - ( void )installationComplete: ( NLEvent * )event
 {
+    ( void )event;
+    
     [ progressBar setIndeterminate: NO ];
     [ progressBar setDoubleValue:   1 ];
     
@@ -95,6 +112,8 @@
 - ( OSStatus )install: ( id )sender
 {
     OSStatus execStatus;
+    
+    ( void )sender;
     
     execStatus = [ super install ];
     
