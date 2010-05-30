@@ -133,12 +133,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05948EA61037693600284538 /* PBXContainerItemProxy */ = {
+		050468B311B2E32B00428AAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0516C2D0100E065300C6B853;
-			remoteInfo = "Cocos (Public)";
+			remoteGlobalIDString = 0516C2D0100E065300C6B853 /* NutShell (Public) */;
+			remoteInfo = "NutShell (Public)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -561,7 +561,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				05948EA71037693600284538 /* PBXTargetDependency */,
+				050468B411B2E32B00428AAE /* PBXTargetDependency */,
 			);
 			name = "NutShell (Private)";
 			productInstallPath = "$(HOME)/Library/Frameworks";
@@ -698,10 +698,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		05948EA71037693600284538 /* PBXTargetDependency */ = {
+		050468B411B2E32B00428AAE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0516C2D0100E065300C6B853 /* NutShell (Public) */;
-			targetProxy = 05948EA61037693600284538 /* PBXContainerItemProxy */;
+			targetProxy = 050468B311B2E32B00428AAE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -721,6 +721,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Public";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -742,6 +743,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Public";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -765,6 +767,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Private";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -786,6 +789,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Private";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
