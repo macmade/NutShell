@@ -88,13 +88,8 @@
 		0516C312100E065300C6B853 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		0516C313100E065300C6B853 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054145490FD7519B00D6CB19 /* Security.framework */; };
 		0516C314100E065300C6B853 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */; };
-		052297221002FD170033A3B9 /* NutShellUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 052297211002FD170033A3B9 /* NutShellUI.h */; settings = {ATTRIBUTES = (); }; };
 		0522984B10030C960033A3B9 /* NLUIInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0522984A10030C960033A3B9 /* NLUIInstaller.m */; };
-		0522984D10030C9D0033A3B9 /* NLUIInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522984C10030C9D0033A3B9 /* NLUIInstaller.h */; settings = {ATTRIBUTES = (); }; };
-		0522986710030CE50033A3B9 /* NLURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0522986610030CE50033A3B9 /* NLURLDownloader.h */; settings = {ATTRIBUTES = (); }; };
 		052298C310031B540033A3B9 /* NLUIURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 052298C210031B540033A3B9 /* NLUIURLDownloader.m */; };
-		052298C510031B5F0033A3B9 /* NLUIURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 052298C410031B5F0033A3B9 /* NLUIURLDownloader.h */; settings = {ATTRIBUTES = (); }; };
-		05394B32102E72C1009E42E3 /* NLImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 05394B31102E72C1009E42E3 /* NLImage.h */; };
 		05394B34102E72CE009E42E3 /* NLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 05394B33102E72CE009E42E3 /* NLImage.m */; };
 		05394B41102E7404009E42E3 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05394B40102E7404009E42E3 /* QuickLook.framework */; };
 		05394B61102E7527009E42E3 /* NLImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 05394B31102E72C1009E42E3 /* NLImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -102,71 +97,35 @@
 		05394B65102E7542009E42E3 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05394B40102E7404009E42E3 /* QuickLook.framework */; };
 		0541454A0FD7519B00D6CB19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054145490FD7519B00D6CB19 /* Security.framework */; };
 		0550DB600FD9993100DC5241 /* NLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0550DB5F0FD9993100DC5241 /* NLTextView.m */; };
-		0550DB620FD9993B00DC5241 /* NLTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DB610FD9993B00DC5241 /* NLTextView.h */; settings = {ATTRIBUTES = (); }; };
-		0550DBB50FD9A28400DC5241 /* NLKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550DBB40FD9A28400DC5241 /* NLKeychainItem.h */; settings = {ATTRIBUTES = (); }; };
 		0552BB4A100829A900F0B59F /* NLUISegmentedTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552BB49100829A900F0B59F /* NLUISegmentedTabView.m */; };
-		0552BB4C100829BA00F0B59F /* NLUISegmentedTabView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0552BB4B100829BA00F0B59F /* NLUISegmentedTabView.h */; settings = {ATTRIBUTES = (); }; };
-		055740850FF24D6000CA6580 /* NLMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 055740840FF24D6000CA6580 /* NLMacros.h */; };
-		055C80E80FD7435C0097C170 /* NLEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E50FD7435C0097C170 /* NLEvent.h */; settings = {ATTRIBUTES = (); }; };
-		055C80EA0FD7435C0097C170 /* NLObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80E70FD7435C0097C170 /* NLObject.h */; settings = {ATTRIBUTES = (); }; };
-		055C80F70FD745300097C170 /* NLSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80F60FD745300097C170 /* NLSingleton.h */; settings = {ATTRIBUTES = (); }; };
-		055C80FB0FD7454B0097C170 /* NLObjectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FA0FD7454B0097C170 /* NLObjectSingleton.h */; settings = {ATTRIBUTES = (); }; };
-		055C81010FD746240097C170 /* NLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C80FF0FD746240097C170 /* NLLogger.h */; settings = {ATTRIBUTES = (); }; };
-		055C81020FD746240097C170 /* NLLogMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81000FD746240097C170 /* NLLogMessage.h */; settings = {ATTRIBUTES = (); }; };
-		055C81610FD749F40097C170 /* NutShell.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81600FD749F40097C170 /* NutShell.h */; settings = {ATTRIBUTES = (); }; };
-		055C81A40FD74CE80097C170 /* NLExecution.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81A30FD74CE80097C170 /* NLExecution.h */; settings = {ATTRIBUTES = (); }; };
-		055C81B30FD74E980097C170 /* NLApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 055C81990FD74BED0097C170 /* NLApplication.h */; settings = {ATTRIBUTES = (); }; };
 		056997BE0FD8B03100B590DD /* NLEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 056997BD0FD8B03100B590DD /* NLEventDispatcher.m */; };
-		056997C00FD8B03C00B590DD /* NLEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 056997BF0FD8B03C00B590DD /* NLEventDispatcher.h */; settings = {ATTRIBUTES = (); }; };
-		056997C80FD8B06500B590DD /* NLScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 056997C70FD8B06500B590DD /* NLScrollView.h */; settings = {ATTRIBUTES = (); }; };
 		056997CA0FD8B07000B590DD /* NLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 056997C90FD8B07000B590DD /* NLScrollView.m */; };
-		059107D01000D41B00F3003A /* NLInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 059107CF1000D41B00F3003A /* NLInstaller.h */; settings = {ATTRIBUTES = (); }; };
 		05948CB1103758F900284538 /* NLDelegateChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 05948CB0103758F900284538 /* NLDelegateChain.m */; };
-		05948CB31037590900284538 /* NLDelegateChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 05948CB21037590900284538 /* NLDelegateChain.h */; };
 		05948CDC10375E2D00284538 /* NLDelegateChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 05948CB21037590900284538 /* NLDelegateChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05948CDD10375E3200284538 /* NLDelegateChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 05948CB0103758F900284538 /* NLDelegateChain.m */; };
-		05984D5A0FEB43EA00A497EF /* NLWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05984D590FEB43EA00A497EF /* NLWindowFader.h */; settings = {ATTRIBUTES = (); }; };
 		059D4CF3106A7CF2001FDA9D /* NLFileInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 059D4CF2106A7CF2001FDA9D /* NLFileInfos.m */; };
 		059D4CF4106A7CF2001FDA9D /* NLFileInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 059D4CF2106A7CF2001FDA9D /* NLFileInfos.m */; };
 		059D4CF6106A81A7001FDA9D /* NLFileInfos.h in Headers */ = {isa = PBXBuildFile; fileRef = 059D4CF5106A81A7001FDA9D /* NLFileInfos.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		059D4CF7106A81A7001FDA9D /* NLFileInfos.h in Headers */ = {isa = PBXBuildFile; fileRef = 059D4CF5106A81A7001FDA9D /* NLFileInfos.h */; };
-		05D5AB6E100DA52400832BFD /* NLHostReachabilityTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D5AB6D100DA52400832BFD /* NLHostReachabilityTest.h */; settings = {ATTRIBUTES = (); }; };
 		05D5AB7B100DA62900832BFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D5AB7A100DA62900832BFD /* SystemConfiguration.framework */; };
-		05DF4E8710316FB000862FA4 /* NLFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF4E8610316FB000862FA4 /* NLFileManager.h */; settings = {ATTRIBUTES = (); }; };
 		05DF4E8910316FBC00862FA4 /* NLFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF4E8810316FBC00862FA4 /* NLFileManager.m */; };
 		05DF4E8A10316FC300862FA4 /* NLFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF4E8810316FBC00862FA4 /* NLFileManager.m */; };
 		05DF4E8B10316FC700862FA4 /* NLFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF4E8610316FB000862FA4 /* NLFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DF527F1031F03A00862FA4 /* NLSystemProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF527E1031F03A00862FA4 /* NLSystemProfiler.m */; };
-		05DF52811031F04C00862FA4 /* NLSystemProfiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF52801031F04C00862FA4 /* NLSystemProfiler.h */; };
 		05DF536C1035A85400862FA4 /* NLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF536B1035A85400862FA4 /* NLView.m */; };
-		05DF536E1035A87A00862FA4 /* NLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF536D1035A87A00862FA4 /* NLView.h */; settings = {ATTRIBUTES = (); }; };
 		05DF536F1035A87A00862FA4 /* NLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF536D1035A87A00862FA4 /* NLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DF53701035A88100862FA4 /* NLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF536B1035A85400862FA4 /* NLView.m */; };
 		05DF56F01035D6B300862FA4 /* NLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF56EF1035D6B300862FA4 /* NLColor.m */; };
 		05DF56F11035D6B300862FA4 /* NLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF56EF1035D6B300862FA4 /* NLColor.m */; };
-		05DF56F31035D6C400862FA4 /* NLColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF56F21035D6C400862FA4 /* NLColor.h */; };
 		05DF56F41035D6C400862FA4 /* NLColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF56F21035D6C400862FA4 /* NLColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DF57331035D91C00862FA4 /* NLLogFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF57301035D91C00862FA4 /* NLLogFunctions.m */; };
-		05DF57341035D91C00862FA4 /* NLLogFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF57321035D91C00862FA4 /* NLLogFunctions.h */; };
 		05DF57351035D91C00862FA4 /* NLLogFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF57301035D91C00862FA4 /* NLLogFunctions.m */; };
 		05DF57361035D91C00862FA4 /* NLLogFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF57321035D91C00862FA4 /* NLLogFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05DF579C1035DCAE00862FA4 /* NLMakeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF579B1035DCAE00862FA4 /* NLMakeFunctions.m */; };
 		05DF579D1035DCAE00862FA4 /* NLMakeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF579B1035DCAE00862FA4 /* NLMakeFunctions.m */; };
-		05DF579F1035DCB600862FA4 /* NLMakeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF579E1035DCB600862FA4 /* NLMakeFunctions.h */; };
 		05DF57A01035DCB600862FA4 /* NLMakeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05DF579E1035DCB600862FA4 /* NLMakeFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05E24B8C0FE859C200C42604 /* NLDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E24B8B0FE859C200C42604 /* NLDictionary.h */; settings = {ATTRIBUTES = (); }; };
 		05E24B8E0FE859CD00C42604 /* NLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E24B8D0FE859CD00C42604 /* NLDictionary.m */; };
-		05E686C90FD77F6C003FAC5F /* NLReflectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C30FD77F6C003FAC5F /* NLReflectionClass.h */; settings = {ATTRIBUTES = (); }; };
-		05E686CA0FD77F6C003FAC5F /* NLReflectionMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C40FD77F6C003FAC5F /* NLReflectionMethod.h */; settings = {ATTRIBUTES = (); }; };
-		05E686CB0FD77F6C003FAC5F /* NLReflectionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C50FD77F6C003FAC5F /* NLReflectionObject.h */; settings = {ATTRIBUTES = (); }; };
-		05E686CC0FD77F6C003FAC5F /* NLReflectionProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C60FD77F6C003FAC5F /* NLReflectionProperty.h */; settings = {ATTRIBUTES = (); }; };
-		05E686CD0FD77F6C003FAC5F /* NLReflectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C70FD77F6C003FAC5F /* NLReflectionProtocol.h */; settings = {ATTRIBUTES = (); }; };
-		05E686CE0FD77F6C003FAC5F /* NLReflectionVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E686C80FD77F6C003FAC5F /* NLReflectionVariable.h */; settings = {ATTRIBUTES = (); }; };
-		05E68A6A0FD80F7D003FAC5F /* NLPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E68A690FD80F7D003FAC5F /* NLPreferences.h */; settings = {ATTRIBUTES = (); }; };
 		05E914EA0FE3C4B6006A901B /* NLString.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E914E90FE3C4B6006A901B /* NLString.m */; };
-		05E914EC0FE3C4C2006A901B /* NLString.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E914EB0FE3C4C2006A901B /* NLString.h */; settings = {ATTRIBUTES = (); }; };
 		05F47F6E10B00A78003AE0A2 /* NLArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F47F6D10B00A78003AE0A2 /* NLArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05F47F6F10B00A78003AE0A2 /* NLArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F47F6D10B00A78003AE0A2 /* NLArray.h */; };
 		05F47F7110B00AE5003AE0A2 /* NLArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F47F7010B00AE5003AE0A2 /* NLArray.m */; };
 		05F47F7210B00AE5003AE0A2 /* NLArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F47F7010B00AE5003AE0A2 /* NLArray.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
@@ -569,54 +528,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8DC2EF500486A6940098B216 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				055C80E80FD7435C0097C170 /* NLEvent.h in Headers */,
-				055C80EA0FD7435C0097C170 /* NLObject.h in Headers */,
-				055C80F70FD745300097C170 /* NLSingleton.h in Headers */,
-				055C80FB0FD7454B0097C170 /* NLObjectSingleton.h in Headers */,
-				055C81010FD746240097C170 /* NLLogger.h in Headers */,
-				055C81020FD746240097C170 /* NLLogMessage.h in Headers */,
-				055C81610FD749F40097C170 /* NutShell.h in Headers */,
-				055C81A40FD74CE80097C170 /* NLExecution.h in Headers */,
-				055C81B30FD74E980097C170 /* NLApplication.h in Headers */,
-				05E686C90FD77F6C003FAC5F /* NLReflectionClass.h in Headers */,
-				05E686CA0FD77F6C003FAC5F /* NLReflectionMethod.h in Headers */,
-				05E686CB0FD77F6C003FAC5F /* NLReflectionObject.h in Headers */,
-				05E686CC0FD77F6C003FAC5F /* NLReflectionProperty.h in Headers */,
-				05E686CD0FD77F6C003FAC5F /* NLReflectionProtocol.h in Headers */,
-				05E686CE0FD77F6C003FAC5F /* NLReflectionVariable.h in Headers */,
-				05E68A6A0FD80F7D003FAC5F /* NLPreferences.h in Headers */,
-				056997C00FD8B03C00B590DD /* NLEventDispatcher.h in Headers */,
-				056997C80FD8B06500B590DD /* NLScrollView.h in Headers */,
-				0550DB620FD9993B00DC5241 /* NLTextView.h in Headers */,
-				0550DBB50FD9A28400DC5241 /* NLKeychainItem.h in Headers */,
-				05E914EC0FE3C4C2006A901B /* NLString.h in Headers */,
-				05E24B8C0FE859C200C42604 /* NLDictionary.h in Headers */,
-				05984D5A0FEB43EA00A497EF /* NLWindowFader.h in Headers */,
-				055740850FF24D6000CA6580 /* NLMacros.h in Headers */,
-				059107D01000D41B00F3003A /* NLInstaller.h in Headers */,
-				052297221002FD170033A3B9 /* NutShellUI.h in Headers */,
-				0522984D10030C9D0033A3B9 /* NLUIInstaller.h in Headers */,
-				0522986710030CE50033A3B9 /* NLURLDownloader.h in Headers */,
-				052298C510031B5F0033A3B9 /* NLUIURLDownloader.h in Headers */,
-				0552BB4C100829BA00F0B59F /* NLUISegmentedTabView.h in Headers */,
-				05D5AB6E100DA52400832BFD /* NLHostReachabilityTest.h in Headers */,
-				05394B32102E72C1009E42E3 /* NLImage.h in Headers */,
-				05DF4E8710316FB000862FA4 /* NLFileManager.h in Headers */,
-				05DF52811031F04C00862FA4 /* NLSystemProfiler.h in Headers */,
-				05DF536E1035A87A00862FA4 /* NLView.h in Headers */,
-				05DF56F31035D6C400862FA4 /* NLColor.h in Headers */,
-				05DF57341035D91C00862FA4 /* NLLogFunctions.h in Headers */,
-				05DF579F1035DCB600862FA4 /* NLMakeFunctions.h in Headers */,
-				05948CB31037590900284538 /* NLDelegateChain.h in Headers */,
-				059D4CF7106A81A7001FDA9D /* NLFileInfos.h in Headers */,
-				05F47F6F10B00A78003AE0A2 /* NLArray.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -643,7 +554,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "NutShell (Private)" */;
 			buildPhases = (
-				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
 				8DC2EF540486A6940098B216 /* Sources */,
 				8DC2EF560486A6940098B216 /* Frameworks */,
