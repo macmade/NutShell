@@ -59,8 +59,8 @@
 
 - ( void )updateWidthOfSegments
 {
-    int count;
-    int i;
+    NSUInteger count;
+    NSUInteger i;
     CGFloat margin;
     
     count = [ control segmentCount ];

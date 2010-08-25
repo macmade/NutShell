@@ -183,7 +183,7 @@ static const unsigned int CRCTable[ 256 ] =
 {
     int error;
     int match;
-    unsigned int i;
+    size_t i;
     size_t start;
     size_t end;
     size_t nmatch;

@@ -31,7 +31,7 @@
     SCNetworkReachabilityRef target;
     SCNetworkConnectionFlags flags;
     NSString * hostname;
-    NSUInteger timeout;
+    unsigned int timeout;
     
 @private
     
@@ -42,7 +42,7 @@
 @property( readonly ) SCNetworkReachabilityRef target;
 @property( readonly ) SCNetworkConnectionFlags flags;
 @property( readonly ) NSString * hostname;
-@property( assign, readwrite ) NSUInteger timeout;
+@property( assign, readwrite ) unsigned int timeout;
 
 + ( id )testWithHost: ( NSString * )host;
 - ( id )initWithHost: ( NSString * )host;

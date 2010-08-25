@@ -17,7 +17,7 @@
     NSRect contentRect;
     NSRect documentRect;
     float scrollXPos;
-    float xPos;
+    CGFloat xPos;
     
     contentRect  = [ ( NSView * )[ self contentView ] bounds ];
     documentRect = [ ( NSView * )[ self documentView ] bounds ];

@@ -84,7 +84,7 @@
         {
             range = [ logMessage rangeOfString: @":" ];
             
-            if( range.location != NSNotFound )
+            if( range.location != ( NSUInteger )NSIntegerMax )
             {
                 action = [ logMessage substringToIndex: range.location ];
                 

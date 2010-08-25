@@ -60,7 +60,7 @@
  * @param       selector    The selector for the method of the target
  " @return      void
  */
-- ( int )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector;
+- ( NSUInteger )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector;
 
 /*!
  * @abstract    Adds an event listener on an event of the current object
@@ -71,7 +71,7 @@
  * @param       priority    The priority of the event listener
  " @return      void
  */
-- ( int )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector priority: ( int )priority;
+- ( NSUInteger )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector priority: ( int )priority;
 
 /*!
  * @abstract    Checks if the object has event listener(s) for a specific event

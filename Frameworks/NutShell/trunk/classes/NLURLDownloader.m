@@ -173,7 +173,7 @@
     [ self dispatchEvent: @"ResponseReceived" ];
 }
 
-- ( void )download: ( NSURLDownload * )downloadObject didReceiveDataOfLength: ( unsigned int)length 
+- ( void )download: ( NSURLDownload * )downloadObject didReceiveDataOfLength: ( NSUInteger )length 
 {
     ( void )downloadObject;
     

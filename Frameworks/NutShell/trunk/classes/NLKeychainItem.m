@@ -37,9 +37,9 @@
         status = SecKeychainFindGenericPassword
         (
             NULL,
-            [ name length ],
+            ( UInt32 )[ name length ],
             [ name cStringUsingEncoding: NSUTF8StringEncoding ],
-            [ username length ],
+            ( UInt32 )[ username length ],
             [ username cStringUsingEncoding: NSUTF8StringEncoding ],
             &passwordLength,
             &passwordData,
@@ -74,11 +74,11 @@
     status = SecKeychainAddGenericPassword
     (
         NULL,
-        [ name length ],
+        ( UInt32 )[ name length ],
         [ name cStringUsingEncoding: NSUTF8StringEncoding ],
-        [ username length ],
+        ( UInt32 )[ username length ],
         [ username cStringUsingEncoding: NSUTF8StringEncoding ],
-        [ password length ],
+        ( UInt32 )[ password length ],
         [ password cStringUsingEncoding: NSUTF8StringEncoding ],
         &item
     );
@@ -104,7 +104,7 @@
     (
         item,
         NULL,
-        [ password length ],
+        ( UInt32 )[ password length ],
         [ password cStringUsingEncoding: NSUTF8StringEncoding ]
     );
     
@@ -134,9 +134,9 @@
     status = SecKeychainFindGenericPassword
     (
         NULL,
-        [ name length ],
+        ( UInt32 )[ name length ],
         [ name cStringUsingEncoding: NSUTF8StringEncoding ],
-        [ username length ],
+        ( UInt32 )[ username length ],
         [ username cStringUsingEncoding: NSUTF8StringEncoding ],
         &passwordLength,
         &passwordData,

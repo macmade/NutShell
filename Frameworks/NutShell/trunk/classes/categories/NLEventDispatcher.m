@@ -49,7 +49,7 @@ static NSMutableDictionary * _events;
     }
     
     classname  = NSStringFromClass( [ self class ] );
-    instanceId = [ [ NSNumber numberWithInteger: ( int )self ] stringValue ];
+    instanceId = [ [ NSNumber numberWithUnsignedLongLong: ( uintptr_t )self ] stringValue ];
     
     instances = [ _events objectForKey: classname ];
     
@@ -88,12 +88,12 @@ static NSMutableDictionary * _events;
     }
 }
 
-- ( int )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector
+- ( NSUInteger )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector
 {
     return [ self addEventListener: name target: target selector: selector priority: 255 ];
 }
 
-- ( int )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector priority: ( int )priority
+- ( NSUInteger )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector priority: ( int )priority
 {
     NSString * classname;
     NSString * instanceId;
@@ -110,7 +110,7 @@ static NSMutableDictionary * _events;
     }
     
     classname   = NSStringFromClass( [ self class ] );
-    instanceId  = [ [ NSNumber numberWithInteger: ( int )self ] stringValue ];
+    instanceId  = [ [ NSNumber numberWithUnsignedLongLong: ( uintptr_t )self ] stringValue ];
     priorityKey = [ [ NSNumber numberWithInteger: priority ] stringValue ];
     
     instances = [ _events objectForKey: classname ];
@@ -169,7 +169,7 @@ static NSMutableDictionary * _events;
     }
     
     classname  = NSStringFromClass( [ self class ] );
-    instanceId = [ [ NSNumber numberWithInteger: ( int )self ] stringValue ];
+    instanceId = [ [ NSNumber numberWithUnsignedLongLong: ( uintptr_t )self ] stringValue ];
     
     instances  = [ _events objectForKey: classname ];
     
