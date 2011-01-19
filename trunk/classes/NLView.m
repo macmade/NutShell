@@ -114,6 +114,11 @@
             
             break;
     }
+    
+    [ left release ];
+    [ top release ];
+    [ right release ];
+    [ bottom release ];
 }
 
 - ( void )drawBackground
@@ -168,7 +173,8 @@
     [ path fill ];
     [ foreground compositeToPoint: bounds.origin operation: NSCompositeSourceIn ];
     [ clip unlockFocus ];
-    [ clip compositeToPoint: bounds.origin operation:NSCompositeSourceOver ];
+    [ clip compositeToPoint: bounds.origin operation: NSCompositeSourceOver ];
+    [ pattern release ];
 }
 
 - ( void )drawRect: ( NSRect )rect

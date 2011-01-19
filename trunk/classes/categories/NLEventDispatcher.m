@@ -95,14 +95,14 @@ static NSMutableDictionary * _events;
 
 - ( NSUInteger )addEventListener: ( NSString * )name target: ( id )target selector: ( SEL )selector priority: ( int )priority
 {
-    NSString * classname;
-    NSString * instanceId;
-    NSString * priorityKey;
+    NSString            * classname;
+    NSString            * instanceId;
+    NSString            * priorityKey;
     NSMutableDictionary * instances;
     NSMutableDictionary * events;
     NSMutableDictionary * priorities;
-    NSMutableArray * listeners;
-    NSDictionary * listener;
+    NSMutableArray      * listeners;
+    NSDictionary        * listener;
     
     if( _events == nil )
     {
@@ -117,7 +117,7 @@ static NSMutableDictionary * _events;
     
     if( instances == nil ) {
         
-        instances = [ [ NSMutableDictionary dictionaryWithCapacity: 10 ] retain ];
+        instances = [ NSMutableDictionary dictionaryWithCapacity: 10 ];
         
         [ _events setObject: instances forKey: classname ];
     }
@@ -126,7 +126,7 @@ static NSMutableDictionary * _events;
     
     if( events == nil )
     {
-        events = [ [ NSMutableDictionary dictionaryWithCapacity: 10 ] retain ];
+        events = [ NSMutableDictionary dictionaryWithCapacity: 10 ];
         
         [ instances setObject: events forKey: instanceId ];
     }
@@ -135,7 +135,7 @@ static NSMutableDictionary * _events;
     
     if( priorities == nil )
     {
-        priorities = [ [ NSMutableDictionary dictionaryWithCapacity: 10 ] retain ];
+        priorities = [ NSMutableDictionary dictionaryWithCapacity: 10 ];
         
         [ events setObject: priorities forKey: name ];
     }
@@ -144,7 +144,7 @@ static NSMutableDictionary * _events;
     
     if( listeners == nil )
     {
-        listeners = [ [ NSMutableArray arrayWithCapacity: 10 ] retain ];
+        listeners = [ NSMutableArray arrayWithCapacity: 10 ];
         
         [ priorities setObject: listeners forKey: priorityKey ];
     }

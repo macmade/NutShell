@@ -147,7 +147,6 @@
 {
     char * args[ 6 ];
     OSStatus execStatus;
-    NSTimer * timer;
     
     if( packagePath == nil )
     {
@@ -181,8 +180,7 @@
     installed  = NO;
     
     [ self dispatchEvent: @"InstallerStart" ];
-    
-    timer = [ NSTimer scheduledTimerWithTimeInterval: 0.1 target: self selector: @selector( updateInstallerStatus: ) userInfo: nil repeats: YES ];
+    [ NSTimer scheduledTimerWithTimeInterval: 0.1 target: self selector: @selector( updateInstallerStatus: ) userInfo: nil repeats: YES ];
     
     return execStatus;
 }

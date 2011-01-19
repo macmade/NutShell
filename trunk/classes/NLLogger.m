@@ -47,7 +47,7 @@
     msg = [ [ NLLogMessage alloc ] initWithMessage: message ];
     
     [ messages addObject: msg ];
-    
+    [ msg release ];
     [ self dispatchEvent: @"MessageReceived" ];
 }
 
@@ -61,7 +61,7 @@
         msg.type = NLMessageDebug;
         
         [ messages addObject: msg ];
-        
+        [ msg release ];
         [ self dispatchEvent: @"MessageReceived" ];
     }
 }

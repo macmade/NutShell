@@ -69,8 +69,8 @@ NLFileInfosFlags;
     
 @private
     
-    id r1;
-    id r2;
+    id NL_r1;
+    id NL_r2;
 }
 
 @property( readonly ) BOOL isDirectory;

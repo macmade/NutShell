@@ -24,7 +24,7 @@
 
 + ( id )eventWithTarget: ( id )targetObject
 {
-    id event = [ [ self alloc ] eventWithTarget: targetObject ];
+    id event = [ [ self alloc ] initWithTarget: targetObject ];
     
     return [ event autorelease ];
 }
