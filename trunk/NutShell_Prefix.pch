@@ -1,8 +1,0 @@
-// $Id$
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-    #import "NLMacros.h"
-    #import "NLLogFunctions.h"
-    #import "NLMakeFunctions.h"
-#endif
