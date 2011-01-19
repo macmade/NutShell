@@ -18,7 +18,7 @@
  *              a precompiled version.
  */
 
-// Functions
+/* Functions */
 #import "NLLogFunctions.h"
 #import "NLMakeFunctions.h"
 
@@ -33,10 +33,10 @@
 #import "NLString.h"
 #import "NLTextView.h"
 
-// Protocols
+/* Protocols */
 #import "NLSingleton.h"
 
-// Classes
+/* Classes */
 #import "NLApplication.h"
 #import "NLDelegateChain.h"
 #import "NLEvent.h"

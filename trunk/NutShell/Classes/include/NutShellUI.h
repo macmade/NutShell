@@ -18,7 +18,7 @@
  *              a precompiled version.
  */
 
-// Classes
+/* Classes */
 #import "NLUIInstaller.h"
 #import "NLUIURLDownloader.h"
 #import "NLUISegmentedTabView.h"
