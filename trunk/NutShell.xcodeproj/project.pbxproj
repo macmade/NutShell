@@ -1,0 +1,729 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05B7571E12E807E600C5DF5B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B7571D12E807E600C5DF5B /* Cocoa.framework */; };
+		05B7572812E807E600C5DF5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05B7572612E807E600C5DF5B /* InfoPlist.strings */; };
+		05B7578912E8085100C5DF5B /* NLArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7573412E8085100C5DF5B /* NLArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7578A12E8085100C5DF5B /* NLColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7573512E8085100C5DF5B /* NLColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7578B12E8085100C5DF5B /* NLDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7573612E8085100C5DF5B /* NLDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7578C12E8085100C5DF5B /* NLEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7573712E8085100C5DF5B /* NLEventDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7578D12E8085100C5DF5B /* NLFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7573812E8085100C5DF5B /* NLFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7578E12E8085100C5DF5B /* NLImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7573912E8085100C5DF5B /* NLImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7578F12E8085100C5DF5B /* NLScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7573A12E8085100C5DF5B /* NLScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7579012E8085100C5DF5B /* NLString.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7573B12E8085100C5DF5B /* NLString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7579112E8085100C5DF5B /* NLTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7573C12E8085100C5DF5B /* NLTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7579212E8085100C5DF5B /* NLArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7573D12E8085100C5DF5B /* NLArray.m */; };
+		05B7579312E8085100C5DF5B /* NLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7573E12E8085100C5DF5B /* NLColor.m */; };
+		05B7579412E8085100C5DF5B /* NLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7573F12E8085100C5DF5B /* NLDictionary.m */; };
+		05B7579512E8085100C5DF5B /* NLEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7574012E8085100C5DF5B /* NLEventDispatcher.m */; };
+		05B7579612E8085100C5DF5B /* NLFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7574112E8085100C5DF5B /* NLFileManager.m */; };
+		05B7579712E8085100C5DF5B /* NLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7574212E8085100C5DF5B /* NLImage.m */; };
+		05B7579812E8085100C5DF5B /* NLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7574312E8085100C5DF5B /* NLScrollView.m */; };
+		05B7579912E8085100C5DF5B /* NLString.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7574412E8085100C5DF5B /* NLString.m */; };
+		05B7579A12E8085100C5DF5B /* NLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7574512E8085100C5DF5B /* NLTextView.m */; };
+		05B7579B12E8085100C5DF5B /* NLApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7574812E8085100C5DF5B /* NLApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7579C12E8085100C5DF5B /* NLDelegateChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7574912E8085100C5DF5B /* NLDelegateChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7579D12E8085100C5DF5B /* NLEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7574A12E8085100C5DF5B /* NLEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7579E12E8085100C5DF5B /* NLExecution.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7574B12E8085100C5DF5B /* NLExecution.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B7579F12E8085100C5DF5B /* NLFileInfos.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7574C12E8085100C5DF5B /* NLFileInfos.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757A012E8085100C5DF5B /* NLHostReachabilityTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7574D12E8085100C5DF5B /* NLHostReachabilityTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757A112E8085100C5DF5B /* NLInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7574E12E8085100C5DF5B /* NLInstaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757A212E8085100C5DF5B /* NLKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7574F12E8085100C5DF5B /* NLKeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757A312E8085100C5DF5B /* NLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575012E8085100C5DF5B /* NLLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757A412E8085100C5DF5B /* NLLogMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575112E8085100C5DF5B /* NLLogMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757A512E8085100C5DF5B /* NLObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575212E8085100C5DF5B /* NLObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757A612E8085100C5DF5B /* NLObjectSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575312E8085100C5DF5B /* NLObjectSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757A712E8085100C5DF5B /* NLPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575412E8085100C5DF5B /* NLPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757A812E8085100C5DF5B /* NLReflectionClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575512E8085100C5DF5B /* NLReflectionClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757A912E8085100C5DF5B /* NLReflectionMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575612E8085100C5DF5B /* NLReflectionMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757AA12E8085100C5DF5B /* NLReflectionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575712E8085100C5DF5B /* NLReflectionObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757AB12E8085100C5DF5B /* NLReflectionProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575812E8085100C5DF5B /* NLReflectionProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757AC12E8085100C5DF5B /* NLReflectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575912E8085100C5DF5B /* NLReflectionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757AD12E8085100C5DF5B /* NLReflectionVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575A12E8085100C5DF5B /* NLReflectionVariable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757AE12E8085100C5DF5B /* NLSystemProfiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575B12E8085100C5DF5B /* NLSystemProfiler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757AF12E8085100C5DF5B /* NLURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575C12E8085100C5DF5B /* NLURLDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757B012E8085100C5DF5B /* NLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575D12E8085100C5DF5B /* NLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757B112E8085100C5DF5B /* NLWindowFader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575E12E8085100C5DF5B /* NLWindowFader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757B212E8085100C5DF5B /* NutShell.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7575F12E8085100C5DF5B /* NutShell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757B312E8085100C5DF5B /* NutShellUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7576012E8085100C5DF5B /* NutShellUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757B412E8085100C5DF5B /* NLApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576112E8085100C5DF5B /* NLApplication.m */; };
+		05B757B512E8085100C5DF5B /* NLDelegateChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576212E8085100C5DF5B /* NLDelegateChain.m */; };
+		05B757B612E8085100C5DF5B /* NLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576312E8085100C5DF5B /* NLEvent.m */; };
+		05B757B712E8085100C5DF5B /* NLExecution.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576412E8085100C5DF5B /* NLExecution.m */; };
+		05B757B812E8085100C5DF5B /* NLFileInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576512E8085100C5DF5B /* NLFileInfos.m */; };
+		05B757B912E8085100C5DF5B /* NLHostReachabilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576612E8085100C5DF5B /* NLHostReachabilityTest.m */; };
+		05B757BA12E8085100C5DF5B /* NLInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576712E8085100C5DF5B /* NLInstaller.m */; };
+		05B757BB12E8085100C5DF5B /* NLKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576812E8085100C5DF5B /* NLKeychainItem.m */; };
+		05B757BC12E8085100C5DF5B /* NLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576912E8085100C5DF5B /* NLLogger.m */; };
+		05B757BD12E8085100C5DF5B /* NLLogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576A12E8085100C5DF5B /* NLLogMessage.m */; };
+		05B757BE12E8085100C5DF5B /* NLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576B12E8085100C5DF5B /* NLObject.m */; };
+		05B757BF12E8085100C5DF5B /* NLObjectSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576C12E8085100C5DF5B /* NLObjectSingleton.m */; };
+		05B757C012E8085100C5DF5B /* NLPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576D12E8085100C5DF5B /* NLPreferences.m */; };
+		05B757C112E8085100C5DF5B /* NLReflectionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576E12E8085100C5DF5B /* NLReflectionClass.m */; };
+		05B757C212E8085100C5DF5B /* NLReflectionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7576F12E8085100C5DF5B /* NLReflectionMethod.m */; };
+		05B757C312E8085100C5DF5B /* NLReflectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577012E8085100C5DF5B /* NLReflectionObject.m */; };
+		05B757C412E8085100C5DF5B /* NLReflectionProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577112E8085100C5DF5B /* NLReflectionProperty.m */; };
+		05B757C512E8085100C5DF5B /* NLReflectionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577212E8085100C5DF5B /* NLReflectionProtocol.m */; };
+		05B757C612E8085100C5DF5B /* NLReflectionVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577312E8085100C5DF5B /* NLReflectionVariable.m */; };
+		05B757C712E8085100C5DF5B /* NLSystemProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577412E8085100C5DF5B /* NLSystemProfiler.m */; };
+		05B757C812E8085100C5DF5B /* NLURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577512E8085100C5DF5B /* NLURLDownloader.m */; };
+		05B757C912E8085100C5DF5B /* NLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577612E8085100C5DF5B /* NLView.m */; };
+		05B757CA12E8085100C5DF5B /* NLWindowFader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577712E8085100C5DF5B /* NLWindowFader.m */; };
+		05B757CB12E8085100C5DF5B /* NLUIInstaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7577A12E8085100C5DF5B /* NLUIInstaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757CC12E8085100C5DF5B /* NLUISegmentedTabView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7577B12E8085100C5DF5B /* NLUISegmentedTabView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757CD12E8085100C5DF5B /* NLUIURLDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7577C12E8085100C5DF5B /* NLUIURLDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757CE12E8085100C5DF5B /* NLUIInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577D12E8085100C5DF5B /* NLUIInstaller.m */; };
+		05B757CF12E8085100C5DF5B /* NLUISegmentedTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577E12E8085100C5DF5B /* NLUISegmentedTabView.m */; };
+		05B757D012E8085100C5DF5B /* NLUIURLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7577F12E8085100C5DF5B /* NLUIURLDownloader.m */; };
+		05B757D112E8085100C5DF5B /* NLLogFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7578212E8085100C5DF5B /* NLLogFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757D212E8085100C5DF5B /* NLMakeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7578312E8085100C5DF5B /* NLMakeFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757D312E8085100C5DF5B /* NLLogFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7578412E8085100C5DF5B /* NLLogFunctions.m */; };
+		05B757D412E8085100C5DF5B /* NLMakeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B7578512E8085100C5DF5B /* NLMakeFunctions.m */; };
+		05B757D512E8085100C5DF5B /* NLMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7578612E8085100C5DF5B /* NLMacros.h */; };
+		05B757D612E8085100C5DF5B /* NLSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 05B7578812E8085100C5DF5B /* NLSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B757D912E8099B00C5DF5B /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B757D812E8099B00C5DF5B /* QuickLook.framework */; };
+		05B757DB12E809A200C5DF5B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B757DA12E809A200C5DF5B /* SystemConfiguration.framework */; };
+		05B757DD12E809A800C5DF5B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B757DC12E809A800C5DF5B /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05B7571A12E807E600C5DF5B /* NutShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NutShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05B7571D12E807E600C5DF5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		05B7572012E807E600C5DF5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		05B7572112E807E600C5DF5B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		05B7572212E807E600C5DF5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		05B7572512E807E600C5DF5B /* NutShell-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NutShell-Info.plist"; sourceTree = "<group>"; };
+		05B7572712E807E600C5DF5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		05B7572912E807E600C5DF5B /* NutShell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NutShell-Prefix.pch"; sourceTree = "<group>"; };
+		05B7573412E8085100C5DF5B /* NLArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLArray.h; sourceTree = "<group>"; };
+		05B7573512E8085100C5DF5B /* NLColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLColor.h; sourceTree = "<group>"; };
+		05B7573612E8085100C5DF5B /* NLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLDictionary.h; sourceTree = "<group>"; };
+		05B7573712E8085100C5DF5B /* NLEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLEventDispatcher.h; sourceTree = "<group>"; };
+		05B7573812E8085100C5DF5B /* NLFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLFileManager.h; sourceTree = "<group>"; };
+		05B7573912E8085100C5DF5B /* NLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLImage.h; sourceTree = "<group>"; };
+		05B7573A12E8085100C5DF5B /* NLScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLScrollView.h; sourceTree = "<group>"; };
+		05B7573B12E8085100C5DF5B /* NLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLString.h; sourceTree = "<group>"; };
+		05B7573C12E8085100C5DF5B /* NLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLTextView.h; sourceTree = "<group>"; };
+		05B7573D12E8085100C5DF5B /* NLArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLArray.m; sourceTree = "<group>"; };
+		05B7573E12E8085100C5DF5B /* NLColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLColor.m; sourceTree = "<group>"; };
+		05B7573F12E8085100C5DF5B /* NLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLDictionary.m; sourceTree = "<group>"; };
+		05B7574012E8085100C5DF5B /* NLEventDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLEventDispatcher.m; sourceTree = "<group>"; };
+		05B7574112E8085100C5DF5B /* NLFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLFileManager.m; sourceTree = "<group>"; };
+		05B7574212E8085100C5DF5B /* NLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLImage.m; sourceTree = "<group>"; };
+		05B7574312E8085100C5DF5B /* NLScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLScrollView.m; sourceTree = "<group>"; };
+		05B7574412E8085100C5DF5B /* NLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLString.m; sourceTree = "<group>"; };
+		05B7574512E8085100C5DF5B /* NLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLTextView.m; sourceTree = "<group>"; };
+		05B7574812E8085100C5DF5B /* NLApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLApplication.h; sourceTree = "<group>"; };
+		05B7574912E8085100C5DF5B /* NLDelegateChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLDelegateChain.h; sourceTree = "<group>"; };
+		05B7574A12E8085100C5DF5B /* NLEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLEvent.h; sourceTree = "<group>"; };
+		05B7574B12E8085100C5DF5B /* NLExecution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLExecution.h; sourceTree = "<group>"; };
+		05B7574C12E8085100C5DF5B /* NLFileInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLFileInfos.h; sourceTree = "<group>"; };
+		05B7574D12E8085100C5DF5B /* NLHostReachabilityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLHostReachabilityTest.h; sourceTree = "<group>"; };
+		05B7574E12E8085100C5DF5B /* NLInstaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLInstaller.h; sourceTree = "<group>"; };
+		05B7574F12E8085100C5DF5B /* NLKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLKeychainItem.h; sourceTree = "<group>"; };
+		05B7575012E8085100C5DF5B /* NLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLLogger.h; sourceTree = "<group>"; };
+		05B7575112E8085100C5DF5B /* NLLogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLLogMessage.h; sourceTree = "<group>"; };
+		05B7575212E8085100C5DF5B /* NLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLObject.h; sourceTree = "<group>"; };
+		05B7575312E8085100C5DF5B /* NLObjectSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLObjectSingleton.h; sourceTree = "<group>"; };
+		05B7575412E8085100C5DF5B /* NLPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLPreferences.h; sourceTree = "<group>"; };
+		05B7575512E8085100C5DF5B /* NLReflectionClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLReflectionClass.h; sourceTree = "<group>"; };
+		05B7575612E8085100C5DF5B /* NLReflectionMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLReflectionMethod.h; sourceTree = "<group>"; };
+		05B7575712E8085100C5DF5B /* NLReflectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLReflectionObject.h; sourceTree = "<group>"; };
+		05B7575812E8085100C5DF5B /* NLReflectionProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLReflectionProperty.h; sourceTree = "<group>"; };
+		05B7575912E8085100C5DF5B /* NLReflectionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLReflectionProtocol.h; sourceTree = "<group>"; };
+		05B7575A12E8085100C5DF5B /* NLReflectionVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLReflectionVariable.h; sourceTree = "<group>"; };
+		05B7575B12E8085100C5DF5B /* NLSystemProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLSystemProfiler.h; sourceTree = "<group>"; };
+		05B7575C12E8085100C5DF5B /* NLURLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLURLDownloader.h; sourceTree = "<group>"; };
+		05B7575D12E8085100C5DF5B /* NLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLView.h; sourceTree = "<group>"; };
+		05B7575E12E8085100C5DF5B /* NLWindowFader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLWindowFader.h; sourceTree = "<group>"; };
+		05B7575F12E8085100C5DF5B /* NutShell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutShell.h; sourceTree = "<group>"; };
+		05B7576012E8085100C5DF5B /* NutShellUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutShellUI.h; sourceTree = "<group>"; };
+		05B7576112E8085100C5DF5B /* NLApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLApplication.m; sourceTree = "<group>"; };
+		05B7576212E8085100C5DF5B /* NLDelegateChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLDelegateChain.m; sourceTree = "<group>"; };
+		05B7576312E8085100C5DF5B /* NLEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLEvent.m; sourceTree = "<group>"; };
+		05B7576412E8085100C5DF5B /* NLExecution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLExecution.m; sourceTree = "<group>"; };
+		05B7576512E8085100C5DF5B /* NLFileInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLFileInfos.m; sourceTree = "<group>"; };
+		05B7576612E8085100C5DF5B /* NLHostReachabilityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLHostReachabilityTest.m; sourceTree = "<group>"; };
+		05B7576712E8085100C5DF5B /* NLInstaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLInstaller.m; sourceTree = "<group>"; };
+		05B7576812E8085100C5DF5B /* NLKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLKeychainItem.m; sourceTree = "<group>"; };
+		05B7576912E8085100C5DF5B /* NLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLLogger.m; sourceTree = "<group>"; };
+		05B7576A12E8085100C5DF5B /* NLLogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLLogMessage.m; sourceTree = "<group>"; };
+		05B7576B12E8085100C5DF5B /* NLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLObject.m; sourceTree = "<group>"; };
+		05B7576C12E8085100C5DF5B /* NLObjectSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLObjectSingleton.m; sourceTree = "<group>"; };
+		05B7576D12E8085100C5DF5B /* NLPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLPreferences.m; sourceTree = "<group>"; };
+		05B7576E12E8085100C5DF5B /* NLReflectionClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLReflectionClass.m; sourceTree = "<group>"; };
+		05B7576F12E8085100C5DF5B /* NLReflectionMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLReflectionMethod.m; sourceTree = "<group>"; };
+		05B7577012E8085100C5DF5B /* NLReflectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLReflectionObject.m; sourceTree = "<group>"; };
+		05B7577112E8085100C5DF5B /* NLReflectionProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLReflectionProperty.m; sourceTree = "<group>"; };
+		05B7577212E8085100C5DF5B /* NLReflectionProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLReflectionProtocol.m; sourceTree = "<group>"; };
+		05B7577312E8085100C5DF5B /* NLReflectionVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLReflectionVariable.m; sourceTree = "<group>"; };
+		05B7577412E8085100C5DF5B /* NLSystemProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLSystemProfiler.m; sourceTree = "<group>"; };
+		05B7577512E8085100C5DF5B /* NLURLDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLURLDownloader.m; sourceTree = "<group>"; };
+		05B7577612E8085100C5DF5B /* NLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLView.m; sourceTree = "<group>"; };
+		05B7577712E8085100C5DF5B /* NLWindowFader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLWindowFader.m; sourceTree = "<group>"; };
+		05B7577A12E8085100C5DF5B /* NLUIInstaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLUIInstaller.h; sourceTree = "<group>"; };
+		05B7577B12E8085100C5DF5B /* NLUISegmentedTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLUISegmentedTabView.h; sourceTree = "<group>"; };
+		05B7577C12E8085100C5DF5B /* NLUIURLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLUIURLDownloader.h; sourceTree = "<group>"; };
+		05B7577D12E8085100C5DF5B /* NLUIInstaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLUIInstaller.m; sourceTree = "<group>"; };
+		05B7577E12E8085100C5DF5B /* NLUISegmentedTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLUISegmentedTabView.m; sourceTree = "<group>"; };
+		05B7577F12E8085100C5DF5B /* NLUIURLDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLUIURLDownloader.m; sourceTree = "<group>"; };
+		05B7578212E8085100C5DF5B /* NLLogFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLLogFunctions.h; sourceTree = "<group>"; };
+		05B7578312E8085100C5DF5B /* NLMakeFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLMakeFunctions.h; sourceTree = "<group>"; };
+		05B7578412E8085100C5DF5B /* NLLogFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLLogFunctions.m; sourceTree = "<group>"; };
+		05B7578512E8085100C5DF5B /* NLMakeFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLMakeFunctions.m; sourceTree = "<group>"; };
+		05B7578612E8085100C5DF5B /* NLMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLMacros.h; sourceTree = "<group>"; };
+		05B7578812E8085100C5DF5B /* NLSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLSingleton.h; sourceTree = "<group>"; };
+		05B757D812E8099B00C5DF5B /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		05B757DA12E809A200C5DF5B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		05B757DC12E809A800C5DF5B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05B7571612E807E600C5DF5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B7571E12E807E600C5DF5B /* Cocoa.framework in Frameworks */,
+				05B757DD12E809A800C5DF5B /* Security.framework in Frameworks */,
+				05B757DB12E809A200C5DF5B /* SystemConfiguration.framework in Frameworks */,
+				05B757D912E8099B00C5DF5B /* QuickLook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05B7570E12E807E600C5DF5B = {
+			isa = PBXGroup;
+			children = (
+				05B7572312E807E600C5DF5B /* NutShell */,
+				05B7571C12E807E600C5DF5B /* Frameworks */,
+				05B7571B12E807E600C5DF5B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05B7571B12E807E600C5DF5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05B7571A12E807E600C5DF5B /* NutShell.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05B7571C12E807E600C5DF5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05B7571D12E807E600C5DF5B /* Cocoa.framework */,
+				05B757DC12E809A800C5DF5B /* Security.framework */,
+				05B757DA12E809A200C5DF5B /* SystemConfiguration.framework */,
+				05B757D812E8099B00C5DF5B /* QuickLook.framework */,
+				05B7571F12E807E600C5DF5B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05B7571F12E807E600C5DF5B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05B7572012E807E600C5DF5B /* AppKit.framework */,
+				05B7572112E807E600C5DF5B /* CoreData.framework */,
+				05B7572212E807E600C5DF5B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		05B7572312E807E600C5DF5B /* NutShell */ = {
+			isa = PBXGroup;
+			children = (
+				05B7573212E8085100C5DF5B /* Categories */,
+				05B7574612E8085100C5DF5B /* Classes */,
+				05B7578012E8085100C5DF5B /* Functions */,
+				05B7578712E8085100C5DF5B /* Protocols */,
+				05B7572412E807E600C5DF5B /* Supporting Files */,
+			);
+			path = NutShell;
+			sourceTree = "<group>";
+		};
+		05B7572412E807E600C5DF5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05B7572512E807E600C5DF5B /* NutShell-Info.plist */,
+				05B7572612E807E600C5DF5B /* InfoPlist.strings */,
+				05B7572912E807E600C5DF5B /* NutShell-Prefix.pch */,
+				05B7578612E8085100C5DF5B /* NLMacros.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05B7573212E8085100C5DF5B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				05B7573312E8085100C5DF5B /* include */,
+				05B7573D12E8085100C5DF5B /* NLArray.m */,
+				05B7573E12E8085100C5DF5B /* NLColor.m */,
+				05B7573F12E8085100C5DF5B /* NLDictionary.m */,
+				05B7574012E8085100C5DF5B /* NLEventDispatcher.m */,
+				05B7574112E8085100C5DF5B /* NLFileManager.m */,
+				05B7574212E8085100C5DF5B /* NLImage.m */,
+				05B7574312E8085100C5DF5B /* NLScrollView.m */,
+				05B7574412E8085100C5DF5B /* NLString.m */,
+				05B7574512E8085100C5DF5B /* NLTextView.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		05B7573312E8085100C5DF5B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				05B7573412E8085100C5DF5B /* NLArray.h */,
+				05B7573512E8085100C5DF5B /* NLColor.h */,
+				05B7573612E8085100C5DF5B /* NLDictionary.h */,
+				05B7573712E8085100C5DF5B /* NLEventDispatcher.h */,
+				05B7573812E8085100C5DF5B /* NLFileManager.h */,
+				05B7573912E8085100C5DF5B /* NLImage.h */,
+				05B7573A12E8085100C5DF5B /* NLScrollView.h */,
+				05B7573B12E8085100C5DF5B /* NLString.h */,
+				05B7573C12E8085100C5DF5B /* NLTextView.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		05B7574612E8085100C5DF5B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				05B7574712E8085100C5DF5B /* include */,
+				05B7576112E8085100C5DF5B /* NLApplication.m */,
+				05B7576212E8085100C5DF5B /* NLDelegateChain.m */,
+				05B7576312E8085100C5DF5B /* NLEvent.m */,
+				05B7576412E8085100C5DF5B /* NLExecution.m */,
+				05B7576512E8085100C5DF5B /* NLFileInfos.m */,
+				05B7576612E8085100C5DF5B /* NLHostReachabilityTest.m */,
+				05B7576712E8085100C5DF5B /* NLInstaller.m */,
+				05B7576812E8085100C5DF5B /* NLKeychainItem.m */,
+				05B7576912E8085100C5DF5B /* NLLogger.m */,
+				05B7576A12E8085100C5DF5B /* NLLogMessage.m */,
+				05B7576B12E8085100C5DF5B /* NLObject.m */,
+				05B7576C12E8085100C5DF5B /* NLObjectSingleton.m */,
+				05B7576D12E8085100C5DF5B /* NLPreferences.m */,
+				05B7576E12E8085100C5DF5B /* NLReflectionClass.m */,
+				05B7576F12E8085100C5DF5B /* NLReflectionMethod.m */,
+				05B7577012E8085100C5DF5B /* NLReflectionObject.m */,
+				05B7577112E8085100C5DF5B /* NLReflectionProperty.m */,
+				05B7577212E8085100C5DF5B /* NLReflectionProtocol.m */,
+				05B7577312E8085100C5DF5B /* NLReflectionVariable.m */,
+				05B7577412E8085100C5DF5B /* NLSystemProfiler.m */,
+				05B7577512E8085100C5DF5B /* NLURLDownloader.m */,
+				05B7577612E8085100C5DF5B /* NLView.m */,
+				05B7577712E8085100C5DF5B /* NLWindowFader.m */,
+				05B7577812E8085100C5DF5B /* UI */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		05B7574712E8085100C5DF5B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				05B7574812E8085100C5DF5B /* NLApplication.h */,
+				05B7574912E8085100C5DF5B /* NLDelegateChain.h */,
+				05B7574A12E8085100C5DF5B /* NLEvent.h */,
+				05B7574B12E8085100C5DF5B /* NLExecution.h */,
+				05B7574C12E8085100C5DF5B /* NLFileInfos.h */,
+				05B7574D12E8085100C5DF5B /* NLHostReachabilityTest.h */,
+				05B7574E12E8085100C5DF5B /* NLInstaller.h */,
+				05B7574F12E8085100C5DF5B /* NLKeychainItem.h */,
+				05B7575012E8085100C5DF5B /* NLLogger.h */,
+				05B7575112E8085100C5DF5B /* NLLogMessage.h */,
+				05B7575212E8085100C5DF5B /* NLObject.h */,
+				05B7575312E8085100C5DF5B /* NLObjectSingleton.h */,
+				05B7575412E8085100C5DF5B /* NLPreferences.h */,
+				05B7575512E8085100C5DF5B /* NLReflectionClass.h */,
+				05B7575612E8085100C5DF5B /* NLReflectionMethod.h */,
+				05B7575712E8085100C5DF5B /* NLReflectionObject.h */,
+				05B7575812E8085100C5DF5B /* NLReflectionProperty.h */,
+				05B7575912E8085100C5DF5B /* NLReflectionProtocol.h */,
+				05B7575A12E8085100C5DF5B /* NLReflectionVariable.h */,
+				05B7575B12E8085100C5DF5B /* NLSystemProfiler.h */,
+				05B7575C12E8085100C5DF5B /* NLURLDownloader.h */,
+				05B7575D12E8085100C5DF5B /* NLView.h */,
+				05B7575E12E8085100C5DF5B /* NLWindowFader.h */,
+				05B7575F12E8085100C5DF5B /* NutShell.h */,
+				05B7576012E8085100C5DF5B /* NutShellUI.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		05B7577812E8085100C5DF5B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				05B7577912E8085100C5DF5B /* include */,
+				05B7577D12E8085100C5DF5B /* NLUIInstaller.m */,
+				05B7577E12E8085100C5DF5B /* NLUISegmentedTabView.m */,
+				05B7577F12E8085100C5DF5B /* NLUIURLDownloader.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		05B7577912E8085100C5DF5B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				05B7577A12E8085100C5DF5B /* NLUIInstaller.h */,
+				05B7577B12E8085100C5DF5B /* NLUISegmentedTabView.h */,
+				05B7577C12E8085100C5DF5B /* NLUIURLDownloader.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		05B7578012E8085100C5DF5B /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				05B7578112E8085100C5DF5B /* include */,
+				05B7578412E8085100C5DF5B /* NLLogFunctions.m */,
+				05B7578512E8085100C5DF5B /* NLMakeFunctions.m */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		05B7578112E8085100C5DF5B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				05B7578212E8085100C5DF5B /* NLLogFunctions.h */,
+				05B7578312E8085100C5DF5B /* NLMakeFunctions.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		05B7578712E8085100C5DF5B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				05B7578812E8085100C5DF5B /* NLSingleton.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		05B7571712E807E600C5DF5B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B7578912E8085100C5DF5B /* NLArray.h in Headers */,
+				05B7578A12E8085100C5DF5B /* NLColor.h in Headers */,
+				05B7578B12E8085100C5DF5B /* NLDictionary.h in Headers */,
+				05B7578C12E8085100C5DF5B /* NLEventDispatcher.h in Headers */,
+				05B7578D12E8085100C5DF5B /* NLFileManager.h in Headers */,
+				05B7578E12E8085100C5DF5B /* NLImage.h in Headers */,
+				05B7578F12E8085100C5DF5B /* NLScrollView.h in Headers */,
+				05B7579012E8085100C5DF5B /* NLString.h in Headers */,
+				05B7579112E8085100C5DF5B /* NLTextView.h in Headers */,
+				05B7579B12E8085100C5DF5B /* NLApplication.h in Headers */,
+				05B7579C12E8085100C5DF5B /* NLDelegateChain.h in Headers */,
+				05B7579D12E8085100C5DF5B /* NLEvent.h in Headers */,
+				05B7579E12E8085100C5DF5B /* NLExecution.h in Headers */,
+				05B7579F12E8085100C5DF5B /* NLFileInfos.h in Headers */,
+				05B757A012E8085100C5DF5B /* NLHostReachabilityTest.h in Headers */,
+				05B757A112E8085100C5DF5B /* NLInstaller.h in Headers */,
+				05B757A212E8085100C5DF5B /* NLKeychainItem.h in Headers */,
+				05B757A312E8085100C5DF5B /* NLLogger.h in Headers */,
+				05B757A412E8085100C5DF5B /* NLLogMessage.h in Headers */,
+				05B757A512E8085100C5DF5B /* NLObject.h in Headers */,
+				05B757A612E8085100C5DF5B /* NLObjectSingleton.h in Headers */,
+				05B757A712E8085100C5DF5B /* NLPreferences.h in Headers */,
+				05B757A812E8085100C5DF5B /* NLReflectionClass.h in Headers */,
+				05B757A912E8085100C5DF5B /* NLReflectionMethod.h in Headers */,
+				05B757AA12E8085100C5DF5B /* NLReflectionObject.h in Headers */,
+				05B757AB12E8085100C5DF5B /* NLReflectionProperty.h in Headers */,
+				05B757AC12E8085100C5DF5B /* NLReflectionProtocol.h in Headers */,
+				05B757AD12E8085100C5DF5B /* NLReflectionVariable.h in Headers */,
+				05B757AE12E8085100C5DF5B /* NLSystemProfiler.h in Headers */,
+				05B757AF12E8085100C5DF5B /* NLURLDownloader.h in Headers */,
+				05B757B012E8085100C5DF5B /* NLView.h in Headers */,
+				05B757B112E8085100C5DF5B /* NLWindowFader.h in Headers */,
+				05B757B212E8085100C5DF5B /* NutShell.h in Headers */,
+				05B757B312E8085100C5DF5B /* NutShellUI.h in Headers */,
+				05B757CB12E8085100C5DF5B /* NLUIInstaller.h in Headers */,
+				05B757CC12E8085100C5DF5B /* NLUISegmentedTabView.h in Headers */,
+				05B757CD12E8085100C5DF5B /* NLUIURLDownloader.h in Headers */,
+				05B757D112E8085100C5DF5B /* NLLogFunctions.h in Headers */,
+				05B757D212E8085100C5DF5B /* NLMakeFunctions.h in Headers */,
+				05B757D612E8085100C5DF5B /* NLSingleton.h in Headers */,
+				05B757D512E8085100C5DF5B /* NLMacros.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		05B7571912E807E600C5DF5B /* NutShell (Public) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05B7572C12E807E600C5DF5B /* Build configuration list for PBXNativeTarget "NutShell (Public)" */;
+			buildPhases = (
+				05B7571512E807E600C5DF5B /* Sources */,
+				05B7571612E807E600C5DF5B /* Frameworks */,
+				05B7571712E807E600C5DF5B /* Headers */,
+				05B7571812E807E600C5DF5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NutShell (Public)";
+			productName = NutShell;
+			productReference = 05B7571A12E807E600C5DF5B /* NutShell.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05B7571012E807E600C5DF5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = eosgarden;
+			};
+			buildConfigurationList = 05B7571312E807E600C5DF5B /* Build configuration list for PBXProject "NutShell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 05B7570E12E807E600C5DF5B;
+			productRefGroup = 05B7571B12E807E600C5DF5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05B7571912E807E600C5DF5B /* NutShell (Public) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05B7571812E807E600C5DF5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B7572812E807E600C5DF5B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05B7571512E807E600C5DF5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B7579212E8085100C5DF5B /* NLArray.m in Sources */,
+				05B7579312E8085100C5DF5B /* NLColor.m in Sources */,
+				05B7579412E8085100C5DF5B /* NLDictionary.m in Sources */,
+				05B7579512E8085100C5DF5B /* NLEventDispatcher.m in Sources */,
+				05B7579612E8085100C5DF5B /* NLFileManager.m in Sources */,
+				05B7579712E8085100C5DF5B /* NLImage.m in Sources */,
+				05B7579812E8085100C5DF5B /* NLScrollView.m in Sources */,
+				05B7579912E8085100C5DF5B /* NLString.m in Sources */,
+				05B7579A12E8085100C5DF5B /* NLTextView.m in Sources */,
+				05B757B412E8085100C5DF5B /* NLApplication.m in Sources */,
+				05B757B512E8085100C5DF5B /* NLDelegateChain.m in Sources */,
+				05B757B612E8085100C5DF5B /* NLEvent.m in Sources */,
+				05B757B712E8085100C5DF5B /* NLExecution.m in Sources */,
+				05B757B812E8085100C5DF5B /* NLFileInfos.m in Sources */,
+				05B757B912E8085100C5DF5B /* NLHostReachabilityTest.m in Sources */,
+				05B757BA12E8085100C5DF5B /* NLInstaller.m in Sources */,
+				05B757BB12E8085100C5DF5B /* NLKeychainItem.m in Sources */,
+				05B757BC12E8085100C5DF5B /* NLLogger.m in Sources */,
+				05B757BD12E8085100C5DF5B /* NLLogMessage.m in Sources */,
+				05B757BE12E8085100C5DF5B /* NLObject.m in Sources */,
+				05B757BF12E8085100C5DF5B /* NLObjectSingleton.m in Sources */,
+				05B757C012E8085100C5DF5B /* NLPreferences.m in Sources */,
+				05B757C112E8085100C5DF5B /* NLReflectionClass.m in Sources */,
+				05B757C212E8085100C5DF5B /* NLReflectionMethod.m in Sources */,
+				05B757C312E8085100C5DF5B /* NLReflectionObject.m in Sources */,
+				05B757C412E8085100C5DF5B /* NLReflectionProperty.m in Sources */,
+				05B757C512E8085100C5DF5B /* NLReflectionProtocol.m in Sources */,
+				05B757C612E8085100C5DF5B /* NLReflectionVariable.m in Sources */,
+				05B757C712E8085100C5DF5B /* NLSystemProfiler.m in Sources */,
+				05B757C812E8085100C5DF5B /* NLURLDownloader.m in Sources */,
+				05B757C912E8085100C5DF5B /* NLView.m in Sources */,
+				05B757CA12E8085100C5DF5B /* NLWindowFader.m in Sources */,
+				05B757CE12E8085100C5DF5B /* NLUIInstaller.m in Sources */,
+				05B757CF12E8085100C5DF5B /* NLUISegmentedTabView.m in Sources */,
+				05B757D012E8085100C5DF5B /* NLUIURLDownloader.m in Sources */,
+				05B757D312E8085100C5DF5B /* NLLogFunctions.m in Sources */,
+				05B757D412E8085100C5DF5B /* NLMakeFunctions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		05B7572612E807E600C5DF5B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05B7572712E807E600C5DF5B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05B7572A12E807E600C5DF5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_VERSION = 1.0;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NutShell/NutShell-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "NutShell/NutShell-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = NutShell;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Werror",
+					"-Wbad-function-cast",
+					"-Wmissing-declarations",
+					"-Wmissing-prototypes",
+					"-Wnested-externs",
+					"-Wold-style-definition",
+					"-Wstrict-prototypes",
+					"-Wdeclaration-after-statement",
+				);
+			};
+			name = Debug;
+		};
+		05B7572B12E807E600C5DF5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /;
+				FRAMEWORK_VERSION = 1.0;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NutShell/NutShell-Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "NutShell/NutShell-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = NutShell;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Werror",
+					"-Wbad-function-cast",
+					"-Wmissing-declarations",
+					"-Wmissing-prototypes",
+					"-Wnested-externs",
+					"-Wold-style-definition",
+					"-Wstrict-prototypes",
+					"-Wdeclaration-after-statement",
+				);
+			};
+			name = Release;
+		};
+		05B7572D12E807E600C5DF5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+			};
+			name = Debug;
+		};
+		05B7572E12E807E600C5DF5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05B7571312E807E600C5DF5B /* Build configuration list for PBXProject "NutShell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05B7572A12E807E600C5DF5B /* Debug */,
+				05B7572B12E807E600C5DF5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05B7572C12E807E600C5DF5B /* Build configuration list for PBXNativeTarget "NutShell (Public)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05B7572D12E807E600C5DF5B /* Debug */,
+				05B7572E12E807E600C5DF5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05B7571012E807E600C5DF5B /* Project object */;
+}
