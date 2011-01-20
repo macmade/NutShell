@@ -1,3 +1,18 @@
+/*******************************************************************************
+ * NutShell Framework
+ * 
+ * Copyright (c) 2009, Jean-David Gadina (macmade@eosgarden.com)
+ * All rights reserved.
+ ******************************************************************************/
+
+/* $Id$ */
+
+/*!
+ * @header
+ * 
+ * @discussion  Precompiled header file for the NutShell framework.
+ */
+
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
     #import "NLMacros.h"
