@@ -133,16 +133,6 @@
 		05B757DD12E809A800C5DF5B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B757DC12E809A800C5DF5B /* Security.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		0575ED9712E892E2005E2DC0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 05B7571012E807E600C5DF5B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 05B7571912E807E600C5DF5B;
-			remoteInfo = "NutShell (Public)";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0575ED8812E89230005E2DC0 /* NutShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NutShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B7571A12E807E600C5DF5B /* NutShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NutShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -543,7 +533,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0575ED9812E892E2005E2DC0 /* PBXTargetDependency */,
 			);
 			name = "NutShell (Private)";
 			productName = NutShell;
@@ -702,14 +691,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0575ED9812E892E2005E2DC0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 05B7571912E807E600C5DF5B /* NutShell (Public) */;
-			targetProxy = 0575ED9712E892E2005E2DC0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		05B7572612E807E600C5DF5B /* InfoPlist.strings */ = {
