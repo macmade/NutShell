@@ -133,8 +133,18 @@
 		05B757DD12E809A800C5DF5B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B757DC12E809A800C5DF5B /* Security.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		05C3AE0412E9C92A000AEC46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05B7571012E807E600C5DF5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05B7571912E807E600C5DF5B;
+			remoteInfo = "NutShell (Public)";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0575ED8812E89230005E2DC0 /* NutShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NutShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0575ED8812E89230005E2DC0 /* NL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B7571A12E807E600C5DF5B /* NutShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NutShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B7571D12E807E600C5DF5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		05B7572012E807E600C5DF5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -265,7 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				05B7571A12E807E600C5DF5B /* NutShell.framework */,
-				0575ED8812E89230005E2DC0 /* NutShell.framework */,
+				0575ED8812E89230005E2DC0 /* NL.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -533,10 +543,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				05C3AE0512E9C92A000AEC46 /* PBXTargetDependency */,
 			);
 			name = "NutShell (Private)";
 			productName = NutShell;
-			productReference = 0575ED8812E89230005E2DC0 /* NutShell.framework */;
+			productReference = 0575ED8812E89230005E2DC0 /* NL.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		05B7571912E807E600C5DF5B /* NutShell (Public) */ = {
@@ -692,6 +703,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		05C3AE0512E9C92A000AEC46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05B7571912E807E600C5DF5B /* NutShell (Public) */;
+			targetProxy = 05C3AE0412E9C92A000AEC46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		05B7572612E807E600C5DF5B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -711,11 +730,11 @@
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DSTROOT = "@executable_path/";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_DYNAMIC_NO_PIC = NO;
-				INSTALL_PATH = ../Frameworks;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = NL;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -728,10 +747,10 @@
 				COPY_PHASE_STRIP = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DSTROOT = "@executable_path/";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				INSTALL_PATH = ../Frameworks;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = NL;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -742,7 +761,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				DSTROOT = /;
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -798,7 +816,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DSTROOT = /;
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
