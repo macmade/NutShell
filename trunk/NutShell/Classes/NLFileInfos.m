@@ -376,10 +376,10 @@
 {
     if( ( self = [ super init ] ) )
     {
-        self.gigaByteSymbol = @"%@GB";
-        self.megaByteSymbol = @"%@MB";
-        self.kiloByteSymbol = @"%@KB";
-        self.byteSymbol     = @"%@B";
+        self.gigaByteSymbol = @"%.2fGB";
+        self.megaByteSymbol = @"%.2fMB";
+        self.kiloByteSymbol = @"%.2fKB";
+        self.byteSymbol     = @"%.2fB";
     }
     
     return self;
