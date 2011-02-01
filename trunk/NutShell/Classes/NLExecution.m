@@ -75,18 +75,16 @@
     {
         status = [ self authorizeExecute ];
     }
-    else
-    {
-        flags  = kAuthorizationFlagDefaults;
-        status = AuthorizationExecuteWithPrivileges
-        (
-            authorizationRef,
-            command,
-            flags,
-            arguments,
-            io
-        );
-    }
+    
+    flags  = kAuthorizationFlagDefaults;
+    status = AuthorizationExecuteWithPrivileges
+    (
+        authorizationRef,
+        command,
+        flags,
+        arguments,
+        io
+    );
     
     return status;
 }
