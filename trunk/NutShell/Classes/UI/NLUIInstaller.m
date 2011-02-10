@@ -63,7 +63,7 @@
     
     if( indeterminateProgressForNewPhases == YES )
     {
-        [ progressBar setIndeterminate: YES ];
+        [ progressBar setIndeterminate: NO ];
         [ progressBar startAnimation:   nil ];
     }
 }
@@ -82,7 +82,7 @@
     ( void )event;
     
     [ progressBar setIndeterminate: NO ];
-    [ progressBar setDoubleValue:   1 ];
+    [ progressBar setDoubleValue:   100 ];
     
     [ installButton setEnabled: NO ];
     [ quitButton setEnabled: YES ];
@@ -96,7 +96,7 @@
 - ( OSStatus )installWithTarget: ( NSString * )destTarget
 {
     [ progressBar setMinValue:      0 ];
-    [ progressBar setMaxValue:      1 ];
+    [ progressBar setMaxValue:      100 ];
     [ progressBar setDoubleValue:   0 ];
     [ progressBar setIndeterminate: YES ];
     [ progressBar startAnimation:   nil ];
