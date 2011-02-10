@@ -35,8 +35,8 @@
     if( ( self = [ super init ] ) )
     {
         [ self addEventListener: @"InstallerProgress" target: self selector: @selector( updateProgressBar: ) ];
-        [ self addEventListener: @"InstallerPhase" target: self selector: @selector( updatePhaseText: ) ];
-        [ self addEventListener: @"InstallerStatus" target: self selector: @selector( updateStatusText: ) ];
+        [ self addEventListener: @"InstallerPhase"    target: self selector: @selector( updatePhaseText: ) ];
+        [ self addEventListener: @"InstallerStatus"   target: self selector: @selector( updateStatusText: ) ];
         [ self addEventListener: @"InstallerComplete" target: self selector: @selector( installationComplete: ) ];
         
         indeterminateProgressForNewPhases = YES;
@@ -51,7 +51,7 @@
     ( void )event;
     
     [ progressBar setIndeterminate: NO ];
-    [ progressBar stopAnimation: nil ];
+    [ progressBar stopAnimation:    nil ];
     [ progressBar setDoubleValue: progress ];
 }
 
@@ -85,7 +85,7 @@
     [ progressBar setDoubleValue:   100 ];
     
     [ installButton setEnabled: NO ];
-    [ quitButton setEnabled: YES ];
+    [ quitButton    setEnabled: YES ];
     
     if( playSoundOnInstallComplete == YES )
     {
@@ -120,12 +120,12 @@
     if( execStatus == 0 )
     {
         [ installButton setEnabled: NO ];
-        [ quitButton setEnabled: NO ];
+        [ quitButton    setEnabled: NO ];
     }
     else
     {
         [ installButton setEnabled: YES ];
-        [ quitButton setEnabled: YES ];
+        [ quitButton    setEnabled: YES ];
     }
     
     return execStatus;
