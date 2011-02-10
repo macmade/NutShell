@@ -72,7 +72,7 @@
             
             [ self dispatchEvent: @"InstallerProgress" ];
             
-            if( progress == 1 )
+            if( progress == 100 )
             {
                 installed  = YES;
                 installing = NO;
