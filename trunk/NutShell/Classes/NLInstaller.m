@@ -61,6 +61,7 @@
     NSRange    range;
     NSString * logMessage;
     NSString * action;
+    double     percent;
     
     if( str != nil && [ str length ] > 11 && [ [ str substringToIndex: 10 ] isEqualToString: @"installer:" ] )
     {
@@ -68,9 +69,15 @@
         
         if( [ [ logMessage substringToIndex: 1 ] isEqualToString: @"%" ] && [ logMessage length ] > 2 )
         {
-            progress = [ [ logMessage substringFromIndex: 1 ] doubleValue ];
+            percent  = [ [ logMessage substringFromIndex: 1 ] doubleValue ];
+            progress = percent;
             
             [ self dispatchEvent: @"InstallerProgress" ];
+            [ status release ];
+            
+            status = [ [ NSString stringWithFormat: @"%.02f%%", percent ] retain ];
+            
+            [ self dispatchEvent: @"InstallerStatus" ];
             
             if( progress == 100 )
             {
@@ -88,16 +95,7 @@
             {
                 action = [ logMessage substringToIndex: range.location ];
                 
-                if( [ action isEqualToString: @"STATUS" ] && installed == NO )
-                {
-                    [ status release ];
-                    
-                    status = [ [ logMessage substringFromIndex: range.location + 1 ] retain ];
-                    
-                    [ self dispatchEvent: @"InstallerStatus" ];
-                    
-                }
-                else if( [ action isEqualToString: @"PHASE" ] )
+                if( [ action isEqualToString: @"PHASE" ] )
                 {
                     [ phase release ];
                     
