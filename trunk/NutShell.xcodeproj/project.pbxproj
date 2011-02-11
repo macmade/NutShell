@@ -134,7 +134,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05C3AE0412E9C92A000AEC46 /* PBXContainerItemProxy */ = {
+		05ED1BDF1305496C00DE1075 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 05B7571012E807E600C5DF5B /* Project object */;
 			proxyType = 1;
@@ -543,7 +543,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				05C3AE0512E9C92A000AEC46 /* PBXTargetDependency */,
+				05ED1BE01305496C00DE1075 /* PBXTargetDependency */,
 			);
 			name = "NutShell (Private)";
 			productName = NutShell;
@@ -704,10 +704,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		05C3AE0512E9C92A000AEC46 /* PBXTargetDependency */ = {
+		05ED1BE01305496C00DE1075 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 05B7571912E807E600C5DF5B /* NutShell (Public) */;
-			targetProxy = 05C3AE0412E9C92A000AEC46 /* PBXContainerItemProxy */;
+			targetProxy = 05ED1BDF1305496C00DE1075 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
