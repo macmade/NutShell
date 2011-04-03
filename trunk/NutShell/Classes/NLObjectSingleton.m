@@ -15,6 +15,11 @@ static NSMutableDictionary * _instances;
 
 + ( id )getInstance
 {
+    return [ self sharedInstance ];
+}
+
++ ( id )sharedInstance
+{
     @synchronized( self )
     {
         if( [ _instances objectForKey: NSStringFromClass( [ self class ] ) ] == nil )

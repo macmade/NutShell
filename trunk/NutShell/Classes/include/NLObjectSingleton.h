@@ -34,11 +34,18 @@
 }
 
 /*!
+ * @method      getInstance
  * @abstract    Gets the unique (singleton) instance of the class
- * 
  * @return      The unique instance of the class
  */
 + ( id )getInstance;
+
+/*!
+ * @method      sharedInstance
+ * @abstract    Gets the unique (singleton) instance of the class
+ * @return      The unique instance of the class
+ */
++ ( id )sharedInstance;
 
 /*!
  * @abstract    
