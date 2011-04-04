@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0562F8991349AD50005190B6 /* NutShell.doxygen in Resources */ = {isa = PBXBuildFile; fileRef = 0562F8971349AD50005190B6 /* NutShell.doxygen */; };
+		0562F89A1349AD50005190B6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0562F8981349AD50005190B6 /* README.md */; };
 		0575ED8912E89230005E2DC0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B7571D12E807E600C5DF5B /* Cocoa.framework */; };
 		0575ED9412E892D4005E2DC0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B757DC12E809A800C5DF5B /* Security.framework */; };
 		0575ED9512E892D6005E2DC0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B757DA12E809A200C5DF5B /* SystemConfiguration.framework */; };
@@ -144,6 +146,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0562F8971349AD50005190B6 /* NutShell.doxygen */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NutShell.doxygen; sourceTree = SOURCE_ROOT; };
+		0562F8981349AD50005190B6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		0575ED8812E89230005E2DC0 /* NL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B7571A12E807E600C5DF5B /* NutShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NutShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B7571D12E807E600C5DF5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -317,6 +321,8 @@
 		05B7572412E807E600C5DF5B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0562F8971349AD50005190B6 /* NutShell.doxygen */,
+				0562F8981349AD50005190B6 /* README.md */,
 				05B7572512E807E600C5DF5B /* NutShell-Info.plist */,
 				05B7572612E807E600C5DF5B /* InfoPlist.strings */,
 				05B7572912E807E600C5DF5B /* NutShell-Prefix.pch */,
@@ -607,6 +613,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				05B7572812E807E600C5DF5B /* InfoPlist.strings in Resources */,
+				0562F8991349AD50005190B6 /* NutShell.doxygen in Resources */,
+				0562F89A1349AD50005190B6 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
