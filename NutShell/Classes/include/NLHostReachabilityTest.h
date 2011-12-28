@@ -57,8 +57,8 @@
     
 @private
     
-    id NL_r1;
-    id NL_r2;
+    id NL_r1 __attribute__( ( unused ) );
+    id NL_r2 __attribute__( ( unused ) );
 }
 
 @property( readonly ) SCNetworkReachabilityRef target;

@@ -85,8 +85,8 @@
         metaClass                  = class_isMetaClass( objcClass );
         instanceSize               = [ [ NSNumber alloc ] initWithUnsignedLongLong: class_getInstanceSize( objcClass ) ];
         version                    = [ [ NSNumber alloc ] initWithInt: class_getVersion( objcClass ) ];
-        instanceVariableLayout     = [ [ NSString alloc ] initWithCString: class_getIvarLayout( objcClass ) encoding: NSASCIIStringEncoding ];
-        weakInstanceVariableLayout = [ [ NSString alloc ] initWithCString: class_getWeakIvarLayout( objcClass ) encoding: NSASCIIStringEncoding ];
+        instanceVariableLayout     = [ [ NSString alloc ] initWithCString: ( const char * )class_getIvarLayout( objcClass ) encoding: NSASCIIStringEncoding ];
+        weakInstanceVariableLayout = [ [ NSString alloc ] initWithCString: ( const char * )class_getWeakIvarLayout( objcClass ) encoding: NSASCIIStringEncoding ];
     }
     
     return self;

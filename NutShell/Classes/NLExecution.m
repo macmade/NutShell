@@ -91,11 +91,9 @@
     OSStatus status;
     AuthorizationFlags flags;
     
-    status = 0;
-    
     if( canExecuteWithPrivilege == NO )
     {
-        status = [ self authorizeExecute ];
+        [ self authorizeExecute ];
     }
     
     flags  = kAuthorizationFlagDefaults;

@@ -580,6 +580,7 @@
 		05B7571012E807E600C5DF5B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = eosgarden;
 			};
 			buildConfigurationList = 05B7571312E807E600C5DF5B /* Build configuration list for PBXProject "NutShell" */;
@@ -879,6 +880,7 @@
 				DSTROOT = /;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Frameworks";
 			};
 			name = Debug;
 		};
@@ -891,6 +893,7 @@
 				DSTROOT = /;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Frameworks";
 			};
 			name = Release;
 		};

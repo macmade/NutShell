@@ -99,7 +99,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id NL_r3;
+    id NL_r3 __attribute__( ( unused ) );
     
     /*!
      * @abstract    Reserved 2
@@ -107,7 +107,7 @@
      * @discussion  Reserved instance variables to help ensure binary
      *              compatibility with future versions of the class.
      */
-    id NL_r4;
+    id NL_r4 __attribute__( ( unused ) );
 }
 
 /*! @property */

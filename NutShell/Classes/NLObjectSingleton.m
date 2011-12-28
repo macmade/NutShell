@@ -90,7 +90,7 @@ static NSMutableDictionary * _instances;
     return UINT_MAX;
 }
 
-- ( void )release
+- ( oneway void )release
 {}
 
 - ( id )autorelease

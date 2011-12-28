@@ -37,7 +37,7 @@
 {
     NSString * fileContent;
     
-    fileContent = [ [ NSString alloc ] initWithContentsOfFile: filePath ];
+    fileContent = [ [ NSString alloc ] initWithContentsOfFile: filePath encoding: NSUTF8StringEncoding error: NULL ];
     self.string = fileContent;
     
     [ fileContent release ];

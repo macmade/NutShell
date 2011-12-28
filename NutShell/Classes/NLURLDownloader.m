@@ -32,7 +32,7 @@
 #import "NLURLDownloader.h"
 #import "NLEventDispatcher.h"
 
-@interface NLURLDownloader( Private )
+@interface NLURLDownloader( Private ) < NSURLDownloadDelegate >
 
 - ( void )updateSpeed: ( NSTimer * )timerObject;
 
