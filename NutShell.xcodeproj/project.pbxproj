@@ -177,13 +177,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0560DFC114B8707D0041D14E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 05B7571012E807E600C5DF5B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 05B7571912E807E600C5DF5B;
-			remoteInfo = "NutShell (Public)";
-		};
 		05ED1BDF1305496C00DE1075 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 05B7571012E807E600C5DF5B /* Project object */;
@@ -616,7 +609,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0560DFC214B8707D0041D14E /* PBXTargetDependency */,
 			);
 			name = "NutShell (Static)";
 			productName = "NutShell (Static)";
@@ -844,11 +836,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0560DFC214B8707D0041D14E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 05B7571912E807E600C5DF5B /* NutShell (Public) */;
-			targetProxy = 0560DFC114B8707D0041D14E /* PBXContainerItemProxy */;
-		};
 		05ED1BE01305496C00DE1075 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 05B7571912E807E600C5DF5B /* NutShell (Public) */;
@@ -876,6 +863,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				PRODUCT_NAME = NLStatic;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -885,6 +873,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				PRODUCT_NAME = NLStatic;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -1063,6 +1052,7 @@
 				0560DFBB14B86FA30041D14E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0575ED9112E89230005E2DC0 /* Build configuration list for PBXNativeTarget "NutShell (Private)" */ = {
 			isa = XCConfigurationList;
