@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2011, Jean-David Gadina <macmade@eosgarden.com>
+ * Copyright (c) 2011, Jean-David Gadina - www.xs-labs.com
  * Distributed under the Boost Software License, Version 1.0.
  * 
  * Boost Software License - Version 1.0 - August 17th, 2003
@@ -267,7 +267,7 @@ static const unsigned int CRCTable[ 256 ] =
             
             submatch[ size ] = '\0';
             
-            result = [ result stringByReplacingOccurrencesOfString: [ NSString stringWithFormat: @"\\%i", i ] withString: [ NSString stringWithCString: ( const char * )submatch encoding: NSASCIIStringEncoding ] ];
+            result = [ result stringByReplacingOccurrencesOfString: [ NSString stringWithFormat: @"\\%zi", i ] withString: [ NSString stringWithCString: ( const char * )submatch encoding: NSASCIIStringEncoding ] ];
             
             free( submatch );
         }

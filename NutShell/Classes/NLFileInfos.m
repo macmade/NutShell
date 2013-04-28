@@ -418,14 +418,14 @@
             "   Parent directory:           %@\n"
             "   Target file:                %@\n"
             "   Type:                       %@\n"
-            "   Size:                       %u\n"
+            "   Size:                       %lu\n"
             "   Human readable size:        %@\n"
-            "   Owner ID:                   %u\n"
+            "   Owner ID:                   %lu\n"
             "   Owner:                      %@\n"
-            "   Group ID:                   %u\n"
+            "   Group ID:                   %lu\n"
             "   Group:                      %@\n"
-            "   Permissions:                %u\n"
-            "   Octal permissions:          %u\n"
+            "   Permissions:                %lu\n"
+            "   Octal permissions:          %lu\n"
             "   Human readable permissions: %@\n"
             "   Is readable:                %@\n"
             "   Is writeable:               %@\n"
@@ -433,12 +433,12 @@
             "   Creation date:              %@\n"
             "   Modification date:          %@\n"
             "   Number of sub-files:        %@\n"
-            "   Reference count:            %u\n"
-            "   Device identifier:          %u\n"
-            "   System number:              %u\n"
-            "   System file number:         %u\n"
-            "   HFS creator code:           %u\n"
-            "   HFS type code:              %u\n"
+            "   Reference count:            %lu\n"
+            "   Device identifier:          %lu\n"
+            "   System number:              %lu\n"
+            "   System file number:         %lu\n"
+            "   HFS creator code:           %lu\n"
+            "   HFS type code:              %lu\n"
             "   Flags - Archived:           %@\n"
             "   Flags - Hidden:             %@\n"
             "   Flags - No dump:            %@\n"
@@ -470,14 +470,14 @@
             parentDirectoryPath,
             ( isSymbolicLink == YES ) ? targetFile.path : @"N/A",
             type,
-            size,
+            ( unsigned long )size,
             humanReadableSize,
-            ownerID,
+            ( unsigned long )ownerID,
             owner,
-            groupID,
+            ( unsigned long )groupID,
             group,
-            permissions,
-            octalPermissions,
+            ( unsigned long )permissions,
+            ( unsigned long )octalPermissions,
             humanReadablePermissions,
             ( isReadable   == YES ) ? @"yes" : @"no",
             ( isWriteable  == YES ) ? @"yes" : @"no",
@@ -485,12 +485,12 @@
             [ creationDate description ],
             [ modificationDate description ],
             ( isDirectory == YES ) ? [ [ NSNumber numberWithUnsignedInteger: numberOfSubFiles ] stringValue ] : @"N/A",
-            referenceCount,
-            deviceIdentifier,
-            systemNumber,
-            systemFileNumber,
-            HFSCreatorCode,
-            HFSTypeCode,
+            ( unsigned long )referenceCount,
+            ( unsigned long )deviceIdentifier,
+            ( unsigned long )systemNumber,
+            ( unsigned long )systemFileNumber,
+            ( unsigned long )HFSCreatorCode,
+            ( unsigned long )HFSTypeCode,
             ( flags.archived         == YES ) ? @"yes" : @"no",
             ( flags.hidden           == YES ) ? @"yes" : @"no",
             ( flags.noDump           == YES ) ? @"yes" : @"no",

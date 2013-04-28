@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2011, Jean-David Gadina <macmade@eosgarden.com>
+ * Copyright (c) 2011, Jean-David Gadina - www.xs-labs.com
  * Distributed under the Boost Software License, Version 1.0.
  * 
  * Boost Software License - Version 1.0 - August 17th, 2003
@@ -224,7 +224,7 @@
     }
     else
     {
-        NLFATAL( @"Trying to select view %@ which does not exist", index );
+        NLFATAL( @"Trying to select view %li which does not exist", ( unsigned long )index );
     }
 }
 
