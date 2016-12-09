@@ -162,6 +162,11 @@
     [ path fill ];
 }
 
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
+#endif
+
 - ( void )drawBackgroundImage
 {
     // Thanx to Matteo Bertozzi for the example
@@ -208,6 +213,10 @@
     [ clip compositeToPoint: bounds.origin operation: NSCompositeSourceOver ];
     [ pattern release ];
 }
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 
 - ( void )drawRect: ( NSRect )rect
 {

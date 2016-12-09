@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: NutShell.xcodeproj
+xcode_scheme: NutShell (Public)
